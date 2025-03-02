@@ -8,13 +8,9 @@ public class Tile : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     bool isSelectable = true;
     bool isMoving = false;
-    private void OnDisable() {
-        GameEvents.OnFoundPosOfTile -= MoveTileTo;
-    }
     private void OnMouseDown() {
         if(!isSelectable) return;
         isSelectable = false;
-        GameEvents.OnFoundPosOfTile += MoveTileTo;
         GameEvents.OnTileSelectedInvoke(this);
     }
     private void GetCardData() {
@@ -25,7 +21,6 @@ public class Tile : MonoBehaviour {
     public void MoveTileTo(Transform target) {
         if(isMoving) return;
         isMoving = true;
-        GameEvents.OnFoundPosOfTile -= MoveTileTo;
         gameObject.transform.DOMove(target.position, 2f).OnComplete(() => {
             GameEvents.OnTileDoneMovingInvoke();
             isSelectable = true;
