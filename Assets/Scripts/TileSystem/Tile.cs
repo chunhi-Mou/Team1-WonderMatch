@@ -7,14 +7,14 @@ public class Tile : MonoBehaviour {
 
     private SpriteRenderer spriteRenderer;
     bool isSelectable = true;
-    private void OnEnable() {
-        GameEvents.OnFoundPosOfTile += MoveTileTo;
-    }
     private void OnDisable() {
         GameEvents.OnFoundPosOfTile -= MoveTileTo;
     }
     private void OnMouseDown() {
         if(!isSelectable) return;
+        Collider2D collider2D = GetComponent<Collider2D>();
+        collider2D.enabled = false;
+        GameEvents.OnFoundPosOfTile += MoveTileTo;
         GameEvents.OnTileSelectedInvoke(this);
     }
     private void GetCardData() {
@@ -23,7 +23,10 @@ public class Tile : MonoBehaviour {
         spriteRenderer.sprite = card.sprite;
     }
     public void MoveTileTo(Transform target) {
-        gameObject.transform.DOMove(target.position, 2f);
+        gameObject.transform.DOMove(target.position, 2f).OnComplete(() => {
+            GameEvents.OnTileDoneMovingInvoke();
+            GameEvents.OnFoundPosOfTile -= MoveTileTo;
+        });
     }
     private void OnValidate() {
         GetCardData();
