@@ -67,7 +67,6 @@ public class Stack : MonoBehaviour
     {
         tilesInStack.Insert(targetIndex, tile);
 
-        // Cập nhật Dictionary
         if (!tileDictionary.ContainsKey(tile.card.cardType))
         {
             tileDictionary[tile.card.cardType] = new List<Tile>();
