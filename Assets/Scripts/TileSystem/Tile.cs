@@ -14,7 +14,6 @@ public class Tile : MonoBehaviour {
     private void OnMouseDown() {
         if(!isSelectable) return;
         isSelectable = false;
-        isMoving = true;
         GameEvents.OnFoundPosOfTile += MoveTileTo;
         GameEvents.OnTileSelectedInvoke(this);
     }
@@ -25,10 +24,12 @@ public class Tile : MonoBehaviour {
     }
     public void MoveTileTo(Transform target) {
         if(isMoving) return;
+        isMoving = true;
         GameEvents.OnFoundPosOfTile -= MoveTileTo;
         gameObject.transform.DOMove(target.position, 2f).OnComplete(() => {
             GameEvents.OnTileDoneMovingInvoke();
             isSelectable = true;
+            isMoving=false;
         });
     }
     private void OnValidate() {
