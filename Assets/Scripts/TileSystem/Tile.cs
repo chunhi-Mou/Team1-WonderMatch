@@ -23,9 +23,9 @@ public class Tile : MonoBehaviour {
         spriteRenderer.sprite = card.sprite;
     }
     public void MoveTileTo(Transform target) {
+        GameEvents.OnFoundPosOfTile -= MoveTileTo;
         gameObject.transform.DOMove(target.position, 2f).OnComplete(() => {
             GameEvents.OnTileDoneMovingInvoke();
-            GameEvents.OnFoundPosOfTile -= MoveTileTo;
         });
     }
     private void OnValidate() {
