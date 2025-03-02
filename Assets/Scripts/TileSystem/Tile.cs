@@ -21,7 +21,7 @@ public class Tile : MonoBehaviour {
     public void MoveTileTo(Transform target) {
         if(isMoving) return;
         isMoving = true;
-        gameObject.transform.DOMove(target.position, 2f).OnComplete(() => {
+        gameObject.transform.DOMove(target.position, 1f).OnComplete(() => {
             GameEvents.OnTileDoneMovingInvoke();
             isSelectable = true;
             isMoving=false;
