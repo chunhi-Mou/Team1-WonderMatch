@@ -7,13 +7,14 @@ public class Tile : MonoBehaviour {
 
     private SpriteRenderer spriteRenderer;
     bool isSelectable = true;
+    bool isMoving = false;
     private void OnDisable() {
         GameEvents.OnFoundPosOfTile -= MoveTileTo;
     }
     private void OnMouseDown() {
         if(!isSelectable) return;
-        Collider2D collider2D = GetComponent<Collider2D>();
-        collider2D.enabled = false;
+        isSelectable = false;
+        isMoving = true;
         GameEvents.OnFoundPosOfTile += MoveTileTo;
         GameEvents.OnTileSelectedInvoke(this);
     }
@@ -23,9 +24,11 @@ public class Tile : MonoBehaviour {
         spriteRenderer.sprite = card.sprite;
     }
     public void MoveTileTo(Transform target) {
+        if(isMoving) return;
         GameEvents.OnFoundPosOfTile -= MoveTileTo;
         gameObject.transform.DOMove(target.position, 2f).OnComplete(() => {
             GameEvents.OnTileDoneMovingInvoke();
+            isSelectable = true;
         });
     }
     private void OnValidate() {
