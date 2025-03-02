@@ -10,13 +10,12 @@ public class Tile : MonoBehaviour {
     private void OnEnable() {
         GameEvents.OnFoundPosOfTile += MoveTileTo;
     }
-
     private void OnDisable() {
         GameEvents.OnFoundPosOfTile -= MoveTileTo;
     }
     private void OnMouseDown() {
         if(!isSelectable) return;
-        GameEvents.OnTileSelectedInvoke();
+        GameEvents.OnTileSelectedInvoke(this.gameObject);
     }
     private void GetCardData() {
         spriteRenderer = GetComponent<SpriteRenderer>();
