@@ -11,6 +11,8 @@ public class Tile : MonoBehaviour {
     private void OnMouseDown() {
         if(!isSelectable) return;
         isSelectable = false;
+        Collider2D collider2D = GetComponent<Collider2D>();
+        collider2D.enabled = false;
         GameEvents.OnTileSelectedInvoke(this);
     }
     private void GetCardData() {
@@ -21,7 +23,7 @@ public class Tile : MonoBehaviour {
     public void MoveTileTo(Transform target) {
         if(isMoving) return;
         isMoving = true;
-        gameObject.transform.DOMove(target.position, 1f).OnComplete(() => {
+        gameObject.transform.DOMove(target.position, 0.5f).OnComplete(() => {
             GameEvents.OnTileDoneMovingInvoke();
             isSelectable = true;
             isMoving=false;
