@@ -15,7 +15,7 @@ public class Tile : MonoBehaviour {
     }
     private void OnMouseDown() {
         if(!isSelectable) return;
-        GameEvents.OnTileSelectedInvoke(this.card);
+        GameEvents.OnTileSelectedInvoke(this);
     }
     private void GetCardData() {
         spriteRenderer = GetComponent<SpriteRenderer>();
