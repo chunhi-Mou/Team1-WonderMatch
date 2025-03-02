@@ -15,7 +15,6 @@ public class Tile : MonoBehaviour {
         Collider2D collider2D = GetComponent<Collider2D>();
         collider2D.enabled = false;
         GameEvents.OnFoundPosOfTile += MoveTileTo;
-
         GameEvents.OnTileSelectedInvoke(this);
     }
     private void GetCardData() {
