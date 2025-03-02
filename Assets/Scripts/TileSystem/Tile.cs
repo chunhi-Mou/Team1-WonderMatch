@@ -3,7 +3,7 @@ using DG.Tweening;
 
 public class Tile : MonoBehaviour {
     [SerializeField] CardDatabase cardDatabase;
-    [SerializeField] CardData card;
+    public CardData card;
 
     private SpriteRenderer spriteRenderer;
     bool isSelectable = true;
@@ -15,7 +15,7 @@ public class Tile : MonoBehaviour {
     }
     private void OnMouseDown() {
         if(!isSelectable) return;
-        GameEvents.OnTileSelectedInvoke(this.gameObject);
+        GameEvents.OnTileSelectedInvoke(this.card);
     }
     private void GetCardData() {
         spriteRenderer = GetComponent<SpriteRenderer>();
