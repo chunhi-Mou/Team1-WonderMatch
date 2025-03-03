@@ -13,10 +13,8 @@ public class Card : MonoBehaviour {
         if (!isSelectable) return;
         Collider collider = GetComponent<Collider>();
         collider.enabled = false;
-        GameEvents.OnFoundPosOfCard += MovCardTo; //Nhi: đăng kí Event nhận Target
-        //GameEvents.OnTileSelectedInvoke(this);
-        TileOverlapChecker tileOverlapChecker = GetComponent<TileOverlapChecker>();
-        tileOverlapChecker.UpdateBelowTiles();
+        GameEvents.OnFoundPosOfCard += MoveCardTo; //Nhi: đăng kí Event nhận Target
+        GameEvents.OnCardSelectedInvoke(this);
     }
     private void GetCardData() {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,10 +22,10 @@ public class Card : MonoBehaviour {
         cardData.sprite = cardFromBase.sprite;
         spriteRenderer.sprite = cardData.sprite;
     }
-    public void MovCardTo(Transform target) {
+    public void MoveCardTo(Transform target) {
         if(isMoving) return;
         isMoving = true;
-        GameEvents.OnFoundPosOfCard -= MovCardTo;//Nhi: huỷ đăng kí Event nhận Target
+        GameEvents.OnFoundPosOfCard -= MoveCardTo;//Nhi: huỷ đăng kí Event nhận Target
         gameObject.transform.DOMove(target.position, 0.5f).OnComplete(() => {
             GameEvents.OnCardDoneMovingInvoke();
             this.isSelectable = true;
