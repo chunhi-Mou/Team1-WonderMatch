@@ -18,7 +18,7 @@ public class Tile : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         CardData cardFromBase = cardDatabase.cards[(int)card.cardType];
         card.sprite = cardFromBase.sprite;
-        spriteRenderer.sprite = cardFromBase.sprite;
+        spriteRenderer.sprite = card.sprite;
     }
     public void MoveTileTo(Transform target) {
         if(isMoving) return;
