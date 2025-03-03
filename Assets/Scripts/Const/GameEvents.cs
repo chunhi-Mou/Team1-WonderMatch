@@ -1,22 +1,22 @@
 using System;
 using UnityEngine;
 
-public static class GameEvents{
+public static class GameEvents {
     public static event Action<Card> OnTileSelected;
     public static event Action<Transform> OnFoundPosOfCard;
     public static event Action OnCardDoneMoving;
     public static event Action OnLoseGame;
 
     public static void OnCardSelectedInvoke(Card tile) {
-        OnTileSelected.Invoke(tile);
+        OnTileSelected?.Invoke(tile);
     }
     public static void OnFoundPosOfCardInvoke(Transform target) {
-        OnFoundPosOfCard.Invoke(target);
+        OnFoundPosOfCard?.Invoke(target);
     }
-    public static void OnCardDoneMovingInvoke(){
-        OnCardDoneMoving.Invoke();
+    public static void OnCardDoneMovingInvoke() {
+        OnCardDoneMoving?.Invoke();
     }
-    public static void OnLoseGameInvoke(){
-        OnLoseGame.Invoke();
+    public static void OnLoseGameInvoke() {
+        OnLoseGame?.Invoke();
     }
 }
