@@ -40,6 +40,17 @@ public class Card : MonoBehaviour {
     }
     public void SetSelectableData(bool _data) {
         this.isSelectable = _data;
+        if(!this.isSelectable) {
+            this.DarkenSprite();
+        } else {
+            this.SetWhiteSprite();
+        }
+    }
+    void DarkenSprite() {
+        spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.5f);
+    }
+    void SetWhiteSprite() {
+        spriteRenderer.DOColor(Color.white, 0.5f);
     }
     private void OnValidate() {
         GetCardData();
