@@ -6,11 +6,16 @@ public class Card : MonoBehaviour {
     [SerializeField] CardDatabase cardDatabase;
     public CardData cardData;
 
+    private CardOverlapChecker cardOverlapChecker;
     private SpriteRenderer spriteRenderer;
-    bool isSelectable = true; //For Vision Only
-    bool isMoving = false;
+    private bool isSelectable = true; //For Vision Only
+    private bool isMoving = false;
+    private void Awake() {
+        cardOverlapChecker = GetComponent<CardOverlapChecker>();
+    }
     private void OnMouseDown() {
         if (!isSelectable) return;
+        cardOverlapChecker.UpdateBelowTiles();
         Collider collider = GetComponent<Collider>();
         collider.enabled = false;
         GameEvents.OnFoundPosOfCard += MoveCardTo; //Nhi: đăng kí Event nhận Target
@@ -27,6 +32,7 @@ public class Card : MonoBehaviour {
         isMoving = true;
         GameEvents.OnFoundPosOfCard -= MoveCardTo;//Nhi: huỷ đăng kí Event nhận Target
         gameObject.transform.DOMove(target.position, 0.5f).OnComplete(() => {
+            cardOverlapChecker.NotifyTilesBelow();
             GameEvents.OnCardDoneMovingInvoke();
             this.isSelectable = true;
             isMoving=false;
