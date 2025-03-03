@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour {
     bool isSelectable = true; //For Vision Only
     bool isMoving = false;
     private void OnMouseDown() {
+        if (!isSelectable) return;
         Collider2D collider2D = GetComponent<Collider2D>();
         collider2D.enabled = false;
         GameEvents.OnFoundPosOfTile += MoveTileTo; //Nhi: đăng kí Event nhận Target
@@ -26,9 +27,12 @@ public class Tile : MonoBehaviour {
         GameEvents.OnFoundPosOfTile -= MoveTileTo;//Nhi: huỷ đăng kí Event nhận Target
         gameObject.transform.DOMove(target.position, 0.5f).OnComplete(() => {
             GameEvents.OnTileDoneMovingInvoke();
-            isSelectable = true;
+            this.isSelectable = true;
             isMoving=false;
         });
+    }
+    public void SetSelectableData(bool _data) {
+        this.isSelectable = _data;
     }
     private void OnValidate() {
         GetCardData();
