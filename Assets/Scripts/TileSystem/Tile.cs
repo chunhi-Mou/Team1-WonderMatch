@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using DG.Tweening;
 
 public class Tile : MonoBehaviour {
@@ -6,23 +6,24 @@ public class Tile : MonoBehaviour {
     public CardData card;
 
     private SpriteRenderer spriteRenderer;
-    bool isSelectable = true;
+    bool isSelectable = true; //For Vision Only
     bool isMoving = false;
     private void OnMouseDown() {
-        if(!isSelectable) return;
-        isSelectable = false;
         Collider2D collider2D = GetComponent<Collider2D>();
         collider2D.enabled = false;
+        GameEvents.OnFoundPosOfTile += MoveTileTo; //Nhi: đăng kí Event nhận Target
         GameEvents.OnTileSelectedInvoke(this);
     }
     private void GetCardData() {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        card = cardDatabase.cards[(int)card.cardType];
-        spriteRenderer.sprite = card.sprite;
+        CardData cardFromBase = cardDatabase.cards[(int)card.cardType];
+        card.sprite = cardFromBase.sprite;
+        spriteRenderer.sprite = cardFromBase.sprite;
     }
     public void MoveTileTo(Transform target) {
         if(isMoving) return;
         isMoving = true;
+        GameEvents.OnFoundPosOfTile -= MoveTileTo;//Nhi: huỷ đăng kí Event nhận Target
         gameObject.transform.DOMove(target.position, 0.5f).OnComplete(() => {
             GameEvents.OnTileDoneMovingInvoke();
             isSelectable = true;
