@@ -3,57 +3,57 @@ using UnityEngine;
 
 public class Stack : MonoBehaviour
 {
-    [SerializeField] Transform[] centerPos;
-    [SerializeField] List<Tile> tilesInStack;
+    [SerializeField] Transform[] centerPos; //Thu: Mang gom vi tri cac o trong khay
+    [SerializeField] List<Card> cardsInStack; //Thu: Danh sach cac card trong khay
     
-    private Dictionary<CardType, List<Tile>> tileDictionary; 
+    private Dictionary<CardType, List<Card>> cardTypeDictionary; //Thu: Dictionary cua cac loai card khac nhau trong khay
 
     public int maxSizeStack = 8;
     public int currentSizeStack = 7;
 
     private void Start()
     {
-        tilesInStack = new List<Tile>();
-        tileDictionary = new Dictionary<CardType, List<Tile>>();
+        cardsInStack = new List<Card>();
+        cardTypeDictionary = new Dictionary<CardType, List<Card>>();
     }
 
     private void OnEnable()
     {
-        GameEvents.OnTileSelected += GetTileTargetPos;
-        GameEvents.OnTileDoneMoving += CheckMatch;
+        GameEvents.OnCardSelected += GetCardTargetPos;
+        GameEvents.OnCardDoneMoving += CheckMatch;
     }
 
     private void OnDisable()
     {
-        GameEvents.OnTileSelected -= GetTileTargetPos;
-        GameEvents.OnTileDoneMoving -= CheckMatch;
+        GameEvents.OnCardSelected -= GetCardTargetPos;
+        GameEvents.OnCardDoneMoving -= CheckMatch;
     }
 
-    private void GetTileTargetPos(Tile tile)
+    private void GetCardTargetPos(Card card)
     {
-        int targetIndex = tilesInStack.Count;
+        int targetIndex = cardsInStack.Count;
 
-        if (tileDictionary.TryGetValue(tile.card.cardType, out List<Tile> matchingTiles) && matchingTiles.Count > 0)
+        if (cardTypeDictionary.TryGetValue(card.cardData.cardType, out List<Card> sameTypeCards) && sameTypeCards.Count > 0)
         {
-            targetIndex = tilesInStack.IndexOf(matchingTiles[matchingTiles.Count - 1]) + 1;
+            targetIndex = cardsInStack.IndexOf(sameTypeCards[sameTypeCards.Count - 1]) + 1;
         }
 
-        AddTileToStack(targetIndex, tile);
-        tile.MoveTileTo(centerPos[targetIndex]);
+        AddCardToStack(targetIndex, card);
+        card.MoveCardTo(centerPos[targetIndex]);
     }
 
     private void CheckFullStack()
     {
-        if (tilesInStack.Count == currentSizeStack) Debug.Log("Stack Is Full!");
+        if (cardsInStack.Count == currentSizeStack) Debug.Log("Stack Is Full!");
     }
 
     private void CheckMatch()
     {
-        int currentMatchPos = tilesInStack.Count;
-        for (int i = tilesInStack.Count - 1; i >= 2; i--)
+        int currentMatchPos = cardsInStack.Count;
+        for (int i = cardsInStack.Count - 1; i >= 2; i--)
         {
-            if (tilesInStack[i].card.cardType == tilesInStack[i - 1].card.cardType &&
-                tilesInStack[i].card.cardType == tilesInStack[i - 2].card.cardType)
+            if (cardsInStack[i].cardData.cardType == cardsInStack[i - 1].cardData.cardType &&
+                cardsInStack[i].cardData.cardType == cardsInStack[i - 2].cardData.cardType)
             {
                 currentMatchPos = i - 2;
                 Debug.Log("Match 3 Found!");
@@ -63,26 +63,25 @@ public class Stack : MonoBehaviour
         CheckFullStack();
     }
 
-    private void AddTileToStack(int targetIndex, Tile tile)
+    private void AddCardToStack(int targetIndex, Card card)
     {
-        tilesInStack.Insert(targetIndex, tile);
+        cardsInStack.Insert(targetIndex, card);
 
-        if (!tileDictionary.ContainsKey(tile.card.cardType))
-        {
-            tileDictionary[tile.card.cardType] = new List<Tile>();
+        //Thu: Neu chua co card nao trong dict cung loai thi tao list moi chua no 
+        if (!cardTypeDictionary.ContainsKey(card.cardData.cardType)){
+            cardTypeDictionary[card.cardData.cardType] = new List<Card>();
         }
-        tileDictionary[tile.card.cardType].Add(tile);
+
+        cardTypeDictionary[card.cardData.cardType].Add(card);
     }
 
     private void RemoveMatchFromStack(int currentMatchPos)
     {
-        CardType removedCardType = tilesInStack[currentMatchPos].card.cardType;
-
         for (int i = 0; i < 3; i++)
         {
-            Tile tile = tilesInStack[currentMatchPos];
-            tilesInStack.RemoveAt(currentMatchPos);
-            tileDictionary[tile.card.cardType].Remove(tile);
+            Card card = cardsInStack[currentMatchPos];
+            cardsInStack.RemoveAt(currentMatchPos);
+            cardTypeDictionary[card.cardData.cardType].Remove(card);
         }
     }
 }
