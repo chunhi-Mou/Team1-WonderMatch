@@ -16,7 +16,7 @@ public class CardOverlapChecker : MonoBehaviour {
         cardsBelow.Clear();
 
         Vector3 belowBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, 1f);
-        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, -1f); 
+        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, 1f); 
 
         Collider[] results = Physics.OverlapBox(belowBoxPosition, belowBoxSize / 2, Quaternion.identity);
 
@@ -36,7 +36,7 @@ public class CardOverlapChecker : MonoBehaviour {
         cardsAbove.Clear();
 
         Vector3 aboveBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, 1f);
-        Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, 1f);
+        Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, -1f);
 
         Collider[] results = Physics.OverlapBox(aboveBoxPosition, aboveBoxSize / 2, Quaternion.identity);
 
