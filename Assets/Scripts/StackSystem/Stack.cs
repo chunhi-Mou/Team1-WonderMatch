@@ -22,14 +22,14 @@ public class Stack : MonoBehaviour
     {
         GameEvents.OnMatchCards += ArrangeCards;
         GameEvents.OnCardSelected += GetCardTargetPos;
-        GameEvents.OnCardDoneMoving += CheckMatch;
+        GameEvents.OnCardDoneMoving += ArrangeAndCheckMatch;
     }
 
     private void OnDisable()
     {
         GameEvents.OnMatchCards -= ArrangeCards;
         GameEvents.OnCardSelected -= GetCardTargetPos;
-        GameEvents.OnCardDoneMoving -= CheckMatch;
+        GameEvents.OnCardDoneMoving -= ArrangeAndCheckMatch;
     }
 
     private void GetCardTargetPos(Card card)
@@ -42,14 +42,18 @@ public class Stack : MonoBehaviour
         }
 
         AddCardToStack(targetIndex, card);
-        card.MoveCardTo(centerPos[targetIndex]);
+        card.MoveCardTo(centerPos[targetIndex],0.5f,Ease.InOutSine);
     }
 
     private void CheckFullStack()
     {
         if (cardsInStack.Count == currentSizeStack) Debug.Log("Stack Is Full!");
     }
-
+    private void ArrangeAndCheckMatch()
+    {
+        ArrangeCards();
+        CheckMatch();
+    }
     private void CheckMatch()
     {
         int currentMatchPos = cardsInStack.Count;
@@ -71,7 +75,7 @@ public class Stack : MonoBehaviour
     {
         cardsInStack.Insert(targetIndex, card);
         for (int i = targetIndex + 1; i < cardsInStack.Count; i ++){
-            cardsInStack[i].MoveCardTo(centerPos[i]);
+            cardsInStack[i].MoveCardTo(centerPos[i],0.3f,Ease.InOutSine);
         }
 
         //Thu: Neu chua co card nao trong dict cung loai thi tao list moi chua no 
@@ -84,7 +88,7 @@ public class Stack : MonoBehaviour
 
     private void RemoveMatchFromStack(int currentMatchPos)
     {
-        GameEvents.OnMatchCardsInvoke(); //Don Cards trong khay
+        GameEvents.OnMatchCardsInvoke();
         List<Card> matchedCards = cardsInStack.GetRange(currentMatchPos, 3);
         //int completedAnimations = 0;
 
@@ -112,7 +116,7 @@ public class Stack : MonoBehaviour
         for (int i = 0; i < cardsInStack.Count; i++)
         {
             Card card = cardsInStack[i];
-            card.MoveCardTo(centerPos[i]); 
+            card.MoveCardTo(centerPos[i],0.1f,Ease.InOutSine); 
             Debug.Log("card " + card.name + " moved to " + i + " position");
         }
     }
