@@ -27,11 +27,11 @@ public class Card : MonoBehaviour {
         cardData.sprite = cardFromBase.sprite;
         spriteRenderer.sprite = cardData.sprite;
     }
-    public void MoveCardTo(Transform target) {
+    public void MoveCardTo(Transform target, float _duration) {
         if(isMoving) return;
         isMoving = true;
         GameEvents.OnFoundPosOfCard -= MoveCardTo;//Nhi: huỷ đăng kí Event nhận Target
-        gameObject.transform.DOMove(target.position, 0.5f).OnComplete(() => {
+        gameObject.transform.DOMove(target.position, _duration).OnComplete(() => {
             cardOverlapChecker.NotifyTilesBelow();
             GameEvents.OnCardDoneMovingInvoke();
             this.isSelectable = true;
