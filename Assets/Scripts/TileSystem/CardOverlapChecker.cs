@@ -16,13 +16,13 @@ public class CardOverlapChecker : MonoBehaviour {
         cardsBelow.Clear();
 
         Vector3 belowBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, 1f);
-        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, -1f); 
+        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, 1f); 
 
         Collider[] results = Physics.OverlapBox(belowBoxPosition, belowBoxSize / 2, Quaternion.identity);
 
-        foreach (var card in results) {
-            if (card.gameObject != gameObject) {
-                Card otherCard = card.GetComponent<Card>();
+        foreach (var col in results) {
+            if (col.gameObject != gameObject) {
+                Card otherCard = col.GetComponent<Card>();
 
                 if (otherCard != null) {
                     cardsBelow.Add(otherCard);
@@ -30,18 +30,19 @@ public class CardOverlapChecker : MonoBehaviour {
                 }
             }
         }
+
     }
     public void UpdateAboveTiles() {
         cardsAbove.Clear();
 
         Vector3 aboveBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, 1f);
-        Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, 1f);
+        Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, -1f);
 
         Collider[] results = Physics.OverlapBox(aboveBoxPosition, aboveBoxSize / 2, Quaternion.identity);
 
-        foreach (var card in results) {
-            if (card.gameObject != gameObject) {
-                Card otherCard = card.GetComponent<Card>();
+        foreach (var col in results) { 
+            if (col.gameObject != gameObject) {
+                Card otherCard = col.GetComponent<Card>();
 
                 if (otherCard != null) {
                     cardsAbove.Add(otherCard);
@@ -59,6 +60,8 @@ public class CardOverlapChecker : MonoBehaviour {
         UpdateAboveTiles();
         if (cardsAbove.Count == 0) {
             card.SetSelectableData(true);
+        } else {
+            card.SetSelectableData(false);
         }
     }
 }

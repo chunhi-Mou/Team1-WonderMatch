@@ -9,7 +9,6 @@ public class Board : MonoBehaviour {
         foreach (GameObject card in cards) {
             CardOverlapChecker checker = card.GetComponent<CardOverlapChecker>();
             checker.CheckIfUncovered();
-            Debug.Log(card.name);
         }
 
     }

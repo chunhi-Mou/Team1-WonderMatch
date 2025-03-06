@@ -47,7 +47,7 @@ public class Card : MonoBehaviour {
         }
     }
     public void DisableMatchedCard(Card card) {
-        card.gameObject.SetActive(false);
+        card.gameObject.SetActive(false); 
     }
     void DarkenSprite() {
         spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.5f);
