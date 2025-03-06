@@ -21,7 +21,7 @@ public class Card : MonoBehaviour {
         GameEvents.OnFoundPosOfCard += MoveCardTo; //Nhi: đăng kí Event nhận Target
         GameEvents.OnCardSelectedInvoke(this);
     }
-    private void GetCardData() {
+    public void GetCardData() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         CardData cardFromBase = cardDatabase.cards[(int)cardData.cardType];
         cardData.sprite = cardFromBase.sprite;
