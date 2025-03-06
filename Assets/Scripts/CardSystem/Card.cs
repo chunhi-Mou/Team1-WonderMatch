@@ -34,10 +34,10 @@ public class Card : MonoBehaviour {
         gameObject.transform.DOMove(target.position, _duration)
             .SetEase(easeType)
             .OnComplete(() => {
-            cardOverlapChecker.NotifyTilesBelow();
-            GameEvents.OnCardDoneMovingInvoke();
-            this.isSelectable = true;
-            isMoving=false;
+                cardOverlapChecker.NotifyTilesBelow();
+                GameEvents.OnCardDoneMovingInvoke();
+                this.isSelectable = true;
+                isMoving = false;
         });
     }
     public void SetSelectableData(bool _data) {
