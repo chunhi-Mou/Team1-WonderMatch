@@ -8,14 +8,14 @@ public class Board : MonoBehaviour {
         UpdateBoard();
     }
     public void ShuffleBoard() {
-        Card[] cards = GameObject.FindGameObjectsWithTag("Card")
+        List<Card> cards = GameObject.FindGameObjectsWithTag("Card")
                                  .Select(obj => obj.GetComponent<Card>())
-                                 .ToArray();
+                                 .ToList();
 
         List<CardData> cardDataList = cards.Select(card => card.cardData).ToList();
         ShuffleList(cardDataList);
 
-        for (int i = 0; i < cards.Length; i++) {
+        for (int i = 0; i < cards.Count; i++) {
             cards[i].cardData = cardDataList[i];
             cards[i].GetCardData();
         }
