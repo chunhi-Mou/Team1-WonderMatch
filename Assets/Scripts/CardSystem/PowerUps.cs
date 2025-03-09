@@ -10,7 +10,7 @@ public class PowerUps : MonoBehaviour {
             board = FindObjectOfType<Board>(); 
         }
         if (stack == null) {
-            board = FindObjectOfType<Stack>();
+            stack = FindObjectOfType<Stack>();
         }
     }
 
