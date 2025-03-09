@@ -4,67 +4,64 @@ using UnityEngine;
 
 public class Stack : MonoBehaviour
 {
-    [SerializeField] Transform[] centerPos; //Thu: Mang gom vi tri cac o trong khay
-    [SerializeField] List<Card> cardsInStack; //Thu: Danh sach cac card trong khay
-    
-    private Dictionary<CardType, List<Card>> cardTypeDictionary; //Thu: Dictionary cua cac loai card khac nhau trong khay
+    [SerializeField] Transform[] centerPos;
+    [SerializeField] List<Card> cardsInStack = new List<Card>();
+
+    private Dictionary<CardType, List<Card>> cardTypeDictionary = new Dictionary<CardType, List<Card>>();
+    private Queue<Card> pendingCards = new Queue<Card>(); 
+    private bool isArranging = false; 
 
     public int maxSizeStack = 8;
     public int currentSizeStack = 7;
-
-    private void Start()
-    {
-        cardsInStack = new List<Card>();
-        cardTypeDictionary = new Dictionary<CardType, List<Card>>();
-    }
 
     private void OnEnable()
     {
         GameEvents.OnMatchCards += ArrangeCards;
         GameEvents.OnCardSelected += GetCardTargetPos;
-        GameEvents.OnCardDoneMoving += ArrangeAndCheckMatch;
+        GameEvents.OnCardDoneMoving += CheckMatch;
     }
 
     private void OnDisable()
     {
         GameEvents.OnMatchCards -= ArrangeCards;
         GameEvents.OnCardSelected -= GetCardTargetPos;
-        GameEvents.OnCardDoneMoving -= ArrangeAndCheckMatch;
+        GameEvents.OnCardDoneMoving -= CheckMatch;
     }
 
     private void GetCardTargetPos(Card card)
     {
-        int targetIndex = cardsInStack.Count;
+        if (!card) return;
 
-        if (cardTypeDictionary.TryGetValue(card.cardData.cardType, out List<Card> sameTypeCards) && sameTypeCards.Count > 0)
+        if (isArranging)
         {
-            targetIndex = cardsInStack.IndexOf(sameTypeCards[sameTypeCards.Count - 1]) + 1;
+            pendingCards.Enqueue(card);
+            return;
+        }
+
+        int targetIndex = cardsInStack.Count;
+        if (cardTypeDictionary.TryGetValue(card.cardData.cardType, out var sameTypeCards) && sameTypeCards.Count > 0)
+        {
+            targetIndex = cardsInStack.IndexOf(sameTypeCards[^1]) + 1;
         }
 
         AddCardToStack(targetIndex, card);
-        card.MoveCardTo(centerPos[targetIndex],0.5f,Ease.InOutSine);
     }
 
     private void CheckFullStack()
     {
-        if (cardsInStack.Count == currentSizeStack) Debug.Log("Stack Is Full!");
+        if (cardsInStack.Count >= currentSizeStack) Debug.Log("Stack Is Full!");
     }
-    private void ArrangeAndCheckMatch()
-    {
-        ArrangeCards();
-        CheckMatch();
-    }
+
     private void CheckMatch()
     {
-        int currentMatchPos = cardsInStack.Count;
+        if (cardsInStack.Count < 3) return;
+
         for (int i = 0; i <= cardsInStack.Count - 3; i++)
         {
-            if (cardsInStack[i].cardData.cardType == cardsInStack[i + 1].cardData.cardType &&
-                cardsInStack[i].cardData.cardType == cardsInStack[i + 2].cardData.cardType)
+            var cardType = cardsInStack[i].cardData.cardType;
+            if (cardType == cardsInStack[i + 1].cardData.cardType && cardType == cardsInStack[i + 2].cardData.cardType)
             {
-                currentMatchPos = i;
-                Debug.Log("Match 3 Found! " + currentMatchPos);  
-                RemoveMatchFromStack(currentMatchPos);
+                RemoveMatchFromStack(i);
                 return;
             }
         }
@@ -74,50 +71,57 @@ public class Stack : MonoBehaviour
     private void AddCardToStack(int targetIndex, Card card)
     {
         cardsInStack.Insert(targetIndex, card);
-        for (int i = targetIndex + 1; i < cardsInStack.Count; i ++){
-            cardsInStack[i].MoveCardTo(centerPos[i],0.3f,Ease.InOutSine);
-        }
-
-        //Thu: Neu chua co card nao trong dict cung loai thi tao list moi chua no 
-        if (!cardTypeDictionary.ContainsKey(card.cardData.cardType)){
-            cardTypeDictionary[card.cardData.cardType] = new List<Card>();
-        }
-
+        cardTypeDictionary.TryAdd(card.cardData.cardType, new List<Card>());
         cardTypeDictionary[card.cardData.cardType].Add(card);
+
+        for (int i = targetIndex; i < cardsInStack.Count; i++)
+        {
+            cardsInStack[i].MoveCardTo(centerPos[i].position,0.1f);
+        }
+        card.MoveCardTo(centerPos[targetIndex].position,0.8f);
     }
 
     private void RemoveMatchFromStack(int currentMatchPos)
     {
         GameEvents.OnMatchCardsInvoke();
         List<Card> matchedCards = cardsInStack.GetRange(currentMatchPos, 3);
-        //int completedAnimations = 0;
+        
+        int completedAnimations = 0;
+        int totalMatches = matchedCards.Count;
+        isArranging = true; 
 
-        foreach (Card card in matchedCards)
+        foreach (var card in matchedCards)
         {
+            cardsInStack.Remove(card);
+            cardTypeDictionary[card.cardData.cardType]?.Remove(card);
             card.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() =>
             {
-                cardsInStack.Remove(card);
-                cardTypeDictionary[card.cardData.cardType].Remove(card);
                 card.DisableMatchedCard(card);
+                completedAnimations++;
 
-                /*completedAnimations++;
-                if (completedAnimations == 3)
+                if (completedAnimations == totalMatches)
                 {
+                    isArranging = false; 
                     ArrangeCards();
-                }*/
+                    ProcessPendingCards(); 
+                }
             });
         }
-
-        matchedCards.Clear();
     }
+
     private void ArrangeCards()
     {
-        Debug.Log("OnMatchCards Invoked");
         for (int i = 0; i < cardsInStack.Count; i++)
         {
-            Card card = cardsInStack[i];
-            card.MoveCardTo(centerPos[i],0.1f,Ease.InOutSine); 
-            Debug.Log("card " + card.name + " moved to " + i + " position");
+            cardsInStack[i].MoveCardTo(centerPos[i].position,0.3f);
+        }
+    }
+
+    private void ProcessPendingCards()
+    {
+        while (pendingCards.Count > 0)
+        {
+            GetCardTargetPos(pendingCards.Dequeue());
         }
     }
 }
