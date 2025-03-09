@@ -5,6 +5,7 @@ using System.Linq;
 public class Board : MonoBehaviour {
     public List<Card> cards = new List<Card>();
     private int currCardCount = 0;
+
     private void Start() {
         UpdateCardsList();
         ShuffleBoard();
@@ -36,6 +37,27 @@ public class Board : MonoBehaviour {
             (list[i], list[randomIndex]) = (list[randomIndex], list[i]);
         }
     }
+    public void BoardMagicHandler(CardType cardType, int count) {
+        if (cardType == CardType.nothing) return;
+
+        List<Card> takenCards = cards.Where(card => card.cardData.cardType == cardType).ToList();
+        List<Card> selectedCards;
+
+        if (takenCards.Count >= count) {
+            selectedCards = takenCards.Take(count).ToList();
+        } else {
+            selectedCards = cards
+                .GroupBy(card => card.cardData.cardType)
+                .Where(group => group.Count() >= 3)
+                .OrderBy(_ => Random.value)
+                .FirstOrDefault()?.Take(3).ToList() ?? new List<Card>();
+        }
+
+        foreach (Card card in selectedCards) {
+            card.PushCardToStack();
+        }
+    }
+
     private void CheckWinGame() {
         currCardCount -= 3;//Nhi: Match Found sẽ trừ đi 3 Card
         if (currCardCount <= 0) {

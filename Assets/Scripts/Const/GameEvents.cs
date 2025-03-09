@@ -7,6 +7,7 @@ public static class GameEvents {
     public static event Action<Vector3, float, Ease> OnFoundPosOfCard;
     public static event Action OnCardDoneMoving;
     public static event Action OnLoseGame;
+    public static event Action<CardType, int> OnMagicPowerClicked;
 
     public static void OnCardSelectedInvoke(Card card) {
         OnCardSelected?.Invoke(card);
@@ -19,5 +20,8 @@ public static class GameEvents {
     }
     public static void OnLoseGameInvoke() {
         OnLoseGame?.Invoke();
+    }
+    public static void OnMagicPowerClickedInvoke(CardType cardType, int neededCard) {
+        OnMagicPowerClicked?.Invoke(cardType, neededCard);
     }
 }

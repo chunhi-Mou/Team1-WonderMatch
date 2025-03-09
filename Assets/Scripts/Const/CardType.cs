@@ -1,4 +1,5 @@
 public enum CardType {
+    nothing,
     cardA,
     card2, 
     card3, 

@@ -18,6 +18,9 @@ public class Card : MonoBehaviour {
         cardOverlapChecker = GetComponent<CardOverlapChecker>();
     }
     private void OnMouseDown() {
+        PushCardToStack();
+    }
+    public void PushCardToStack() {
         if (!isSelectable) return;
         if (state == CardState.inBoard) {
             prevPosition = transform.position;
