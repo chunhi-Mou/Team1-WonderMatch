@@ -28,7 +28,9 @@ public class PowerUps : MonoBehaviour {
     }
     public void OnUndoPress() {
         if (cardHistory.Count > 0) {
-            Card lastCard = cardHistory.Pop();
+            Card lastCard = null;
+            while(lastCard==null)
+                lastCard = cardHistory.Pop();
             lastCard.UndoMove();
         } else {
             Debug.Log("No Card Left!");
