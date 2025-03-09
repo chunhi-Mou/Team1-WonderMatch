@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class PowerUps : MonoBehaviour {
     public Board board;
-    public Card prevCard;
+    private Stack<Card> cardHistory = new Stack<Card>();
     private void Awake() {
         if (board == null) {
             board = FindObjectOfType<Board>(); 
@@ -10,22 +11,23 @@ public class PowerUps : MonoBehaviour {
     }
 
     private void OnEnable() {
-        GameEvents.OnCardSelected += SetPrevCard;
+        GameEvents.OnCardSelected += PushCardToHistory;
     }
     private void OnDisable() {
-        GameEvents.OnCardSelected -= SetPrevCard;
+        GameEvents.OnCardSelected -= PushCardToHistory;
     }
     public void OnShufflePress() {
         board.ShuffleBoard();
     }
-    public void SetPrevCard(Card card) {
-        prevCard = card;
+    public void PushCardToHistory(Card card) {
+        cardHistory.Push(card);
     }
     public void OnUndoPress() {
-        if (prevCard != null) {
-            prevCard.UndoMove();
+        if (cardHistory.Count > 0) {
+            Card lastCard = cardHistory.Pop();
+            lastCard.UndoMove();
         } else {
-            //Gọi Stack trả về cùng phải
+            Debug.Log("No Card Left!");
         }
     }
 }
