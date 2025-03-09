@@ -45,13 +45,17 @@ public class Board : MonoBehaviour {
     public void BoardMagicHandler(CardType cardType, int count) {
         if (cardType == CardType.nothing) return;
 
-        List<Card> takenCards = cards.Where(card => card.cardData.cardType == cardType).ToList();
+        List<Card> availableCards = cards
+            .Where(card => card.cardData.cardType == cardType && card.state == CardState.inBoard)
+            .ToList();
+
         List<Card> selectedCards;
 
-        if (takenCards.Count >= count) {
-            selectedCards = takenCards.Take(count).ToList();
+        if (availableCards.Count >= count) {
+            selectedCards = availableCards.Take(count).ToList();
         } else {
             selectedCards = cards
+                .Where(card => card.state == CardState.inBoard)
                 .GroupBy(card => card.cardData.cardType)
                 .Where(group => group.Count() >= 3)
                 .OrderBy(_ => Random.value)
@@ -59,6 +63,7 @@ public class Board : MonoBehaviour {
         }
 
         foreach (Card card in selectedCards) {
+            card.SetSelectableData(true);
             card.PushCardToStack();
         }
     }
