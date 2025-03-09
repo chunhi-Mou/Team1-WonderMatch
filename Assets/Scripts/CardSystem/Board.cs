@@ -43,8 +43,6 @@ public class Board : MonoBehaviour {
         }
     }
     public void BoardMagicHandler(CardType cardType, int count) {
-        if (cardType == CardType.nothing) return;
-
         List<Card> availableCards = cards
             .Where(card => card.cardData.cardType == cardType && card.state == CardState.inBoard)
             .ToList();
