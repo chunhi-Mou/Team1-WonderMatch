@@ -67,7 +67,7 @@ public class Card : MonoBehaviour {
         card.gameObject.SetActive(false); 
     }
     public void UndoMove() {
-        if (isMoving && state == CardState.inStack) return;
+        if (isMoving && state != CardState.inStack) return;
         MoveCardTo(prevPosition, 0.5f, Ease.OutQuad);
     }
     void DarkenSprite() {
