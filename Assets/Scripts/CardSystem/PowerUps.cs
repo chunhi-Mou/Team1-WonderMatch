@@ -2,6 +2,7 @@
 using UnityEngine;
 
 public class PowerUps : MonoBehaviour {
+    [SerializeField] GameObject addOneCellObj;
     public Board board;
     public Stack stack;
     private List<Card> cardHistory = new List<Card>();
@@ -22,6 +23,10 @@ public class PowerUps : MonoBehaviour {
     }
     public void OnShufflePress() {
         board.ShuffleBoard();
+    }
+    public void OnAddOneCell(){
+        stack.AddOneCell();
+        addOneCellObj.SetActive(false);
     }
     public void PushCardToHistory(Card card) {
         cardHistory.Add(card);
