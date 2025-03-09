@@ -12,11 +12,11 @@ public class CardOverlapChecker : MonoBehaviour {
         card = GetComponent<Card>();
         boxCollider = GetComponent<BoxCollider>();
     }
-    public void UpdateBelowTiles() {
+    public void UpdateBelowTiles(float _deep=1f) {
         cardsBelow.Clear();
 
-        Vector3 belowBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, 1f);
-        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, 1f); 
+        Vector3 belowBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, _deep);
+        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, _deep); 
 
         Collider[] results = Physics.OverlapBox(belowBoxPosition, belowBoxSize / 2, Quaternion.identity);
 
@@ -32,11 +32,11 @@ public class CardOverlapChecker : MonoBehaviour {
         }
 
     }
-    public void UpdateAboveTiles() {
+    public void UpdateAboveTiles(float _deep = 1f) {
         cardsAbove.Clear();
 
-        Vector3 aboveBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, 1f);
-        Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, -1f);
+        Vector3 aboveBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, _deep);
+        Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, -_deep);
 
         Collider[] results = Physics.OverlapBox(aboveBoxPosition, aboveBoxSize / 2, Quaternion.identity);
 
