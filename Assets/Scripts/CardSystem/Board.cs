@@ -17,12 +17,18 @@ public class Board : MonoBehaviour {
         UpdateBoard();
     }
     private void UpdateCardsList() {
-        cards = GameObject.FindGameObjectsWithTag("Card").Select(obj => obj.GetComponent<Card>()).ToList();
+        cards = GameObject.FindGameObjectsWithTag("Card")
+            .Select(obj => obj.GetComponent<Card>())
+            .ToList();
+        cards = cards
+            .Where(card => card.state == CardState.inBoard)
+            .ToList();
+
         currCardCount = cards.Count;
     }
     public void ShuffleBoard() {
+        UpdateBoard();
         List<CardData> cardDataList = cards
-            .Where(card => card.state == CardState.inBoard)
             .Select(card => card.cardData)
             .ToList();
         ShuffleList(cardDataList);
