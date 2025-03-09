@@ -68,6 +68,8 @@ public class Card : MonoBehaviour {
     }
     public void UndoMove() {
         if (isMoving && state != CardState.inStack) return;
+        Collider collider = GetComponent<Collider>();
+        collider.enabled = true;
         MoveCardTo(prevPosition, 0.5f, Ease.OutQuad);
     }
     void DarkenSprite() {
