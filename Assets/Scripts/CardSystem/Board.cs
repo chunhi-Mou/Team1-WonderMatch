@@ -21,7 +21,10 @@ public class Board : MonoBehaviour {
         currCardCount = cards.Count;
     }
     public void ShuffleBoard() {
-        List<CardData> cardDataList = cards.Select(card => card.cardData).ToList();
+        List<CardData> cardDataList = cards
+            .Where(card => card.state == CardState.inBoard)
+            .Select(card => card.cardData)
+            .ToList();
         ShuffleList(cardDataList);
 
         for (int i = 0; i < cards.Count; i++) {

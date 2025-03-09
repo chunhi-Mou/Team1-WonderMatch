@@ -28,16 +28,20 @@ public class PowerUps : MonoBehaviour {
     }
     public void OnUndoPress() {
         Card lastCard = null;
-        while (cardHistory.Count > 0 && lastCard == null) {
+        while (cardHistory.Count > 0) {
             lastCard = cardHistory[^1];
             cardHistory.RemoveAt(cardHistory.Count - 1);
+            if (lastCard != null && lastCard.gameObject.activeSelf) {
+                break;
+            }
         }
-        if(lastCard != null) {
+        if (lastCard != null && lastCard.gameObject.activeSelf) {
             lastCard.UndoMove();
         } else {
             Debug.Log("No Card Left!");
         }
     }
+
     public void OnMagicPress() {
         stack.StackMagicHandler();
     }
