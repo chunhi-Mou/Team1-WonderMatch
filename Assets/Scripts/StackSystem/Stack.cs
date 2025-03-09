@@ -124,4 +124,22 @@ public class Stack : MonoBehaviour
             GetCardTargetPos(pendingCards.Dequeue());
         }
     }
+    public void StackMagicHandler()
+    {
+        CardType magicCardType = CardType.nothing;
+        int maxCount = 0;
+
+        foreach (var cardType in cardTypeDictionary)
+        {
+            if (cardType.Value.Count > maxCount)
+            {
+                maxCount = cardType.Value.Count;
+                magicCardType = cardType.Key;
+            }
+        }
+
+        int magicCardAmount = 3 - maxCount;
+        
+        GameEvents.OnMagicPowerClickedInvoke(magicCardType, magicCardAmount);
+    }
 }
