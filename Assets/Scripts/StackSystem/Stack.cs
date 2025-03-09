@@ -16,6 +16,7 @@ public class Stack : MonoBehaviour
 
     private void OnEnable()
     {
+        GameEvents.OnUndoPressed += RemoveUndoCard;
         GameEvents.OnMatchCards += ArrangeCards;
         GameEvents.OnCardSelected += GetCardTargetPos;
         GameEvents.OnCardDoneMoving += CheckMatch;
@@ -23,11 +24,15 @@ public class Stack : MonoBehaviour
 
     private void OnDisable()
     {
+        GameEvents.OnUndoPressed -= RemoveUndoCard;
         GameEvents.OnMatchCards -= ArrangeCards;
         GameEvents.OnCardSelected -= GetCardTargetPos;
         GameEvents.OnCardDoneMoving -= CheckMatch;
     }
-
+    public void AddOneCell()
+    {
+        currentSizeStack += 1;
+    }
     private void GetCardTargetPos(Card card)
     {
         if (!card) return;
@@ -50,6 +55,7 @@ public class Stack : MonoBehaviour
     private void CheckFullStack()
     {
         if (cardsInStack.Count >= currentSizeStack) Debug.Log("Stack Is Full!");
+        Time.timeScale = 0f;
     }
 
     private void CheckMatch()
@@ -139,7 +145,15 @@ public class Stack : MonoBehaviour
         }
 
         int magicCardAmount = 3 - maxCount;
-        
-        GameEvents.OnMagicPowerClickedInvoke(magicCardType, magicCardAmount);
+        int availableStackCount = currentSizeStack - cardsInStack.Count;
+
+        if (magicCardAmount <= availableStackCount) GameEvents.OnMagicPowerClickedInvoke(magicCardType, magicCardAmount);
+    }
+    
+    private void RemoveUndoCard(Card card)
+    {
+        cardsInStack.Remove(card);
+        cardTypeDictionary[card.cardData.cardType].Remove(card);
+        ArrangeCards();
     }
 }
