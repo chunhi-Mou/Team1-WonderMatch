@@ -5,7 +5,12 @@ using System.Linq;
 public class Board : MonoBehaviour {
     public List<Card> cards = new List<Card>();
     private int currCardCount = 0;
-
+    private void OnEnable() {
+        GameEvents.OnMagicPowerClicked += BoardMagicHandler;
+    }
+    private void OnDisable() {
+        GameEvents.OnMagicPowerClicked -= BoardMagicHandler;
+    }
     private void Start() {
         UpdateCardsList();
         ShuffleBoard();
