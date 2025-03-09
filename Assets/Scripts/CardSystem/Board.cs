@@ -20,24 +20,23 @@ public class Board : MonoBehaviour {
         cards = GameObject.FindGameObjectsWithTag("Card")
             .Select(obj => obj.GetComponent<Card>())
             .ToList();
-        cards = cards
-            .Where(card => card.state == CardState.inBoard)
-            .ToList();
-
         currCardCount = cards.Count;
     }
     public void ShuffleBoard() {
-        UpdateBoard();
         List<CardData> cardDataList = cards
+            .Where(card => card.state == CardState.inBoard)
             .Select(card => card.cardData)
             .ToList();
+
         ShuffleList(cardDataList);
 
-        for (int i = 0; i < cards.Count; i++) {
-            cards[i].cardData = cardDataList[i];
-            cards[i].GetCardData();
+        int index = 0;
+        foreach (var card in cards.Where(c => c.state == CardState.inBoard)) {
+            card.cardData = cardDataList[index++];
+            card.GetCardData();
         }
     }
+
 
     public void UpdateBoard() {
         foreach (var card in cards) {
