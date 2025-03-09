@@ -8,6 +8,7 @@ public static class GameEvents {
     public static event Action OnCardDoneMoving;
     public static event Action OnMatchCards;
     public static event Action OnLoseGame;
+    public static event Action<CardType, int> OnMagicPowerClicked;
 
     public static void OnCardSelectedInvoke(Card card) {
         OnCardSelected?.Invoke(card);
@@ -24,5 +25,8 @@ public static class GameEvents {
     }
     public static void OnLoseGameInvoke() {
         OnLoseGame?.Invoke();
+    }
+    public static void OnMagicPowerClickedInvoke(CardType cardType, int neededCard) {
+        OnMagicPowerClicked?.Invoke(cardType, neededCard);
     }
 }

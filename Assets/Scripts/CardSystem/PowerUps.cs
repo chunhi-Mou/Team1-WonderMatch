@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class PowerUps : MonoBehaviour {
     public Board board;
+    public Stack stack;
     private Stack<Card> cardHistory = new Stack<Card>();
     private void Awake() {
         if (board == null) {
             board = FindObjectOfType<Board>(); 
+        }
+        if (stack == null) {
+            board = FindObjectOfType<Stack>();
         }
     }
 
@@ -29,5 +33,8 @@ public class PowerUps : MonoBehaviour {
         } else {
             Debug.Log("No Card Left!");
         }
+    }
+    public void OnMagicPress() {
+        stack.StackMagicHandler();
     }
 }
