@@ -4,7 +4,7 @@ using UnityEngine;
 public class PowerUps : MonoBehaviour {
     public Board board;
     public Stack stack;
-    private Stack<Card> cardHistory = new Stack<Card>();
+    private List<Card> cardHistory = new List<Card>();
     private void Awake() {
         if (board == null) {
             board = FindObjectOfType<Board>(); 
@@ -24,13 +24,15 @@ public class PowerUps : MonoBehaviour {
         board.ShuffleBoard();
     }
     public void PushCardToHistory(Card card) {
-        cardHistory.Push(card);
+        cardHistory.Add(card);
     }
     public void OnUndoPress() {
-        if (cardHistory.Count > 0) {
-            Card lastCard = null;
-            while(lastCard==null)
-                lastCard = cardHistory.Pop();
+        Card lastCard = null;
+        while (cardHistory.Count > 0 && lastCard == null) {
+            lastCard = cardHistory[^1];
+            cardHistory.RemoveAt(cardHistory.Count - 1);
+        }
+        if(lastCard != null) {
             lastCard.UndoMove();
         } else {
             Debug.Log("No Card Left!");
