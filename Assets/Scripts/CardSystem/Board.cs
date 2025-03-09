@@ -1,17 +1,20 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 
 public class Board : MonoBehaviour {
+    public List<Card> cards = new List<Card>();
+    private int currCardCount = 0;
     private void Start() {
+        UpdateCardsList();
         ShuffleBoard();
         UpdateBoard();
     }
+    private void UpdateCardsList() {
+        cards = GameObject.FindGameObjectsWithTag("Card").Select(obj => obj.GetComponent<Card>()).ToList();
+        currCardCount = cards.Count;
+    }
     public void ShuffleBoard() {
-        List<Card> cards = GameObject.FindGameObjectsWithTag("Card")
-                                 .Select(obj => obj.GetComponent<Card>())
-                                 .ToList();
-
         List<CardData> cardDataList = cards.Select(card => card.cardData).ToList();
         ShuffleList(cardDataList);
 
@@ -22,9 +25,8 @@ public class Board : MonoBehaviour {
     }
 
     public void UpdateBoard() {
-        GameObject[] cards = GameObject.FindGameObjectsWithTag("Card");
-        foreach (GameObject card in cards) {
-            CardOverlapChecker checker = card.GetComponent<CardOverlapChecker>();
+        foreach (var card in cards) {
+            CardOverlapChecker checker = card.gameObject.GetComponent<CardOverlapChecker>();
             checker.CheckIfUncovered();
         }
     }
@@ -32,6 +34,12 @@ public class Board : MonoBehaviour {
         for (int i = list.Count - 1; i > 0; i--) {
             int randomIndex = Random.Range(0, i + 1);
             (list[i], list[randomIndex]) = (list[randomIndex], list[i]);
+        }
+    }
+    private void CheckWinGame() {
+        currCardCount -= 3;//Nhi: Match Found sẽ trừ đi 3 Card
+        if (currCardCount <= 0) {
+            //WinGame
         }
     }
 }
