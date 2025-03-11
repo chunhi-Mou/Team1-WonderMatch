@@ -6,6 +6,7 @@ public class PowerUps : MonoBehaviour {
     public Board board;
     public Stack stack;
     private List<Card> cardHistory = new List<Card>();
+
     private void Awake() {
         if (board == null) {
             board = FindObjectOfType<Board>(); 
@@ -28,10 +29,16 @@ public class PowerUps : MonoBehaviour {
         stack.AddOneCell();
         addOneCellObj.SetActive(false);
     }
+    public void OnUndoPress() {
+        UndoCardLogic();
+    }
+    public void OnMagicPress() {
+        stack.StackMagicHandler();
+    }
     public void PushCardToHistory(Card card) {
         cardHistory.Add(card);
     }
-    public void OnUndoPress() {
+    private void UndoCardLogic() {
         Card lastCard = null;
         while (cardHistory.Count > 0) {
             lastCard = cardHistory[^1];
@@ -45,9 +52,5 @@ public class PowerUps : MonoBehaviour {
         } else {
             Debug.Log("No Card Left!");
         }
-    }
-
-    public void OnMagicPress() {
-        stack.StackMagicHandler();
     }
 }
