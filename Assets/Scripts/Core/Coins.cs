@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour {
     public int currCoins = 0;
+    
     private void Start() {
         this.RestoreCoins();
     }
@@ -19,6 +20,10 @@ public class Coins : MonoBehaviour {
     }
     public void AddCoins(int _coins) {
         currCoins += _coins;
+        SaveCoinsData(currCoins);
+    }
+    public void RemoveCoins(int _coins) {
+        currCoins -= _coins;
         SaveCoinsData(currCoins);
     }
     private void SaveCoinsData(int _coins) {
