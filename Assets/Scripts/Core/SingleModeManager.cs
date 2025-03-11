@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 public class SingleModeManager : GameStateBase {
+    #region Singleton - Dont destroy
     public static SingleModeManager Instance { get; private set; }
 
     private void Awake() {
@@ -11,6 +12,21 @@ public class SingleModeManager : GameStateBase {
             return;
         }
         DontDestroyOnLoad(gameObject);
+    }
+    #endregion
+    private void OnEnable() {
+        this.registerEvents();
+    }
+    private void OnDisable() {
+        this.unregisterEvents();
+    }
+    private void registerEvents() {
+        GameEvents.OnLoseGame += LoseGame;
+        GameEvents.OnWinGame += WinGame;
+    }
+    private void unregisterEvents() {
+        GameEvents.OnLoseGame -= LoseGame;
+        GameEvents.OnWinGame -= WinGame;
     }
     public void LoseGame() {
         this.TogglePause();
