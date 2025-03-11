@@ -12,7 +12,11 @@ public static class GameEvents {
     public static event Action <Card> OnUndoPressed;
     public static event Action<CardType, int> OnMagicPowerClicked;
     public static event Action OnTurnChange;
+    public static event Func<int, bool> OnSpendCoins;
+    public static event Action<int> OnCoinsChanged;
 
+    public static void OnSpendCoinsInvoke(int coins) => OnSpendCoins?.Invoke(coins);
+    public static void OnCoinsChangedInvoke(int coins) => OnCoinsChanged?.Invoke(coins);
     public static void OnCardSelectedInvoke(Card card) {
         OnCardSelected?.Invoke(card);
     }
@@ -39,4 +43,5 @@ public static class GameEvents {
     {
         OnTurnChange?.Invoke();
     }
+
 }
