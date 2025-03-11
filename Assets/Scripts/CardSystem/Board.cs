@@ -22,22 +22,47 @@ public class Board : MonoBehaviour {
             .ToList();
         currCardCount = cards.Count;
     }
-    public void ShuffleBoard() {
-        List<CardData> cardDataList = cards
+    public void ShuffleBoard(CardType cardType = CardType.nothing, int count = 0) {
+        List<CardData> cardDataList = GetAllCardsInBoard();
+        ShuffleList(cardDataList);
+        UpdateBoardCards(cardDataList);
+
+        if (cardType != CardType.nothing && count > 0) {
+            SwapSpecificCards(cardType, count);
+        }
+    }
+    private List<CardData> GetAllCardsInBoard() {
+        return cards
             .Where(card => card.state == CardState.inBoard)
             .Select(card => card.cardData)
             .ToList();
-
-        ShuffleList(cardDataList);
-
+    }
+    private void UpdateBoardCards(List<CardData> cardDataList) {
         int index = 0;
         foreach (var card in cards.Where(c => c.state == CardState.inBoard)) {
             card.cardData = cardDataList[index++];
             card.GetCardData();
         }
     }
+    private void SwapSpecificCards(CardType cardType, int count) {
+        var selectedCards = cards
+            .Where(card => card.state == CardState.inBoard && card.cardData.cardType == cardType)
+            .Take(count)
+            .ToList();
 
+        var topCards = cards
+            .Where(card => card.state == CardState.inBoard)
+            .OrderByDescending(card => card.transform.position.z)
+            .Take(count)
+            .ToList();
 
+        for (int i = 0; i < Mathf.Min(count, selectedCards.Count); i++) {
+            (selectedCards[i].cardData, topCards[i].cardData) = (topCards[i].cardData, selectedCards[i].cardData);
+
+            selectedCards[i].GetCardData();
+            topCards[i].GetCardData();
+        }
+    }
     public void UpdateBoard() {
         foreach (var card in cards) {
             CardOverlapChecker checker = card.gameObject.GetComponent<CardOverlapChecker>();
