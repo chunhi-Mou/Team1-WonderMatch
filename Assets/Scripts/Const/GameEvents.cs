@@ -11,6 +11,7 @@ public static class GameEvents {
     public static event Action OnWinGame;
     public static event Action <Card> OnUndoPressed;
     public static event Action<CardType, int> OnMagicPowerClicked;
+    public static event Action OnTurnChange;
 
     public static void OnCardSelectedInvoke(Card card) {
         OnCardSelected?.Invoke(card);
@@ -33,5 +34,9 @@ public static class GameEvents {
     }
     public static void OnMagicPowerClickedInvoke(CardType cardType, int neededCard) {
         OnMagicPowerClicked?.Invoke(cardType, neededCard);
+    }
+    public static void OnTurnChangeInvoke()
+    {
+        OnTurnChange?.Invoke();
     }
 }
