@@ -54,8 +54,10 @@ public class Stack : MonoBehaviour
 
     private void CheckFullStack()
     {
-        if (cardsInStack.Count >= currentSizeStack) Debug.Log("Stack Is Full!");
-        Time.timeScale = 0f;
+        if (cardsInStack.Count >= currentSizeStack) {
+            Debug.Log("Stack Is Full!");
+            //Time.timeScale = 0f;
+        }
     }
 
     private void CheckMatch()
