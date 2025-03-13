@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CoinsManager : MonoBehaviour {
     public int currCoins { get; private set; }
+    public static int powerCost = 100;
+
     #region Singleton
     public static CoinsManager Instance { get; private set; }
     private void Awake() {
@@ -41,5 +43,8 @@ public class CoinsManager : MonoBehaviour {
         PlayerPrefs.SetInt(SavedData.Coins, _coins);
         PlayerPrefs.Save();
         GameEvents.OnCoinsChangedInvoke(_coins);
+    }
+    public bool CanBuyPower() {
+        return currCoins >= powerCost;
     }
 }
