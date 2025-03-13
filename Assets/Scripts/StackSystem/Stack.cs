@@ -167,9 +167,8 @@ public class Stack : MonoBehaviour
         }
 
         int magicCardAmount = 3 - maxCount;
-        int availableStackCount = currentSizeStack - cardsInStack.Count;
 
-        GameEvents.OnMagicPowerClickedInvoke(magicCardType, magicCardAmount);
+        GameEvents.OnShufflePowerClickedInvoke(magicCardType, magicCardAmount);
     }
 
     private void RemoveUndoCard(Card card)
