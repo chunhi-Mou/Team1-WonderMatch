@@ -152,6 +152,26 @@ public class Stack : MonoBehaviour
         if (magicCardAmount <= availableStackCount) GameEvents.OnMagicPowerClickedInvoke(magicCardType, magicCardAmount);
     }
     
+    public void ShuffleMagicHandler()
+    {
+        CardType magicCardType = CardType.nothing;
+        int maxCount = 0;
+
+        foreach (var cardType in cardTypeDictionary)
+        {
+            if (cardType.Value.Count > maxCount)
+            {
+                maxCount = cardType.Value.Count;
+                magicCardType = cardType.Key;
+            }
+        }
+
+        int magicCardAmount = 3 - maxCount;
+        int availableStackCount = currentSizeStack - cardsInStack.Count;
+
+        GameEvents.OnMagicPowerClickedInvoke(magicCardType, magicCardAmount);
+    }
+
     private void RemoveUndoCard(Card card)
     {
         cardsInStack.Remove(card);
