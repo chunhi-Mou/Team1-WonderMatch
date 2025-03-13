@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MagicPowerUp : IPowerUp {
     private int count = 3;
@@ -11,7 +11,7 @@ public class MagicPowerUp : IPowerUp {
 
     public void Use() {
         if (count > 0) {
-            stack.StackMagicHandler();
+            stack.StackMagicHandler();//Đồng thời Invoke cho Board
             count--;
             SaveData();
         } else {
