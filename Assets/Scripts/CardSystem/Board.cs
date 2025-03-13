@@ -7,9 +7,11 @@ public class Board : MonoBehaviour {
     private int currCardCount = 0;
     private void OnEnable() {
         GameEvents.OnMagicPowerClicked += BoardMagicHandler;
+        GameEvents.OnShufflePowerClicked += ShuffleBoard;
     }
     private void OnDisable() {
         GameEvents.OnMagicPowerClicked -= BoardMagicHandler;
+        GameEvents.OnShufflePowerClicked -= ShuffleBoard;
     }
     private void Start() {
         UpdateCardsList();
@@ -23,6 +25,8 @@ public class Board : MonoBehaviour {
         currCardCount = cards.Count;
     }
     public void ShuffleBoard(CardType cardType = CardType.nothing, int count = 0) {
+        Debug.Log(cardType);
+        Debug.Log(count);
         List<CardData> cardDataList = GetAllCardsInBoard();
         ShuffleList(cardDataList);
         UpdateBoardCards(cardDataList);
@@ -52,7 +56,7 @@ public class Board : MonoBehaviour {
 
         var topCards = cards
             .Where(card => card.state == CardState.inBoard)
-            .OrderByDescending(card => card.transform.position.z)
+            .OrderBy(card => card.transform.position.z) //Nhi: Z càng nho -> cang tren cao
             .Take(count)
             .ToList();
 
