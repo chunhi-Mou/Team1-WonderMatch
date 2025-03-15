@@ -18,6 +18,7 @@ public class Card : MonoBehaviour {
         cardOverlapChecker = GetComponent<CardOverlapChecker>();
     }
     private void OnMouseDown() {
+        if (GameModeManager.instance.gameMode.IsPaused) return;
         PushCardToStack();
     }
     public void PushCardToStack() {
@@ -30,8 +31,7 @@ public class Card : MonoBehaviour {
         }
 
         cardOverlapChecker.UpdateBelowTiles();
-        Collider collider = GetComponent<Collider>();
-        collider.enabled = false;
+        GetComponent<Collider>().enabled = false;
 
         GameEvents.OnFoundPosOfCard += MoveCardTo; //Nhi: đăng kí Event nhận Target
         GameEvents.OnCardSelectedInvoke(this);
@@ -69,8 +69,7 @@ public class Card : MonoBehaviour {
     public void UndoMove() {
         if (isMoving && state != CardState.inStack) return;
         GameEvents.OnUndoPressedInvoke(this);
-        Collider collider = GetComponent<Collider>();
-        collider.enabled = true;
+        GetComponent<Collider>().enabled = true;
         MoveCardTo(prevPosition, 0.5f, Ease.OutQuad);
     }
     void DarkenSprite() {
