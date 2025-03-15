@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class ShufflePowerUp : IPowerUp {
     private int count = 3;
-    private Board board;
+    private Stack stack;
 
     public ShufflePowerUp() {
-        board = Object.FindObjectOfType<Board>();
+        stack = GameObject.Find("StackA")?.GetComponent<Stack>();
         count = PlayerPrefs.GetInt(SavedData.ShufflePowerCount, 3);
     }
 
     public void Use() {
         if (count > 0) {
-            board.ShuffleBoard();
+            stack.ShuffleMagicHandler();
             count--;
             SaveData();
         } else {

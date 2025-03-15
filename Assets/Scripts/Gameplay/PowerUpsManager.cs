@@ -20,21 +20,27 @@ public class PowerUpsManager : MonoBehaviour {
     private int maxPowerCount = 3;
 
     private void Awake() {
+        this.RegisterToGameMode();
         if (Instance == null) {
             Instance = this;
-            InitPowerUps();
         } else {
             Destroy(gameObject);
         }
     }
-
+    private void Start() {
+        InitPowerUps();
+    }
     private void OnEnable() {
         GameEvents.OnCardSelected += CardHistory.Instance.PushCardToHistory;
     }
     private void OnDisable() {
         GameEvents.OnCardSelected -= CardHistory.Instance.PushCardToHistory;
     }
-
+    public void RegisterToGameMode() {
+        if (SingleModeManager.instance != null) {
+            SingleModeManager.instance.SetPowerUpUI(this.gameObject);
+        }
+    }
     private void InitPowerUps() {
         powerUps[PowerType.Shuffle] = new ShufflePowerUp();
         powerUps[PowerType.Undo] = new UndoPowerUp();

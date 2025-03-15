@@ -7,9 +7,11 @@ public class Board : MonoBehaviour {
     private int currCardCount = 0;
     private void OnEnable() {
         GameEvents.OnMagicPowerClicked += BoardMagicHandler;
+        GameEvents.OnShufflePowerClicked += ShuffleBoard;
     }
     private void OnDisable() {
         GameEvents.OnMagicPowerClicked -= BoardMagicHandler;
+        GameEvents.OnShufflePowerClicked -= ShuffleBoard;
     }
     private void Start() {
         UpdateCardsList();
@@ -23,6 +25,8 @@ public class Board : MonoBehaviour {
         currCardCount = cards.Count;
     }
     public void ShuffleBoard(CardType cardType = CardType.nothing, int count = 0) {
+        Debug.Log(cardType);
+        Debug.Log(count);
         List<CardData> cardDataList = GetAllCardsInBoard();
         ShuffleList(cardDataList);
         UpdateBoardCards(cardDataList);
@@ -52,7 +56,7 @@ public class Board : MonoBehaviour {
 
         var topCards = cards
             .Where(card => card.state == CardState.inBoard)
-            .OrderByDescending(card => card.transform.position.z)
+            .OrderBy(card => card.transform.position.z) //Nhi: Z càng nho -> cang tren cao
             .Take(count)
             .ToList();
 
@@ -78,31 +82,26 @@ public class Board : MonoBehaviour {
     public void BoardMagicHandler(CardType cardType, int count) {
         List<Card> availableCards = cards
             .Where(card => card.cardData.cardType == cardType && card.state == CardState.inBoard)
+            .OrderBy(_ => Random.value)
             .ToList();
-
-        List<Card> selectedCards;
-
+        Debug.Log(cardType);
+        Debug.Log(count);
         if (availableCards.Count >= count) {
-            selectedCards = availableCards.Take(count).ToList();
+            List<Card> selectedCards = availableCards.Take(count).ToList();
+            foreach (Card card in selectedCards) {
+                card.SetSelectableData(true);
+                card.PushCardToStack();
+            }
         } else {
-            selectedCards = cards
-                .Where(card => card.state == CardState.inBoard)
-                .GroupBy(card => card.cardData.cardType)
-                .Where(group => group.Count() >= 3)
-                .OrderBy(_ => Random.value)
-                .FirstOrDefault()?.Take(3).ToList() ?? new List<Card>();
-        }
-
-        foreach (Card card in selectedCards) {
-            card.SetSelectableData(true);
-            card.PushCardToStack();
+            Debug.Log($"Not enough {cardType} cards, skipping .-. ");
         }
     }
+
 
     private void CheckWinGame() {
         currCardCount -= 3;//Nhi: Match Found sẽ trừ đi 3 Card
         if (currCardCount <= 0) {
-            //WinGame
+            GameEvents.OnWinGameInvoke();
         }
     }
 }

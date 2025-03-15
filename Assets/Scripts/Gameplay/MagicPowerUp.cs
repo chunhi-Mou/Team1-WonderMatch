@@ -1,17 +1,17 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MagicPowerUp : IPowerUp {
     private int count = 3;
     private Stack stack;
 
     public MagicPowerUp() {
-        stack = Object.FindObjectOfType<Stack>();
+        stack = GameObject.Find("StackA")?.GetComponent<Stack>();
         count = PlayerPrefs.GetInt(SavedData.MagicPowerCount, 3);
     }
 
     public void Use() {
         if (count > 0) {
-            stack.StackMagicHandler();
+            stack.StackMagicHandler();//Đồng thời Invoke cho Board
             count--;
             SaveData();
         } else {
