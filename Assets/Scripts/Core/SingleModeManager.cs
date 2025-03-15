@@ -27,6 +27,7 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         Time.timeScale = 1;
         isPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        TurnOnObjsOfSingleMode();
     }
     #endregion
     private void OnEnable() {
