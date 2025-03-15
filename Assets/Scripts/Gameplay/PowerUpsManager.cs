@@ -23,12 +23,13 @@ public class PowerUpsManager : MonoBehaviour {
         this.RegisterToGameMode();
         if (Instance == null) {
             Instance = this;
-            InitPowerUps();
         } else {
             Destroy(gameObject);
         }
     }
-
+    private void Start() {
+        InitPowerUps();
+    }
     private void OnEnable() {
         GameEvents.OnCardSelected += CardHistory.Instance.PushCardToHistory;
     }

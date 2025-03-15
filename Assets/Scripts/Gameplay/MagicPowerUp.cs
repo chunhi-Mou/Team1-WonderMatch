@@ -5,7 +5,7 @@ public class MagicPowerUp : IPowerUp {
     private Stack stack;
 
     public MagicPowerUp() {
-        stack = Object.FindObjectOfType<Stack>();
+        stack = stack = GameObject.Find("StackA")?.GetComponent<Stack>();
         count = PlayerPrefs.GetInt(SavedData.MagicPowerCount, 3);
     }
 

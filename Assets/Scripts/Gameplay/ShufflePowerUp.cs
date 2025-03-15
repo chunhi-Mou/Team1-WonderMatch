@@ -5,7 +5,7 @@ public class ShufflePowerUp : IPowerUp {
     private Stack stack;
 
     public ShufflePowerUp() {
-        stack = Object.FindObjectOfType<Stack>();
+        stack = GameObject.Find("StackA")?.GetComponent<Stack>();
         count = PlayerPrefs.GetInt(SavedData.ShufflePowerCount, 3);
     }
 
