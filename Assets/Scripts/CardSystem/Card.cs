@@ -71,6 +71,7 @@ public class Card : MonoBehaviour {
         GameEvents.OnUndoPressedInvoke(this);
         GetComponent<Collider>().enabled = true;
         MoveCardTo(prevPosition, 0.5f, Ease.OutQuad);
+        state = CardState.inBoard;
     }
     void DarkenSprite() {
         spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.5f);
