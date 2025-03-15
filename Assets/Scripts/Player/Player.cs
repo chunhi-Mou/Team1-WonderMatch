@@ -7,6 +7,11 @@ public class Player : MonoBehaviour
     public Stack stack;
     public PlayerID playerID;
     private int score = 0;
+    public void RegisterToGameMode() {
+        if (SingleModeManager.instance != null) {
+            SingleModeManager.instance.RegisterPlayer(this);
+        }
+    }
     public void AddScore(CardType cardType)
     {
         score += (int)cardType;
