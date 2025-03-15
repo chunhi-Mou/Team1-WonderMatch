@@ -26,8 +26,15 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
     public void ResetGame() {
         Time.timeScale = 1;
         isPaused = false;
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         TurnOnObjsOfSingleMode();
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    public void TurnOnObjsOfMode() {
+        this.TurnOnObjsOfSingleMode();
     }
     #endregion
     private void OnEnable() {
