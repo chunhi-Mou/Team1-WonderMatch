@@ -82,26 +82,21 @@ public class Board : MonoBehaviour {
     public void BoardMagicHandler(CardType cardType, int count) {
         List<Card> availableCards = cards
             .Where(card => card.cardData.cardType == cardType && card.state == CardState.inBoard)
+            .OrderBy(_ => Random.value)
             .ToList();
-
-        List<Card> selectedCards;
-
+        Debug.Log(cardType);
+        Debug.Log(count);
         if (availableCards.Count >= count) {
-            selectedCards = availableCards.Take(count).ToList();
+            List<Card> selectedCards = availableCards.Take(count).ToList();
+            foreach (Card card in selectedCards) {
+                card.SetSelectableData(true);
+                card.PushCardToStack();
+            }
         } else {
-            selectedCards = cards
-                .Where(card => card.state == CardState.inBoard)
-                .GroupBy(card => card.cardData.cardType)
-                .Where(group => group.Count() >= 3)
-                .OrderBy(_ => Random.value)
-                .FirstOrDefault()?.Take(3).ToList() ?? new List<Card>();
-        }
-
-        foreach (Card card in selectedCards) {
-            card.SetSelectableData(true);
-            card.PushCardToStack();
+            Debug.Log($"Not enough {cardType} cards, skipping .-. ");
         }
     }
+
 
     private void CheckWinGame() {
         currCardCount -= 3;//Nhi: Match Found sẽ trừ đi 3 Card
