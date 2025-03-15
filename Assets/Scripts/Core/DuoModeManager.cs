@@ -12,7 +12,6 @@ public class DuoModeManager : MonoBehaviour, IGameMode {
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
     }
     #endregion
     private bool isPaused = false;

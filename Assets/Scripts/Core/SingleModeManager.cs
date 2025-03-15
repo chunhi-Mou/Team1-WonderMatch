@@ -13,7 +13,6 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
     }
     #endregion
 
