@@ -3,13 +3,14 @@ using UnityEngine;
 using DG.Tweening;
 
 public static class GameEvents {
+    // Events
     public static event Action<Card> OnCardSelected;
     public static event Action<Vector3, float, Ease> OnFoundPosOfCard;
     public static event Action OnCardDoneMoving;
     public static event Action OnMatchCards;
     public static event Action OnLoseGame;
     public static event Action OnWinGame;
-    public static event Action <Card> OnUndoPressed;
+    public static event Action<Card> OnUndoPressed;
     public static event Action<CardType, int> OnMagicPowerClicked;
     public static event Action OnTurnChange;
     public static event Func<int, bool> OnSpendCoins;
@@ -17,37 +18,18 @@ public static class GameEvents {
     public static event Action<PowerType> OnSpendCoinsNeeded;
     public static event Action<CardType, int> OnShufflePowerClicked;
 
+    // Invoke Methods
+    public static void OnCardSelectedInvoke(Card card) => OnCardSelected?.Invoke(card);
+    public static void OnFoundPosOfCardInvoke(Vector3 target, float duration, Ease ease) => OnFoundPosOfCard?.Invoke(target, duration, ease);
+    public static void OnCardDoneMovingInvoke() => OnCardDoneMoving?.Invoke();
+    public static void OnMatchCardsInvoke() => OnMatchCards?.Invoke();
+    public static void OnLoseGameInvoke() => OnLoseGame?.Invoke();
+    public static void OnWinGameInvoke() => OnWinGame?.Invoke();
+    public static void OnUndoPressedInvoke(Card card) => OnUndoPressed?.Invoke(card);
+    public static void OnMagicPowerClickedInvoke(CardType cardType, int neededCard) => OnMagicPowerClicked?.Invoke(cardType, neededCard);
+    public static void OnShufflePowerClickedInvoke(CardType cardType, int neededCard) => OnShufflePowerClicked?.Invoke(cardType, neededCard);
+    public static void OnTurnChangeInvoke() => OnTurnChange?.Invoke();
     public static void OnSpendCoinsNeededInvoke(PowerType type) => OnSpendCoinsNeeded?.Invoke(type);
     public static void OnSpendCoinsInvoke(int coins) => OnSpendCoins?.Invoke(coins);
     public static void OnCoinsChangedInvoke(int coins) => OnCoinsChanged?.Invoke(coins);
-    public static void OnCardSelectedInvoke(Card card) {
-        OnCardSelected?.Invoke(card);
-    }
-    public static void OnFoundPosOfCardInvoke(Vector3 target, float _duration, Ease _ease) {
-        OnFoundPosOfCard?.Invoke(target, _duration, _ease);
-    }
-    public static void OnCardDoneMovingInvoke() {
-        OnCardDoneMoving?.Invoke();
-    }
-    public static void OnMatchCardsInvoke()
-    {
-        OnMatchCards?.Invoke();
-    }
-    public static void OnLoseGameInvoke() {
-        OnLoseGame?.Invoke();
-    }
-    public static void OnUndoPressedInvoke(Card card) {
-        OnUndoPressed?.Invoke(card);
-    }
-    public static void OnMagicPowerClickedInvoke(CardType cardType, int neededCard) {
-        OnMagicPowerClicked?.Invoke(cardType, neededCard);
-    }
-    public static void OnShufflePowerClickedInvoke(CardType cardType, int neededCard) {
-        OnShufflePowerClicked?.Invoke(cardType, neededCard);
-    }
-    public static void OnTurnChangeInvoke()
-    {
-        OnTurnChange?.Invoke();
-    }
-
 }
