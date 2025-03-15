@@ -68,15 +68,15 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         foreach (var player in players) {
             if (player.CompareTag("PlayerA")) { //Nhi: Player A is default
                 player.gameObject.SetActive(true);
+            } else {
+                player.gameObject.SetActive(false);
             }
         }
     }
     public void TurnOffObjsOfSingleMode() {
         if (PowerUpUI != null) PowerUpUI.SetActive(false);
         foreach (var player in players) {
-            if (player.CompareTag("PlayerA")) {
-                player.gameObject.SetActive(false);
-            }
+            player.gameObject.SetActive(false);
         }
     }
 }

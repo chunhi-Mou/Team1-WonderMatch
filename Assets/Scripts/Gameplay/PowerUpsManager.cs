@@ -20,6 +20,7 @@ public class PowerUpsManager : MonoBehaviour {
     private int maxPowerCount = 3;
 
     private void Awake() {
+        this.RegisterToGameMode();
         if (Instance == null) {
             Instance = this;
             InitPowerUps();
@@ -33,9 +34,6 @@ public class PowerUpsManager : MonoBehaviour {
     }
     private void OnDisable() {
         GameEvents.OnCardSelected -= CardHistory.Instance.PushCardToHistory;
-    }
-    private void Start() {
-        this.RegisterToGameMode();
     }
     public void RegisterToGameMode() {
         if (SingleModeManager.instance != null) {

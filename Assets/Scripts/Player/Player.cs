@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     public Stack stack;
     public PlayerID playerID;
     private int score = 0;
+    private void Awake() {
+        this.RegisterToGameMode();
+    }
     public void RegisterToGameMode() {
         if (SingleModeManager.instance != null) {
             SingleModeManager.instance.RegisterPlayer(this);
