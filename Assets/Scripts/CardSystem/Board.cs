@@ -8,10 +8,12 @@ public class Board : MonoBehaviour {
     private void OnEnable() {
         GameEvents.OnMagicPowerClicked += BoardMagicHandler;
         GameEvents.OnShufflePowerClicked += ShuffleBoard;
+        GameEvents.OnMatchTilesDone += CheckWinGame;
     }
     private void OnDisable() {
         GameEvents.OnMagicPowerClicked -= BoardMagicHandler;
         GameEvents.OnShufflePowerClicked -= ShuffleBoard;
+        GameEvents.OnMatchTilesDone -= CheckWinGame;
     }
     private void Start() {
         UpdateCardsList();
@@ -100,6 +102,6 @@ public class Board : MonoBehaviour {
         currCardCount -= 3;//Nhi: Match Found sẽ trừ đi 3 Card
         if (currCardCount <= 0) {
             GameEvents.OnWinGameInvoke();
-        }
+        } 
     }
 }
