@@ -101,6 +101,7 @@ public class Board : MonoBehaviour {
     private void CheckWinGame() {
         currCardCount -= 3;//Nhi: Match Found sẽ trừ đi 3 Card
         if (currCardCount <= 0) {
+            LevelManager.UnlockNextLevel();
             GameEvents.OnWinGameInvoke();
         } 
     }
