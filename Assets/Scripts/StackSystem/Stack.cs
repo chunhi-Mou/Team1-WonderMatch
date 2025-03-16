@@ -111,11 +111,11 @@ public class Stack : MonoBehaviour
                 {
                     isArranging = false; 
                     ArrangeCards();
-                    ProcessPendingCards(); 
+                    ProcessPendingCards();
+                    GameEvents.OnMatchTilesDoneInvoke();
                 }
             });
         }
-        GameEvents.OnWinGameInvoke();
     }
 
     private void ArrangeCards()
