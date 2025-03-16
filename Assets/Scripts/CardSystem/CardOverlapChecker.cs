@@ -12,45 +12,44 @@ public class CardOverlapChecker : MonoBehaviour {
         card = GetComponent<Card>();
         boxCollider = GetComponent<BoxCollider>();
     }
-    public void UpdateBelowTiles(float _deep=1f) {
+    public void UpdateBelowTiles(float _deep = 1f) {
         cardsBelow.Clear();
 
-        Vector3 belowBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, _deep);
-        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, _deep); 
+        float shrinkFactor = 0.1f; 
+        Vector3 belowBoxSize = new Vector3(boxCollider.size.x - shrinkFactor, boxCollider.size.y - shrinkFactor, _deep);
+        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, _deep);
 
-        Collider[] results = Physics.OverlapBox(belowBoxPosition, belowBoxSize / 2, Quaternion.identity);
+        Collider[] cards = Physics.OverlapBox(belowBoxPosition, belowBoxSize / 2, Quaternion.identity);
 
-        foreach (var col in results) {
+        foreach (var col in cards) {
             if (col.gameObject != gameObject) {
                 Card otherCard = col.GetComponent<Card>();
-
                 if (otherCard != null) {
                     cardsBelow.Add(otherCard);
-                    Debug.Log(otherCard);
                 }
             }
         }
-
     }
+
     public void UpdateAboveTiles(float _deep = 1f) {
         cardsAbove.Clear();
 
-        Vector3 aboveBoxSize = new Vector3(boxCollider.size.x, boxCollider.size.y, _deep);
+        float shrinkFactor = 0.1f; 
+        Vector3 aboveBoxSize = new Vector3(boxCollider.size.x - shrinkFactor, boxCollider.size.y - shrinkFactor, _deep);
         Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, -_deep);
 
-        Collider[] results = Physics.OverlapBox(aboveBoxPosition, aboveBoxSize / 2, Quaternion.identity);
+        Collider[] cards = Physics.OverlapBox(aboveBoxPosition, aboveBoxSize / 2, Quaternion.identity);
 
-        foreach (var col in results) { 
+        foreach (var col in cards) {
             if (col.gameObject != gameObject) {
                 Card otherCard = col.GetComponent<Card>();
-
                 if (otherCard != null) {
                     cardsAbove.Add(otherCard);
-                    Debug.Log(otherCard);
                 }
             }
         }
     }
+
     public void NotifyTilesBelow() {
         foreach (var t in cardsBelow) {
             t.GetComponent<CardOverlapChecker>().CheckIfUncovered();

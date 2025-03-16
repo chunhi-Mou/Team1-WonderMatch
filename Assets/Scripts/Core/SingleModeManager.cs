@@ -33,9 +33,6 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         TurnOnObjsOfSingleMode();
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-    public void TurnOnObjsOfMode() {
-        this.TurnOnObjsOfSingleMode();
-    }
     #endregion
     private void OnEnable() {
         RegisterEvents();

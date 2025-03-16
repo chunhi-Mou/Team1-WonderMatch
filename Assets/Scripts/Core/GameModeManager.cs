@@ -31,7 +31,6 @@ public class GameModeManager : MonoBehaviour {
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         gameMode = SingleModeManager.instance;
         SingleModeManager.instance.TurnOnObjsOfSingleMode();
-
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     public void OnDuoModeSelected() {

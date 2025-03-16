@@ -42,6 +42,13 @@ public class Card : MonoBehaviour {
         cardData.sprite = cardFromBase.sprite;
         spriteRenderer.sprite = cardData.sprite;
     }
+    public void SetCardData(int curType) {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        CardData cardFromBase = cardDatabase.cards[curType];
+        cardData.sprite = cardFromBase.sprite;
+        cardData.cardType = (CardType) curType;
+        spriteRenderer.sprite = cardData.sprite;
+    }
     public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear) {
         if(isMoving) return;
         isMoving = true;
@@ -78,8 +85,5 @@ public class Card : MonoBehaviour {
     }
     void SetWhiteSprite() {
         spriteRenderer.DOColor(Color.white, 0.5f);
-    }
-    private void OnValidate() {
-        GetCardData();
     }
 }
