@@ -28,6 +28,7 @@ public class DuoModeManager : MonoBehaviour, IGameMode {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void EnterMap() {
+        this.TogglePause();
         SceneManager.LoadScene("Map");
     }
 }

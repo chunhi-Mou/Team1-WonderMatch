@@ -35,6 +35,7 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         SceneManager.sceneLoaded -= OnSceneReloaded;
     }
     public void EnterMap() {
+        this.TogglePause();
         this.ClearOldData();
         SceneManager.LoadScene("Map");
     }
