@@ -55,7 +55,6 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
     }
     public void WinGame() {
         TogglePause();
-        CoinsManager.Instance.AddCoinsOnWin(); //20 coins
         Debug.Log("Win");
     }
     [SerializeField] GameObject PowerUpUI;
