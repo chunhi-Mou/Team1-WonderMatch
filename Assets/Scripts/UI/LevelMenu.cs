@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,7 +17,14 @@ public class LevelMenu : MonoBehaviour
     }
     public void OpenLevel(int levelID)
     {
-        string levelName = "Level " + levelID;
-        SceneManager.LoadScene(levelName);
+        SceneManager.sceneLoaded += OnSceneReloaded;
+        SceneManager.LoadScene(2);
+        if (GameModeManager.instance.gameMode == (IGameMode)SingleModeManager.instance)
+            SingleModeManager.instance.TurnOnObjsOfSingleMode();
+    }
+    private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
+        if (GameModeManager.instance.gameMode == (IGameMode)SingleModeManager.instance)
+            SingleModeManager.instance.TurnOnObjsOfSingleMode();
+        SceneManager.sceneLoaded -= OnSceneReloaded;
     }
 }
