@@ -42,6 +42,7 @@ public class LevelEditor : EditorWindow {
     private void ShowGridSettings() {
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Grid Settings", EditorStyles.boldLabel);
+        EditorGUILayout.LabelField("Note! Level Name: \"Level\" + number ", EditorStyles.boldLabel);
 
         levelName = EditorGUILayout.TextField("Level Name", levelName);
         gridW = EditorGUILayout.IntField("Grid Width", gridW);
