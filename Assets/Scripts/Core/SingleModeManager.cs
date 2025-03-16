@@ -24,8 +24,7 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         Time.timeScale = isPaused ? 0 : 1;
     }
     public void ResetGame() {
-        Time.timeScale = 1;
-        isPaused = false;
+        this.TogglePause();
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
