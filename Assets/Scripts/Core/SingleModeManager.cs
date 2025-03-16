@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using DG.Tweening;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,13 +25,14 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         Time.timeScale = isPaused ? 0 : 1;
     }
     public void ResetGame() {
-        this.TogglePause();
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += OnSceneReloaded;
+        this.ClearOldData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+    private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
+        this.TogglePause();
         TurnOnObjsOfSingleMode();
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneLoaded -= OnSceneReloaded;
     }
     #endregion
     private void OnEnable() {
@@ -65,6 +67,10 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         if (!players.Contains(player)) {
             players.Add(player);
         }
+    }
+    private void ClearOldData() {
+        DOTween.KillAll();
+        players.Clear();
     }
     public void TurnOnObjsOfSingleMode() {
         if (PowerUpUI != null) PowerUpUI.SetActive(true);

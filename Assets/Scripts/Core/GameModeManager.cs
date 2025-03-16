@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 public interface IGameModeObject {
     void RegisterToGameMode();
@@ -22,17 +22,22 @@ public class GameModeManager : MonoBehaviour {
     [SerializeField] GameObject SingleMode;
     [SerializeField] GameObject DuoMode;
     public void OnSingleModeSelected() {
+        SceneManager.sceneLoaded += OnSceneLoaded; // Đăng ký sự kiện trước khi load scene
         SceneManager.LoadScene(1);
-        SingleMode.SetActive(true);
-        DuoMode.SetActive(false);
-        gameMode = SingleModeManager.instance;
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         gameMode = SingleModeManager.instance;
-        SingleModeManager.instance.TurnOnObjsOfSingleMode();
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        if (gameMode != null) {
+            SingleModeManager.instance.TurnOnObjsOfSingleMode();
+        } else {
+            Debug.LogError("SingleModeManager.instance is null!");
+        }
+
+        SceneManager.sceneLoaded -= OnSceneLoaded; // Hủy đăng ký sau khi dùng
     }
+
     public void OnDuoModeSelected() {
         SceneManager.LoadScene(1);
         SingleMode.SetActive(false);
