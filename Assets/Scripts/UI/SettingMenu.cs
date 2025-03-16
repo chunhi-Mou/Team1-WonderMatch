@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingMenu : MonoBehaviour
 {
@@ -21,7 +20,7 @@ public class SettingMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
-        Debug.Log("Loading menu...");
+        SceneManager.LoadScene("Map");
     }
     public void RestartLevel()
     {
