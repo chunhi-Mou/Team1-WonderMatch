@@ -15,7 +15,7 @@ public class HeartsSystem : MonoBehaviour {
     public int maxHearts = 3;
     public float healTime = 300f;
 
-    private static int hearts;
+    public static int hearts;
     private static System.DateTime lastHealTime;
 
     public static HeartsSystem instance;
@@ -42,6 +42,9 @@ public class HeartsSystem : MonoBehaviour {
         HealHeartInGame();
         if (Input.GetKeyDown(KeyCode.A) ){
             LoseHeart();
+        }
+        if (Input.GetKeyDown(KeyCode.S)) {
+            ClearPlayerPrefs();
         }
     }
 
@@ -104,5 +107,10 @@ public class HeartsSystem : MonoBehaviour {
         PlayerPrefs.SetInt("Hearts", hearts);
         PlayerPrefs.SetString("LastHealTimestamp", lastHealTime.ToString());
         PlayerPrefs.Save();
+    }
+    public static void ClearPlayerPrefs() {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        Debug.Log("All PlayerPrefs cleared.");
     }
 }
