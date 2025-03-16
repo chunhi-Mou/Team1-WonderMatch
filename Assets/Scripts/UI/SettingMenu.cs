@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SettingMenu : MonoBehaviour
 {
-    public static bool GameIsPause = false;
     public GameObject settingMenuUI;
     void Start()
     {
@@ -13,14 +12,12 @@ public class SettingMenu : MonoBehaviour
     public void Resume()
     {
         settingMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPause = false;
+        GameModeManager.instance.gameMode.TogglePause();
     }
     public void Pause()
     {
         settingMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPause = true;
+        GameModeManager.instance.gameMode.TogglePause();
     }
     public void LoadMenu()
     {
@@ -28,6 +25,6 @@ public class SettingMenu : MonoBehaviour
     }
     public void RestartLevel()
     {
-        Debug.Log("Restarting level...");
+        GameModeManager.instance.gameMode.ResetGame();
     }
 }
