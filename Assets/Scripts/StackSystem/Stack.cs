@@ -56,7 +56,7 @@ public class Stack : MonoBehaviour
     {
         if (cardsInStack.Count >= currentSizeStack) {
             Debug.Log("Stack Is Full!");
-            //Time.timeScale = 0f;
+            GameEvents.OnLoseGameInvoke();
         }
     }
 
@@ -115,6 +115,7 @@ public class Stack : MonoBehaviour
                 }
             });
         }
+        GameEvents.OnWinGameInvoke();
     }
 
     private void ArrangeCards()
