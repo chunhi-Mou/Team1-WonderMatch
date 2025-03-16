@@ -27,4 +27,7 @@ public class DuoModeManager : MonoBehaviour, IGameMode {
         isPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void EnterMap() {
+        SceneManager.LoadScene("Map");
+    }
 }

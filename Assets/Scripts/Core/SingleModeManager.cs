@@ -34,6 +34,10 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         TurnOnObjsOfSingleMode();
         SceneManager.sceneLoaded -= OnSceneReloaded;
     }
+    public void EnterMap() {
+        this.ClearOldData();
+        SceneManager.LoadScene("Map");
+    }
     #endregion
     private void OnEnable() {
         RegisterEvents();

@@ -20,7 +20,7 @@ public class SettingMenu : MonoBehaviour
     }
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Map");
+        GameModeManager.instance.gameMode.EnterMap();
     }
     public void RestartLevel()
     {
