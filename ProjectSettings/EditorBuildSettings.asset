@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Nhi-DEMO.unity
     guid: b649359fa72f9954da45d5f270a99333
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
+    path: Assets/Scenes/InGame.unity
     guid: e972d28bffee0eb4cb5fdc76d29a5fd2
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
