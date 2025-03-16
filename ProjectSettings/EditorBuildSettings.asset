@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nhi-DEMO.unity
     guid: b649359fa72f9954da45d5f270a99333
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 4ef6afcd3c901c24db66d3bafaf275d3
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: e972d28bffee0eb4cb5fdc76d29a5fd2
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: f070d4dbaa69ae64db8a87ffee957c54
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 6422696224551524a80107ec6f1f97b2
   m_configObjects: {}
