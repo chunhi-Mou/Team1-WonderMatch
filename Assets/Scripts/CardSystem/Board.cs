@@ -25,8 +25,6 @@ public class Board : MonoBehaviour {
         currCardCount = cards.Count;
     }
     public void ShuffleBoard(CardType cardType = CardType.nothing, int count = 0) {
-        Debug.Log(cardType);
-        Debug.Log(count);
         List<CardData> cardDataList = GetAllCardsInBoard();
         ShuffleList(cardDataList);
         UpdateBoardCards(cardDataList);
