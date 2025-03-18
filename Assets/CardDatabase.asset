@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cards:
   - cardType: 0
-    sprite: {fileID: 910360338, guid: 7f6cf932ff2e69841ae0c6d28bdb6170, type: 3}
+    sprite: {fileID: 21300000, guid: 2c90112aca9537f43acc927cf028f99c, type: 3}
   - cardType: 1
-    sprite: {fileID: 1705984315, guid: 5071418ad93d5554aadc1ce75135f363, type: 3}
+    sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
   - cardType: 2
-    sprite: {fileID: -838201137, guid: 85e845f9e9ecc6340ba5ad1cbbe36f01, type: 3}
+    sprite: {fileID: 21300000, guid: c8f772763843af046b0f648dbbf3174b, type: 3}
   - cardType: 3
-    sprite: {fileID: 954345167, guid: e254f75cd426bbe4ea47bf54173cf2b7, type: 3}
+    sprite: {fileID: 21300000, guid: c7c7075a1bee015419fea0cdcd8d5c90, type: 3}
   - cardType: 4
-    sprite: {fileID: -28256313, guid: 176cbc411bbd02140a5e08ccbd142986, type: 3}
+    sprite: {fileID: 21300000, guid: eb4dad5b8c162fe4db936b466ba5a560, type: 3}
   - cardType: 5
-    sprite: {fileID: 1431215824, guid: 8a4df8a7efa12e543a5bdbc2f32e7d94, type: 3}
+    sprite: {fileID: 21300000, guid: 6b44066e679d06a49acc51b6e3a08186, type: 3}
   - cardType: 6
-    sprite: {fileID: 2081970786, guid: 81beed2bbf6cb804aa488acb1127efb6, type: 3}
+    sprite: {fileID: 21300000, guid: 2b58fe0c79455f24eb1cc10e14727fe1, type: 3}
   - cardType: 7
-    sprite: {fileID: -811584660, guid: 0c5e78b330043d9498d3c362ebe659ee, type: 3}
+    sprite: {fileID: 21300000, guid: 6234a96aa4169f3498889e8fe07002f2, type: 3}
   - cardType: 8
-    sprite: {fileID: -1957895008, guid: 82354fed9d45dc7439ec23b51a4ff08f, type: 3}
+    sprite: {fileID: 21300000, guid: afb37974702d2e545bdb8d171e79b957, type: 3}
   - cardType: 9
-    sprite: {fileID: -1964350466, guid: 5770a363fe4791048b73f8ae4457af97, type: 3}
+    sprite: {fileID: 21300000, guid: 2e0e35b61c9d1d249b5bef11ce6708cc, type: 3}
   - cardType: 10
-    sprite: {fileID: -1891635838, guid: 676a0700a0fc71349bcc184d62dcc94c, type: 3}
+    sprite: {fileID: 21300000, guid: 64372e8cbae53d148bd2afeda6bb9953, type: 3}
   - cardType: 13
-    sprite: {fileID: 2087316102, guid: 935bf75104c5a8a4d8d12b27ec4591c4, type: 3}
+    sprite: {fileID: 21300000, guid: 935bf75104c5a8a4d8d12b27ec4591c4, type: 3}
