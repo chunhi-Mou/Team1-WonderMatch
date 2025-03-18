@@ -14,6 +14,6 @@ public class LevelLoader : MonoBehaviour {
     public void NextLevel() {
         LevelManager.UnlockNextLevel();
         LevelManager.CurrLevel++;
-        LevelManager.instance.EnterGameLv(CurrLevel);
+        LevelManager.instance.EnterGameLv(LevelManager.CurrLevel);
     }
 }
