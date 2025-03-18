@@ -6,7 +6,18 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour {
     public Button[] levelButtons;
     public static int CurrLevel = 0;
+    #region Singleton - Dont destroy
+    public static LevelManager instance { get; private set; }
 
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+        } else {
+            Destroy(gameObject);
+            return;
+        }
+    }
+    #endregion
     public static int UnlockedLevels {
         get => PlayerPrefs.GetInt("UnlockedLevels", 1);
         set {
@@ -54,5 +65,10 @@ public class LevelManager : MonoBehaviour {
         if (UnlockedLevels == CurrLevel) {
             UnlockedLevels++;
         }
+    }
+    public void NextLevel() {
+        UnlockNextLevel();
+        CurrLevel++;
+        EnterGameLv(CurrLevel);
     }
 }
