@@ -15,7 +15,7 @@ public class CardOverlapChecker : MonoBehaviour {
     public void UpdateBelowTiles(float _deep = 1f) {
         cardsBelow.Clear();
 
-        float shrinkFactor = 0.1f; 
+        float shrinkFactor = 0.01f; 
         Vector3 belowBoxSize = new Vector3(boxCollider.size.x - shrinkFactor, boxCollider.size.y - shrinkFactor, _deep);
         Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, _deep);
 
@@ -34,7 +34,7 @@ public class CardOverlapChecker : MonoBehaviour {
     public void UpdateAboveTiles(float _deep = 1f) {
         cardsAbove.Clear();
 
-        float shrinkFactor = 0.1f; 
+        float shrinkFactor = 0.01f; 
         Vector3 aboveBoxSize = new Vector3(boxCollider.size.x - shrinkFactor, boxCollider.size.y - shrinkFactor, _deep);
         Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, -_deep);
 
