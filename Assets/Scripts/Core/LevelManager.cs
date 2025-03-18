@@ -47,7 +47,7 @@ public class LevelManager : MonoBehaviour {
         });
     }
 
-    private void EnterGameLv(int level) {
+    public void EnterGameLv(int level) {
         DOTween.KillAll();
         CurrLevel = level;
         SceneManager.sceneLoaded += OnSceneReloaded;
@@ -65,10 +65,5 @@ public class LevelManager : MonoBehaviour {
         if (UnlockedLevels == CurrLevel) {
             UnlockedLevels++;
         }
-    }
-    public void NextLevel() {
-        UnlockNextLevel();
-        CurrLevel++;
-        EnterGameLv(CurrLevel);
     }
 }
