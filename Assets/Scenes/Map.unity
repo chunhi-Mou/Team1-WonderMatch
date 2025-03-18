@@ -1351,7 +1351,6 @@ GameObject:
   - component: {fileID: 1393185499}
   - component: {fileID: 1393185498}
   - component: {fileID: 1393185497}
-  - component: {fileID: 1393185501}
   m_Layer: 5
   m_Name: LevelMap
   m_TagString: Untagged
@@ -1443,24 +1442,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1393185501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393185496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c33ee2f3d865227458e9998a777b4186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 1433135435}
-  - {fileID: 689247359}
-  - {fileID: 1079986972}
-  - {fileID: 1294947942}
-  - {fileID: 1708753248}
 --- !u!1 &1433135433
 GameObject:
   m_ObjectHideFlags: 0
