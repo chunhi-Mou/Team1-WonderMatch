@@ -38,14 +38,17 @@ public class CoinsUI : MonoBehaviour {
         if (CoinsManager.Instance.CanBuyPower()) {
             PowerUpsManager.Instance.ResetPower(currPowerType);
             spendCoinsUI.gameObject.SetActive(false);
+            GameModeManager.instance.gameMode.TogglePause();
         }
     }
     public void OnXPress() {
         spendCoinsUI.gameObject.SetActive(false);
+        GameModeManager.instance.gameMode.TogglePause();
     }
     public void OnAdButtonPress() {
         PowerUpsManager.Instance.ResetPower(currPowerType);
         Debug.Log("YOU WATCHED AD");
         spendCoinsUI.gameObject.SetActive(false);
+        GameModeManager.instance.gameMode.TogglePause();
     }
 }
