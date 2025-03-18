@@ -15,8 +15,11 @@ public class CardOverlapChecker : MonoBehaviour {
     public void UpdateBelowTiles(float _deep = 1f) {
         cardsBelow.Clear();
 
-        float shrinkFactor = 0.01f; 
-        Vector3 belowBoxSize = new Vector3(boxCollider.size.x - shrinkFactor, boxCollider.size.y - shrinkFactor, _deep);
+        float shrinkFactor = 0.01f;
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        Vector3 spriteSize = sr.bounds.size; 
+        Vector3 scaledSize = new Vector3(spriteSize.x * transform.localScale.x, spriteSize.y * transform.localScale.y, _deep);
+        Vector3 belowBoxSize = scaledSize - new Vector3(shrinkFactor, shrinkFactor, 0);
         Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, _deep);
 
         Collider[] cards = Physics.OverlapBox(belowBoxPosition, belowBoxSize / 2, Quaternion.identity);
@@ -34,8 +37,11 @@ public class CardOverlapChecker : MonoBehaviour {
     public void UpdateAboveTiles(float _deep = 1f) {
         cardsAbove.Clear();
 
-        float shrinkFactor = 0.01f; 
-        Vector3 aboveBoxSize = new Vector3(boxCollider.size.x - shrinkFactor, boxCollider.size.y - shrinkFactor, _deep);
+        float shrinkFactor = 0.01f;
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        Vector3 spriteSize = sr.bounds.size; 
+        Vector3 scaledSize = new Vector3(spriteSize.x * transform.localScale.x, spriteSize.y * transform.localScale.y, _deep);
+        Vector3 aboveBoxSize = scaledSize - new Vector3(shrinkFactor, shrinkFactor, 0);
         Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, -_deep);
 
         Collider[] cards = Physics.OverlapBox(aboveBoxPosition, aboveBoxSize / 2, Quaternion.identity);
@@ -49,6 +55,7 @@ public class CardOverlapChecker : MonoBehaviour {
             }
         }
     }
+
 
     public void NotifyTilesBelow() {
         foreach (var t in cardsBelow) {
