@@ -12,13 +12,11 @@ public class LevelManager : MonoBehaviour {
     private void Awake() {
         if (instance == null) {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
             return;
         }
     }
-
     #endregion
     public static int UnlockedLevels {
         get => PlayerPrefs.GetInt("UnlockedLevels", 1);
@@ -29,15 +27,11 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void Start() {
-        if (SceneManager.GetActiveScene().name == "Menu") {
-            levelButtons = FindObjectsOfType<Button>();
-            int unlockedLevel = UnlockedLevels;
-            for (int i = 0; i < levelButtons.Length; i++) {
-                levelButtons[i].interactable = i < unlockedLevel;
-            }
+        int unlockedLevel = UnlockedLevels;
+        for (int i = 0; i < levelButtons.Length; i++) {
+            levelButtons[i].interactable = i < unlockedLevel;
         }
     }
-
 
     public void OnClickLevelMenu(int level) {
         if (level > UnlockedLevels) return;
@@ -56,13 +50,9 @@ public class LevelManager : MonoBehaviour {
     public void EnterGameLv(int level) {
         DOTween.KillAll();
         CurrLevel = level;
-
-        SceneManager.sceneLoaded -= OnSceneReloaded;
         SceneManager.sceneLoaded += OnSceneReloaded;
-
         SceneManager.LoadScene("InGame");
     }
-
 
     private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
         if (GameModeManager.instance.gameMode == (IGameMode)SingleModeManager.instance) {
