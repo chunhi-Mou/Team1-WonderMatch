@@ -16,6 +16,7 @@ public class CoinsUI : MonoBehaviour {
     }
     private PowerType currPowerType;
     public void TurnOnSpendCoinsUI(PowerType powerType) {
+        GameModeManager.instance.gameMode.TogglePause();
         coinTxt.text = CoinsManager.Instance.currCoins.ToString();
         spendCoinsUI.gameObject.SetActive(true);
         this.currPowerType = powerType;
