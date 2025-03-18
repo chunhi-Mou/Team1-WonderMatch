@@ -5,7 +5,7 @@ public class LevelLoader : MonoBehaviour {
 
     private void Start() {
         int selectedLevel = LevelManager.CurrLevel;
-        string prefabName = "LevelPrefabs/Level" + selectedLevel;
+        string prefabName = "LevelPrefabs/Lv" + selectedLevel;
         GameObject levelPrefab = Resources.Load<GameObject>(prefabName);
         if (levelPrefab != null) {
             Instantiate(levelPrefab, levelParent);
