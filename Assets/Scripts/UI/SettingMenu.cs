@@ -26,4 +26,9 @@ public class SettingMenu : MonoBehaviour
     {
         GameModeManager.instance.gameMode.ResetGame();
     }
+    public void NextLevel() {
+        LevelManager.UnlockNextLevel();
+        LevelManager.CurrLevel++;
+        RestartLevel();
+    }
 }

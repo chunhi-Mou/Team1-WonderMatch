@@ -11,9 +11,4 @@ public class LevelLoader : MonoBehaviour {
             Instantiate(levelPrefab, levelParent);
         }
     }
-    public void NextLevel() {
-        LevelManager.UnlockNextLevel();
-        LevelManager.CurrLevel++;
-        LevelManager.instance.EnterGameLv(LevelManager.CurrLevel);
-    }
 }
