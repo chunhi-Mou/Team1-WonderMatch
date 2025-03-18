@@ -133,7 +133,7 @@ public class Stack : MonoBehaviour
             GetCardTargetPos(pendingCards.Dequeue());
         }
     }
-    public void StackMagicHandler()
+    public bool StackMagicHandler()
     {
         CardType magicCardType = CardType.nothing;
         int maxCount = 0;
@@ -150,7 +150,12 @@ public class Stack : MonoBehaviour
         int magicCardAmount = 3 - maxCount;
         int availableStackCount = currentSizeStack - cardsInStack.Count;
 
-        if (magicCardAmount <= availableStackCount) GameEvents.OnMagicPowerClickedInvoke(magicCardType, magicCardAmount);
+        if (magicCardAmount <= availableStackCount) {
+            GameEvents.OnMagicPowerClickedInvoke(magicCardType, magicCardAmount);
+            return true;
+        } else {
+            return false;
+        }
     }
     
     public void ShuffleMagicHandler()

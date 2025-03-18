@@ -84,8 +84,7 @@ public class Board : MonoBehaviour {
             .Where(card => card.cardData.cardType == cardType && card.state == CardState.inBoard)
             .OrderBy(_ => Random.value)
             .ToList();
-        Debug.Log(cardType);
-        Debug.Log(count);
+
         if (availableCards.Count >= count) {
             List<Card> selectedCards = availableCards.Take(count).ToList();
             foreach (Card card in selectedCards) {
@@ -93,10 +92,23 @@ public class Board : MonoBehaviour {
                 card.PushCardToStack();
             }
         } else {
-            Debug.Log($"Not enough {cardType} cards, skipping .-. ");
+            var groupedCards = cards
+                .Where(card => card.state == CardState.inBoard)
+                .GroupBy(card => card.cardData.cardType)
+                .Where(group => group.Count() >= count)
+                .OrderBy(_ => Random.value)
+                .ToList();
+
+            if (groupedCards.Count > 0) {
+                var randomGroup = groupedCards.First();
+                List<Card> selectedCards = randomGroup.Take(count).ToList();
+                foreach (Card card in selectedCards) {
+                    card.SetSelectableData(true);
+                    card.PushCardToStack();
+                }
+            }
         }
     }
-
 
     private void CheckWinGame() {
         currCardCount -= 3;//Nhi: Match Found sẽ trừ đi 3 Card

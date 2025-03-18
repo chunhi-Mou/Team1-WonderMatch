@@ -11,9 +11,10 @@ public class MagicPowerUp : IPowerUp {
 
     public void Use() {
         if (count > 0) {
-            stack.StackMagicHandler();//Đồng thời Invoke cho Board
-            count--;
-            SaveData();
+            if (stack.StackMagicHandler()) { //Đồng thời Invoke cho Board
+                count--;
+                SaveData();
+            } 
         } else {
             GameEvents.OnSpendCoinsNeededInvoke(PowerType.Magic);
         }
