@@ -55,8 +55,8 @@ public class LevelEditor : EditorWindow {
         EditorGUILayout.Space();
         List<GUIContent> contents = GetCardGUIContents();
 
-        float cardWidth = 100;
-        float cardHeight = 150;
+        float cardWidth = 200;
+        float cardHeight = 300;
         int columns = Mathf.Max(1, Mathf.FloorToInt(position.width / cardWidth));
 
         scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition, GUILayout.Height(400));
@@ -83,8 +83,6 @@ public class LevelEditor : EditorWindow {
         EditorGUILayout.LabelField("Card Prefab", EditorStyles.boldLabel);
         cardPrefab = (GameObject)EditorGUILayout.ObjectField("Card Prefab", cardPrefab, typeof(GameObject), false);
 
-        if (GUILayout.Button("Create Grid")) BuildGrid();
-
         if (cardDatabase == null) {
             EditorGUILayout.HelpBox("Hãy Gắn ScriptableObject: CardDatabase", MessageType.Warning);
             return false;
@@ -94,6 +92,8 @@ public class LevelEditor : EditorWindow {
             EditorGUILayout.HelpBox("No cards in CardDatabase", MessageType.Info);
             return false;
         }
+        if (cardPrefab == null) return false;
+        if (GUILayout.Button("Create Grid")) BuildGrid();
         return true;
     }
     #endregion
@@ -210,7 +210,7 @@ public class LevelEditor : EditorWindow {
 
     private Vector2 GetCellSizeFromPrefab() {
         if (cardPrefab == null) return new Vector2(1, 1);
-        Renderer renderer = cardPrefab.GetComponent<Renderer>();
+        SpriteRenderer renderer = cardPrefab.GetComponent<SpriteRenderer>();
         return renderer != null ? new Vector2(renderer.bounds.size.x, renderer.bounds.size.y) : new Vector2(1, 1);
     }
 }
