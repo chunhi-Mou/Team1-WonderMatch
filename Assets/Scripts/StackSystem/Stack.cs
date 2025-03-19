@@ -10,7 +10,7 @@ public class Stack : MonoBehaviour
     private Dictionary<CardType, List<Card>> cardTypeDictionary = new Dictionary<CardType, List<Card>>();
     private Queue<Card> pendingCards = new Queue<Card>(); 
     private bool isArranging = false; 
-
+    private bool isAddingCard = false;
     public int maxSizeStack = 8;
     public int currentSizeStack = 7;
 
@@ -37,7 +37,7 @@ public class Stack : MonoBehaviour
     {
         if (!card) return;
 
-        if (isArranging)
+        if (isArranging || isAddingCard)
         {
             pendingCards.Enqueue(card);
             return;
@@ -78,6 +78,8 @@ public class Stack : MonoBehaviour
 
     private void AddCardToStack(int targetIndex, Card card)
     {
+        isAddingCard = true;
+
         cardsInStack.Insert(targetIndex, card);
         cardTypeDictionary.TryAdd(card.cardData.cardType, new List<Card>());
         cardTypeDictionary[card.cardData.cardType].Add(card);
@@ -86,7 +88,11 @@ public class Stack : MonoBehaviour
         {
             cardsInStack[i].MoveCardTo(centerPos[i].position,0.1f);
         }
-        card.MoveCardTo(centerPos[targetIndex].position,0.8f);
+        card.transform.DOMove(centerPos[targetIndex].position, 0.2f).OnComplete(() =>
+{
+        isAddingCard = false; 
+        ProcessPendingCards(); 
+});
     }
 
     private void RemoveMatchFromStack(int currentMatchPos)
@@ -128,7 +134,7 @@ public class Stack : MonoBehaviour
 
     private void ProcessPendingCards()
     {
-        while (pendingCards.Count > 0)
+        while (pendingCards.Count > 0 && !isAddingCard)
         {
             GetCardTargetPos(pendingCards.Dequeue());
         }
