@@ -18,7 +18,7 @@ public class Card : MonoBehaviour {
         cardOverlapChecker = GetComponent<CardOverlapChecker>();
     }
     private void OnMouseDown() {
-        if (GameModeManager.instance.gameMode.IsPaused) return;
+        if (GameModeManager.instance.isPaused) return;
         PushCardToStack();
     }
     public void PushCardToStack() {

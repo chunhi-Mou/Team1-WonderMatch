@@ -50,13 +50,14 @@ public class LevelManager : MonoBehaviour {
     public void EnterGameLv(int level) {
         DOTween.KillAll();
         CurrLevel = level;
+        GameModeManager.instance.TurnOffUIAndResumeGame();
         SceneManager.sceneLoaded += OnSceneReloaded;
         SceneManager.LoadScene("InGame");
     }
 
     private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
         if (GameModeManager.instance.gameMode == (IGameMode)SingleModeManager.instance) {
-            SingleModeManager.instance.TurnOnObjsOfSingleMode();
+            SingleModeManager.instance.TurnOnObjsOfMode();
         }
         SceneManager.sceneLoaded -= OnSceneReloaded;
     }

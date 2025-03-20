@@ -1,8 +1,4 @@
 public interface IGameMode {
-    bool IsPaused { get; }
-    void TogglePause();
-    void ResetGame();
-    void EnterMap();
-    void TurnOnUIAndPauseGame();
-    void TurnOffUIAndResumeGame();
+    void ClearOldData();
+    void TurnOnObjsOfMode();
 }

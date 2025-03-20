@@ -11,20 +11,20 @@ public class SettingMenu : MonoBehaviour
     public void Resume()
     {
         settingMenuUI.SetActive(false);
-        GameModeManager.instance.gameMode.TurnOffUIAndResumeGame();
+        GameModeManager.instance.TurnOffUIAndResumeGame();
     }
     public void Pause()
     {
         settingMenuUI.SetActive(true);
-        GameModeManager.instance.gameMode.TurnOnUIAndPauseGame();
+        GameModeManager.instance.TurnOnUIAndPauseGame();
     }
     public void LoadMenu()
     {
-        GameModeManager.instance.gameMode.EnterMap();
+        GameModeManager.instance.EnterMap();
     }
     public void RestartLevel()
     {
-        GameModeManager.instance.gameMode.ResetGame();
+        GameModeManager.instance.ResetGame();
     }
     public void NextLevel() {
         LevelManager.UnlockNextLevel();

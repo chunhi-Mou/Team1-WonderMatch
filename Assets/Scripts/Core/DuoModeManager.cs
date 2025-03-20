@@ -1,5 +1,7 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class DuoModeManager : MonoBehaviour, IGameMode {
     #region Singleton - Dont destroy
@@ -14,27 +16,10 @@ public class DuoModeManager : MonoBehaviour, IGameMode {
         }
     }
     #endregion
-    private bool isPaused = false;
-    public bool IsPaused => isPaused;
+    public void TurnOnObjsOfMode() {
 
-    public void TogglePause() {
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0 : 1;
     }
-
-    public void ResetGame() {
-        Time.timeScale = 1;
-        isPaused = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    public void EnterMap() {
-        this.TogglePause();
-        SceneManager.LoadScene("Map");
-    }
-    public void TurnOnUIAndPauseGame() {
-        if (!isPaused) TogglePause();
-    }
-    public void TurnOffUIAndResumeGame() {
-        if (isPaused) TogglePause();
+    public void ClearOldData() {
+        DOTween.KillAll();
     }
 }

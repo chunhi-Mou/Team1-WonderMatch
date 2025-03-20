@@ -17,35 +17,6 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
     }
     #endregion
 
-    #region IGameMode
-    private bool isPaused = false;
-    public bool IsPaused => isPaused;
-    public void TogglePause() {
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0 : 1;
-    }
-    public void ResetGame() {
-        SceneManager.sceneLoaded += OnSceneReloaded;
-        this.ClearOldData();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
-        if (isPaused) TogglePause();
-        TurnOnObjsOfSingleMode();
-        SceneManager.sceneLoaded -= OnSceneReloaded;
-    }
-    public void EnterMap() {
-        if (isPaused) TogglePause();
-        ClearOldData();
-        SceneManager.LoadScene("Map");
-    }
-    public void TurnOnUIAndPauseGame() {
-        if (!isPaused) TogglePause();
-    }
-    public void TurnOffUIAndResumeGame() {
-        if (isPaused) TogglePause();
-    }
-    #endregion
     private void OnEnable() {
         RegisterEvents();
     }
@@ -61,11 +32,11 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         GameEvents.OnWinGame -= WinGame;
     }
     public void LoseGame() {
-        if (!isPaused) TogglePause();
+        GameModeManager.instance.TurnOnUIAndPauseGame();
         Debug.Log("Lose!");
     }
     public void WinGame() {
-        if (!isPaused) TogglePause();
+        GameModeManager.instance.TurnOnUIAndPauseGame();
         Debug.Log("Win");
     }
     [SerializeField] GameObject PowerUpUI;
@@ -78,11 +49,11 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
             players.Add(player);
         }
     }
-    private void ClearOldData() {
+    public void ClearOldData() {
         DOTween.KillAll();
         players.Clear();
     }
-    public void TurnOnObjsOfSingleMode() {
+    public void TurnOnObjsOfMode() {
         if (PowerUpUI != null) PowerUpUI.SetActive(true);
         foreach (var player in players) {
             if (player.CompareTag("PlayerA")) { //Nhi: Player A is default
