@@ -2332,7 +2332,7 @@ MonoBehaviour:
   HeartIcon: {fileID: 900582059}
   AdsButton: {fileID: 900582057}
   maxHearts: 3
-  healTime: 3
+  healTime: 10
 --- !u!4 &8919398068564617769
 Transform:
   m_ObjectHideFlags: 0
