@@ -31,4 +31,8 @@ public class SettingMenu : MonoBehaviour
         LevelManager.CurrLevel++;
         RestartLevel();
     }
+    public void QuitMidGame() {
+        LoadMenu();
+        HeartsSystem.instance.LoseHeart();
+    }
 }
