@@ -11,12 +11,12 @@ public class SettingMenu : MonoBehaviour
     public void Resume()
     {
         settingMenuUI.SetActive(false);
-        GameModeManager.instance.gameMode.TogglePause();
+        GameModeManager.instance.gameMode.TurnOffUIAndResumeGame();
     }
     public void Pause()
     {
         settingMenuUI.SetActive(true);
-        GameModeManager.instance.gameMode.TogglePause();
+        GameModeManager.instance.gameMode.TurnOnUIAndPauseGame();
     }
     public void LoadMenu()
     {

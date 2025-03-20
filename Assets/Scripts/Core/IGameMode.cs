@@ -3,4 +3,6 @@ public interface IGameMode {
     void TogglePause();
     void ResetGame();
     void EnterMap();
+    void TurnOnUIAndPauseGame();
+    void TurnOffUIAndResumeGame();
 }

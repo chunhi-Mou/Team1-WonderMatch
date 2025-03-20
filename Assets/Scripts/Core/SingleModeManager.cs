@@ -30,14 +30,20 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
-        this.TogglePause();
+        if (isPaused) TogglePause();
         TurnOnObjsOfSingleMode();
         SceneManager.sceneLoaded -= OnSceneReloaded;
     }
     public void EnterMap() {
-        this.TogglePause();
-        this.ClearOldData();
+        if (isPaused) TogglePause();
+        ClearOldData();
         SceneManager.LoadScene("Map");
+    }
+    public void TurnOnUIAndPauseGame() {
+        if (!isPaused) TogglePause();
+    }
+    public void TurnOffUIAndResumeGame() {
+        if (isPaused) TogglePause();
     }
     #endregion
     private void OnEnable() {
@@ -55,11 +61,11 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         GameEvents.OnWinGame -= WinGame;
     }
     public void LoseGame() {
-        TogglePause();
+        if (!isPaused) TogglePause();
         Debug.Log("Lose!");
     }
     public void WinGame() {
-        TogglePause();
+        if (!isPaused) TogglePause();
         Debug.Log("Win");
     }
     [SerializeField] GameObject PowerUpUI;

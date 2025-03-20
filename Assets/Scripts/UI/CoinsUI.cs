@@ -16,7 +16,7 @@ public class CoinsUI : MonoBehaviour {
     }
     private PowerType currPowerType;
     public void TurnOnSpendCoinsUI(PowerType powerType) {
-        GameModeManager.instance.gameMode.TogglePause();
+        GameModeManager.instance.gameMode.TurnOnUIAndPauseGame();
         coinTxt.text = CoinsManager.Instance.currCoins.ToString();
         spendCoinsUI.gameObject.SetActive(true);
         this.currPowerType = powerType;
@@ -38,17 +38,17 @@ public class CoinsUI : MonoBehaviour {
         if (CoinsManager.Instance.CanBuyPower()) {
             PowerUpsManager.Instance.ResetPower(currPowerType);
             spendCoinsUI.gameObject.SetActive(false);
-            GameModeManager.instance.gameMode.TogglePause();
+            GameModeManager.instance.gameMode.TurnOffUIAndResumeGame();
         }
     }
     public void OnXPress() {
         spendCoinsUI.gameObject.SetActive(false);
-        GameModeManager.instance.gameMode.TogglePause();
+        GameModeManager.instance.gameMode.TurnOffUIAndResumeGame();
     }
     public void OnAdButtonPress() {
         PowerUpsManager.Instance.ResetPower(currPowerType);
         Debug.Log("YOU WATCHED AD");
         spendCoinsUI.gameObject.SetActive(false);
-        GameModeManager.instance.gameMode.TogglePause();
+        GameModeManager.instance.gameMode.TurnOffUIAndResumeGame();
     }
 }

@@ -31,4 +31,10 @@ public class DuoModeManager : MonoBehaviour, IGameMode {
         this.TogglePause();
         SceneManager.LoadScene("Map");
     }
+    public void TurnOnUIAndPauseGame() {
+        if (!isPaused) TogglePause();
+    }
+    public void TurnOffUIAndResumeGame() {
+        if (isPaused) TogglePause();
+    }
 }
