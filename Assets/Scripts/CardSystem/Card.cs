@@ -12,13 +12,12 @@ public class Card : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
 
     private bool isSelectable = true; //For Vision Only
-    private bool isMoving = false;
     
     private void Awake() {
         cardOverlapChecker = GetComponent<CardOverlapChecker>();
     }
     private void OnMouseDown() {
-        if (GameModeManager.instance.isPaused) return;
+        if (GameModeManager.instance.isPaused || GameModeManager.instance.isProcessingCard) return;
         PushCardToStack();
     }
     public void PushCardToStack() {
@@ -50,8 +49,6 @@ public class Card : MonoBehaviour {
         spriteRenderer.sprite = cardData.sprite;
     }
     public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear) {
-        if(isMoving) return;
-        isMoving = true;
         GameEvents.OnFoundPosOfCard -= MoveCardTo;//Nhi: huỷ đăng kí Event nhận Target
         gameObject.transform.DOMove(target, _duration)
             .SetEase(easeType)
@@ -59,7 +56,6 @@ public class Card : MonoBehaviour {
                 cardOverlapChecker.NotifyTilesBelow();
                 GameEvents.OnCardDoneMovingInvoke();
                 this.isSelectable = true;
-                isMoving = false;
         });
     }
     public void SetSelectableData(bool _data) {
@@ -74,7 +70,7 @@ public class Card : MonoBehaviour {
         card.gameObject.SetActive(false); 
     }
     public void UndoMove() {
-        if (isMoving && state != CardState.inStack) return;
+        if (!GameModeManager.instance.isProcessingCard && state != CardState.inStack) return;
         GameEvents.OnUndoPressedInvoke(this);
         GetComponent<Collider>().enabled = true;
         MoveCardTo(prevPosition, 0.5f, Ease.OutQuad);

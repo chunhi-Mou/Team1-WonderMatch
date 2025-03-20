@@ -20,8 +20,16 @@ public class GameModeManager : MonoBehaviour {
     #endregion
     public IGameMode gameMode;
     public bool isPaused = false;
+    public bool isProcessingCard = false;
     [SerializeField] GameObject SingleMode;
     [SerializeField] GameObject DuoMode;
+
+    public void OnEnable() {
+        GameEvents.OnCardSelected += SetCardProcessingStateTrue;
+        GameEvents.OnCardDoneMoving += SetCardProcessingStateFalse;
+    }
+    private void SetCardProcessingStateTrue(Card card = null) => isProcessingCard = true;
+    private void SetCardProcessingStateFalse() => isProcessingCard = false;
     public void TogglePause() {
         isPaused = !isPaused;
         Time.timeScale = isPaused ? 0 : 1;
