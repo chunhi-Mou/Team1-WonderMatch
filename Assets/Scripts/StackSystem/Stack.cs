@@ -136,7 +136,14 @@ public class Stack : MonoBehaviour
     {
         while (pendingCards.Count > 0 && !isAddingCard)
         {
-            GetCardTargetPos(pendingCards.Dequeue());
+            Card card = pendingCards.Dequeue();
+            int targetIndex = cardsInStack.Count;
+            if (cardTypeDictionary.TryGetValue(card.cardData.cardType, out var sameTypeCards) && sameTypeCards.Count > 0)
+            {
+                targetIndex = cardsInStack.IndexOf(sameTypeCards[^1]) + 1;
+            }
+
+            AddCardToStack(targetIndex, card);
         }
     }
     public bool StackMagicHandler()
