@@ -17,7 +17,6 @@ public class Stack : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnUndoPressed += RemoveUndoCard;
-        GameEvents.OnMatchCards += ArrangeCards;
         GameEvents.OnCardSelected += GetCardTargetPos;
         GameEvents.OnCardDoneMoving += CheckMatch;
     }
@@ -25,7 +24,6 @@ public class Stack : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.OnUndoPressed -= RemoveUndoCard;
-        GameEvents.OnMatchCards -= ArrangeCards;
         GameEvents.OnCardSelected -= GetCardTargetPos;
         GameEvents.OnCardDoneMoving -= CheckMatch;
     }
@@ -89,10 +87,11 @@ public class Stack : MonoBehaviour
             cardsInStack[i].MoveCardTo(centerPos[i].position,0.1f);
         }
         card.transform.DOMove(centerPos[targetIndex].position, 0.2f).OnComplete(() =>
-{
-        isAddingCard = false; 
-        ProcessPendingCards(); 
-});
+        {
+            isAddingCard = false; 
+            ProcessPendingCards(); 
+        });
+        ArrangeCards();
     }
 
     private void RemoveMatchFromStack(int currentMatchPos)
@@ -130,22 +129,21 @@ public class Stack : MonoBehaviour
         {
             cardsInStack[i].MoveCardTo(centerPos[i].position,0.3f);
         }
-    }
-
+        }
     private void ProcessPendingCards()
     {
-        while (pendingCards.Count > 0 && !isAddingCard)
-        {
-            Card card = pendingCards.Dequeue();
-            int targetIndex = cardsInStack.Count;
-            if (cardTypeDictionary.TryGetValue(card.cardData.cardType, out var sameTypeCards) && sameTypeCards.Count > 0)
-            {
-                targetIndex = cardsInStack.IndexOf(sameTypeCards[^1]) + 1;
-            }
+        if (isAddingCard || pendingCards.Count == 0) return;
 
-            AddCardToStack(targetIndex, card);
+        Card card = pendingCards.Dequeue();
+        int targetIndex = cardsInStack.Count;
+        if (cardTypeDictionary.TryGetValue(card.cardData.cardType, out var sameTypeCards) && sameTypeCards.Count > 0)
+        {
+            targetIndex = cardsInStack.IndexOf(sameTypeCards[^1]) + 1;
         }
+
+        AddCardToStack(targetIndex, card);
     }
+
     public bool StackMagicHandler()
     {
         CardType magicCardType = CardType.nothing;
@@ -194,6 +192,7 @@ public class Stack : MonoBehaviour
     {
         cardsInStack.Remove(card);
         cardTypeDictionary[card.cardData.cardType].Remove(card);
+        ProcessPendingCards();
         ArrangeCards();
     }
 }
