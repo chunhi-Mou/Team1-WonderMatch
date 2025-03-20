@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 
 public class Board : MonoBehaviour {
     public List<Card> cards = new List<Card>();
@@ -87,9 +88,25 @@ public class Board : MonoBehaviour {
 
         if (availableCards.Count >= count) {
             List<Card> selectedCards = availableCards.Take(count).ToList();
+
+            Sequence sequence = DOTween.Sequence();
+
             foreach (Card card in selectedCards) {
-                card.SetSelectableData(true);
-                card.PushCardToStack();
+                sequence.AppendCallback(() => {
+                    card.SetSelectableData(true);
+                    card.PushCardToStack();
+                });
+
+                sequence.AppendInterval(0.1f);
+
+                sequence.AppendCallback(() => {
+                    DOVirtual.DelayedCall(0, () => { }, false)
+                        .OnUpdate(() => {
+                            if (!GameModeManager.instance.isProcessingCard) {
+                                sequence.PlayForward();
+                            }
+                        });
+                });
             }
         } else {
             var groupedCards = cards
