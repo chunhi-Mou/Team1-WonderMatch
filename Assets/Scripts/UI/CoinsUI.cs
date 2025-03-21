@@ -36,6 +36,7 @@ public class CoinsUI : MonoBehaviour {
     }
     public void OnSpendButtonPress() {
         if (CoinsManager.Instance.CanBuyPower()) {
+            CoinsManager.Instance.TrySpendCoins();
             PowerUpsManager.Instance.ResetPower(currPowerType);
             spendCoinsUI.gameObject.SetActive(false);
             GameModeManager.instance.TurnOffUIAndResumeGame();

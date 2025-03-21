@@ -13,7 +13,6 @@ public static class GameEvents {
     public static event Action<Card> OnUndoPressed;
     public static event Action<CardType, int> OnMagicPowerClicked;
     public static event Action OnTurnChange;
-    public static event Func<int, bool> OnSpendCoins;
     public static event Action<int> OnCoinsChanged;
     public static event Action<PowerType> OnSpendCoinsNeeded;
     public static event Action<CardType, int> OnShufflePowerClicked;
@@ -30,6 +29,5 @@ public static class GameEvents {
     public static void OnShufflePowerClickedInvoke(CardType cardType, int neededCard) => OnShufflePowerClicked?.Invoke(cardType, neededCard);
     public static void OnTurnChangeInvoke() => OnTurnChange?.Invoke();
     public static void OnSpendCoinsNeededInvoke(PowerType type) => OnSpendCoinsNeeded?.Invoke(type);
-    public static void OnSpendCoinsInvoke(int coins) => OnSpendCoins?.Invoke(coins);
     public static void OnCoinsChangedInvoke(int coins) => OnCoinsChanged?.Invoke(coins);
 }
