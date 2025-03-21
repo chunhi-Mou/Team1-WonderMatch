@@ -5,14 +5,21 @@ public class StackLogic : MonoBehaviour {
     [SerializeField] private StackAnimation stackAnimation;
     [SerializeField] private Transform[] centerPos;
     [SerializeField] private List<Card> cardsInStack = new List<Card>();
+    [SerializeField] GameObject stack;
+    [SerializeField] GameObject stackCenterPos;
 
     private Dictionary<CardType, List<Card>> cardTypeDictionary = new Dictionary<CardType, List<Card>>();
     private Queue<Card> pendingCards = new Queue<Card>();
     private bool isArranging = false;
     private bool isAddingCard = false;
     public int maxSizeStack = 8;
-    public int currentSizeStack = 7;
-
+    public int currentSizeStack;
+    private void Start()
+    {
+        currentSizeStack = 7;
+        SpriteRenderer spiteRenderer = stack.GetComponent<SpriteRenderer>();
+        spiteRenderer.sprite = Resources.Load<Sprite>("StackAsset/Stack7");
+    }
     private void OnEnable() {
         GameEvents.OnUndoPressed += RemoveUndoCard;
         GameEvents.OnMatchCards += ArrangeCards;
@@ -27,7 +34,6 @@ public class StackLogic : MonoBehaviour {
         GameEvents.OnCardDoneMoving -= CheckMatch;
     }
 
-    public void AddOneCell() => currentSizeStack++;
 
     private void GetCardTargetPos(Card card) {
         if (!card) return;
@@ -149,4 +155,14 @@ public class StackLogic : MonoBehaviour {
         GameEvents.OnShufflePowerClickedInvoke(magicCardType, 3 - maxCount);
     }
 
+    public void AddOneCell() {
+        currentSizeStack++;
+        SpriteRenderer spiteRenderer = stack.GetComponent<SpriteRenderer>();
+        spiteRenderer.sprite = Resources.Load<Sprite>("StackAsset/Stack8");
+        Transform transform = stackCenterPos.GetComponent<Transform>();
+        transform.position = new Vector3(transform.position.x - 0.37f, transform.position.y, transform.position.z);
+        for (int i = 0; i < cardsInStack.Count; i++) {
+            cardsInStack[i].MoveCardTo(centerPos[i].position, 0);
+        }
+    } 
 }
