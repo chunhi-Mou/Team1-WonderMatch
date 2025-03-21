@@ -31,7 +31,7 @@ public class Stack : MonoBehaviour
     {
         currentSizeStack += 1;
     }
-    private void GetCardTargetPos(Card card)
+    private void GetCardTargetPos(Card card) //Card Selected
     {
         if (!card) return;
 
@@ -50,7 +50,7 @@ public class Stack : MonoBehaviour
         AddCardToStack(targetIndex, card);
     }
 
-    private void CheckFullStack()
+    private void CheckFullStack() //Card Done Moving & Match
     {
         if (cardsInStack.Count >= currentSizeStack) {
             Debug.Log("Stack Is Full!");
@@ -58,7 +58,7 @@ public class Stack : MonoBehaviour
         }
     }
 
-    private void CheckMatch()
+    private void CheckMatch() //Card Done Moving
     {
         if (cardsInStack.Count < 3) return;
 
