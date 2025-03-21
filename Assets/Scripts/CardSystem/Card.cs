@@ -48,12 +48,14 @@ public class Card : MonoBehaviour {
         spriteRenderer.sprite = cardData.sprite;
     }
     public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear) {
+        spriteRenderer.sortingOrder = 1000;
         gameObject.transform.DOMove(target, _duration)
             .SetEase(easeType)
             .OnComplete(() => {
                 cardOverlapChecker.NotifyTilesBelow();
                 GameEvents.OnCardDoneMovingInvoke();
-        });
+                spriteRenderer.sortingOrder = 0;
+            });
     }
     public void SetSelectableData(bool _data) {
         this.isSelectable = _data;
