@@ -17,10 +17,12 @@ public class SettingMenu : MonoBehaviour
     {
         settingMenuUI.SetActive(true);
         GameModeManager.instance.TurnOnUIAndPauseGame();
+        CoinsManager.Instance.ToggleCoinsUI(true);
     }
     public void LoadMenu()
     {
         GameModeManager.instance.EnterMap();
+        CoinsManager.Instance.ToggleCoinsUI(true);
     }
     public void RestartLevel()
     {
