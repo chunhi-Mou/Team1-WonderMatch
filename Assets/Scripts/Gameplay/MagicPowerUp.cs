@@ -2,10 +2,10 @@
 
 public class MagicPowerUp : IPowerUp {
     private int count = 3;
-    private Stack stack;
+    private StackLogic stack;
 
     public MagicPowerUp() {
-        stack = GameObject.Find("StackA")?.GetComponent<Stack>();
+        stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
         count = PlayerPrefs.GetInt(SavedData.MagicPowerCount, 3);
     }
 

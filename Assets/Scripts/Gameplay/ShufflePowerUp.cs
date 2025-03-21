@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class ShufflePowerUp : IPowerUp {
     private int count = 3;
-    private Stack stack;
+    private StackLogic stack;
 
     public ShufflePowerUp() {
-        stack = GameObject.Find("StackA")?.GetComponent<Stack>();
+        stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
         count = PlayerPrefs.GetInt(SavedData.ShufflePowerCount, 3);
     }
 

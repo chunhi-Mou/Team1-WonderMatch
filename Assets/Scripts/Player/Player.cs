@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
-    public Stack stack;
+    public StackLogic stack;
     public PlayerID playerID;
     private int score = 0;
     private void Awake() {
