@@ -2,12 +2,12 @@
 
 public class AddOneCellPowerUp : IPowerUp {
     private int count = 3;
-    private Stack stack;
+    private StackLogic stack;
     private GameObject addOneCellObj;
 
     public AddOneCellPowerUp() {
         count = PlayerPrefs.GetInt(SavedData.AddOneCellPowerCount, 3);
-        stack = Object.FindObjectOfType<Stack>();
+        stack = Object.FindObjectOfType<StackLogic>();
         addOneCellObj = GameObject.Find("AddOneCellObj");
     }
 

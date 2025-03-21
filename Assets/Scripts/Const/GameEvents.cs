@@ -5,7 +5,6 @@ using DG.Tweening;
 public static class GameEvents {
     // Events
     public static event Action<Card> OnCardSelected;
-    public static event Action<Vector3, float, Ease> OnFoundPosOfCard;
     public static event Action OnCardDoneMoving;
     public static event Action OnMatchCards;
     public static event Action OnLoseGame;
@@ -22,7 +21,6 @@ public static class GameEvents {
     // Invoke Methods
     public static void OnMatchTilesDoneInvoke() => OnMatchTilesDone?.Invoke();
     public static void OnCardSelectedInvoke(Card card) => OnCardSelected?.Invoke(card);
-    public static void OnFoundPosOfCardInvoke(Vector3 target, float duration, Ease ease) => OnFoundPosOfCard?.Invoke(target, duration, ease);
     public static void OnCardDoneMovingInvoke() => OnCardDoneMoving?.Invoke();
     public static void OnMatchCardsInvoke() => OnMatchCards?.Invoke();
     public static void OnLoseGameInvoke() => OnLoseGame?.Invoke();

@@ -152,7 +152,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6552653060598800937}
   - component: {fileID: 1511347485511156636}
-  - component: {fileID: 8161565105511763795}
+  - component: {fileID: 4019757932116443623}
+  - component: {fileID: 5146606070634983054}
   m_Layer: 0
   m_Name: StackB
   m_TagString: Untagged
@@ -228,7 +229,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8161565105511763795
+--- !u!114 &4019757932116443623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,9 +238,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 920064029215144526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907128645e3f6764f8eceef33c60d050, type: 3}
+  m_Script: {fileID: 11500000, guid: 4eb58a56e1879d24484ca2c2a1b6a7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stackAnimation: {fileID: 5146606070634983054}
   centerPos:
   - {fileID: 2184173543369365132}
   - {fileID: 27685130596687820}
@@ -252,6 +254,18 @@ MonoBehaviour:
   cardsInStack: []
   maxSizeStack: 8
   currentSizeStack: 7
+--- !u!114 &5146606070634983054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920064029215144526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01593b2508786c47b4298dbdd84a227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1365635382608999238
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +276,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5130649037219516714}
   - component: {fileID: 4460423749046962237}
-  - component: {fileID: 3391412588089348366}
+  - component: {fileID: 6273235422060493591}
+  - component: {fileID: 6811267188494305774}
   m_Layer: 0
   m_Name: StackA
   m_TagString: Untagged
@@ -338,7 +353,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3391412588089348366
+--- !u!114 &6273235422060493591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,9 +362,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1365635382608999238}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 907128645e3f6764f8eceef33c60d050, type: 3}
+  m_Script: {fileID: 11500000, guid: 4eb58a56e1879d24484ca2c2a1b6a7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stackAnimation: {fileID: 6811267188494305774}
   centerPos:
   - {fileID: 6279225652229618827}
   - {fileID: 4491685524088492426}
@@ -362,6 +378,18 @@ MonoBehaviour:
   cardsInStack: []
   maxSizeStack: 8
   currentSizeStack: 7
+--- !u!114 &6811267188494305774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365635382608999238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01593b2508786c47b4298dbdd84a227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1592841781249841004
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6846713669063876148
 Transform:
   m_ObjectHideFlags: 0
@@ -408,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
-  stack: {fileID: 8161565105511763795}
+  stack: {fileID: 4019757932116443623}
   playerID: 1
 --- !u!1 &2608472223243930963
 GameObject:
@@ -774,7 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
-  stack: {fileID: 3391412588089348366}
+  stack: {fileID: 6273235422060493591}
   playerID: 0
 --- !u!1 &6688673320376980009
 GameObject:

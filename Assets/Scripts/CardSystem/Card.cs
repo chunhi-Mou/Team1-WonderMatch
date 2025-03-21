@@ -32,7 +32,6 @@ public class Card : MonoBehaviour {
         cardOverlapChecker.UpdateBelowTiles();
         GetComponent<Collider>().enabled = false;
 
-        GameEvents.OnFoundPosOfCard += MoveCardTo; //Nhi: đăng kí Event nhận Target
         GameEvents.OnCardSelectedInvoke(this);
     }
     public void GetCardData() {
@@ -49,13 +48,11 @@ public class Card : MonoBehaviour {
         spriteRenderer.sprite = cardData.sprite;
     }
     public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear) {
-        GameEvents.OnFoundPosOfCard -= MoveCardTo;//Nhi: huỷ đăng kí Event nhận Target
         gameObject.transform.DOMove(target, _duration)
             .SetEase(easeType)
             .OnComplete(() => {
                 cardOverlapChecker.NotifyTilesBelow();
                 GameEvents.OnCardDoneMovingInvoke();
-                this.isSelectable = true;
         });
     }
     public void SetSelectableData(bool _data) {
@@ -75,6 +72,7 @@ public class Card : MonoBehaviour {
         GetComponent<Collider>().enabled = true;
         MoveCardTo(prevPosition, 0.5f, Ease.OutQuad);
         state = CardState.inBoard;
+        this.isSelectable = true;
     }
     void DarkenSprite() {
         spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.5f);
