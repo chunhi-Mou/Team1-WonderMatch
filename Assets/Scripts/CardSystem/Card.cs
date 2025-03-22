@@ -49,6 +49,7 @@ public class Card : MonoBehaviour {
     }
     public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear) {
         spriteRenderer.sortingOrder = 1000;
+        SetSelectableData(true);
         gameObject.transform.DOMove(target, _duration)
             .SetEase(easeType)
             .OnComplete(() => {
@@ -84,9 +85,9 @@ public class Card : MonoBehaviour {
         spriteRenderer.sortingOrder = 0;
     }
     void DarkenSprite() {
-        spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.15f);
+        spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.2f);
     }
     void SetWhiteSprite() {
-        spriteRenderer.DOColor(Color.white, 0.15f);
+        spriteRenderer.DOColor(Color.white, 0.2f);
     }
 }
