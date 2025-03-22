@@ -28,6 +28,9 @@ public class GameModeManager : MonoBehaviour {
         GameEvents.OnCardSelected += SetCardProcessingStateTrue;
         GameEvents.OnCardDoneMoving += SetCardProcessingStateFalse;
     }
+    private void Start() {
+        Audio_PlayBGMusic();
+    }
     private void SetCardProcessingStateTrue(Card card = null) => isProcessingCard = true;
     private void SetCardProcessingStateFalse() => isProcessingCard = false;
     public void TogglePause() {
@@ -57,6 +60,7 @@ public class GameModeManager : MonoBehaviour {
     }
     public void OnSingleModeSelected() {
         SceneManager.sceneLoaded += OnSceneLoaded; // Đăng ký sự kiện trước khi load scene
+        Audio_PlayButtonSound();
         SceneManager.LoadScene(1);
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -76,4 +80,12 @@ public class GameModeManager : MonoBehaviour {
         DuoMode.SetActive(true);
         gameMode = DuoModeManager.instance;
     }
+    #region Audio
+    private void Audio_PlayBGMusic() {
+        AudioManager.instance.Play(SoundEffect.BGMusic);
+    }
+    private void Audio_PlayButtonSound() {
+        AudioManager.instance.Play(SoundEffect.ButtonTink);
+    }
+    #endregion
 }
