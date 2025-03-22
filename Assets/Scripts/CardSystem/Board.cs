@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class Board : MonoBehaviour {
     public List<Card> cards = new List<Card>();
+    [SerializeField] private Transform centerShufflePoint;
     private int currCardCount = 0;
     private void OnEnable() {
         GameEvents.OnMagicPowerClicked += BoardMagicHandler;
@@ -29,6 +30,13 @@ public class Board : MonoBehaviour {
     }
     public void ShuffleBoard(CardType cardType = CardType.nothing, int count = 0) {
         List<CardData> cardDataList = GetAllCardsInBoard();
+        List<Transform> cardTransforms = cards
+            .Where(card => card.state == CardState.inBoard)
+            .Select(card=> card.gameObject.transform).ToList();
+
+        CardAnimation.PlayCardSpreadAnimation(cardTransforms, centerShufflePoint, 5, 0.5f);
+
+        CardAnimation.PlayCardSpreadAnimation(cardTransforms, centerShufflePoint, 5, (float)0.5);
         ShuffleList(cardDataList);
         UpdateBoardCards(cardDataList);
 
