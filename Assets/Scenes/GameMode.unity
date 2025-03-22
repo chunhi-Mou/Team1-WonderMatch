@@ -130,10 +130,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1450618887469715138, guid: 25b77faf0888a4c4fb6525d601619b94, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1751101874273815392, guid: 25b77faf0888a4c4fb6525d601619b94, type: 3}
       propertyPath: m_Name
       value: GameMode

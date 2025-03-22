@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133f008330dfeed459996aaa2c1f71e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPaused: 0
+  isProcessingCard: 0
   SingleMode: {fileID: 7000527662696101119}
   DuoMode: {fileID: 1450618887469715138}
 --- !u!1 &7000527662696101119
