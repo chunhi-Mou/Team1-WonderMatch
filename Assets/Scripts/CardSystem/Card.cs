@@ -84,9 +84,9 @@ public class Card : MonoBehaviour {
         spriteRenderer.sortingOrder = 0;
     }
     void DarkenSprite() {
-        spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.5f);
+        spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.15f);
     }
     void SetWhiteSprite() {
-        spriteRenderer.DOColor(Color.white, 0.5f);
+        spriteRenderer.DOColor(Color.white, 0.15f);
     }
 }
