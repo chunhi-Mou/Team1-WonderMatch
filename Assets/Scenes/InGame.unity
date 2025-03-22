@@ -621,6 +621,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3560531860980006317}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 3560531860980006317}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 3560531860980006317}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 3560531860980006317}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4533484210623281051, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -697,11 +737,94 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9198267788872807509, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1129151552170587660, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2888363960064506989, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3560531860980006318}
   m_SourcePrefab: {fileID: 100100000, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+--- !u!1 &3560531860980006314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2888363960064506989, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3560531860980006315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4027740729914522998, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369e723749eba224881d6136204ca1cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3560531860980006316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560531860980006314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3560531860980006317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2249058574829277740, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3560531860980006318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560531860980006314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 3560531860980006316}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3560531860980006315}
+        m_TargetAssemblyTypeName: SettingMenu, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 2
+  clickRotationAngle: 60
 --- !u!1001 &4248859617156454137
 PrefabInstance:
   m_ObjectHideFlags: 0

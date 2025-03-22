@@ -60,7 +60,6 @@ public class GameModeManager : MonoBehaviour {
     }
     public void OnSingleModeSelected() {
         SceneManager.sceneLoaded += OnSceneLoaded; // Đăng ký sự kiện trước khi load scene
-        Audio_PlayButtonSound();
         SceneManager.LoadScene(1);
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -83,9 +82,6 @@ public class GameModeManager : MonoBehaviour {
     #region Audio
     private void Audio_PlayBGMusic() {
         AudioManager.instance.Play(SoundEffect.BGMusic);
-    }
-    private void Audio_PlayButtonSound() {
-        AudioManager.instance.Play(SoundEffect.ButtonTink);
     }
     #endregion
 }
