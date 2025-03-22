@@ -12,7 +12,6 @@ public static class CustomAnimation {
                     .SetEase(Ease.OutQuad)
                     .OnComplete(() => target.DORotate(Vector3.zero, 0.1f, RotateMode.LocalAxisAdd).SetEase(Ease.OutQuad).OnComplete(() => onComplete?.Invoke()));
             case UIButtonHandler.ClickAnimationType.Shake:
-                Debug.Log("sahke");
                 return target.DOShakePosition(0.2f, 10, 10).OnComplete(() => onComplete?.Invoke());
             default:
                 onComplete?.Invoke();

@@ -72,9 +72,16 @@ public class Card : MonoBehaviour {
         if (!GameModeManager.instance.isProcessingCard && state != CardState.inStack) return;
         GameEvents.OnUndoPressedInvoke(this);
         GetComponent<Collider>().enabled = true;
-        MoveCardTo(prevPosition, 0.5f, Ease.OutQuad);
+        CardAnimation.PlayCardShakeThenMove(this.transform, prevPosition, 0.3f, 0.5f, () => {
+            HandleCardMoveComplete();
+        });
         state = CardState.inBoard;
         this.isSelectable = true;
+    }
+    private void HandleCardMoveComplete() {
+        cardOverlapChecker.NotifyTilesBelow();
+        GameEvents.OnCardDoneMovingInvoke();
+        spriteRenderer.sortingOrder = 0;
     }
     void DarkenSprite() {
         spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.5f);

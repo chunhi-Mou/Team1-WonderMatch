@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public static class CardAnimation {
     public static void PlayCardSpreadAnimation(List<Transform> cards, Transform centerPoint, float spreadDistance, float animationDuration) {
-        if (cards == null || cards.Count == 0 || centerPoint == null) return;
+        if (cards == null || cards.Count <= 1 || centerPoint == null) return;
 
         Vector3[] originalPositions = new Vector3[cards.Count];
 
@@ -12,9 +13,13 @@ public static class CardAnimation {
             originalPositions[i] = cards[i].position;
         }
 
-        Sequence seq = DOTween.Sequence();
+        DG.Tweening.Sequence seq = DOTween.Sequence();
+        int middleIndex = (cards.Count - 1) / 2;
         for (int i = 0; i < cards.Count; i++) {
             float offset = (i - (cards.Count - 1) / 2f) * spreadDistance;
+            if (cards.Count % 2 == 1 && i == middleIndex) {
+                offset -= spreadDistance * 0.5f;
+            }
             Vector3 targetPos = originalPositions[i] + new Vector3(offset, 0, 0);
             seq.Join(cards[i].DOMove(targetPos, animationDuration).SetEase(Ease.OutQuad));
         }
@@ -28,5 +33,12 @@ public static class CardAnimation {
         for (int i = 0; i < cards.Count; i++) {
             seq.Join(cards[i].DOMove(originalPositions[i], animationDuration).SetEase(Ease.OutQuad));
         }
+    }
+    public static void PlayCardShakeThenMove(Transform card, Vector3 targetPosition, float shakeDuration = 0.3f, float moveDuration = 0.5f, System.Action onComplete = null) {
+        card.GetComponent<SpriteRenderer>().sortingOrder = 1000;
+        DG.Tweening.Sequence seq = DOTween.Sequence();
+        seq.Append(card.DOShakePosition(shakeDuration, strength: 0.5f, vibrato: 20, randomness: 90));
+        seq.Append(card.DOMove(targetPosition, moveDuration).SetEase(Ease.OutQuad))
+            .OnComplete(() => onComplete?.Invoke());
     }
 }
