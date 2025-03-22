@@ -14,7 +14,8 @@ public static class CardAnimation {
 
         Sequence seq = DOTween.Sequence();
         for (int i = 0; i < cards.Count; i++) {
-            Vector3 targetPos = originalPositions[i] + Vector3.right * (i - cards.Count / 2f) * spreadDistance;
+            float offset = (i - (cards.Count - 1) / 2f) * spreadDistance;
+            Vector3 targetPos = originalPositions[i] + new Vector3(offset, 0, 0);
             seq.Join(cards[i].DOMove(targetPos, animationDuration).SetEase(Ease.OutQuad));
         }
 

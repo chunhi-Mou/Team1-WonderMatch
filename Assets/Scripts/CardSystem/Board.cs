@@ -34,9 +34,7 @@ public class Board : MonoBehaviour {
             .Where(card => card.state == CardState.inBoard)
             .Select(card=> card.gameObject.transform).ToList();
 
-        CardAnimation.PlayCardSpreadAnimation(cardTransforms, centerShufflePoint, 5, 0.5f);
-
-        CardAnimation.PlayCardSpreadAnimation(cardTransforms, centerShufflePoint, 5, (float)0.5);
+        CardAnimation.PlayCardSpreadAnimation(cardTransforms, centerShufflePoint, 10, 0.5f);
         ShuffleList(cardDataList);
         UpdateBoardCards(cardDataList);
 
