@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: 2
   button: {fileID: 534778027}
   onClickEvent:
     m_PersistentCalls:
@@ -456,6 +457,7 @@ MonoBehaviour:
   idleEaseType: 4
   idleLoopType: 1
   clickAnimationType: 1
+  clickRotationAngle: 15
 --- !u!1 &602787486
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +908,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 382a597fc5db9bf4d95f88193f8e3a2a, type: 3}
     loop: 1
     volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - type: 2
+    outputMixer: {fileID: -6315820454765346748, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
+    clip: {fileID: 8300000, guid: 12597d76957028e4db44fd2bc1994a6a, type: 3}
+    loop: 0
+    volume: 1
     pitch: 1
     source: {fileID: 0}
   - type: 2

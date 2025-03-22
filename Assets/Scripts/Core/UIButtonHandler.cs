@@ -9,6 +9,7 @@ public class UIButtonHandler : MonoBehaviour {
     public enum ClickAnimationType { None, Shrink, Rotate, Shake }
 
     [Header("Button Settings")]
+    [SerializeField] SoundEffect buttonSound;
     [SerializeField] private Button button;
     [SerializeField] private UnityEvent onClickEvent;
     [SerializeField] private bool useAnimation = true;
@@ -44,7 +45,7 @@ public class UIButtonHandler : MonoBehaviour {
         }
 
         if (useAnimation) {
-            AudioManager.instance.Play(SoundEffect.ButtonTink);
+            AudioManager.instance.Play(buttonSound);
             CustomAnimation.PlayClickAnimation(transform, clickAnimationType, clickRotationAngle, () => onClickEvent?.Invoke());
         } else {
             onClickEvent?.Invoke();

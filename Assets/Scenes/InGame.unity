@@ -411,6 +411,60 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &845126421 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4555169612818106220, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &845126422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8305703851807823620, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845126421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &845126423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845126421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonSound: 0
+  button: {fileID: 845126422}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1112783864}
+        m_TargetAssemblyTypeName: PowerUpsManager, Assembly-CSharp
+        m_MethodName: UseUndoPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 3
+  clickRotationAngle: 15
 --- !u!1 &907717494
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +510,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1112783864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7082415412589823969, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f91efde40153148a839131a633b9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1520232753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8058556094437961462, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1520232754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3488874168205930257, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+  m_PrefabInstance: {fileID: 3560531860980006313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520232753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1520232755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520232753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonSound: 0
+  button: {fileID: 1520232754}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1112783864}
+        m_TargetAssemblyTypeName: PowerUpsManager, Assembly-CSharp
+        m_MethodName: UseShufflePress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 3
+  clickRotationAngle: 15
 --- !u!1 &1722089042
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +740,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3488874168205930257, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3959947457156275101, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -713,6 +836,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8305703851807823620, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8642525784431393853, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -746,6 +873,12 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4555169612818106220, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 845126423}
+    - targetCorrespondingSourceObject: {fileID: 8058556094437961462, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1520232755}
     - targetCorrespondingSourceObject: {fileID: 2888363960064506989, guid: 299d248335e54d74289e5e7c6703bc59, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3560531860980006318}
@@ -800,6 +933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: 0
   button: {fileID: 3560531860980006316}
   onClickEvent:
     m_PersistentCalls:
