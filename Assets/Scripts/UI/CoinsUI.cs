@@ -7,7 +7,6 @@ public class CoinsUI : MonoBehaviour {
     [SerializeField] RectTransform adButton;
     [SerializeField] RectTransform spendButton;
     [SerializeField] RectTransform[] powerImages;
-    [SerializeField] TextMeshProUGUI coinTxt;
     private void OnEnable() {
         GameEvents.OnSpendCoinsNeeded += TurnOnSpendCoinsUI;
     }
@@ -16,8 +15,7 @@ public class CoinsUI : MonoBehaviour {
     }
     private PowerType currPowerType;
     public void TurnOnSpendCoinsUI(PowerType powerType) {
-        GameModeManager.instance.TurnOnUIAndPauseGame();
-        coinTxt.text = CoinsManager.Instance.currCoins.ToString();
+        GameModeManager.instance.PauseGame();
         spendCoinsUI.gameObject.SetActive(true);
         this.currPowerType = powerType;
 
@@ -39,17 +37,17 @@ public class CoinsUI : MonoBehaviour {
             CoinsManager.Instance.TrySpendCoins();
             PowerUpsManager.Instance.ResetPower(currPowerType);
             spendCoinsUI.gameObject.SetActive(false);
-            GameModeManager.instance.TurnOffUIAndResumeGame();
+            GameModeManager.instance.ResumeGame();
         }
     }
     public void OnXPress() {
         spendCoinsUI.gameObject.SetActive(false);
-        GameModeManager.instance.TurnOffUIAndResumeGame();
+        GameModeManager.instance.ResumeGame();
     }
     public void OnAdButtonPress() {
         PowerUpsManager.Instance.ResetPower(currPowerType);
         Debug.Log("YOU WATCHED AD");
         spendCoinsUI.gameObject.SetActive(false);
-        GameModeManager.instance.TurnOffUIAndResumeGame();
+        GameModeManager.instance.ResumeGame();
     }
 }

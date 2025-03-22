@@ -4,25 +4,27 @@ using UnityEngine.SceneManagement;
 public class SettingMenu : MonoBehaviour
 {
     public GameObject settingMenuUI;
+    public GameObject settingButton;
     void Start()
     {
         settingMenuUI.SetActive(false);
+        settingButton.SetActive(true);
     }
     public void Resume()
     {
         settingMenuUI.SetActive(false);
-        GameModeManager.instance.TurnOffUIAndResumeGame();
+        settingButton.SetActive(true);
+        GameModeManager.instance.ResumeGame();
     }
     public void Pause()
     {
         settingMenuUI.SetActive(true);
-        GameModeManager.instance.TurnOnUIAndPauseGame();
-        CoinsManager.Instance.ToggleCoinsUI(true);
+        settingButton.SetActive(false);
+        GameModeManager.instance.PauseGame();
     }
     public void LoadMenu()
     {
         GameModeManager.instance.EnterMap();
-        CoinsManager.Instance.ToggleCoinsUI(true);
     }
     public void RestartLevel()
     {

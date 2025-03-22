@@ -49,10 +49,10 @@ public class GameModeManager : MonoBehaviour {
         gameMode.ClearOldData();
         SceneManager.LoadScene("Map");
     }
-    public void TurnOnUIAndPauseGame() {
+    public void PauseGame() {
         if (!isPaused) TogglePause();
     }
-    public void TurnOffUIAndResumeGame() {
+    public void ResumeGame() {
         if (isPaused) TogglePause();
     }
     public void OnSingleModeSelected() {

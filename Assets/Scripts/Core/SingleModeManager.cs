@@ -32,12 +32,10 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         GameEvents.OnWinGame -= WinGame;
     }
     public void LoseGame() {
-        GameModeManager.instance.TurnOnUIAndPauseGame();
-        Debug.Log("Lose!");
+        GameModeManager.instance.PauseGame();
     }
     public void WinGame() {
-        GameModeManager.instance.TurnOnUIAndPauseGame();
-        Debug.Log("Win");
+        GameModeManager.instance.PauseGame();
     }
     [SerializeField] GameObject PowerUpUI;
     [SerializeField] List<Player> players = new List<Player>();

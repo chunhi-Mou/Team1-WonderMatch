@@ -29,11 +29,11 @@ public class CoinsManager : MonoBehaviour {
     }
     public void AddCoinsOnWin() {
         this.AddCoins(20);
+        Debug.Log(currCoins);
     }
     private void RestoreCoins() {
         currCoins = PlayerPrefs.GetInt(SavedData.Coins, 0);
         UpdateUI();
-        GameEvents.OnCoinsChangedInvoke(currCoins);
     }
     public void AddCoins(int _coins) {
         currCoins += _coins;
@@ -48,7 +48,6 @@ public class CoinsManager : MonoBehaviour {
     private void SaveCoinsData(int _coins) {
         PlayerPrefs.SetInt(SavedData.Coins, _coins);
         PlayerPrefs.Save();
-        GameEvents.OnCoinsChangedInvoke(_coins);
         UpdateUI();
     }
     public bool CanBuyPower() {
@@ -57,11 +56,6 @@ public class CoinsManager : MonoBehaviour {
     private void UpdateUI() {
         if (coinsText != null) {
             coinsText.text = $"{currCoins}";
-        }
-    }
-    public void ToggleCoinsUI(bool isActive) {
-        if (coinsText != null) {
-            coinsText.gameObject.SetActive(isActive);
         }
     }
 }

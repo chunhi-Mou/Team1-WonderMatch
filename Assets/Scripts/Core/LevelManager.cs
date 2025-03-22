@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour {
     public void EnterGameLv(int level) {
         DOTween.KillAll();
         CurrLevel = level;
-        GameModeManager.instance.TurnOffUIAndResumeGame();
+        GameModeManager.instance.ResumeGame();
         SceneManager.sceneLoaded += OnSceneReloaded;
         SceneManager.LoadScene("InGame");
     }
