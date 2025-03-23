@@ -253,7 +253,7 @@ MonoBehaviour:
   - {fileID: 5161491160305670837}
   cardsInStack: []
   stack: {fileID: 920064029215144526}
-  stackCenterPos: {fileID: 0}
+  stackCenterPos: {fileID: 7093784203858169495}
   maxSizeStack: 8
   currentSizeStack: 7
 --- !u!114 &5146606070634983054
