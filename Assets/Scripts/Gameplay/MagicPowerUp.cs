@@ -1,6 +1,15 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Linq;
 
 public class MagicPowerUp : IPowerUp {
+    public void OnEnable() {
+        GameEvents.OnMagicPowerClicked += BoardMagicHandler;
+    }
+    public void OnDisable() {
+        GameEvents.OnMagicPowerClicked -= BoardMagicHandler;
+    }
     private int count = 3;
     private StackLogic stack;
 
@@ -30,5 +39,47 @@ public class MagicPowerUp : IPowerUp {
     public void SaveData() {
         PlayerPrefs.SetInt(SavedData.MagicPowerCount, count);
         PlayerPrefs.Save();
+    }
+    public void BoardMagicHandler(CardType cardType, int count) {
+        List<Card> availableCards = Board.cards
+            .Where(card => card.cardData.cardType == cardType && card.state == CardState.inBoard)
+            .OrderBy(_ => Random.value)
+            .ToList();
+
+        if (availableCards.Count >= count) {
+            SelectAndProcessCards(availableCards.Take(count).ToList());
+        } else {
+            var groupedCards = Board.cards
+                .Where(card => card.state == CardState.inBoard)
+                .GroupBy(card => card.cardData.cardType)
+                .Where(group => group.Count() >= count)
+                .OrderBy(_ => Random.value)
+                .ToList();
+
+            if (groupedCards.Count > 0) {
+                SelectAndProcessCards(groupedCards.First().Take(count).ToList());
+            }
+        }
+    }
+    private void SelectAndProcessCards(List<Card> selectedCards) {
+        Sequence sequence = DOTween.Sequence();
+
+        foreach (Card card in selectedCards) {
+            sequence.AppendCallback(() => {
+                card.SetSelectableData(true);
+                card.PushCardToStack();
+            });
+
+            sequence.AppendInterval(0.1f);
+
+            sequence.AppendCallback(() => {
+                DOVirtual.DelayedCall(0, () => { }, false)
+                    .OnUpdate(() => {
+                        if (!GameModeManager.instance.isProcessingCard) {
+                            sequence.PlayForward();
+                        }
+                    });
+            });
+        }
     }
 }

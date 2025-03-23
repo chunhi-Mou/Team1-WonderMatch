@@ -15,6 +15,7 @@ public class Card : MonoBehaviour {
     
     private void Awake() {
         cardOverlapChecker = GetComponent<CardOverlapChecker>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void OnMouseDown() {
         if (GameModeManager.instance.isPaused || GameModeManager.instance.isProcessingCard) return;
@@ -35,7 +36,6 @@ public class Card : MonoBehaviour {
         GameEvents.OnCardSelectedInvoke(this);
     }
     public void GetCardData() {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         CardData cardFromBase = cardDatabase.cards[(int)cardData.cardType];
         cardData.sprite = cardFromBase.sprite;
         spriteRenderer.sprite = cardData.sprite;

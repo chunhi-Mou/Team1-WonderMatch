@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 
 public class AddOneCellPowerUp : IPowerUp {
+    public void OnEnable() {
+    }
+    public void OnDisable() {
+    }
     private int count = 3;
     private StackLogic stack;
     private GameObject addOneCellObj;

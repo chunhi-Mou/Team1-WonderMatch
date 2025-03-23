@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public static class CardAnimation {
     public static void PlayCardSpreadAnimation(List<Transform> cards, Transform centerPoint, float spreadDistance, float animationDuration) {

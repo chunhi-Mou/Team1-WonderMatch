@@ -1,11 +1,16 @@
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using DG.Tweening;
 public interface IPowerUp {
     void Use();
     void ResetCount(int maxCount);
     int GetCount();
     void SaveData();
+    void OnEnable();
+    void OnDisable();
 }
 
 public class PowerUpsManager : MonoBehaviour {
@@ -15,6 +20,7 @@ public class PowerUpsManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI undoCntTxt;
     [SerializeField] private TextMeshProUGUI magicCntTxt;
     [SerializeField] private TextMeshProUGUI addOneCellCntTxt;
+    private StackLogic stack;
 
     private Dictionary<PowerType, IPowerUp> powerUps = new Dictionary<PowerType, IPowerUp>();
     private int maxPowerCount = 3;
@@ -26,15 +32,18 @@ public class PowerUpsManager : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
-    }
-    private void Start() {
         InitPowerUps();
     }
     private void OnEnable() {
+        stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
         GameEvents.OnCardSelected += CardHistory.Instance.PushCardToHistory;
     }
     private void OnDisable() {
         GameEvents.OnCardSelected -= CardHistory.Instance.PushCardToHistory;
+    }
+    private IEnumerator Start() {
+        yield return new WaitForEndOfFrame();
+        DOVirtual.DelayedCall(0.15f, () => stack.ShuffleMagicHandler());
     }
     public void RegisterToGameMode() {
         if (SingleModeManager.instance != null) {
@@ -46,6 +55,8 @@ public class PowerUpsManager : MonoBehaviour {
         powerUps[PowerType.Undo] = new UndoPowerUp();
         powerUps[PowerType.Magic] = new MagicPowerUp();
         powerUps[PowerType.AddOneCell] = new AddOneCellPowerUp();
+        powerUps[PowerType.Shuffle].OnEnable();
+        powerUps[PowerType.Magic].OnEnable();
         this.UpdatePowerCountTxtUI();
     }
 

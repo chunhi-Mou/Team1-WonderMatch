@@ -1,6 +1,10 @@
 using UnityEngine;
 
 public class UndoPowerUp : IPowerUp {
+    public void OnEnable() {
+    }
+    public void OnDisable() {
+    }
     private int count = 3;
     public UndoPowerUp() {
         count = PlayerPrefs.GetInt(SavedData.UndoPowerCount, 3);
