@@ -2,13 +2,16 @@
 using UnityEngine.UI;
 using UnityEngine.Events;
 using DG.Tweening;
+using static UIButtonHandler;
 
 [System.Serializable]
 public class UIButtonHandler : MonoBehaviour {
     public enum IdleAnimationType { None, Scale, Rotate, ScaleAndRotate }
     public enum ClickAnimationType { None, Shrink, Rotate, Shake }
+    public enum ButtonType { Normal, Power }
 
     [Header("Button Settings")]
+    [SerializeField] private ButtonType buttonType = ButtonType.Normal;
     [SerializeField] SoundEffect buttonSound;
     [SerializeField] private Button button;
     [SerializeField] private UnityEvent onClickEvent;
@@ -38,7 +41,11 @@ public class UIButtonHandler : MonoBehaviour {
     }
 
     private void OnButtonClicked() {
-        if (idleTween != null) {
+            if (buttonType == ButtonType.Power && GameModeManager.instance.isUsingPowers) return;
+            if (buttonType == ButtonType.Power) {
+                GameModeManager.instance.isUsingPowers = true;
+            }
+            if (idleTween != null) {
             idleTween.Kill();
             transform.localScale = Vector3.one;
             transform.rotation = Quaternion.identity;

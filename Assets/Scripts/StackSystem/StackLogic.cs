@@ -156,6 +156,7 @@ public class StackLogic : MonoBehaviour {
     }
 
     public void AddOneCell() {
+        Debug.Log("Added");
         currentSizeStack++;
         SpriteRenderer spiteRenderer = stack.GetComponent<SpriteRenderer>();
         spiteRenderer.sprite = Resources.Load<Sprite>("StackAsset/Stack8");

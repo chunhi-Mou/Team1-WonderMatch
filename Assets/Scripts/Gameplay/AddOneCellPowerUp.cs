@@ -11,16 +11,18 @@ public class AddOneCellPowerUp : IPowerUp {
 
     public AddOneCellPowerUp() {
         count = PlayerPrefs.GetInt(SavedData.AddOneCellPowerCount, 3);
-        stack = Object.FindObjectOfType<StackLogic>();
+        stack = GameObject.Find("StackA").GetComponent<StackLogic>();
         addOneCellObj = GameObject.Find("AddOneCellObj");
     }
 
     public void Use() {
         stack.AddOneCell();
+        count--;
         if (addOneCellObj != null) {
             addOneCellObj.SetActive(false);
-            count--;
+            
             SaveData();
+            GameModeManager.instance.isUsingPowers = false;
         }
     }
 

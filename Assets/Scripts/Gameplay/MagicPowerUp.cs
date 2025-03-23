@@ -80,6 +80,7 @@ public class MagicPowerUp : IPowerUp {
                         }
                     });
             });
+            sequence.AppendCallback(() => GameModeManager.instance.isUsingPowers = false);
         }
     }
 }

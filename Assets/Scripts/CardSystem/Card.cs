@@ -76,6 +76,7 @@ public class Card : MonoBehaviour {
         GetComponent<Collider>().enabled = true;
         CardAnimation.PlayCardShakeThenMove(this.transform, prevPosition, 0.3f, 0.5f, () => {
             HandleCardMoveComplete();
+            GameModeManager.instance.isUsingPowers = false;
         });
         state = CardState.inBoard;
         this.isSelectable = true;

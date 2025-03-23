@@ -33,6 +33,7 @@ public static class CardAnimation {
         for (int i = 0; i < cards.Count; i++) {
             seq.Join(cards[i].DOMove(originalPositions[i], animationDuration).SetEase(Ease.OutQuad));
         }
+        seq.AppendCallback(()=>GameModeManager.instance.isUsingPowers = false);
     }
     public static void PlayCardShakeThenMove(Transform card, Vector3 targetPosition, float shakeDuration = 0.3f, float moveDuration = 0.5f, System.Action onComplete = null) {
         card.GetComponent<SpriteRenderer>().sortingOrder = 1000;
