@@ -10,5 +10,6 @@ public static class SavedData {
     public static string UnlockedLevel = "UnlockedLevel";
     public static string MusicVolume = "MusicVolume";
     public static string SFXVolume = "SFXVolume";
-
+    public static string MusicToggle = "MusicToggle";
+    public static string SFXToggle = "SFXToggle";
 }

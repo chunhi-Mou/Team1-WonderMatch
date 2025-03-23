@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
     [System.Serializable]
@@ -128,6 +129,7 @@ public class AudioManager : MonoBehaviour {
         float volume = isOn ? defaultVolume : 0f; 
         SetMusicVolume(volume);
         PlayerPrefs.SetFloat(SavedData.MusicVolume, volume); 
+        PlayerPrefs.SetInt(SavedData.MusicToggle, isOn ? 1 : 0);
         PlayerPrefs.Save();
     }
     public void ToggleSFX(bool isOn) {
@@ -135,11 +137,23 @@ public class AudioManager : MonoBehaviour {
         float volume = isOn ? defaultVolume : 0f; 
         SetSFXVolume(volume);
         PlayerPrefs.SetFloat(SavedData.SFXVolume, volume); 
+        PlayerPrefs.SetInt(SavedData.SFXToggle, isOn ? 1 : 0);
         PlayerPrefs.Save();
     }
 
     internal void SetUpToggle(object masterToggle, string v, Action<bool> value)
     {
         throw new NotImplementedException();
+    }
+        private void OnEnable() {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable() {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        LoadSettings();
     }
 }
