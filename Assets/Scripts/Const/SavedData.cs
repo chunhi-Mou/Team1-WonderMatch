@@ -8,4 +8,7 @@ public static class SavedData {
     public static string ShufflePowerCount = "ShufflePowerCount";
     public static string AddOneCellPowerCount = "AddOneCellPowerCount";
     public static string UnlockedLevel = "UnlockedLevel";
+    public static string MusicVolume = "MusicVolume";
+    public static string SFXVolume = "SFXVolume";
+
 }

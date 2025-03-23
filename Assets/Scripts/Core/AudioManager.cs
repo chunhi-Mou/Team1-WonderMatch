@@ -3,6 +3,7 @@ using UnityEngine.Audio;
 using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviour {
     [System.Serializable]
@@ -14,8 +15,8 @@ public class AudioManager : MonoBehaviour {
         [Range(0f, 1f)] public float volume = 1f;
         [Range(0.1f, 3f)] public float pitch = 1f;
         [HideInInspector] public AudioSource source;
+        
     }
-
     public Sound[] sounds;
     public AudioMixer audioMixer;
 
@@ -35,6 +36,7 @@ public class AudioManager : MonoBehaviour {
         LoadSettings();
     }
     #endregion
+    
     private void InitSounds() {
         soundDict = new Dictionary<SoundEffect, AudioSource>();
 
@@ -114,5 +116,30 @@ public class AudioManager : MonoBehaviour {
     public void SetUpSlider(Slider slider, string prefsKey) {
         float savedValue = PlayerPrefs.GetFloat(prefsKey, 1f);
         slider.SetValueWithoutNotify(savedValue);
+    }
+
+    public void SetUpToggle(Toggle toggle, string prefsKey, UnityAction<bool> toggleAction) {
+        bool isOn = PlayerPrefs.GetInt(prefsKey, 1) == 1;
+        toggle.isOn = isOn;
+        toggle.onValueChanged.AddListener(toggleAction);
+    }
+    public void ToggleMusic(bool isOn) {
+        float defaultVolume = 1f; 
+        float volume = isOn ? defaultVolume : 0f; 
+        SetMusicVolume(volume);
+        PlayerPrefs.SetFloat(SavedData.MusicVolume, volume); 
+        PlayerPrefs.Save();
+    }
+    public void ToggleSFX(bool isOn) {
+        float defaultVolume = 1f; 
+        float volume = isOn ? defaultVolume : 0f; 
+        SetSFXVolume(volume);
+        PlayerPrefs.SetFloat(SavedData.SFXVolume, volume); 
+        PlayerPrefs.Save();
+    }
+
+    internal void SetUpToggle(object masterToggle, string v, Action<bool> value)
+    {
+        throw new NotImplementedException();
     }
 }
