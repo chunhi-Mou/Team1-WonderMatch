@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public static class CardAnimation {
     public static void PlayCardSpreadAnimation(List<Transform> cards, Transform centerPoint, float spreadDistance, float animationDuration) {
         if (cards == null || cards.Count <= 1 || centerPoint == null) return;
-
+        AudioManager.instance.PlayOneShot(SoundEffect.Shuffle);
         Vector3[] originalPositions = new Vector3[cards.Count];
 
         for (int i = 0; i < cards.Count; i++) {
@@ -24,11 +24,12 @@ public static class CardAnimation {
         }
 
         seq.AppendInterval(0.5f);
+        seq.AppendCallback(() => AudioManager.instance.PlayOneShot(SoundEffect.ShuffleOut));
         for (int i = 0; i < cards.Count; i++) {
             seq.Join(cards[i].DOMove(centerPoint.position, animationDuration).SetEase(Ease.InOutQuad));
         }
-
         seq.AppendInterval(0.5f);
+        
         for (int i = 0; i < cards.Count; i++) {
             seq.Join(cards[i].DOMove(originalPositions[i], animationDuration).SetEase(Ease.OutQuad));
         }

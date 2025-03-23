@@ -13,6 +13,7 @@ public class UndoPowerUp : IPowerUp {
         if (count > 0) {
             Card lastCard = CardHistory.Instance.UndoLastMove();
             if (lastCard != null) {
+                AudioManager.instance.Play(SoundEffect.Undo);
                 lastCard.UndoMove();
                 count--;
                 SaveData();

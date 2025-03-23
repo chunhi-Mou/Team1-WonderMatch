@@ -19,6 +19,7 @@ public class Card : MonoBehaviour {
     }
     private void OnMouseDown() {
         if (GameModeManager.instance.isPaused || GameModeManager.instance.isProcessingCard) return;
+        AudioManager.instance.Play(SoundEffect.Pop);
         PushCardToStack();
     }
     public void PushCardToStack() {

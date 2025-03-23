@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -56,6 +55,14 @@ public class AudioManager : MonoBehaviour {
             Debug.LogWarning($"Sound {type} not found!");
         }
     }
+    public void PlayOneShot(SoundEffect type) {
+        if (soundDict.TryGetValue(type, out AudioSource source)) {
+            source.PlayOneShot(source.clip);
+        } else {
+            Debug.LogWarning($"Sound {type} not found!");
+        }
+    }
+
     public void Pause(SoundEffect type) {
         if (soundDict.TryGetValue(type, out AudioSource source)) {
             source.Pause();

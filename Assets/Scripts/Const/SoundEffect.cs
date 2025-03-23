@@ -4,5 +4,9 @@ public enum SoundEffect {
     ButtonTink,
     SettingButtonSfx,
     ResumeButtonSfx,
-    WinSfx
+    WinSfx,
+    Shuffle,
+    Pop,
+    Undo,
+    ShuffleOut,
 }
