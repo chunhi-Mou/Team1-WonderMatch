@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CardIdleState : CardBaseState {
     public override void EnterState(CardStateManager card) {
-        card.prevPosition = card.transform.position;
+        card.prevPosition = card.transform.position;//For Undo
         card.cardInfo.cardCollider.enabled = true;
         card.cardInfo.spriteRenderer.DOColor(Color.white, 0.2f);
     }
