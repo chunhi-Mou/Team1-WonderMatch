@@ -31,7 +31,7 @@ public class MagicPowerUp : IPowerUp {
         PlayerPrefs.Save();
     }
     public void BoardMagicHandler(CardType cardType, int selectCount) {
-        var selectedCards = BoardController.GetAvailableCards(cardType, selectCount);
+        var selectedCards = CardBoardHelper.GetAvailableCards(cardType, selectCount);
         ProcessSelectedCards(selectedCards);
     }
     public static void ProcessSelectedCards(List<CardStateManager> selectedCards) {

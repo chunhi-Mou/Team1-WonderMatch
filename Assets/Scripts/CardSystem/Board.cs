@@ -3,16 +3,17 @@
 public class Board : MonoBehaviour {
     private int currCardCount;
 
-    private void OnEnable() => GameEvents.OnMatchTilesDone += CheckWinGame;
-    private void OnDisable() => GameEvents.OnMatchTilesDone -= CheckWinGame;
+    private void OnEnable() => GameEvents.OnCheckWin += CheckWinGame;
+    private void OnDisable() => GameEvents.OnCheckWin -= CheckWinGame;
 
     private void Start() {
-        BoardController.UpdateCardsList();
-        currCardCount = BoardController.cards.Count;
+        CardBoardHelper.UpdateCardsList();
+        currCardCount = CardBoardHelper.cards.Count;
     }
 
     private void CheckWinGame() {
-        currCardCount -= 3; // Mỗi lần match thành công sẽ giảm 3 card
+        CardBoardHelper.UpdateCardsList();
+        currCardCount = CardBoardHelper.cards.Count;
         if (currCardCount <= 0) {
             LevelManager.UnlockNextLevel();
             GameEvents.OnWinGameInvoke();

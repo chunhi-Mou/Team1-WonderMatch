@@ -9,6 +9,7 @@ public static class GameEvents {
     public static event Action OnMatchCards;
     public static event Action OnLoseGame;
     public static event Action OnWinGame;
+    public static event Action OnCheckWin;
     public static event Action OnMatchTilesDone;
     public static event Action<CardInfo> OnUndoPressed;
     public static event Action<CardType, int> OnMagicPowerClicked;
@@ -28,6 +29,7 @@ public static class GameEvents {
     public static void OnMatchCardsInvoke() => OnMatchCards?.Invoke();
     public static void OnLoseGameInvoke() => OnLoseGame?.Invoke();
     public static void OnWinGameInvoke() => OnWinGame?.Invoke();
+    public static void OnCheckWinInvoke() => OnCheckWin?.Invoke();
     public static void OnUndoPressedInvoke(CardInfo card) => OnUndoPressed?.Invoke(card);
     public static void OnMagicPowerClickedInvoke(CardType cardType, int neededCard) => OnMagicPowerClicked?.Invoke(cardType, neededCard);
     public static void OnShufflePowerClickedInvoke(CardType cardType, int neededCard) => OnShufflePowerClicked?.Invoke(cardType, neededCard);

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public static class BoardController {
+public static class CardBoardHelper {
     public static List<CardStateManager> cards { get; private set; } = new();
 
     public static void UpdateCardsList() {

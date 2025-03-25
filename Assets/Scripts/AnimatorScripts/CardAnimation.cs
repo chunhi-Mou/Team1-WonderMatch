@@ -55,21 +55,17 @@ public static class CardAnimation {
 
         Sequence seq = DOTween.Sequence();
 
-        // Hiệu ứng phóng to nhẹ, xoay, sau đó thu nhỏ và fade out
-        seq.Append(cardTransform.DOScale(1.2f, 0.15f).SetEase(Ease.OutBack))
-           .Join(cardTransform.DORotate(new Vector3(0, 0, 15f), 0.15f))
-           .Append(cardTransform.DOScale(0f, 0.3f).SetEase(Ease.InBack));
+        seq.Append(cardTransform.DOScale(1.2f, 0.05f).SetEase(Ease.OutBack))
+           .Join(cardTransform.DORotate(new Vector3(0, 0, 15f), 0.05f))
+           .Append(cardTransform.DOScale(0f, 0.1f).SetEase(Ease.InBack));
 
-        // Nếu có sprite renderer, làm hiệu ứng nhấp nháy trắng
         if (spriteRenderer != null) {
             seq.Join(spriteRenderer.DOColor(Color.white, 0.1f))
-               .Append(spriteRenderer.DOFade(0f, 0.2f));
+               .Append(spriteRenderer.DOFade(0f, 0.15f));
         }
 
-        // Gọi callback khi hoàn thành
         seq.OnComplete(() => {
             onComplete?.Invoke();
-            GameObject.Destroy(card);
         });
     }
 }

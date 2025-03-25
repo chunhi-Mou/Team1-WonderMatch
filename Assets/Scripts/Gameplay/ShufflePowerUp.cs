@@ -38,15 +38,15 @@ public class ShufflePowerUp : IPowerUp {
         PlayerPrefs.Save();
     }
     public void ShuffleBoard(CardType cardType = CardType.nothing, int swapCount = 0) {
-        var cardDataList = BoardController.GetAllCardNotInTray();
-        var cardTransforms = BoardController.GetAllCardNotInTrayTransforms();
+        var cardDataList = CardBoardHelper.GetAllCardNotInTray();
+        var cardTransforms = CardBoardHelper.GetAllCardNotInTrayTransforms();
 
         CardAnimation.PlayCardSpreadAnimation(cardTransforms, centerShufflePoint, 20, 0.8f);
         ShuffleList(cardDataList);
-        BoardController.UpdateBoardCards(cardDataList);
+        CardBoardHelper.UpdateBoardCards(cardDataList);
 
         if (cardType != CardType.nothing && swapCount > 0) {
-            BoardController.SwapSpecificCards(cardType, swapCount);
+            CardBoardHelper.SwapSpecificCards(cardType, swapCount);
         }
     }
     public void ShuffleList<T>(List<T> list) {

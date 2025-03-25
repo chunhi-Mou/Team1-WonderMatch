@@ -8,5 +8,6 @@ public class CardMatchedState : CardBaseState {
 
     public override void UpdateState(CardStateManager card) {
         card.gameObject.SetActive(false);
+        GameEvents.OnMatchTilesDoneInvoke();
     }
 }

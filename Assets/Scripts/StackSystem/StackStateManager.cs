@@ -16,10 +16,13 @@ public class StackStateManager : MonoBehaviour
     {
         GameEvents.OnAddingCard += AddingCardHandler;
         GameEvents.OnCardDoneMoving += CheckMatchHandler;
+        GameEvents.OnMatchTilesDone += ArrangeCards;
     }
     private void OnDisable()
     {
         GameEvents.OnAddingCard -= AddingCardHandler;
+        GameEvents.OnCardDoneMoving -= CheckMatchHandler;
+        GameEvents.OnMatchTilesDone -= ArrangeCards;
     }
     private void Start()
     {
@@ -96,12 +99,15 @@ public class StackStateManager : MonoBehaviour
             }
 
             //isArranging = false;
-            ArrangeCards();
+            //ArrangeCards();
             //ProcessPendingCards();
-            GameEvents.OnMatchTilesDoneInvoke();
+            //GameEvents.OnMatchTilesDoneInvoke();
         //});
     }
     private void ArrangeCards() {
-        StackAnimation.AnimateArrangeCards(cardsInStack, centerPos);
+        StackAnimation.AnimateArrangeCards(cardsInStack, centerPos, () => {
+            SwitchState(idleState);
+            GameEvents.OnCheckWinInvoke();
+        });
     }
 }

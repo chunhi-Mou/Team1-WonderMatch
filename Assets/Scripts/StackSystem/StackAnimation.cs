@@ -35,9 +35,13 @@ public class StackAnimation : MonoBehaviour {
         sequence.OnComplete(() => onComplete?.Invoke());
     }
 
-    public static void AnimateArrangeCards(List<CardStateManager> cardsInStack, Transform[] centerPos) {
+    public static void AnimateArrangeCards(List<CardStateManager> cardsInStack, Transform[] centerPos, System.Action onComplete) {
+        Sequence sequence = DOTween.Sequence();
         for (int i = 0; i < cardsInStack.Count; i++) {
-            CardAnimation.PlayMoveToStack(cardsInStack[i].gameObject, centerPos[i].position, () => {});
+            int index = i;
+            sequence.AppendCallback(() => CardAnimation.PlayMoveToStack(cardsInStack[index].gameObject, centerPos[index].position, () => { }));
         }
+        sequence.OnComplete(() => onComplete?.Invoke());
     }
+
 }

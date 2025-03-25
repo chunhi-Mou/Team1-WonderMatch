@@ -4,7 +4,7 @@ using UnityEngine;
 public class CardOverlapChecker : MonoBehaviour {
     public List<CardStateManager> cardsBelow = new();
     public List<CardStateManager> cardsAbove = new();
-    const float SHRINK_FACTOR = 0.01f;
+    const float SHRINK_FACTOR = 0.02f;
 
     public List<CardStateManager> UpdateTiles(List<CardStateManager> cardsList, float _deep = 1f, bool isBelow = true) {
         cardsList.Clear();
