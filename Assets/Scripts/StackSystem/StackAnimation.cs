@@ -25,6 +25,15 @@ public class StackAnimation : MonoBehaviour {
     //         });
     //     }
     // }
+    public static void AnimateAddCard(List<CardStateManager> cardsInStack, Transform[] centerPos, int targetIndex, System.Action onComplete) {
+        Sequence sequence = DOTween.Sequence();
+
+        for (int i = targetIndex; i < cardsInStack.Count; i++) {
+            sequence.Join(cardsInStack[i].transform.DOMove(centerPos[i].position, 0.5f).SetEase(Ease.OutQuad));
+        }
+
+        sequence.OnComplete(() => onComplete?.Invoke());
+    }
 
     public static void AnimateArrangeCards(List<CardStateManager> cardsInStack, Transform[] centerPos) {
         for (int i = 0; i < cardsInStack.Count; i++) {

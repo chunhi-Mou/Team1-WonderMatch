@@ -59,14 +59,11 @@ public class StackStateManager : MonoBehaviour
         cardsInStack.Insert(targetIndex, card);
         cardTypeDictionary.TryAdd(card.cardInfo.cardData.cardType, new List<CardStateManager>());
         cardTypeDictionary[card.cardInfo.cardData.cardType].Add(card);
-        card.target = centerPos[targetIndex].position;
-        card.currState.UpdateState(card);
 
-        // stackAnimation.AnimateAddCard(cardsInStack, centerPos, targetIndex, () => {
-        //     isAddingCard = false;
-        //     CheckMatch();
-        //     ProcessPendingCards();
-        // });
+        StackAnimation.AnimateAddCard(cardsInStack, centerPos, targetIndex, () => {
+            card.target = centerPos[targetIndex].position;
+            card.currState.UpdateState(card);
+        });
     }
     private void CheckMatch() {
         //if (isAddingCard || isArranging || cardsInStack.Count < 3) return;
