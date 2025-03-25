@@ -33,4 +33,7 @@ public static class GameEvents {
     public static void OnShufflePowerClickedInvoke(CardType cardType, int neededCard) => OnShufflePowerClicked?.Invoke(cardType, neededCard);
     public static void OnTurnChangeInvoke() => OnTurnChange?.Invoke();
     public static void OnSpendCoinsNeededInvoke(PowerType type) => OnSpendCoinsNeeded?.Invoke(type);
+
+    public static event Action<CardStateManager> OnAddingCard;
+    public static void OnAddingCardInvoke(CardStateManager card) => OnAddingCard?.Invoke(card);
 }
