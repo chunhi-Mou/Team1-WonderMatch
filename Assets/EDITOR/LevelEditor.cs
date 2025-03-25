@@ -142,7 +142,7 @@ public class LevelEditor : EditorWindow {
         foreach (Transform layer in parentLevel.transform) {
             foreach (Transform cell in layer) {
                 foreach (Transform card in cell) {
-                    string type = card.GetComponent<Card>().cardData.cardType.ToString();
+                    string type = card.GetComponent<CardInfo>().cardData.cardType.ToString();
                     if (!cardCount.ContainsKey(type)) cardCount[type] = 0;
                     cardCount[type]++;
                 }
@@ -203,7 +203,7 @@ public class LevelEditor : EditorWindow {
         obj.transform.position = selectedCell.transform.position;
         obj.transform.rotation = cardPrefab.transform.rotation;
         obj.transform.localScale = cardPrefab.transform.localScale;
-        obj.GetComponent<Card>().SetCardData(selectedCardIdx);
+        obj.GetComponent<CardInfo>().SetCardData((CardType)selectedCardIdx);
         EditorUtility.SetDirty(obj);
         return obj;
     }

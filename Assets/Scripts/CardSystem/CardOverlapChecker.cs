@@ -1,73 +1,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Card))]
 public class CardOverlapChecker : MonoBehaviour {
-    private Card card;
-    private List<Card> cardsBelow = new List<Card>();
-    private List<Card> cardsAbove = new List<Card>(); 
+    public List<CardStateManager> cardsBelow = new();
+    public List<CardStateManager> cardsAbove = new();
+    const float SHRINK_FACTOR = 0.01f;
 
-    private BoxCollider boxCollider;
-    private void Awake() {
-        card = GetComponent<Card>();
-        boxCollider = GetComponent<BoxCollider>();
-    }
-    public void UpdateBelowTiles(float _deep = 1f) {
-        cardsBelow.Clear();
+    public List<CardStateManager> UpdateTiles(List<CardStateManager> cardsList, float _deep = 1f, bool isBelow = true) {
+        cardsList.Clear();
 
-        float shrinkFactor = 0.01f;
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        Vector3 spriteSize = sr.bounds.size; 
+        Vector3 spriteSize = sr.bounds.size;
         Vector3 scaledSize = new Vector3(spriteSize.x * transform.localScale.x, spriteSize.y * transform.localScale.y, _deep);
-        Vector3 belowBoxSize = scaledSize - new Vector3(shrinkFactor, shrinkFactor, 0);
-        Vector3 belowBoxPosition = transform.position + new Vector3(0, 0, _deep);
+        Vector3 boxSize = scaledSize - new Vector3(SHRINK_FACTOR, SHRINK_FACTOR, 0);
+        Vector3 boxPosition = transform.position + new Vector3(0, 0, isBelow ? _deep : -_deep);
 
-        Collider[] cards = Physics.OverlapBox(belowBoxPosition, belowBoxSize / 2, Quaternion.identity);
+        Collider[] cards = Physics.OverlapBox(boxPosition, boxSize / 2, Quaternion.identity);
 
         foreach (var col in cards) {
-            if (col.gameObject != gameObject) {
-                Card otherCard = col.GetComponent<Card>();
-                if (otherCard != null) {
-                    cardsBelow.Add(otherCard);
-                }
-            }
+            CardStateManager otherCard = col.GetComponent<CardStateManager>();
+            if (otherCard != null) cardsList.Add(otherCard);
         }
+        return cardsList;
     }
 
-    public void UpdateAboveTiles(float _deep = 1f) {
-        cardsAbove.Clear();
+    public List<CardStateManager> UpdateBelowCards() => UpdateTiles(cardsBelow,1f, true);
+    public List<CardStateManager> UpdateAboveCards() => UpdateTiles(cardsAbove,1f, false);
 
-        float shrinkFactor = 0.01f;
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        Vector3 spriteSize = sr.bounds.size; 
-        Vector3 scaledSize = new Vector3(spriteSize.x * transform.localScale.x, spriteSize.y * transform.localScale.y, _deep);
-        Vector3 aboveBoxSize = scaledSize - new Vector3(shrinkFactor, shrinkFactor, 0);
-        Vector3 aboveBoxPosition = transform.position + new Vector3(0, 0, -_deep);
-
-        Collider[] cards = Physics.OverlapBox(aboveBoxPosition, aboveBoxSize / 2, Quaternion.identity);
-
-        foreach (var col in cards) {
-            if (col.gameObject != gameObject) {
-                Card otherCard = col.GetComponent<Card>();
-                if (otherCard != null) {
-                    cardsAbove.Add(otherCard);
-                }
-            }
-        }
+    public bool IsNoAboveCards() {
+        UpdateAboveCards();
+        return cardsAbove.Count == 0;
     }
-
-
-    public void NotifyTilesBelow() {
-        foreach (var t in cardsBelow) {
-            t.GetComponent<CardOverlapChecker>().CheckIfUncovered();
-        }
-    }
-    public void CheckIfUncovered() {
-        UpdateAboveTiles();
-        if (cardsAbove.Count == 0) {
-            card.SetSelectableData(true);
-        } else {
-            card.SetSelectableData(false);
-        }
+    public bool IsNoBelowCards() {
+        UpdateBelowCards();
+        return cardsBelow.Count == 0;
     }
 }

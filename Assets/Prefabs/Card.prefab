@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6801358816124858803}
-  - component: {fileID: 5488567140559598819}
+  - component: {fileID: 3883543068689944616}
+  - component: {fileID: 5109762274353783380}
   - component: {fileID: 4463758739028416285}
   - component: {fileID: 3186193803128364640}
   - component: {fileID: 3733460361830629854}
@@ -30,12 +31,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.16, y: -1.13, z: -3}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5488567140559598819
+--- !u!114 &3883543068689944616
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,14 +45,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 3844113169063565252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a7dd758e44d004e95f5e9b45b832f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 79fa7dc37297bb24b96b5bf608910a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardInfo: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+  prevPosition: {x: 0, y: 0, z: 0}
+  cardOverlapChecker: {fileID: 0}
+--- !u!114 &5109762274353783380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844113169063565252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e51c83b508eb744a56117288435e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
     cardType: 0
-    sprite: {fileID: 21300000, guid: 15a50c89952b566449fe7de5efecfd36, type: 3}
-  state: 0
+    sprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  cardCollider: {fileID: 0}
 --- !u!114 &4463758739028416285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +101,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.46, y: 5.5, z: 0.2}
+  m_Size: {x: 0.692, y: 1.1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &3733460361830629854
 SpriteRenderer:

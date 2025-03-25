@@ -35,5 +35,9 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 2e0e35b61c9d1d249b5bef11ce6708cc, type: 3}
   - cardType: 10
     sprite: {fileID: 21300000, guid: 64372e8cbae53d148bd2afeda6bb9953, type: 3}
+  - cardType: 11
+    sprite: {fileID: 21300000, guid: 935bf75104c5a8a4d8d12b27ec4591c4, type: 3}
+  - cardType: 12
+    sprite: {fileID: 21300000, guid: 935bf75104c5a8a4d8d12b27ec4591c4, type: 3}
   - cardType: 13
     sprite: {fileID: 21300000, guid: 935bf75104c5a8a4d8d12b27ec4591c4, type: 3}

@@ -42,4 +42,9 @@ public static class CardAnimation {
         seq.Append(card.DOMove(targetPosition, moveDuration).SetEase(Ease.OutQuad))
             .OnComplete(() => onComplete?.Invoke());
     }
+    public static void PlayMoveToStack(GameObject card, Vector3 target, System.Action onComplete) {
+        card.transform.DOMove(target, 0.5f)
+            .SetEase(Ease.OutQuad)
+            .OnComplete(() => onComplete?.Invoke());
+    }
 }

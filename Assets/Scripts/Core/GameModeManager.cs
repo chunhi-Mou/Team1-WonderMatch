@@ -32,7 +32,7 @@ public class GameModeManager : MonoBehaviour {
     private void Start() {
         Audio_PlayBGMusic();
     }
-    private void SetCardProcessingStateTrue(Card card = null) => isProcessingCard = true;
+    private void SetCardProcessingStateTrue(CardStateManager card = null) => isProcessingCard = true;
     private void SetCardProcessingStateFalse() => isProcessingCard = false;
     public void TogglePause() {
         isPaused = !isPaused;

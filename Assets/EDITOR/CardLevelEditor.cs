@@ -19,7 +19,7 @@ public class CardLevelEditor : EditorWindow {
     //SELECTED DATA
     private bool deleteIsOn = false;
     private Cell selectedCell;
-    private int defaultCardIdx = (int)CardType.nothing;
+    private CardType defaultCardIdx = CardType.nothing;
     private Vector2 scrollPosition;
     private Dictionary<CardType, int> selectedCardCounts = new Dictionary<CardType, int>();
 
@@ -113,7 +113,7 @@ public class CardLevelEditor : EditorWindow {
         obj.transform.position = selectedCell.transform.position;
         obj.transform.rotation = cardPrefab.transform.rotation;
         obj.transform.localScale = cardPrefab.transform.localScale;
-        obj.GetComponent<Card>().SetCardData(defaultCardIdx);
+        obj.GetComponent<CardInfo>().SetCardData(defaultCardIdx);
         EditorUtility.SetDirty(obj);
         return obj;
     }
@@ -200,7 +200,7 @@ public class CardLevelEditor : EditorWindow {
         foreach (Transform layer in parentLevel.transform) {
             foreach (Transform cell in layer) {
                 foreach (Transform card in cell) {
-                    Card cardComponent = card.GetComponent<Card>();
+                    CardInfo cardComponent = card.GetComponent<CardInfo>();
                     if (cardComponent != null) {
                         CardType type = cardComponent.cardData.cardType;
                         if (!selectedCardCounts.ContainsKey(type)) {
@@ -248,14 +248,14 @@ public class CardLevelEditor : EditorWindow {
             CardType type = card.Key;
             int count = card.Value;
             for (int i = 0; i < count && index < allCards.Count; i++, index++) {
-                Card cardComponent = allCards[index].GetComponent<Card>();
+                CardInfo cardComponent = allCards[index].GetComponent<CardInfo>();
                 if (cardComponent != null) {
-                    cardComponent.SetCardData((int)type);
+                    cardComponent.SetCardData(type);
                 }
             }
         }
         for (; index < allCards.Count; index++) {
-            Card cardComponent = allCards[index].GetComponent<Card>();
+            CardInfo cardComponent = allCards[index].GetComponent<CardInfo>();
             if (cardComponent != null) {
                 cardComponent.SetCardData(0);
             }
