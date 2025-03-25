@@ -34,6 +34,7 @@ public class CardStateManager : MonoBehaviour {
         AudioManager.instance.Play(SoundEffect.Pop);
         GameEvents.OnCardSelectedInvoke(this);
         SwitchState(movingState);
+        GameEvents.OnAddingCardInvoke(this);
     }
     public void SwitchState(CardBaseState state) {
         currState = state;

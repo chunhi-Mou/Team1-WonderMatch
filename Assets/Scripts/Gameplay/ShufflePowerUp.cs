@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class ShufflePowerUp : IPowerUp {
     private int count;
-    private StackLogic stack;
+    private StackStateManager stack;
     private Transform centerShufflePoint;
 
     public ShufflePowerUp() {
-        stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
+        stack = GameObject.Find("StackA")?.GetComponent<StackStateManager>();
         count = PlayerPrefs.GetInt(SavedData.ShufflePowerCount, 3);
     }
 
@@ -22,7 +22,7 @@ public class ShufflePowerUp : IPowerUp {
 
     public void Use() {
         if (count > 0) {
-            stack.ShuffleMagicHandler();
+            //stack.ShuffleMagicHandler();
             count--;
             SaveData();
         } else {

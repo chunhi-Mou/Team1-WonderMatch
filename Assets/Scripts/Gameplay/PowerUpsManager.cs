@@ -20,7 +20,7 @@ public class PowerUpsManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI undoCntTxt;
     [SerializeField] private TextMeshProUGUI magicCntTxt;
     [SerializeField] private TextMeshProUGUI addOneCellCntTxt;
-    private StackLogic stack;
+    private StackStateManager stack;
 
     private Dictionary<PowerType, IPowerUp> powerUps = new Dictionary<PowerType, IPowerUp>();
     private int maxPowerCount = 3;
@@ -35,7 +35,7 @@ public class PowerUpsManager : MonoBehaviour {
         InitPowerUps();
     }
     private void OnEnable() {
-        stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
+        stack = GameObject.Find("StackA")?.GetComponent<StackStateManager>();
         GameEvents.OnCardSelected += CardHistory.Instance.PushCardToHistory;
     }
     private void OnDisable() {
@@ -43,7 +43,7 @@ public class PowerUpsManager : MonoBehaviour {
     }
     private IEnumerator Start() {
         yield return new WaitForEndOfFrame();
-        DOVirtual.DelayedCall(0.15f, () => stack.ShuffleMagicHandler());
+        //DOVirtual.DelayedCall(0.15f, () => stack.ShuffleMagicHandler());
     }
     public void RegisterToGameMode() {
         if (SingleModeManager.instance != null) {

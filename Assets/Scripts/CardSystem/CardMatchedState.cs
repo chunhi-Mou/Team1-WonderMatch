@@ -3,7 +3,7 @@ using DG.Tweening;
 
 public class CardMatchedState : CardBaseState {
     public override void EnterState(CardStateManager card) {
-        //play anim xong thì Update
+        CardAnimation.PlayCardsMatched(card.gameObject, () => { UpdateState(card); });
     }
 
     public override void UpdateState(CardStateManager card) {

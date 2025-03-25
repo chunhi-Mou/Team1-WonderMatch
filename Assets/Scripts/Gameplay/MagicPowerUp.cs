@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MagicPowerUp : IPowerUp {
     private int count;
-    private StackLogic stack;
+    private StackStateManager stack;
 
     public MagicPowerUp() {
-        stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
+        stack = GameObject.Find("StackA")?.GetComponent<StackStateManager>();
         count = PlayerPrefs.GetInt(SavedData.MagicPowerCount, 3);
     }
 
@@ -15,10 +15,10 @@ public class MagicPowerUp : IPowerUp {
     public void OnDisable() => GameEvents.OnMagicPowerClicked -= BoardMagicHandler;
     public void Use() {
         if (count > 0) {
-            if (stack.StackMagicHandler()) { //Đồng thời Invoke cho Board
-                count--;
-                SaveData();
-            } 
+            //if (stack.StackMagicHandler()) { //Đồng thời Invoke cho Board
+            //    count--;
+            //    SaveData();
+            //} 
         } else {
             GameEvents.OnSpendCoinsNeededInvoke(PowerType.Magic);
         }
