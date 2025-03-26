@@ -1116,6 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonType: 0
   buttonSound: 4
   button: {fileID: 4093123597119084873}
   onClickEvent:
@@ -3239,7 +3240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSound: 0
+  buttonType: 1
+  buttonSound: 7
   button: {fileID: 8305703851807823620}
   onClickEvent:
     m_PersistentCalls:
@@ -3277,6 +3279,7 @@ GameObject:
   - component: {fileID: 8263962662818701138}
   - component: {fileID: 8625741421784594737}
   - component: {fileID: 3459843394174947489}
+  - component: {fileID: 8624181635133877188}
   m_Layer: 5
   m_Name: Magic
   m_TagString: Untagged
@@ -3385,6 +3388,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8625741421784594737}
   m_OnClick:
     m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8624181635133877188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4905650151183658664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 1
+  buttonSound: 7
+  button: {fileID: 3459843394174947489}
+  onClickEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7082415412589823969}
         m_TargetAssemblyTypeName: PowerUpsManager, Assembly-CSharp
@@ -3398,6 +3419,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 3
+  clickRotationAngle: 15
 --- !u!1 &4923357157382075864
 GameObject:
   m_ObjectHideFlags: 0
@@ -3624,6 +3654,7 @@ GameObject:
   - component: {fileID: 8430306788634039058}
   - component: {fileID: 6546351608516950561}
   - component: {fileID: 2249058574829277740}
+  - component: {fileID: 5256429057140084764}
   m_Layer: 5
   m_Name: AddCell
   m_TagString: Untagged
@@ -3733,18 +3764,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7082415412589823969}
-        m_TargetAssemblyTypeName: PowerUpsManager, Assembly-CSharp
-        m_MethodName: UseAddOneCellPress
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2249058574829277740}
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
@@ -3757,6 +3776,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5256429057140084764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939242772822078706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 1
+  buttonSound: 7
+  button: {fileID: 2249058574829277740}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 3
+  clickRotationAngle: 15
 --- !u!1 &4977624791011548603
 GameObject:
   m_ObjectHideFlags: 0
@@ -6424,7 +6470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSound: 0
+  buttonType: 1
+  buttonSound: 7
   button: {fileID: 3488874168205930257}
   onClickEvent:
     m_PersistentCalls:
@@ -7609,6 +7656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonType: 0
   buttonSound: 3
   button: {fileID: 3959947457156275101}
   onClickEvent:
@@ -7698,6 +7746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonType: 0
   buttonSound: 4
   button: {fileID: 2690959291734273739}
   onClickEvent:

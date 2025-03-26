@@ -18,7 +18,7 @@ public class Card : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void OnMouseDown() {
-        if (GameModeManager.instance.isPaused || GameModeManager.instance.isProcessingCard) return;
+        if (GameModeManager.instance.isPaused || GameModeManager.instance.isProcessingCard || GameModeManager.instance.isUsingPowers) return;
         AudioManager.instance.Play(SoundEffect.Pop);
         PushCardToStack();
     }
