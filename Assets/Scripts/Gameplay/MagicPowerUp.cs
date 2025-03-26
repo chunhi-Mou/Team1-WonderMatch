@@ -12,6 +12,7 @@ public class MagicPowerUp : IPowerUp {
     }
     private int count = 3;
     private StackLogic stack;
+    public static bool canUseMagic = true;
 
     public MagicPowerUp() {
         stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
@@ -19,9 +20,11 @@ public class MagicPowerUp : IPowerUp {
     }
 
     public void Use() {
-        if (GameModeManager.instance.isUsingPowers || GameModeManager.instance.isProcessingCard) return;
+        if (GameModeManager.instance.isUsingPowers || GameModeManager.instance.isProcessingCard || GameModeManager.instance.isMovingCardsInStack) return;
         if (count > 0) {
             if (stack.StackMagicHandler()) { //Đồng thời Invoke cho Board
+                canUseMagic = false;
+                GameModeManager.instance.isUsingPowers = true;
                 count--;
                 SaveData();
             } 
@@ -63,19 +66,21 @@ public class MagicPowerUp : IPowerUp {
         }
     }
     private void SelectAndProcessCards(List<Card> selectedCards) {
-        GameModeManager.instance.isUsingPowers = true;
-        Sequence sequence = DOTween.Sequence();
-
         foreach (Card card in selectedCards) {
-            sequence.AppendCallback(() => {
-                card.SetSelectableData(true);
-                card.PushCardToStack();
-            });
+            card.SetSelectableData(true);
+            card.state = CardState.inStack;
+            card.UpdateCardsState();
 
-            sequence.AppendInterval(0.1f);
         }
-        sequence.AppendCallback(() => GameModeManager.instance.isUsingPowers = false);
 
-        sequence.Play();
+        // Đợi Stack xử lý xong rồi mới tắt isUsingPowers
+        GameEvents.OnMatchTilesDone += () => {
+            GameModeManager.instance.isUsingPowers = false;
+            Debug.Log("Stack done processing, powers off.");
+
+            // Unsubscribe tránh bị gọi nhiều lần
+            GameEvents.OnMatchTilesDone -= () => { };
+        };
     }
+
 }

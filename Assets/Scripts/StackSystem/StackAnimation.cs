@@ -27,8 +27,10 @@ public class StackAnimation : MonoBehaviour {
     }
 
     public void AnimateArrangeCards(List<Card> cardsInStack, Transform[] centerPos) {
+        GameModeManager.instance.isMovingCardsInStack = true;
         for (int i = 0; i < cardsInStack.Count; i++) {
             cardsInStack[i].MoveCardTo(centerPos[i].position, 0.3f);
         }
+        GameModeManager.instance.isMovingCardsInStack = false;
     }
 }

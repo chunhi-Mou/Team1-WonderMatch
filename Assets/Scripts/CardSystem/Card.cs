@@ -31,6 +31,9 @@ public class Card : MonoBehaviour {
             state = CardState.inBoard;
         }
 
+        UpdateCardsState();
+    }
+    public void UpdateCardsState() {
         cardOverlapChecker.UpdateBelowTiles();
         GetComponent<Collider>().enabled = false;
 
