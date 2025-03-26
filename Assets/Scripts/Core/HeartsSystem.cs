@@ -1,5 +1,4 @@
-﻿using DG.Tweening;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class HeartsSystem : MonoBehaviour {
@@ -30,12 +29,7 @@ public class HeartsSystem : MonoBehaviour {
 
     private void Start() {
         LoadHeartsData();
-    }
-    private void OnEnable() {
-        GameEvents.OnLoseGame += LoseHeart;
-    }
-    private void OnDisable() {
-        GameEvents.OnLoseGame -= LoseHeart;
+        ShowUpHearts();
     }
     private void Update() {
         ShowUpHearts();
@@ -97,13 +91,17 @@ public class HeartsSystem : MonoBehaviour {
         Debug.Log("WATCH AD");
         HealHeart(maxHearts);
     }
-    public void LoseHeart() {
+    public static void LoseHeart() {
+        Debug.Log("tru tim");
         hearts = Mathf.Max(0, hearts - 1);
         lastHealTime = System.DateTime.UtcNow;
-        SaveHearts();
+        PlayerPrefs.SetInt("Hearts", hearts);
+        PlayerPrefs.SetString("LastHealTimestamp", lastHealTime.ToString());
+        PlayerPrefs.Save();
     }
 
     private void SaveHearts() {
+        ShowUpHearts();
         PlayerPrefs.SetInt("Hearts", hearts);
         PlayerPrefs.SetString("LastHealTimestamp", lastHealTime.ToString());
         PlayerPrefs.Save();

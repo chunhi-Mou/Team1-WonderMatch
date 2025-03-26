@@ -38,10 +38,14 @@ public static class CardAnimation {
         seq.AppendCallback(()=>GameModeManager.instance.isUsingPowers = false);
     }
     public static void PlayCardShakeThenMove(Transform card, Vector3 targetPosition, float shakeDuration = 0.3f, float moveDuration = 0.5f, System.Action onComplete = null) {
+        GameModeManager.instance.isUsingPowers = true;
         card.GetComponent<SpriteRenderer>().sortingOrder = 1000;
         DG.Tweening.Sequence seq = DOTween.Sequence();
         seq.Append(card.DOShakePosition(shakeDuration, strength: 0.5f, vibrato: 20, randomness: 90));
         seq.Append(card.DOMove(targetPosition, moveDuration).SetEase(Ease.OutQuad))
-            .OnComplete(() => onComplete?.Invoke());
+            .OnComplete(() => {
+                GameModeManager.instance.isUsingPowers = false;
+                onComplete?.Invoke();
+            });
     }
 }

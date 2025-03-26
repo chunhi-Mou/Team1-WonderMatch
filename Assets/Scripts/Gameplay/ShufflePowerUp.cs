@@ -21,7 +21,8 @@ public class ShufflePowerUp : IPowerUp {
     }
 
     public void Use() {
-        if (count > 0 || GetAllCardsInBoard().Count > 1) {
+        if(GameModeManager.instance.isUsingPowers) return;
+        if (count > 0 && GetAllCardsInBoard().Count > 1) {
             stack.ShuffleMagicHandler();
             count--;
             SaveData();
