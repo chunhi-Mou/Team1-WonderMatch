@@ -42,7 +42,6 @@ public class UIButtonHandler : MonoBehaviour {
 
     private void OnButtonClicked() {
             if (buttonType == ButtonType.Power && GameModeManager.instance.isUsingPowers) return;
-        Debug.Log("can play");
             if (idleTween != null) {
             idleTween.Kill();
             transform.localScale = Vector3.one;

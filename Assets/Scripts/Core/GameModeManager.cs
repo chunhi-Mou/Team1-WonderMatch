@@ -22,6 +22,7 @@ public class GameModeManager : MonoBehaviour {
     public bool isPaused = false;
     public bool isProcessingCard = false;
     public bool isUsingPowers = false;
+    public bool isMovingCardsInStack = false;
     [SerializeField] GameObject SingleMode;
     [SerializeField] GameObject DuoMode;
 
