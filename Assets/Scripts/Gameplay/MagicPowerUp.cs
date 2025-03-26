@@ -19,6 +19,7 @@ public class MagicPowerUp : IPowerUp {
     }
 
     public void Use() {
+        if (GameModeManager.instance.isUsingPowers || GameModeManager.instance.isProcessingCard) return;
         if (count > 0) {
             if (stack.StackMagicHandler()) { //Đồng thời Invoke cho Board
                 count--;
@@ -62,6 +63,7 @@ public class MagicPowerUp : IPowerUp {
         }
     }
     private void SelectAndProcessCards(List<Card> selectedCards) {
+        GameModeManager.instance.isUsingPowers = true;
         Sequence sequence = DOTween.Sequence();
 
         foreach (Card card in selectedCards) {
@@ -71,16 +73,9 @@ public class MagicPowerUp : IPowerUp {
             });
 
             sequence.AppendInterval(0.1f);
-
-            sequence.AppendCallback(() => {
-                DOVirtual.DelayedCall(0, () => { }, false)
-                    .OnUpdate(() => {
-                        if (!GameModeManager.instance.isProcessingCard) {
-                            sequence.PlayForward();
-                        }
-                    });
-            });
-            sequence.AppendCallback(() => GameModeManager.instance.isUsingPowers = false);
         }
+        sequence.AppendCallback(() => GameModeManager.instance.isUsingPowers = false);
+
+        sequence.Play();
     }
 }

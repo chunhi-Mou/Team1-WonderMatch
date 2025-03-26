@@ -16,5 +16,6 @@ public class WinLoseUI : MonoBehaviour {
     }
     private void ShowUpLoseUI() {
         LoseUI.SetActive(true);
+        HeartsSystem.LoseHeart();
     }
 }

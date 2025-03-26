@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SettingMenu : MonoBehaviour
 {
@@ -37,6 +36,6 @@ public class SettingMenu : MonoBehaviour
     }
     public void QuitMidGame() {
         LoadMenu();
-        HeartsSystem.instance.LoseHeart();
+        HeartsSystem.LoseHeart();
     }
 }
