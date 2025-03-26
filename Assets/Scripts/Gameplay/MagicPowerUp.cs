@@ -1,5 +1,4 @@
-﻿using DG.Tweening;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
@@ -73,12 +72,8 @@ public class MagicPowerUp : IPowerUp {
 
         }
 
-        // Đợi Stack xử lý xong rồi mới tắt isUsingPowers
         GameEvents.OnMatchTilesDone += () => {
             GameModeManager.instance.isUsingPowers = false;
-            Debug.Log("Stack done processing, powers off.");
-
-            // Unsubscribe tránh bị gọi nhiều lần
             GameEvents.OnMatchTilesDone -= () => { };
         };
     }

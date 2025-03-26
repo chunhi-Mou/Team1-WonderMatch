@@ -1,6 +1,4 @@
 using System;
-using UnityEngine;
-using DG.Tweening;
 
 public static class GameEvents {
     // Events
