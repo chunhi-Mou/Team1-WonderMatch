@@ -1,7 +1,5 @@
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class DuoModeManager : MonoBehaviour, IGameMode {
     #region Singleton - Dont destroy
