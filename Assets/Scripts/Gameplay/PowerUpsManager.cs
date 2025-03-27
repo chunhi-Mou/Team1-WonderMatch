@@ -37,9 +37,13 @@ public class PowerUpsManager : MonoBehaviour {
     private void OnEnable() {
         stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
         GameEvents.OnCardSelected += CardHistory.Instance.PushCardToHistory;
+        powerUps[PowerType.Shuffle].OnEnable();
+        powerUps[PowerType.Magic].OnEnable();
     }
     private void OnDisable() {
         GameEvents.OnCardSelected -= CardHistory.Instance.PushCardToHistory;
+        powerUps[PowerType.Shuffle].OnDisable();
+        powerUps[PowerType.Magic].OnDisable();
     }
     private IEnumerator Start() {
         yield return new WaitForEndOfFrame();
@@ -55,8 +59,6 @@ public class PowerUpsManager : MonoBehaviour {
         powerUps[PowerType.Undo] = new UndoPowerUp();
         powerUps[PowerType.Magic] = new MagicPowerUp();
         powerUps[PowerType.AddOneCell] = new AddOneCellPowerUp();
-        powerUps[PowerType.Shuffle].OnEnable();
-        powerUps[PowerType.Magic].OnEnable();
         this.UpdatePowerCountTxtUI();
     }
 
