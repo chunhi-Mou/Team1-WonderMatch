@@ -26,16 +26,14 @@ public class SettingPanel : MonoBehaviour {
     private Tween minuteTween;
 
     void Start() {
-        StartIdleClock();
-
         settingButton.onClick.RemoveAllListeners();
-        settingButton.onClick.AddListener(Pause);
+        settingButton.onClick.AddListener(SpinClockFast);
+
+        StartIdleClock();
 
         settingsPanelBG.SetActive(false);
         settingsBox.SetActive(false);
         settingsButtonObj.SetActive(true);
-
-        settingButton.onClick.AddListener(SpinClockFast);
     }
 
     private void OnDisable() {
@@ -46,12 +44,14 @@ public class SettingPanel : MonoBehaviour {
     public void Resume() {
         settingsPanelBG.SetActive(false);
         settingsButtonObj.SetActive(true);
+        settingsBox.SetActive(false);
         GameModeManager.instance.ResumeGame();
     }
 
     public void Pause() {
+        Debug.Log("whyy");
         settingsPanelBG.SetActive(true);
-        settingsButtonObj.SetActive(false);
+        settingsBox.SetActive(true);
         GameModeManager.instance.PauseGame();
     }
 
@@ -85,17 +85,20 @@ public class SettingPanel : MonoBehaviour {
     }
 
     private void SpinClockFast() {
-        hourTween.Kill();
         minuteTween.Kill();
-
-        hourHand.transform.DORotate(new Vector3(0, 0, 360), fastHourSpeed, RotateMode.FastBeyond360)
+        //minuteTween.Kill();
+        AudioManager.instance.Play(buttonSound);
+        minuteHand.transform.DORotate(new Vector3(0, 0, 360), fastHourSpeed, RotateMode.FastBeyond360)
             .SetEase(Ease.OutQuad)
-            .SetLoops(3, LoopType.Restart)
-            .OnComplete(StartIdleClock);
+            .SetLoops(1, LoopType.Restart)
+            .OnComplete(()=>{
+                Pause();
+                StartIdleClock();
+            });
 
-        minuteHand.transform.DORotate(new Vector3(0, 0, 360), fastMinuteSpeed, RotateMode.FastBeyond360)
-            .SetEase(Ease.OutQuad)
-            .SetLoops(3, LoopType.Restart);
+        //minuteHand.transform.DORotate(new Vector3(0, 0, 360), fastMinuteSpeed, RotateMode.FastBeyond360)
+        //    .SetEase(Ease.OutQuad)
+        //    .SetLoops(1, LoopType.Restart);
     }
 
 }
