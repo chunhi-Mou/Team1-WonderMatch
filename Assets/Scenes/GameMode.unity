@@ -949,6 +949,16 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a7c7562e615f75048b96a3a59474844a, type: 3}
     loop: 0
     source: {fileID: 0}
+  - type: 11
+    outputMixer: {fileID: -6315820454765346748, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
+    clip: {fileID: 8300000, guid: bcc624b11e8033e4aa46f09bfa5f2c3c, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - type: 12
+    outputMixer: {fileID: -6315820454765346748, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
+    clip: {fileID: 8300000, guid: b9e19fc894934374bb8a832a39c38d0e, type: 3}
+    loop: 0
+    source: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
 --- !u!4 &1335280672
 Transform:

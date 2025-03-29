@@ -9,5 +9,7 @@ public enum SoundEffect {
     Pop,
     Undo,
     ShuffleOut,
-    CoinPower
+    CoinPower,
+    ClockSlow,
+    ClockFast
 }
