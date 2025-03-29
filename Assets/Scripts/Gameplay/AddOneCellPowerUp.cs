@@ -25,6 +25,8 @@ public class AddOneCellPowerUp : IPowerUp {
                 addOneCellObj.SetActive(false);
                 GameModeManager.instance.isUsingPowers = false;
             }
+        } else {
+            GameEvents.OnSpendCoinsNeededInvoke(PowerType.AddOneCell);
         }
     }
 
