@@ -5,7 +5,7 @@ using UnityEngine;
 public class StackAnimation : MonoBehaviour {
     public void AnimateAddCard(List<Card> cardsInStack, Transform[] centerPos, int targetIndex, System.Action onComplete) {
         for (int i = targetIndex; i < cardsInStack.Count; i++) {
-            cardsInStack[i].MoveCardTo(centerPos[i].position, 0.1f);
+            cardsInStack[i].MoveCardToStack(centerPos[i].position, 0.1f);
         }
         cardsInStack[targetIndex].transform
             .DOMove(centerPos[targetIndex].position, 0.2f)
