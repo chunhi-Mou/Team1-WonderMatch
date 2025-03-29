@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonType: 0
   buttonSound: 2
   button: {fileID: 534778027}
   onClickEvent:
@@ -941,6 +942,11 @@ MonoBehaviour:
   - type: 9
     outputMixer: {fileID: -6315820454765346748, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
     clip: {fileID: 8300000, guid: a435116d20a6343409301f9b827ca65e, type: 3}
+    loop: 0
+    source: {fileID: 0}
+  - type: 10
+    outputMixer: {fileID: -6315820454765346748, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
+    clip: {fileID: 8300000, guid: a7c7562e615f75048b96a3a59474844a, type: 3}
     loop: 0
     source: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
