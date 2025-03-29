@@ -191,8 +191,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369e723749eba224881d6136204ca1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingMenuUI: {fileID: 5933624471946213639}
-  settingButton: {fileID: 7545200499967051227}
+  settingsPanelBG: {fileID: 0}
+  settingsButtonObj: {fileID: 0}
+  settingsBox: {fileID: 0}
+  settingButton: {fileID: 8526694446686757419}
+  buttonSound: 0
+  clockCenter: {fileID: 0}
+  hourHand: {fileID: 0}
+  minuteHand: {fileID: 0}
+  hourSpeed: 10
+  minuteSpeed: 2
+  fastHourSpeed: 100
+  fastMinuteSpeed: 20
+  fastDuration: 0.5
 --- !u!1 &2175313174180703078
 GameObject:
   m_ObjectHideFlags: 0
