@@ -42,7 +42,8 @@ public static class CardAnimation {
         card.GetComponent<SpriteRenderer>().sortingOrder = 1000;
         DG.Tweening.Sequence seq = DOTween.Sequence();
         seq.Append(card.DOShakePosition(shakeDuration, strength: 0.5f, vibrato: 20, randomness: 90));
-        seq.Append(card.DOMove(targetPosition, moveDuration).SetEase(Ease.OutQuad))
+        seq.Append(card.DOMove(targetPosition, moveDuration).SetEase(Ease.OutQuad));
+        seq.Append(card.DOScale(Vector3.one * 0.2f, 0.2f))
             .OnComplete(() => {
                 GameModeManager.instance.isUsingPowers = false;
                 onComplete?.Invoke();

@@ -62,6 +62,25 @@ public class Card : MonoBehaviour {
                 spriteRenderer.sortingOrder = 0;
             });
     }
+    public void MoveCardToStack(Vector3 target, float _duration = 0.5f, Ease easeType = Ease.Linear) {
+        spriteRenderer.sortingOrder = 1000;
+        SetSelectableData(true);
+
+        float randomRotation = Random.Range(-3f, 3f); 
+        Vector3 originalScale = new Vector3(1f, 1f, 1f); 
+        Vector3 finalScale = originalScale * 0.15f;
+
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(transform.DOMove(target, _duration).SetEase(easeType));
+        sequence.Join(transform.DOScale(finalScale, _duration));
+        sequence.Join(transform.DORotate(new Vector3(0, 0, randomRotation), _duration)); 
+
+        sequence.OnComplete(() => {
+            cardOverlapChecker.NotifyTilesBelow();
+            GameEvents.OnCardDoneMovingInvoke();
+            spriteRenderer.sortingOrder = 0;
+        });
+    }
     public void SetSelectableData(bool _data) {
         this.isSelectable = _data;
         if(!this.isSelectable) {
@@ -77,6 +96,7 @@ public class Card : MonoBehaviour {
         if (!GameModeManager.instance.isProcessingCard && state != CardState.inStack) return;
         GameEvents.OnUndoPressedInvoke(this);
         GetComponent<Collider>().enabled = true;
+        transform.rotation = Quaternion.identity;
         CardAnimation.PlayCardShakeThenMove(this.transform, prevPosition, 0.3f, 0.5f, () => {
             HandleCardMoveComplete();
         });
