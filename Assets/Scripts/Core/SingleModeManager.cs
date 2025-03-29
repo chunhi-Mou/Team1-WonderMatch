@@ -24,17 +24,14 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         UnregisterEvents();
     }
     private void RegisterEvents() {
-        GameEvents.OnLoseGame += LoseGame;
-        GameEvents.OnWinGame += WinGame;
+        GameEvents.OnLoseGame += TogglePause;
+        GameEvents.OnWinGame += TogglePause;
     }
     private void UnregisterEvents() {
-        GameEvents.OnLoseGame -= LoseGame;
-        GameEvents.OnWinGame -= WinGame;
+        GameEvents.OnLoseGame -= TogglePause;
+        GameEvents.OnWinGame -= TogglePause;
     }
-    public void LoseGame() {
-        GameModeManager.instance.PauseGame();
-    }
-    public void WinGame() {
+    public void TogglePause() {
         GameModeManager.instance.PauseGame();
     }
     [SerializeField] GameObject PowerUpUI;

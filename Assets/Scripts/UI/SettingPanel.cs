@@ -49,7 +49,6 @@ public class SettingPanel : MonoBehaviour {
     }
 
     public void Pause() {
-        Debug.Log("whyy");
         settingsPanelBG.SetActive(true);
         settingsBox.SetActive(true);
         GameModeManager.instance.PauseGame();
@@ -73,7 +72,7 @@ public class SettingPanel : MonoBehaviour {
         LoadMenu();
         HeartsSystem.LoseHeart();
     }
-
+    
     private void StartIdleClock() {
         hourTween = hourHand.transform.DORotate(new Vector3(0, 0, 360), hourSpeed, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)
