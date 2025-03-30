@@ -16,7 +16,7 @@ MonoBehaviour:
   - cardType: 0
     sprite: {fileID: 21300000, guid: 2c90112aca9537f43acc927cf028f99c, type: 3}
   - cardType: 1
-    sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+    sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   - cardType: 2
     sprite: {fileID: 21300000, guid: 6deefc09f942fe343a4ffd97fc2b7540, type: 3}
   - cardType: 3
@@ -28,7 +28,7 @@ MonoBehaviour:
   - cardType: 6
     sprite: {fileID: 21300000, guid: 0bd2deaa819480843809c96c15d7bda3, type: 3}
   - cardType: 7
-    sprite: {fileID: 21300000, guid: 6234a96aa4169f3498889e8fe07002f2, type: 3}
+    sprite: {fileID: 21300000, guid: 673a95eaa4213d044ad95c2fbb304983, type: 3}
   - cardType: 8
     sprite: {fileID: 21300000, guid: 2a643b11fa3b3c84ab84919d29f8dfb6, type: 3}
   - cardType: 9

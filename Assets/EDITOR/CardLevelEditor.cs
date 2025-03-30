@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class CardLevelEditor : EditorWindow {
     //DATA
@@ -126,6 +127,7 @@ public class CardLevelEditor : EditorWindow {
     private void ShowCardSelection() {
         EditorGUILayout.Space();
         List<GUIContent> contents = GetCardGUIContents();
+        if (GUILayout.Button("Update Cell Layer")) ModifyAllLayer();
         if (GUILayout.Button("Done Edit")) ApplyCardSelection();
         if (GUILayout.Button("Cập nhật từ Scene")) {
             UpdateCardSelectionFromScene();
@@ -271,4 +273,25 @@ public class CardLevelEditor : EditorWindow {
 
         return contents;
     }
+
+    private void ModifyAllLayer() {
+        GameObject parentLevel = GameObject.Find(levelName);
+        if (parentLevel == null) {
+            EditorUtility.DisplayDialog("Cảnh báo", "Level không tồn tại!", "OK");
+            return;
+        }
+
+        foreach (Transform layer in parentLevel.transform) {
+            var layerScript = layer.GetComponent<BuildLayer>();
+            layerScript.gridCellSize = GetCellSizeFromPrefab(); 
+
+            foreach (Transform cell in layer) {
+                layerScript.ModifyCells(cell.gameObject, layer.transform, layerScript.gridCellSize);
+            }
+        }
+
+        EditorUtility.SetDirty(parentLevel);
+        Repaint();
+    }
+
 }
