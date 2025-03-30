@@ -34,11 +34,8 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
     public void TogglePause() {
         GameModeManager.instance.PauseGame();
     }
-    [SerializeField] GameObject PowerUpUI;
+
     [SerializeField] List<Player> players = new List<Player>();
-    public void SetPowerUpUI(GameObject obj) {
-        PowerUpUI = obj;
-    }
     public void RegisterPlayer(Player player) {
         if (!players.Contains(player)) {
             players.Add(player);
@@ -49,19 +46,13 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
         players.Clear();
     }
     public void TurnOnObjsOfMode() {
-        if (PowerUpUI != null) PowerUpUI.SetActive(true);
         foreach (var player in players) {
             if (player.CompareTag("PlayerA")) { //Nhi: Player A is default
                 player.gameObject.SetActive(true);
             } else {
                 player.gameObject.SetActive(false);
+                Debug.Log(player.gameObject.ToString());
             }
-        }
-    }
-    public void TurnOffObjsOfSingleMode() {
-        if (PowerUpUI != null) PowerUpUI.SetActive(false);
-        foreach (var player in players) {
-            player.gameObject.SetActive(false);
         }
     }
 }

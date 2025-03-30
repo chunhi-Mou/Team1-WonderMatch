@@ -61,7 +61,7 @@ public class GameModeManager : MonoBehaviour {
         if (isPaused) TogglePause();
     }
     public void OnSingleModeSelected() {
-        SceneManager.sceneLoaded += OnSceneLoaded; // Đăng ký sự kiện trước khi load scene
+        SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(1);
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -69,11 +69,9 @@ public class GameModeManager : MonoBehaviour {
 
         if (gameMode != null) {
             SingleModeManager.instance.TurnOnObjsOfMode();
-        } else {
-            Debug.LogError("SingleModeManager.instance is null!");
         }
 
-        SceneManager.sceneLoaded -= OnSceneLoaded; // Hủy đăng ký sau khi dùng
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     public void OnDuoModeSelected() {
         SceneManager.LoadScene(1);
