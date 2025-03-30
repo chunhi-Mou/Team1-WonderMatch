@@ -4,6 +4,19 @@ using System.Collections;
 
 public class SceneLoader : MonoBehaviour
 {
+    #region Singleton - Dont destroy
+    public static SceneLoader instance { get; private set; }
+
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+        } else {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+    }
+    #endregion
     public void LoadScene(string sceneToLoad)
     {
         StartCoroutine(LoadSceneAsync(sceneToLoad));
@@ -22,6 +35,7 @@ public class SceneLoader : MonoBehaviour
         {
             if (asyncLoad.progress >= 0.9f)
             {
+                yield return new WaitForSeconds(1f);
                 asyncLoad.allowSceneActivation = true;
             }
 

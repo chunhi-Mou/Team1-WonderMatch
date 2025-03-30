@@ -54,16 +54,16 @@ public class LevelManager : MonoBehaviour {
         DOTween.KillAll();
         CurrLevel = level;
         GameModeManager.instance.ResumeGame();
-        SceneManager.sceneLoaded += OnSceneReloaded;
-        SceneManager.LoadScene("InGame");
+        //SceneManager.sceneLoaded += OnSceneReloaded;
+        SceneLoader.instance.LoadScene("InGame");
     }
 
-    private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
-        if (GameModeManager.instance.gameMode == (IGameMode)SingleModeManager.instance) {
-            SingleModeManager.instance.TurnOnObjsOfMode();
-        }
-        SceneManager.sceneLoaded -= OnSceneReloaded;
-    }
+    //private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
+    //    if (GameModeManager.instance.gameMode == (IGameMode)SingleModeManager.instance) {
+    //        SingleModeManager.instance.TurnOnObjsOfMode();
+    //    }
+    //    SceneManager.sceneLoaded -= OnSceneReloaded;
+    //}
 
     public static void UnlockNextLevel() {
         if (UnlockedLevels == CurrLevel) {

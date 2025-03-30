@@ -41,26 +41,28 @@ public class GameModeManager : MonoBehaviour {
         Time.timeScale = isPaused ? 0 : 1;
     }
     public void ResetGame() {
-        SceneManager.sceneLoaded += OnSceneReloaded;
-        gameMode.ClearOldData();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
-        StartCoroutine(DelayedSetup());
-        SceneManager.sceneLoaded -= OnSceneReloaded;
-    }
-
-    private IEnumerator DelayedSetup() {
-        gameMode.ClearOldData();
-        yield return new WaitForEndOfFrame();
         if (isPaused) TogglePause();
-        gameMode.TurnOnObjsOfMode();
+        //SceneManager.sceneLoaded -= OnSceneReloaded;
+        //SceneManager.sceneLoaded += OnSceneReloaded;
+        gameMode.ClearOldData();
+        SceneLoader.instance.LoadScene("InGame");
     }
+    //private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
+    //    StartCoroutine(DelayedSetup());
+    //    SceneManager.sceneLoaded -= OnSceneReloaded;
+    //}
+
+    //private IEnumerator DelayedSetup() {
+    //    gameMode.ClearOldData();
+    //    yield return new WaitForEndOfFrame();
+    //    if (isPaused) TogglePause();
+    //    //gameMode.TurnOnObjsOfMode();
+    //}
 
     public void EnterMap() {
         if (isPaused) TogglePause();
         gameMode.ClearOldData();
-        SceneManager.LoadScene("Map");
+        SceneLoader.instance.LoadScene("Map");
     }
     public void PauseGame() {
         if (!isPaused) TogglePause();
@@ -70,7 +72,7 @@ public class GameModeManager : MonoBehaviour {
     }
     public void OnSingleModeSelected() {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene(1);
+        SceneLoader.instance.LoadScene("Map");
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         gameMode = SingleModeManager.instance;
@@ -81,12 +83,12 @@ public class GameModeManager : MonoBehaviour {
 
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-    public void OnDuoModeSelected() {
-        SceneManager.LoadScene(1);
-        SingleMode.SetActive(false);
-        DuoMode.SetActive(true);
-        gameMode = DuoModeManager.instance;
-    }
+    //public void OnDuoModeSelected() {
+    //    SceneManager.LoadScene(1);
+    //    SingleMode.SetActive(false);
+    //    DuoMode.SetActive(true);
+    //    gameMode = DuoModeManager.instance;
+    //}
     #region Audio
     private void Audio_PlayBGMusic() {
         AudioManager.instance.Play(SoundEffect.BGMusic);
