@@ -72,7 +72,13 @@ public class GameModeManager : MonoBehaviour {
     }
     public void OnSingleModeSelected() {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneLoader.instance.LoadScene("Map");
+        if (PlayerPrefs.GetInt("HasSeenTutorial", 0) == 0) {
+            PlayerPrefs.SetInt("HasSeenTutorial", 1);
+            PlayerPrefs.Save();
+            SceneLoader.instance.LoadScene("Tut");
+        } else {
+            SceneLoader.instance.LoadScene("Map");
+        }
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         gameMode = SingleModeManager.instance;
