@@ -37,14 +37,17 @@ public class LevelManager : MonoBehaviour {
         if (level > UnlockedLevels) return;
 
         levelButtons[level - 1].transform.DOScale(0.95f, 0.1f).OnComplete(() => {
-            levelButtons[level - 1].transform.DOScale(1f, 0.2f).OnComplete(() => {
+            levelButtons[level - 1].transform.DOScale(1f, 0.1f).OnComplete(() => {
                 if (HeartsSystem.hearts > 0) {
                     EnterGameLv(level);
                 } else {
                     Debug.Log("Not enough Hearts");
+                    GameEvents.OnOutOfHeartInvoke();
+                    levelButtons[level - 1].transform.DOScale(1.2f, 0.2f);
                 }
             });
         });
+
     }
 
     public void EnterGameLv(int level) {
