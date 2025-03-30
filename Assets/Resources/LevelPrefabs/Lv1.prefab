@@ -1370,7 +1370,7 @@ MonoBehaviour:
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
     cardType: 1
-    sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+    sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
 --- !u!114 &8948632916149038459
 MonoBehaviour:
@@ -1446,7 +1446,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2867,7 +2867,7 @@ MonoBehaviour:
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
     cardType: 1
-    sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+    sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
 --- !u!114 &6348327491659252053
 MonoBehaviour:
@@ -2943,7 +2943,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3185,7 +3185,7 @@ MonoBehaviour:
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
     cardType: 1
-    sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+    sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
 --- !u!114 &8938199489928936333
 MonoBehaviour:
@@ -3261,7 +3261,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9287,7 +9287,7 @@ MonoBehaviour:
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
     cardType: 1
-    sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+    sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
 --- !u!114 &6324754683049733610
 MonoBehaviour:
@@ -9363,7 +9363,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9969,7 +9969,7 @@ MonoBehaviour:
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
     cardType: 1
-    sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+    sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
 --- !u!114 &7911340159689830492
 MonoBehaviour:
@@ -10045,7 +10045,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10376,7 +10376,7 @@ MonoBehaviour:
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
     cardType: 1
-    sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+    sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
 --- !u!114 &5684181507754799847
 MonoBehaviour:
@@ -10452,7 +10452,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb525cb3910d7d449ad34bb2bc4e0f1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
