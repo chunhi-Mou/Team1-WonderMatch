@@ -664,7 +664,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1338,7 +1338,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1361,7 +1361,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -2763,7 +2763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4856227917725463556, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29990.443
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4856227917725463556, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2882,6 +2882,22 @@ PrefabInstance:
       value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 6846713669063876148, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846713669063876148, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846713669063876148, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846713669063876148, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846713669063876148, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_LocalScale.x
       value: 341.3333
       objectReference: {fileID: 0}
@@ -2895,11 +2911,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6846713669063876148, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 155830
+      value: 155836
       objectReference: {fileID: 0}
     - target: {fileID: 6846713669063876148, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 69309
+      value: 67527
       objectReference: {fileID: 0}
     - target: {fileID: 6846713669063876148, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -2911,7 +2927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7105503600881332983, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7105503600881332983, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2919,7 +2935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7105503600881332983, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7105503600881332983, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_LocalScale.x
@@ -2935,11 +2951,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7105503600881332983, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 155835
+      value: 155832
       objectReference: {fileID: 0}
     - target: {fileID: 7105503600881332983, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 69520
+      value: 71254
       objectReference: {fileID: 0}
     - target: {fileID: 7105503600881332983, guid: 8935f2bc80f39f34faadd829211bfa5f, type: 3}
       propertyPath: m_ConstrainProportionsScale
