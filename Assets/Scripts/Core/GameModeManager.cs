@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 public interface IGameModeObject {
     void RegisterToGameMode();
 }
@@ -45,10 +46,17 @@ public class GameModeManager : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
-        if (isPaused) TogglePause();
-        gameMode.TurnOnObjsOfMode();
+        StartCoroutine(DelayedSetup());
         SceneManager.sceneLoaded -= OnSceneReloaded;
     }
+
+    private IEnumerator DelayedSetup() {
+        gameMode.ClearOldData();
+        yield return new WaitForEndOfFrame();
+        if (isPaused) TogglePause();
+        gameMode.TurnOnObjsOfMode();
+    }
+
     public void EnterMap() {
         if (isPaused) TogglePause();
         gameMode.ClearOldData();
