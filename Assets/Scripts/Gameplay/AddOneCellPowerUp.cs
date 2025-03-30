@@ -21,8 +21,11 @@ public class AddOneCellPowerUp : IPowerUp {
             stack.AddOneCell();
             count--;
             SaveData();
-            CustomAnimation.PlayExitAnimation(addCell.transform, () => addCell.SetActive(false));
-            GameModeManager.instance.isUsingPowers = false;
+            GameModeManager.instance.isUsingPowers = true;
+            CustomAnimation.PlayExitAnimation(addCell.transform, () => {
+                addCell.SetActive(false);
+                GameModeManager.instance.isUsingPowers = false;
+            });
         } else {
             GameEvents.OnSpendCoinsNeededInvoke(PowerType.AddOneCell);
         }
