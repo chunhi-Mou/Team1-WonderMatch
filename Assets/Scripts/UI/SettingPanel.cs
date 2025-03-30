@@ -70,6 +70,7 @@ public class SettingPanel : MonoBehaviour {
 
     public void QuitMidGame() {
         LoadMenu();
+        settingsBox.SetActive(false);
         HeartsSystem.LoseHeart();
     }
     
