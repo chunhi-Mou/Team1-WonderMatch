@@ -4,30 +4,31 @@ using UnityEngine.Events;
 using DG.Tweening;
 using static UIButtonHandler;
 
+public enum IdleAnimationType { None, Scale, Rotate, ScaleAndRotate }
+public enum ClickAnimationType { None, Shrink, Rotate, Shake }
+public enum ButtonType { Normal, Power }
+
 [System.Serializable]
 public class UIButtonHandler : MonoBehaviour {
-    public enum IdleAnimationType { None, Scale, Rotate, ScaleAndRotate }
-    public enum ClickAnimationType { None, Shrink, Rotate, Shake }
-    public enum ButtonType { Normal, Power }
 
     [Header("Button Settings")]
-    [SerializeField] private ButtonType buttonType = ButtonType.Normal;
+    [SerializeField] ButtonType buttonType = ButtonType.Normal;
     [SerializeField] SoundEffect buttonSound;
-    [SerializeField] private Button button;
-    [SerializeField] private UnityEvent onClickEvent;
-    [SerializeField] private bool useAnimation = true;
+    [SerializeField] Button button;
+    [SerializeField] UnityEvent onClickEvent;
+    [SerializeField] bool useAnimation = true;
 
     [Header("Idle Animation Settings")]
-    [SerializeField] private IdleAnimationType idleAnimationType = IdleAnimationType.Scale;
-    [SerializeField] private float idleScaleFactor = 1.1f;
-    [SerializeField] private float idleRotationAngle = 15f;
-    [SerializeField] private float idleDuration = 1.5f;
-    [SerializeField] private Ease idleEaseType = Ease.InOutSine;
-    [SerializeField] private LoopType idleLoopType = LoopType.Yoyo;
+    [SerializeField] IdleAnimationType idleAnimationType = IdleAnimationType.Scale;
+    [SerializeField] float idleScaleFactor = 1.1f;
+    [SerializeField] float idleRotationAngle = 15f;
+    [SerializeField] float idleDuration = 1.5f;
+    [SerializeField] Ease idleEaseType = Ease.InOutSine;
+    [SerializeField] LoopType idleLoopType = LoopType.Yoyo;
 
     [Header("Click Animation Settings")]
-    [SerializeField] private ClickAnimationType clickAnimationType = ClickAnimationType.Shrink;
-    [SerializeField] private float clickRotationAngle = 15f;
+    [SerializeField] ClickAnimationType clickAnimationType = ClickAnimationType.Shrink;
+    [SerializeField] float clickRotationAngle = 15f;
 
     private Tween idleTween;
 
