@@ -13,6 +13,7 @@ public static class GameEvents {
     public static event Action OnTurnChange;
     public static event Action<PowerType> OnSpendCoinsNeeded;
     public static event Action<CardType, int> OnShufflePowerClicked;
+    public static event Action OnOutOfHeart;
 
     // Invoke Methods
     public static void OnMatchTilesDoneInvoke() => OnMatchTilesDone?.Invoke();
@@ -26,4 +27,5 @@ public static class GameEvents {
     public static void OnShufflePowerClickedInvoke(CardType cardType, int neededCard) => OnShufflePowerClicked?.Invoke(cardType, neededCard);
     public static void OnTurnChangeInvoke() => OnTurnChange?.Invoke();
     public static void OnSpendCoinsNeededInvoke(PowerType type) => OnSpendCoinsNeeded?.Invoke(type);
+    public static void OnOutOfHeartInvoke() => OnOutOfHeart?.Invoke();
 }

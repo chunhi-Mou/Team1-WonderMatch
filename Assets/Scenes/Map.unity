@@ -1129,18 +1129,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2170394896205415915, guid: edd299371e5f349449fa4bd530433651, type: 3}
-      propertyPath: m_text
-      value: FULL
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170394896205415915, guid: edd299371e5f349449fa4bd530433651, type: 3}
-      propertyPath: m_fontSize
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170394896205415915, guid: edd299371e5f349449fa4bd530433651, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 110
-      objectReference: {fileID: 0}
     - target: {fileID: 2170394897023078674, guid: edd299371e5f349449fa4bd530433651, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1160,7 +1148,7 @@ PrefabInstance:
     - target: {fileID: 2170394897569509686, guid: edd299371e5f349449fa4bd530433651, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8919398068564617771}
+      objectReference: {fileID: 8919398068564617768}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3106,10 +3094,6 @@ PrefabInstance:
     - target: {fileID: 5955044919004781643, guid: 17e111a9be433ce49a6a2510898774b4, type: 3}
       propertyPath: m_Name
       value: OutOfHeartPopUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5955044919004781643, guid: 17e111a9be433ce49a6a2510898774b4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
