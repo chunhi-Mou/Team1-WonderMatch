@@ -14,6 +14,9 @@ public class Card : MonoBehaviour {
     private bool isSelectable = true; //For Vision Only
     
     private void Awake() {
+        GameModeManager.instance.isPaused = false;
+        GameModeManager.instance.isProcessingCard = false;
+        GameModeManager.instance.isUsingPowers = false;
         cardOverlapChecker = GetComponent<CardOverlapChecker>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -57,29 +60,38 @@ public class Card : MonoBehaviour {
         gameObject.transform.DOMove(target, _duration)
             .SetEase(easeType)
             .OnComplete(() => {
-                cardOverlapChecker.NotifyTilesBelow();
-                GameEvents.OnCardDoneMovingInvoke();
-                spriteRenderer.sortingOrder = 0;
+                CardDoneMovingStatusUpdate();
             });
     }
-    public void MoveCardToStack(Vector3 target, float _duration = 0.5f, Ease easeType = Ease.Linear) {
+    public void MoveCardToStack(Vector3 target, float _duration = 0.5f, Ease easeType = Ease.OutBack) {
         spriteRenderer.sortingOrder = 1000;
         SetSelectableData(true);
 
-        float randomRotation = Random.Range(-3f, 3f); 
-        Vector3 originalScale = new Vector3(1f, 1f, 1f); 
+        float randomRotation = Random.Range(-5f, 5f);
+        Vector3 originalScale = new Vector3(1f, 1f, 1f);
         Vector3 finalScale = originalScale * 0.15f;
 
         Sequence sequence = DOTween.Sequence();
+
         sequence.Append(transform.DOMove(target, _duration).SetEase(easeType));
-        sequence.Join(transform.DOScale(finalScale, _duration));
-        sequence.Join(transform.DORotate(new Vector3(0, 0, randomRotation), _duration)); 
+        sequence.Join(transform.DOScale(originalScale * 0.18f, _duration * 0.7f));
+        sequence.Append(transform.DOScale(finalScale, _duration * 0.3f));
+
+        sequence.Join(transform.DORotate(new Vector3(0, 0, randomRotation), _duration));
+        sequence.Append(transform.DOShakePosition(0.2f, 0.1f, 10, 90, false, true));
+
+        sequence.Join(spriteRenderer.DOFade(0.8f, _duration * 0.5f));
 
         sequence.OnComplete(() => {
-            cardOverlapChecker.NotifyTilesBelow();
-            GameEvents.OnCardDoneMovingInvoke();
-            spriteRenderer.sortingOrder = 0;
+            spriteRenderer.DOFade(1f, 0.2f); 
+            CardDoneMovingStatusUpdate();
         });
+    }
+
+    private void CardDoneMovingStatusUpdate() {
+        cardOverlapChecker.NotifyTilesBelow();
+        GameEvents.OnCardDoneMovingInvoke();
+        spriteRenderer.sortingOrder = 0;
     }
     public void SetSelectableData(bool _data) {
         this.isSelectable = _data;
