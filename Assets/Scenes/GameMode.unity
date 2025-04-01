@@ -932,7 +932,7 @@ MonoBehaviour:
   sounds:
   - type: 1
     outputMixer: {fileID: -6685368643935606666, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
-    clip: {fileID: 8300000, guid: 382a597fc5db9bf4d95f88193f8e3a2a, type: 3}
+    clip: {fileID: 8300000, guid: 3d16b37dd547132438a0322911779903, type: 3}
     loop: 1
     source: {fileID: 0}
   - type: 2
