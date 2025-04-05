@@ -12,4 +12,5 @@ public static class SavedData {
     public static string SFXVolume = "SFXVolume";
     public static string MusicToggle = "MusicToggle";
     public static string SFXToggle = "SFXToggle";
+    public static string CurrPage = "CurrPage";
 }
