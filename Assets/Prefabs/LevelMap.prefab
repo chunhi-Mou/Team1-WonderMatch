@@ -439,7 +439,7 @@ RectTransform:
   m_GameObject: {fileID: 8583930493605211660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 676479753017152970}
@@ -523,6 +523,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7585473923280090265}
     m_Modifications:
+    - target: {fileID: 411396905206753359, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 411396905206753359, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 708463433441278117, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 708463433441278117, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 774140589197886267, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 774140589197886267, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332853192529021180, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332853192529021180, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6380444392722737133, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -602,6 +634,14 @@ PrefabInstance:
     - target: {fileID: 6380444392722737133, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662066963059509276, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662066963059509276, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7027518208386014739, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_Name
@@ -710,9 +750,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 815014886753334218, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558724154307353021, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
     - target: {fileID: 2759821000899058569, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
       propertyPath: m_Name
       value: Page1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805578528310505856, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176846763797082964, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999699490085444809, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -737,6 +797,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7585473923280090265}
     m_Modifications:
+    - target: {fileID: 179492367863467603, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 179492367863467603, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 1487238655006994584, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -821,6 +889,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Page4
       objectReference: {fileID: 0}
+    - target: {fileID: 3277969369685211280, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277969369685211280, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480923195715044100, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480923195715044100, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975906252358553174, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975906252358553174, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121519503335268322, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121519503335268322, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -844,6 +944,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7585473923280090265}
     m_Modifications:
+    - target: {fileID: 245584063322545136, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 245584063322545136, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271248984712989689, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271248984712989689, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 2880211725349504060, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -924,9 +1040,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5950453127907186493, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950453127907186493, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 6276608301175361040, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_Name
       value: Page3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109681485228841298, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109681485228841298, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435936590960861007, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435936590960861007, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
