@@ -33,37 +33,35 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
-    public void OnClickLevelMenu(int level) {
-        if (level > UnlockedLevels) return;
+    //public void OnClickLevelMenu(int level) {
+    //    if (level > UnlockedLevels) return;
 
-        levelButtons[level - 1].transform.DOScale(0.95f, 0.1f).OnComplete(() => {
-            levelButtons[level - 1].transform.DOScale(1f, 0.1f).OnComplete(() => {
-                if (HeartsSystem.hearts > 0) {
-                    EnterGameLv(level);
-                } else {
-                    Debug.Log("Not enough Hearts");
-                    GameEvents.OnOutOfHeartInvoke();
-                    levelButtons[level - 1].transform.DOScale(1.2f, 0.2f);
-                }
-            });
-        });
+    //    levelButtons[level - 1].transform.DOScale(0.95f, 0.1f).OnComplete(() => {
+    //        levelButtons[level - 1].transform.DOScale(1f, 0.1f).OnComplete(() => {
+    //            if (HeartsSystem.hearts > 0) {
+    //                EnterGameLv(level);
+    //            } else {
+    //                Debug.Log("Not enough Hearts");
+    //                GameEvents.OnOutOfHeartInvoke();
+    //                levelButtons[level - 1].transform.DOScale(1.2f, 0.2f);
+    //            }
+    //        });
+    //    });
 
-    }
+    //}
 
     public void EnterGameLv(int level) {
-        DOTween.KillAll();
-        CurrLevel = level;
-        GameModeManager.instance.ResumeGame();
-        //SceneManager.sceneLoaded += OnSceneReloaded;
-        SceneLoader.instance.LoadScene("InGame");
+        if (level > UnlockedLevels) return;
+        if (HeartsSystem.hearts > 0) {
+            CurrLevel = level;
+            GameModeManager.instance.ResumeGame();
+            SceneLoader.instance.LoadScene("InGame");
+        } else {
+            Debug.Log("Not enough Hearts");
+            GameEvents.OnOutOfHeartInvoke();
+            levelButtons[level - 1].transform.DOScale(1.2f, 0.2f);
+        }
     }
-
-    //private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
-    //    if (GameModeManager.instance.gameMode == (IGameMode)SingleModeManager.instance) {
-    //        SingleModeManager.instance.TurnOnObjsOfMode();
-    //    }
-    //    SceneManager.sceneLoaded -= OnSceneReloaded;
-    //}
 
     public static void UnlockNextLevel() {
         if (UnlockedLevels == CurrLevel) {
