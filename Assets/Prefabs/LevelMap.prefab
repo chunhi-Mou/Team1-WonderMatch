@@ -524,12 +524,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 7585473923280090265}
     m_Modifications:
     - target: {fileID: 411396905206753359, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411396905206753359, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
     - target: {fileID: 411396905206753359, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 708463433441278117, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 708463433441278117, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -540,12 +548,20 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 774140589197886267, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 774140589197886267, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
     - target: {fileID: 774140589197886267, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332853192529021180, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1332853192529021180, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -636,6 +652,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6662066963059509276, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662066963059509276, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
@@ -650,13 +670,303 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3710199275117773354, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2396324985698325511}
+    - targetCorrespondingSourceObject: {fileID: 7496991929406921696, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6346100420170810487}
+    - targetCorrespondingSourceObject: {fileID: 5217442737040230272, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3418661220737810049}
+    - targetCorrespondingSourceObject: {fileID: 6507930768285342994, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2466192294530386527}
+    - targetCorrespondingSourceObject: {fileID: 1979423874500760304, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7830324151906108342}
   m_SourcePrefab: {fileID: 100100000, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+--- !u!114 &73609709820319533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 708463433441278117, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416707125543533944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &175421421627436211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 774140589197886267, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945213940970123930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &965150581411399623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 411396905206753359, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663865127726704648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1416707125543533944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1979423874500760304, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7830324151906108342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416707125543533944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 73609709820319533}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!114 &1922556501108647796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1332853192529021180, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299867322787327394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4299867322787327394 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3710199275117773354, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2396324985698325511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299867322787327394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 1922556501108647796}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!1 &4663865127726704648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5217442737040230272, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3418661220737810049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4663865127726704648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 965150581411399623}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
 --- !u!224 &5790098909483092069 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6380444392722737133, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
   m_PrefabInstance: {fileID: 635416673884761992}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5945213940970123930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6507930768285342994, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2466192294530386527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945213940970123930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 175421421627436211}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!114 &6099314814981891988 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6662066963059509276, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979416591419569256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &6979416591419569256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7496991929406921696, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
+  m_PrefabInstance: {fileID: 635416673884761992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6346100420170810487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979416591419569256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 6099314814981891988}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
 --- !u!1 &7590736403264369051 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7027518208386014739, guid: f21bcad2e3f26dd428ef6ca956053bbb, type: 3}
@@ -751,8 +1061,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 815014886753334218, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 815014886753334218, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 1558724154307353021, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1558724154307353021, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -763,12 +1081,24 @@ PrefabInstance:
       value: Page1
       objectReference: {fileID: 0}
     - target: {fileID: 4805578528310505856, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805578528310505856, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
     - target: {fileID: 5176846763797082964, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176846763797082964, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999699490085444809, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6999699490085444809, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -777,7 +1107,22 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5552006344531245038, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1872614402745997073}
+    - targetCorrespondingSourceObject: {fileID: 8400393839420378407, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8300954648270301627}
+    - targetCorrespondingSourceObject: {fileID: 714451124490979783, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5594518433766044261}
+    - targetCorrespondingSourceObject: {fileID: 5727094004975531586, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4141987148062029688}
+    - targetCorrespondingSourceObject: {fileID: 8756020351512931159, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6975307162205814350}
   m_SourcePrefab: {fileID: 100100000, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
 --- !u!1 &217292249853669021 stripped
 GameObject:
@@ -789,6 +1134,281 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 649141294843315141, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
   m_PrefabInstance: {fileID: 2688403453163173140}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3217009606359301331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 714451124490979783, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5594518433766044261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217009606359301331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 7493981565929145492}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!114 &3314828592532096734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 815014886753334218, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686863222734954051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3525918209879764137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1558724154307353021, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898326841331120179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4930541280116599261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6999699490085444809, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513007932221850362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5898326841331120179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8400393839420378407, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8300954648270301627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5898326841331120179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 3525918209879764137}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!1 &6686863222734954051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8756020351512931159, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6975307162205814350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686863222734954051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 3314828592532096734}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!114 &7104703317908391488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5176846763797082964, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653191457652376406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7493981565929145492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4805578528310505856, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217009606359301331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7513007932221850362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5552006344531245038, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1872614402745997073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513007932221850362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 4930541280116599261}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!1 &7653191457652376406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5727094004975531586, guid: f0e132ffd55bb044ebd30582ea81b2b4, type: 3}
+  m_PrefabInstance: {fileID: 2688403453163173140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4141987148062029688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653191457652376406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 7104703317908391488}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
 --- !u!1001 &6456486424233936421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -797,6 +1417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7585473923280090265}
     m_Modifications:
+    - target: {fileID: 179492367863467603, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 179492367863467603, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
@@ -890,12 +1514,20 @@ PrefabInstance:
       value: Page4
       objectReference: {fileID: 0}
     - target: {fileID: 3277969369685211280, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3277969369685211280, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
     - target: {fileID: 3277969369685211280, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480923195715044100, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6480923195715044100, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -906,12 +1538,20 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6975906252358553174, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975906252358553174, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
     - target: {fileID: 6975906252358553174, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121519503335268322, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7121519503335268322, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -924,18 +1564,308 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4762158578675364612, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1440876831116277100}
+    - targetCorrespondingSourceObject: {fileID: 1611151074693252700, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5147219923951000618}
+    - targetCorrespondingSourceObject: {fileID: 2789935101766886323, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 23526571181096441}
+    - targetCorrespondingSourceObject: {fileID: 6501514393905215316, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 368430294609635619}
+    - targetCorrespondingSourceObject: {fileID: 1061272675904479236, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4491779852831425596}
   m_SourcePrefab: {fileID: 100100000, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+--- !u!114 &30066689927791905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6480923195715044100, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261218488961970545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &261218488961970545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6501514393905215316, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &368430294609635619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261218488961970545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 30066689927791905}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 19
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!1 &1985130649758905633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4762158578675364612, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1440876831116277100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985130649758905633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 4273551490167609799}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 16
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!114 &4131324743495878771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6975906252358553174, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278134230623315489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4273551490167609799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7121519503335268322, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985130649758905633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5564680698095433405 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1487238655006994584, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
   m_PrefabInstance: {fileID: 6456486424233936421}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5747148843280760953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1611151074693252700, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5147219923951000618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747148843280760953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 6622441454612367478}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 17
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!1 &6278134230623315489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1061272675904479236, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4491779852831425596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278134230623315489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 4131324743495878771}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!114 &6622441454612367478 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 179492367863467603, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747148843280760953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8202672383327358806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2904737249004013939, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
   m_PrefabInstance: {fileID: 6456486424233936421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8423881912982585013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3277969369685211280, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9164221612410398102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &9164221612410398102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2789935101766886323, guid: b1edf630db09ddd449f6237ab021fd1e, type: 3}
+  m_PrefabInstance: {fileID: 6456486424233936421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &23526571181096441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9164221612410398102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 8423881912982585013}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 18
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
 --- !u!1001 &8598516155078466249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -945,12 +1875,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 7585473923280090265}
     m_Modifications:
     - target: {fileID: 245584063322545136, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245584063322545136, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
     - target: {fileID: 245584063322545136, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271248984712989689, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2271248984712989689, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1041,6 +1979,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5950453127907186493, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950453127907186493, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
@@ -1053,12 +1995,20 @@ PrefabInstance:
       value: Page3
       objectReference: {fileID: 0}
     - target: {fileID: 7109681485228841298, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109681485228841298, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EnterGameLv
       objectReference: {fileID: 0}
     - target: {fileID: 7109681485228841298, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435936590960861007, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8435936590960861007, guid: c45d221399ddefb42a02d738623541f5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1071,15 +2021,305 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8690572274080783290, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2393348199351918346}
+    - targetCorrespondingSourceObject: {fileID: 5306965390251321164, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 365590770888179449}
+    - targetCorrespondingSourceObject: {fileID: 3093741406419612136, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7628994893009922321}
+    - targetCorrespondingSourceObject: {fileID: 3403954461180365435, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5483027049729166272}
+    - targetCorrespondingSourceObject: {fileID: 4806830331349571349, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4372740614842336846}
   m_SourcePrefab: {fileID: 100100000, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+--- !u!114 &163931963455554950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8435936590960861007, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882483675446824412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1139144153907151219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8690572274080783290, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2393348199351918346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139144153907151219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 8375689826380185913}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!114 &1584907832331092891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7109681485228841298, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4535740574691507589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2328058763576841433 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6276608301175361040, guid: c45d221399ddefb42a02d738623541f5, type: 3}
   m_PrefabInstance: {fileID: 8598516155078466249}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2720263738277875188 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5950453127907186493, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754059721275484961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3882483675446824412 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4806830331349571349, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4372740614842336846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3882483675446824412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 163931963455554950}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 15
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!1 &4535740574691507589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5306965390251321164, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &365590770888179449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4535740574691507589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 1584907832331092891}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
 --- !u!224 &5813163807743647477 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2880211725349504060, guid: c45d221399ddefb42a02d738623541f5, type: 3}
   m_PrefabInstance: {fileID: 8598516155078466249}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6370718182376460466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3403954461180365435, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5483027049729166272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6370718182376460466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 7552826888459129136}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 14
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!1 &6754059721275484961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3093741406419612136, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7628994893009922321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754059721275484961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc44c9c3b577fc4291396ca0869701e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonType: 0
+  buttonSound: 7
+  button: {fileID: 2720263738277875188}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: EnterGameLv
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 13
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  useAnimation: 1
+  idleAnimationType: 0
+  idleScaleFactor: 1.1
+  idleRotationAngle: 15
+  idleDuration: 1.5
+  idleEaseType: 4
+  idleLoopType: 1
+  clickAnimationType: 1
+  clickRotationAngle: 15
+--- !u!114 &7552826888459129136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2271248984712989689, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6370718182376460466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8375689826380185913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 245584063322545136, guid: c45d221399ddefb42a02d738623541f5, type: 3}
+  m_PrefabInstance: {fileID: 8598516155078466249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139144153907151219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
