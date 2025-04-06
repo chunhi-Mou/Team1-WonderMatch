@@ -11,5 +11,6 @@ public enum SoundEffect {
     ShuffleOut,
     CoinPower,
     ClockSlow,
-    ClockFast
+    ClockFast,
+    Win
 }
