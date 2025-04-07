@@ -77,6 +77,7 @@ public class SettingPanel : MonoBehaviour {
 
     public void LoadMenu() {
         GameModeManager.instance.EnterMap();
+        AudioManager.instance.ResumeAll();
     }
 
     public void RestartLevel() {
