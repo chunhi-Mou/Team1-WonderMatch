@@ -3,7 +3,9 @@ using DG.Tweening;
 using System.Collections.Generic;
 
 public static class CardAnimation {
-    public static void PlayCardSpreadAnimation(List<Transform> cards, Transform centerPoint, float spreadDistance, float animationDuration) {
+    public static void PlayCardSpreadAnimation(List<Transform> cards, Transform centerPoint, 
+        float spreadDistance, float animationDuration, System.Action onComplete = null) {
+
         GameModeManager.instance.isUsingPowers = true;
         Debug.Log("hi");
         if (cards == null || cards.Count <= 1 || centerPoint == null) return;
@@ -35,9 +37,14 @@ public static class CardAnimation {
         for (int i = 0; i < cards.Count; i++) {
             seq.Join(cards[i].DOMove(originalPositions[i], animationDuration).SetEase(Ease.OutQuad));
         }
-        seq.AppendCallback(()=>GameModeManager.instance.isUsingPowers = false);
+        seq.AppendCallback(()=> {
+            GameModeManager.instance.isUsingPowers = false;
+            onComplete?.Invoke();
+        });
     }
-    public static void PlayCardShakeThenMove(Transform card, Vector3 targetPosition, float shakeDuration = 0.3f, float moveDuration = 0.5f, System.Action onComplete = null) {
+    public static void PlayCardShakeThenMove(Transform card, Vector3 targetPosition, 
+        float shakeDuration = 0.3f, float moveDuration = 0.5f, System.Action onComplete = null) {
+
         GameModeManager.instance.isUsingPowers = true;
         card.GetComponent<SpriteRenderer>().sortingOrder = 1000;
         DG.Tweening.Sequence seq = DOTween.Sequence();

@@ -9,6 +9,7 @@ public class WinLosePanel : MonoBehaviour {
     [SerializeField] RectTransform WinContent;
     [SerializeField] RectTransform WinBanner;
     [SerializeField] TextMeshProUGUI WinCoinsTxt;
+    [SerializeField] TextMeshProUGUI WinTimerTxt;
 
     [SerializeField] GameObject WinUI;
     [SerializeField] GameObject LoseUI;
@@ -22,7 +23,6 @@ public class WinLosePanel : MonoBehaviour {
     private void OnDisable() {
         GameEvents.OnWinGame -= ShowUpWinUI;
         GameEvents.OnLoseGame -= ShowUpLoseUI;
-        AudioManager.instance.ResumeAll();
     }
 
     private void ShowUpWinUI() {
@@ -42,6 +42,8 @@ public class WinLosePanel : MonoBehaviour {
         WinBanner.DOScale(1f, 0.5f).SetEase(Ease.OutBack).SetDelay(0.4f).SetUpdate(true);
 
         WinCoinsTxt.DOFade(1f, 0.5f).SetDelay(0.6f).SetUpdate(true);
+        int seconds = Mathf.FloorToInt(TimerPanel.timeRemaining);
+        WinTimerTxt.text = seconds.ToString() + "s";
     }
 
 

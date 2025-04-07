@@ -37,7 +37,6 @@ public class PowerUpsManager : MonoBehaviour {
     private void OnEnable() {
         stack = GameObject.Find("StackA")?.GetComponent<StackLogic>();
         GameEvents.OnCardSelected += CardHistory.Instance.PushCardToHistory;
-        powerUps[PowerType.Shuffle].OnEnable();
         powerUps[PowerType.Magic].OnEnable();
     }
     private void OnDisable() {
@@ -47,7 +46,7 @@ public class PowerUpsManager : MonoBehaviour {
     }
     private IEnumerator Start() {
         yield return new WaitForEndOfFrame();
-        DOVirtual.DelayedCall(0.15f, () => stack.ShuffleMagicHandler());
+        DOVirtual.DelayedCall(0.15f, () => powerUps[PowerType.Shuffle].OnEnable());
     }
     private void InitPowerUps() {
         powerUps[PowerType.Shuffle] = new ShufflePowerUp();
