@@ -9,7 +9,7 @@ public class PreviousAndNextButtonUI : MonoBehaviour
     [SerializeField] GameObject[] Pages;
     private int currPage;
     private int prevPage = 0;
-    private int maxPage = 4;
+    private int maxPage;
     private void Start()
     {
         nextButton.onClick.RemoveAllListeners();
@@ -21,6 +21,8 @@ public class PreviousAndNextButtonUI : MonoBehaviour
         for (int i = 0; i < maxPage; i++) Pages[i].SetActive(false);
 
         currPage = PlayerPrefs.GetInt(SavedData.CurrPage, 1);
+        maxPage = Pages.Length;
+        
         LoadPage();
     }
     private void NextPage()

@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour {
         } else {
             Debug.Log("Not enough Hearts");
             GameEvents.OnOutOfHeartInvoke();
-            levelButtons[level - 1].transform.DOScale(1.2f, 0.2f);
+            levelButtons[level - 1].transform.DOScale(1.1f, 0.2f);
         }
     }
 
