@@ -12,7 +12,11 @@ public class Card : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
 
     private bool isSelectable = true; //For Vision Only
-    
+
+    private void Start() {
+        //BẠN ART MUỐN LÀM BALATRO
+    }
+
     private void Awake() {
         GameModeManager.instance.isPaused = false;
         GameModeManager.instance.isProcessingCard = false;

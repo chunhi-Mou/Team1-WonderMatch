@@ -10,6 +10,8 @@ public class WinLosePanel : MonoBehaviour {
     [SerializeField] RectTransform WinBanner;
     [SerializeField] TextMeshProUGUI WinCoinsTxt;
     [SerializeField] TextMeshProUGUI WinTimerTxt;
+    [SerializeField] Image timerIcon;
+    [SerializeField] Image coinIcon;
 
     [SerializeField] GameObject WinUI;
     [SerializeField] GameObject LoseUI;
@@ -32,7 +34,7 @@ public class WinLosePanel : MonoBehaviour {
         WinContent.gameObject.SetActive(true);
 
         WinBG.alpha = 0f;
-        WinBG.DOFade(1f, 0.3f).SetEase(Ease.InSine).SetUpdate(true);  // Quick fade-in for BG
+        WinBG.DOFade(1f, 0.3f).SetEase(Ease.InSine).SetUpdate(true); 
 
         WinContent.localScale = Vector3.zero;
         WinBanner.localScale = Vector3.zero;
@@ -42,8 +44,14 @@ public class WinLosePanel : MonoBehaviour {
         WinBanner.DOScale(1f, 0.5f).SetEase(Ease.OutBack).SetDelay(0.4f).SetUpdate(true);
 
         WinCoinsTxt.DOFade(1f, 0.5f).SetDelay(0.6f).SetUpdate(true);
+
         int seconds = Mathf.FloorToInt(TimerPanel.timeRemaining);
-        WinTimerTxt.text = seconds.ToString() + "s";
+        DOVirtual.Int(0, seconds, 1f, value =>
+        {
+            WinTimerTxt.text = value.ToString() + "s";
+        }).SetDelay(0.7f).SetEase(Ease.Linear).SetUpdate(true);
+
+        SpawnAndAnimateCoins();
     }
 
 
@@ -64,4 +72,8 @@ public class WinLosePanel : MonoBehaviour {
             lastCard.UndoMove();
         }
     }
+    void SpawnAndAnimateCoins() {
+
+    }
+
 }
