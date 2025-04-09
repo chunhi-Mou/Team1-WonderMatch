@@ -7,9 +7,13 @@ public class PreviousAndNextButtonUI : MonoBehaviour
     [SerializeField] Button nextButton;
     [SerializeField] Button prevButton;
     [SerializeField] GameObject[] Pages;
+    [SerializeField] Image nextAnimation;
+    [SerializeField] Image prevAnimation;
     private int currPage;
     private int prevPage = 0;
     private int maxPage;
+    private Animator nextAnimator;
+    private Animator prevAnimator;
     private void Start()
     {
         nextButton.onClick.RemoveAllListeners();
@@ -18,11 +22,17 @@ public class PreviousAndNextButtonUI : MonoBehaviour
         nextButton.onClick.AddListener(NextPage);
         prevButton.onClick.AddListener(PrevPage);
 
-        for (int i = 0; i < maxPage; i++) Pages[i].SetActive(false);
-
         currPage = PlayerPrefs.GetInt(SavedData.CurrPage, 1);
         maxPage = Pages.Length;
-        
+
+        nextAnimation.gameObject.SetActive(false);
+        prevAnimation.gameObject.SetActive(false);
+
+        nextAnimator = nextAnimation.GetComponent<Animator>();
+        prevAnimator = prevAnimation.GetComponent<Animator>();
+
+        for (int i = 0; i < maxPage; i++) Pages[i].SetActive(false);
+
         LoadPage();
     }
     private void NextPage()
@@ -33,6 +43,18 @@ public class PreviousAndNextButtonUI : MonoBehaviour
             SavePage();
             LoadPage();
         }
+
+        nextAnimation.DOFade(0f, 0f);
+        nextAnimation.gameObject.SetActive(true);
+
+        Sequence seq = DOTween.Sequence();
+        seq.Append(nextAnimation.DOFade(1f, 0.3f))
+        .AppendCallback(() => nextAnimator.Play("animate")) 
+        .AppendInterval(0.6f) 
+        .Append(nextAnimation.DOFade(0f, 0.25f)) 
+        .AppendCallback(() => {
+            nextAnimation.gameObject.SetActive(false);
+        });
     }
     private void PrevPage()
     {
@@ -40,8 +62,22 @@ public class PreviousAndNextButtonUI : MonoBehaviour
             prevPage = currPage;
             currPage--;
             SavePage();
-            LoadPage();
         }
+
+        prevAnimation.DOFade(0f, 0f);
+        prevAnimation.gameObject.SetActive(true);
+
+        Sequence seq = DOTween.Sequence();
+        seq.Append(prevAnimation.DOFade(1f, 0.3f))
+        .AppendCallback(() => {
+            prevAnimator.Play("animate");
+            LoadPage();
+        }) 
+        .AppendInterval(0.6f) 
+        .Append(prevAnimation.DOFade(0f, 0.25f)) 
+        .AppendCallback(() => {
+            prevAnimation.gameObject.SetActive(false);
+        });
     }
     private void LoadPage()
     {

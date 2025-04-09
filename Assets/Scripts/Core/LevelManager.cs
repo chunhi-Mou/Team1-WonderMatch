@@ -28,19 +28,11 @@ public class LevelManager : MonoBehaviour {
     private void Start() {
         int unlockedLevel = UnlockedLevels;
         for (int i = 0; i < levelButtons.Length; i++) {
-            if (i < unlockedLevel){
-                levelButtons[i].interactable = true;
-            } 
-            else {
-                levelButtons[i].interactable = false;
-            }
-
             Transform unlockTransform = levelButtons[i].transform.Find("Unlock");
 
             if (i < unlockedLevel - 1){
                 if (unlockTransform != null)
                 {
-                    Debug.Log("Level" + i + " COMPLETED!");
                     GameObject unlockObject = unlockTransform.gameObject;
                     unlockObject.SetActive(true);
                 }  
@@ -52,16 +44,22 @@ public class LevelManager : MonoBehaviour {
                     unlockObject.SetActive(false);
                 }  
             }
+
+            if (i < unlockedLevel){
+                levelButtons[i].interactable = true;
+            } 
+            else {
+                levelButtons[i].interactable = false;
+            }
         }
     }
 
     public void CompleteLevel() 
     {
-        //Debug.Log("Level" + CurrLevel + " Completed!");
         Transform unlockTransform = levelButtons[CurrLevel - 1].transform.Find("Unlock");
         if (unlockTransform != null)
         {
-            Debug.Log("Level" + CurrLevel + " COMPLETED!");
+            //Debug.Log("Level" + CurrLevel + " COMPLETED!");
             GameObject unlockObject = unlockTransform.gameObject;
             unlockObject.SetActive(true);
         }    
