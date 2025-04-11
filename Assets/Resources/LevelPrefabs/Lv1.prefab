@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 650452478830173082}
   - component: {fileID: 1784280429568725735}
   - component: {fileID: 521082277293116761}
+  - component: {fileID: 5019538748617384848}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -182,6 +183,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5019538748617384848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120932494144641859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &137546172772247595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,6 +1347,7 @@ GameObject:
   - component: {fileID: 8948632916149038459}
   - component: {fileID: 5080804302451676531}
   - component: {fileID: 519582952530857433}
+  - component: {fileID: 3684441723254874086}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -1457,6 +1472,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3684441723254874086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938676874928443902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &942619295344886225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1634,7 @@ GameObject:
   - component: {fileID: 390810104884728619}
   - component: {fileID: 1488924793059695190}
   - component: {fileID: 815698260675429864}
+  - component: {fileID: 5748047209784094636}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -1730,6 +1759,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5748047209784094636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992784076206461938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &994875603877715848
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,6 +2872,7 @@ GameObject:
   - component: {fileID: 6348327491659252053}
   - component: {fileID: 8206427218444721564}
   - component: {fileID: 5233416281558359241}
+  - component: {fileID: 8758385881165413686}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -2954,6 +2997,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8758385881165413686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879753341498944532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &1957537742292536257
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,6 +3204,7 @@ GameObject:
   - component: {fileID: 8938199489928936333}
   - component: {fileID: 2425762761512303615}
   - component: {fileID: 3965181151581893761}
+  - component: {fileID: 4561783006770699832}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -3272,6 +3329,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4561783006770699832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063648220010944561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &2216609129943303851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3645,6 +3715,7 @@ GameObject:
   - component: {fileID: 3247656481252990260}
   - component: {fileID: 4383173216697685065}
   - component: {fileID: 2534507186947312631}
+  - component: {fileID: 5462564590534716071}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -3769,6 +3840,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5462564590534716071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718628535809777133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &2746536938628297279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4190,6 +4274,7 @@ GameObject:
   - component: {fileID: 1798727957549688547}
   - component: {fileID: 924446684352909178}
   - component: {fileID: 2347705399331779664}
+  - component: {fileID: 1868258612769962324}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -4314,6 +4399,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1868258612769962324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3004805803975520609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &3011622096501954437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4463,6 +4561,7 @@ GameObject:
   - component: {fileID: 5838918603867600200}
   - component: {fileID: 8459811544240109014}
   - component: {fileID: 1782142574877855632}
+  - component: {fileID: 2663066750477331091}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -4587,6 +4686,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2663066750477331091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139842076795980015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &3162590262131645771
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,6 +5669,7 @@ GameObject:
   - component: {fileID: 3467261164129013839}
   - component: {fileID: 2439817561009494322}
   - component: {fileID: 4477617273251939980}
+  - component: {fileID: 4006759868539063463}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -5681,6 +5794,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4006759868539063463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4086264371268817046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4095918941209699067
 GameObject:
   m_ObjectHideFlags: 0
@@ -5874,6 +6000,7 @@ GameObject:
   - component: {fileID: 3757427179873203489}
   - component: {fileID: 8503576837701968135}
   - component: {fileID: 7480051843510574624}
+  - component: {fileID: 7587843100334536942}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -5998,6 +6125,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7587843100334536942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4262152051689104389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4272889603912976271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6809,6 +6949,7 @@ GameObject:
   - component: {fileID: 4760648709873988992}
   - component: {fileID: 4080682372709771652}
   - component: {fileID: 2993963639765896021}
+  - component: {fileID: 7126639138963956730}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -6933,6 +7074,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7126639138963956730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988354964777914325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4996137818722507757
 GameObject:
   m_ObjectHideFlags: 0
@@ -7127,6 +7281,7 @@ GameObject:
   - component: {fileID: 5626850616151355832}
   - component: {fileID: 6904933430928242885}
   - component: {fileID: 4623798607766398843}
+  - component: {fileID: 4319273650272931433}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -7251,6 +7406,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4319273650272931433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097488401588384097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5105599387504285937
 GameObject:
   m_ObjectHideFlags: 0
@@ -8751,6 +8919,7 @@ GameObject:
   - component: {fileID: 2426197332354029584}
   - component: {fileID: 5486074416801791704}
   - component: {fileID: 7290851954369998164}
+  - component: {fileID: 3096908093158830636}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -8875,6 +9044,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3096908093158830636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6499280904032937386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &6539875642847429982
 GameObject:
   m_ObjectHideFlags: 0
@@ -9068,6 +9250,7 @@ GameObject:
   - component: {fileID: 7427411769071569007}
   - component: {fileID: 4855738747046383894}
   - component: {fileID: 2242269860927378802}
+  - component: {fileID: 8063330019344862055}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -9192,6 +9375,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8063330019344862055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639765217043603989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &6726847890677598225
 GameObject:
   m_ObjectHideFlags: 0
@@ -9250,6 +9446,7 @@ GameObject:
   - component: {fileID: 6324754683049733610}
   - component: {fileID: 5045118253965976727}
   - component: {fileID: 6483939196449192745}
+  - component: {fileID: 5837926703045381518}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -9374,6 +9571,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5837926703045381518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6876282759951691059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &6901077603755275689
 GameObject:
   m_ObjectHideFlags: 0
@@ -9387,6 +9597,7 @@ GameObject:
   - component: {fileID: 6300238904780289392}
   - component: {fileID: 5092207143924775949}
   - component: {fileID: 6436610750897808307}
+  - component: {fileID: 1498097974379157400}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -9511,6 +9722,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1498097974379157400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901077603755275689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &6954399912020997342
 GameObject:
   m_ObjectHideFlags: 0
@@ -9795,6 +10019,7 @@ GameObject:
   - component: {fileID: 7116009318894546114}
   - component: {fileID: 7073994207865507790}
   - component: {fileID: 8498987216999430040}
+  - component: {fileID: 6945081636102048434}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -9919,6 +10144,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6945081636102048434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192914540133014519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7305337321679941765
 GameObject:
   m_ObjectHideFlags: 0
@@ -9932,6 +10170,7 @@ GameObject:
   - component: {fileID: 7911340159689830492}
   - component: {fileID: 8939486347149310241}
   - component: {fileID: 7203269502814332575}
+  - component: {fileID: 390729158314523333}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -10056,6 +10295,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &390729158314523333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305337321679941765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7406119348122320910
 GameObject:
   m_ObjectHideFlags: 0
@@ -10339,6 +10591,7 @@ GameObject:
   - component: {fileID: 5684181507754799847}
   - component: {fileID: 4786210904593218571}
   - component: {fileID: 5257978456585241342}
+  - component: {fileID: 6811315825014237329}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -10463,6 +10716,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6811315825014237329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590460946607099599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7621344769470996915
 GameObject:
   m_ObjectHideFlags: 0
@@ -10791,6 +11057,7 @@ GameObject:
   - component: {fileID: 7354145914011452238}
   - component: {fileID: 8631986732773591603}
   - component: {fileID: 7508259490491536781}
+  - component: {fileID: 6670256901104988478}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -10915,6 +11182,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6670256901104988478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7972586152948515735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7996638530373007608
 GameObject:
   m_ObjectHideFlags: 0
@@ -11018,6 +11298,7 @@ GameObject:
   - component: {fileID: 8651423383671874993}
   - component: {fileID: 7626231579762027724}
   - component: {fileID: 8515630960828101490}
+  - component: {fileID: 7932125142575142011}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -11142,6 +11423,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7932125142575142011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123222528287040872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &8198896368839013761
 GameObject:
   m_ObjectHideFlags: 0
@@ -11516,6 +11810,7 @@ GameObject:
   - component: {fileID: 9133627823065203350}
   - component: {fileID: 7999796539423509483}
   - component: {fileID: 8141580807334663253}
+  - component: {fileID: 5875904267832914058}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -11640,6 +11935,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5875904267832914058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532727550904353359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &8571728435732703609
 GameObject:
   m_ObjectHideFlags: 0
@@ -12104,6 +12412,7 @@ GameObject:
   - component: {fileID: 4606982481153294879}
   - component: {fileID: 947050295005664482}
   - component: {fileID: 524238931543852426}
+  - component: {fileID: 6820274810709609723}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -12228,6 +12537,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6820274810709609723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8916409435432517023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &9003042007251973558
 GameObject:
   m_ObjectHideFlags: 0
@@ -12331,6 +12653,7 @@ GameObject:
   - component: {fileID: 8506029851137761141}
   - component: {fileID: 7480104702617490952}
   - component: {fileID: 8662361151223384502}
+  - component: {fileID: 7213925359949483673}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -12455,6 +12778,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7213925359949483673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124294451661217708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &9150339003686741300
 GameObject:
   m_ObjectHideFlags: 0
