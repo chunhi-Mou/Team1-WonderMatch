@@ -16,24 +16,22 @@ MonoBehaviour:
   - cardType: 0
     sprite: {fileID: 21300000, guid: 2c90112aca9537f43acc927cf028f99c, type: 3}
   - cardType: 1
-    sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
+    sprite: {fileID: 21300000, guid: e7f2317be017d364eae4ba83a3cccf1f, type: 3}
   - cardType: 2
-    sprite: {fileID: 21300000, guid: 6deefc09f942fe343a4ffd97fc2b7540, type: 3}
+    sprite: {fileID: 21300000, guid: 348d9622b653e5a4ca36db46a328eb89, type: 3}
   - cardType: 3
-    sprite: {fileID: 21300000, guid: f34a11e574f16de47a0a3756da5aafe1, type: 3}
+    sprite: {fileID: 21300000, guid: 3a451dfefaa1fbf4f94132e7ac90364f, type: 3}
   - cardType: 4
-    sprite: {fileID: 21300000, guid: c3a9398eea2589f4f9152ef7f069a591, type: 3}
+    sprite: {fileID: 21300000, guid: 4f611b7e16e53ee478be18918120a7fe, type: 3}
   - cardType: 5
-    sprite: {fileID: 21300000, guid: 15f445d0e9e46f548b07d216b0fc8d54, type: 3}
+    sprite: {fileID: 21300000, guid: 3fbcbf902d89a6d4887c5139a8a6d4de, type: 3}
   - cardType: 6
-    sprite: {fileID: 21300000, guid: 0bd2deaa819480843809c96c15d7bda3, type: 3}
+    sprite: {fileID: 21300000, guid: fdd25b4f2f20b11438fee1d5fdc16c5a, type: 3}
   - cardType: 7
-    sprite: {fileID: 21300000, guid: 673a95eaa4213d044ad95c2fbb304983, type: 3}
+    sprite: {fileID: 21300000, guid: 7e015d0e021bb244f96477e0c6fc15ff, type: 3}
   - cardType: 8
-    sprite: {fileID: 21300000, guid: 2a643b11fa3b3c84ab84919d29f8dfb6, type: 3}
+    sprite: {fileID: 21300000, guid: 4906d8737cb208842b172714de158088, type: 3}
   - cardType: 9
-    sprite: {fileID: 21300000, guid: c96a0e4084105eb458367e5d51e6b828, type: 3}
+    sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
   - cardType: 10
-    sprite: {fileID: 21300000, guid: 95b094e01ff689d49ba5a7849dab0034, type: 3}
-  - cardType: 13
-    sprite: {fileID: 21300000, guid: 935bf75104c5a8a4d8d12b27ec4591c4, type: 3}
+    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
