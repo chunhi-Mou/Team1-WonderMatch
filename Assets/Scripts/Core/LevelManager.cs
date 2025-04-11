@@ -1,6 +1,5 @@
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
@@ -29,10 +28,42 @@ public class LevelManager : MonoBehaviour {
     private void Start() {
         int unlockedLevel = UnlockedLevels;
         for (int i = 0; i < levelButtons.Length; i++) {
-            levelButtons[i].interactable = i < unlockedLevel;
+            Transform unlockTransform = levelButtons[i].transform.Find("Unlock");
+
+            if (i < unlockedLevel - 1){
+                if (unlockTransform != null)
+                {
+                    GameObject unlockObject = unlockTransform.gameObject;
+                    unlockObject.SetActive(true);
+                }  
+            }
+            else {
+                if (unlockTransform != null)
+                {
+                    GameObject unlockObject = unlockTransform.gameObject;
+                    unlockObject.SetActive(false);
+                }  
+            }
+
+            if (i < unlockedLevel){
+                levelButtons[i].interactable = true;
+            } 
+            else {
+                levelButtons[i].interactable = false;
+            }
         }
     }
 
+    public void CompleteLevel() 
+    {
+        Transform unlockTransform = levelButtons[CurrLevel - 1].transform.Find("Unlock");
+        if (unlockTransform != null)
+        {
+            //Debug.Log("Level" + CurrLevel + " COMPLETED!");
+            GameObject unlockObject = unlockTransform.gameObject;
+            unlockObject.SetActive(true);
+        }    
+    }
     //public void OnClickLevelMenu(int level) {
     //    if (level > UnlockedLevels) return;
 
