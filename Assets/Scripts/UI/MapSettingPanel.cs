@@ -78,11 +78,11 @@ public class MapSettingPanel : MonoBehaviour {
 
 
     private void StartIdleClock() {
-        hourTween = hourHand.transform.DORotate(new Vector3(0, 0, 360), hourSpeed, RotateMode.FastBeyond360)
+        hourTween = hourHand.transform.DORotate(new Vector3(0, 0, -360), hourSpeed, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)
             .SetLoops(-1, LoopType.Restart);
 
-        minuteTween = minuteHand.transform.DORotate(new Vector3(0, 0, 360), minuteSpeed, RotateMode.FastBeyond360)
+        minuteTween = minuteHand.transform.DORotate(new Vector3(0, 0, -360), minuteSpeed, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)
             .SetLoops(-1, LoopType.Restart);
     }

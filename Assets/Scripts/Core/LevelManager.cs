@@ -51,19 +51,12 @@ public class LevelManager : MonoBehaviour {
             else {
                 levelButtons[i].interactable = false;
             }
+
+            
         }
     }
 
-    public void CompleteLevel() 
-    {
-        Transform unlockTransform = levelButtons[CurrLevel - 1].transform.Find("Unlock");
-        if (unlockTransform != null)
-        {
-            //Debug.Log("Level" + CurrLevel + " COMPLETED!");
-            GameObject unlockObject = unlockTransform.gameObject;
-            unlockObject.SetActive(true);
-        }    
-    }
+
     //public void OnClickLevelMenu(int level) {
     //    if (level > UnlockedLevels) return;
 
