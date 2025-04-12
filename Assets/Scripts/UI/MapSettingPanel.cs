@@ -76,15 +76,6 @@ public class MapSettingPanel : MonoBehaviour {
         AudioManager.instance.ResumeAll();
     }
 
-    public void RestartLevel() {
-        GameModeManager.instance.ResetGame();
-    }
-
-    public void NextLevel() {
-        LevelManager.UnlockNextLevel();
-        LevelManager.CurrLevel++;
-        RestartLevel();
-    }
 
     private void StartIdleClock() {
         hourTween = hourHand.transform.DORotate(new Vector3(0, 0, 360), hourSpeed, RotateMode.FastBeyond360)
