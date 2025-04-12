@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CoinsUI : MonoBehaviour {
     [SerializeField] RectTransform spendCoinsUI;
-    [SerializeField] RectTransform xButton;
     [SerializeField] RectTransform adButton;
     [SerializeField] RectTransform spendButton;
     [SerializeField] RectTransform[] powerImages;

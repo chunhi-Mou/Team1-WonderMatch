@@ -7,7 +7,7 @@ public class ShufflePowerUp : IPowerUp {
     public void OnEnable() {
         GetCenterPoint();
         GameEvents.OnShufflePowerClicked += HandleShufflePowerClicked;
-        ShuffleBoard(CardType.nothing, 0, ()=> GameEvents.StartTimer());
+        ShuffleBoardWhenStart(CardType.nothing, 0, ()=> GameEvents.StartTimer());
     }
     public void OnDisable() {
         GameEvents.OnShufflePowerClicked -= HandleShufflePowerClicked;
@@ -53,7 +53,22 @@ public class ShufflePowerUp : IPowerUp {
             .Select(card => card.gameObject.transform)
             .ToList();
 
-        CardAnimation.PlayCardSpreadAnimation(cardTransforms, centerShufflePoint, 20, 0.8f, onComplete);
+        CardAnimation.PlayCardSpreadAnimation(cardTransforms, centerShufflePoint, 20, 1f, onComplete);
+        ShuffleList(cardDataList);
+        UpdateBoardCards(cardDataList);
+
+        if (cardType != CardType.nothing && count > 0) {
+            SwapSpecificCards(cardType, count);
+        }
+    }
+    public void ShuffleBoardWhenStart(CardType cardType = CardType.nothing, int count = 0, System.Action onComplete = null) {
+        List<CardData> cardDataList = GetAllCardsInBoard();
+        List<Transform> cardTransforms = Board.cards
+            .Where(card => card.state == CardState.inBoard)
+            .Select(card => card.gameObject.transform)
+            .ToList();
+
+        CardAnimation.MagicCardsAnimations(cardTransforms, centerShufflePoint, 20, 1f, onComplete);
         ShuffleList(cardDataList);
         UpdateBoardCards(cardDataList);
 

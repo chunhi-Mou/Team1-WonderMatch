@@ -1,11 +1,8 @@
 using UnityEngine;
 
 public class CardVFXController : MonoBehaviour {
-    [Header("Card Appearance")]
-    public Texture cardTexture;
-    public float fade = 6.25f;
-    public float alphaClip = 0.11f;
-    public Color borderColor = Color.magenta;
+    [Range(0f, 6.3f)]
+    public float fadeAmount = 6.3f;
 
     private SpriteRenderer spriteRenderer;
     private MaterialPropertyBlock block;
@@ -16,17 +13,24 @@ public class CardVFXController : MonoBehaviour {
     }
 
     void Start() {
-        ApplyProperties();
+        ApplyFade();
     }
 
-    public void ApplyProperties() {
-        block.Clear();
-
-        block.SetTexture("_MainTex", cardTexture);
-        block.SetFloat("_do_tan_bien", fade);
-        block.SetFloat("_alpha_clip", alphaClip);
-        block.SetColor("_mau_vien", borderColor);
-
+    public void ApplyFade() {
+        spriteRenderer.GetPropertyBlock(block);
+        block.SetFloat("_do_tan_bien", fadeAmount);
+        //block.SetColor("")
+        Color rainbowColor = Color.HSVToRGB(fadeAmount / 6.3f, 1f, 1f);
+        block.SetColor("_mau_vien", rainbowColor);
         spriteRenderer.SetPropertyBlock(block);
+    }
+
+    void OnValidate() {
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        if (block == null)
+            block = new MaterialPropertyBlock();
+
+        ApplyFade();
     }
 }

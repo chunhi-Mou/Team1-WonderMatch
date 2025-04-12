@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2083155299477373786}
   - component: {fileID: 18560583338433268}
   - component: {fileID: 5391168455011370422}
+  - component: {fileID: 3478185325166160148}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -105,7 +106,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -137,6 +138,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3478185325166160148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711108279450422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &6135458028531898
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +344,7 @@ GameObject:
   - component: {fileID: 8420024717001516982}
   - component: {fileID: 3806821276961576090}
   - component: {fileID: 805346420324377417}
+  - component: {fileID: 8958441591283800286}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -422,7 +437,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -454,6 +469,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8958441591283800286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96919192376656823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &99887235564416266
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +540,7 @@ GameObject:
   - component: {fileID: 4033741268475428695}
   - component: {fileID: 4098318940604220886}
   - component: {fileID: 3761268219867103570}
+  - component: {fileID: 489987439184563322}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -604,7 +633,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -636,6 +665,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &489987439184563322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102534214739057276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &106159220032182677
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +826,7 @@ GameObject:
   - component: {fileID: 5277912502858269663}
   - component: {fileID: 386504951450798242}
   - component: {fileID: 2444521605122620331}
+  - component: {fileID: 1888786239294921817}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -876,7 +919,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -908,6 +951,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1888786239294921817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188761919221358002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &197127972854538663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1067,7 @@ GameObject:
   - component: {fileID: 3055283783832708079}
   - component: {fileID: 8325747719263114083}
   - component: {fileID: 9090971906540341689}
+  - component: {fileID: 7137754005175225318}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -1103,7 +1160,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1135,6 +1192,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7137754005175225318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238000898430680985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &277969103468500802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1713,7 @@ GameObject:
   - component: {fileID: 3578815566999423828}
   - component: {fileID: 5543166044351254898}
   - component: {fileID: 1824296440656032423}
+  - component: {fileID: 7896868788143771014}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -1735,7 +1806,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1767,6 +1838,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7896868788143771014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446736019172705971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &463678449123515941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1909,7 @@ GameObject:
   - component: {fileID: 6163989104099652198}
   - component: {fileID: 5118316036462272604}
   - component: {fileID: 3681662532923854679}
+  - component: {fileID: 3062234522777226256}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -1917,7 +2002,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1949,6 +2034,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3062234522777226256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463906767396152761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &478120965892163335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,6 +2330,7 @@ GameObject:
   - component: {fileID: 667408112115285484}
   - component: {fileID: 7474548060751051567}
   - component: {fileID: 1194901970971991520}
+  - component: {fileID: 5658805915625570878}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -2324,7 +2423,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2356,6 +2455,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5658805915625570878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564621960998827049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &586996077079326667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2571,7 @@ GameObject:
   - component: {fileID: 8471017909142037805}
   - component: {fileID: 4623152035370530669}
   - component: {fileID: 1706703181238855957}
+  - component: {fileID: 47919523192684804}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -2551,7 +2664,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2583,6 +2696,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &47919523192684804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637276814490089956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &655582245417978722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,6 +2722,7 @@ GameObject:
   - component: {fileID: 1975253801521736772}
   - component: {fileID: 4133301866869559475}
   - component: {fileID: 4868399459437166841}
+  - component: {fileID: 7202442649892864527}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -2688,7 +2815,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2720,6 +2847,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7202442649892864527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655582245417978722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &681412677342239363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4462,7 @@ GameObject:
   - component: {fileID: 8830277652182600392}
   - component: {fileID: 4985642296447449334}
   - component: {fileID: 5284448374959660644}
+  - component: {fileID: 7329311080177095531}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -4414,7 +4555,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4446,6 +4587,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7329311080177095531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212963537270380864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &1239828229618682435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4684,6 +4838,7 @@ GameObject:
   - component: {fileID: 7840367445335871677}
   - component: {fileID: 8471789572969334300}
   - component: {fileID: 3801544447968902997}
+  - component: {fileID: 1935595596207736218}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -4776,7 +4931,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4808,6 +4963,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1935595596207736218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333209518714939771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &1375785897147164074
 GameObject:
   m_ObjectHideFlags: 0
@@ -5227,6 +5395,7 @@ GameObject:
   - component: {fileID: 365050038591457415}
   - component: {fileID: 4858659707789109046}
   - component: {fileID: 977243452714533944}
+  - component: {fileID: 6693478403880273110}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -5319,7 +5488,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5351,6 +5520,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6693478403880273110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569705969243063050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &1571707358415559043
 GameObject:
   m_ObjectHideFlags: 0
@@ -6041,6 +6223,7 @@ GameObject:
   - component: {fileID: 3978204374921745612}
   - component: {fileID: 796591673484557104}
   - component: {fileID: 964845491534143304}
+  - component: {fileID: 5026756229405169894}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -6133,7 +6316,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6165,6 +6348,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5026756229405169894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786214241213036999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &1790236440706701841
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,6 +6734,7 @@ GameObject:
   - component: {fileID: 5213263272628187438}
   - component: {fileID: 3616168202720271206}
   - component: {fileID: 3618217821472486425}
+  - component: {fileID: 8562693749014264593}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -6630,7 +6827,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6662,6 +6859,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8562693749014264593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852443481307784624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &1872095824377269525
 GameObject:
   m_ObjectHideFlags: 0
@@ -6900,6 +7110,7 @@ GameObject:
   - component: {fileID: 8831075865357602930}
   - component: {fileID: 6788219488709750027}
   - component: {fileID: 6426245669068402420}
+  - component: {fileID: 1822569514288465944}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -6992,7 +7203,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7024,6 +7235,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1822569514288465944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979914232955323738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &2036606202190916801
 GameObject:
   m_ObjectHideFlags: 0
@@ -8302,6 +8526,7 @@ GameObject:
   - component: {fileID: 5076520443552332221}
   - component: {fileID: 4912369814412049935}
   - component: {fileID: 2066108440098071700}
+  - component: {fileID: 3023126735209149677}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -8394,7 +8619,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8426,6 +8651,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3023126735209149677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2509309858583885737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &2527224094448067844
 GameObject:
   m_ObjectHideFlags: 0
@@ -9263,6 +9501,7 @@ GameObject:
   - component: {fileID: 2756243849750757893}
   - component: {fileID: 796369382394242659}
   - component: {fileID: 4959904033689977605}
+  - component: {fileID: 657768307384359771}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -9355,7 +9594,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9387,6 +9626,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &657768307384359771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731973537763594312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &2767412451094302439
 GameObject:
   m_ObjectHideFlags: 0
@@ -10494,6 +10746,7 @@ GameObject:
   - component: {fileID: 7604878052376830143}
   - component: {fileID: 7513495000334887585}
   - component: {fileID: 2499477805852057888}
+  - component: {fileID: 4564532854001313176}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -10586,7 +10839,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10618,6 +10871,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4564532854001313176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3246882226223996537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &3249505532958743059
 GameObject:
   m_ObjectHideFlags: 0
@@ -11498,6 +11764,7 @@ GameObject:
   - component: {fileID: 5036162118178789018}
   - component: {fileID: 833787298243991952}
   - component: {fileID: 4019307649848775911}
+  - component: {fileID: 3547194044762935448}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -11590,7 +11857,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11622,6 +11889,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3547194044762935448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511714741103316499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &3552609075909385359
 GameObject:
   m_ObjectHideFlags: 0
@@ -13122,6 +13402,7 @@ GameObject:
   - component: {fileID: 4518180646462115617}
   - component: {fileID: 2708026822761681529}
   - component: {fileID: 903362699814905697}
+  - component: {fileID: 6430014950288114050}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -13214,7 +13495,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13246,6 +13527,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6430014950288114050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4077722929338996272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4094761255099804955
 GameObject:
   m_ObjectHideFlags: 0
@@ -13304,6 +13598,7 @@ GameObject:
   - component: {fileID: 8602743439954737352}
   - component: {fileID: 5988142024318510337}
   - component: {fileID: 4591284728231149220}
+  - component: {fileID: 7681218045505672659}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -13396,7 +13691,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13428,6 +13723,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7681218045505672659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4103122682182380755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4123348230176467293
 GameObject:
   m_ObjectHideFlags: 0
@@ -14251,6 +14559,7 @@ GameObject:
   - component: {fileID: 4250950084169388007}
   - component: {fileID: 4502126567446148001}
   - component: {fileID: 5407294500013229379}
+  - component: {fileID: 2290256385015487981}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -14343,7 +14652,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14375,6 +14684,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2290256385015487981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454758378813859929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4483405201930592564
 GameObject:
   m_ObjectHideFlags: 0
@@ -14523,6 +14845,7 @@ GameObject:
   - component: {fileID: 5178756190156496107}
   - component: {fileID: 3252319509668923629}
   - component: {fileID: 9157364144693076070}
+  - component: {fileID: 237833125240132020}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -14615,7 +14938,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14647,6 +14970,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &237833125240132020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4537975514203236944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4599052777958318451
 GameObject:
   m_ObjectHideFlags: 0
@@ -14841,6 +15177,7 @@ GameObject:
   - component: {fileID: 2605493578013832794}
   - component: {fileID: 5592504840706246675}
   - component: {fileID: 5921706386640223532}
+  - component: {fileID: 179826785373077862}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -14933,7 +15270,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14965,6 +15302,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &179826785373077862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656928775500620434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4666533624557692580
 GameObject:
   m_ObjectHideFlags: 0
@@ -15205,6 +15555,7 @@ GameObject:
   - component: {fileID: 1931193633588162214}
   - component: {fileID: 2961550497473835059}
   - component: {fileID: 8587736532566390077}
+  - component: {fileID: 1646938599325049378}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -15297,7 +15648,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15329,6 +15680,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1646938599325049378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714283213327728275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4730843860556650919
 GameObject:
   m_ObjectHideFlags: 0
@@ -15477,6 +15841,7 @@ GameObject:
   - component: {fileID: 4603093498727964477}
   - component: {fileID: 5637714747767522202}
   - component: {fileID: 4699062285002075564}
+  - component: {fileID: 8337576465526135142}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -15569,7 +15934,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15601,6 +15966,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8337576465526135142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4774020377105062213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4775966246851580454
 GameObject:
   m_ObjectHideFlags: 0
@@ -15704,6 +16082,7 @@ GameObject:
   - component: {fileID: 3427306008580869151}
   - component: {fileID: 2077353241666930815}
   - component: {fileID: 8415875917299445436}
+  - component: {fileID: 3847554632440215642}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -15796,7 +16175,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15828,6 +16207,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3847554632440215642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4804280497834645222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &4804305762750918955
 GameObject:
   m_ObjectHideFlags: 0
@@ -17160,6 +17552,7 @@ GameObject:
   - component: {fileID: 2311022465687358790}
   - component: {fileID: 5448833850962239673}
   - component: {fileID: 2138845026768506614}
+  - component: {fileID: 825857318806523664}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -17252,7 +17645,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17284,6 +17677,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &825857318806523664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335690138787649096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5371737902109078883
 GameObject:
   m_ObjectHideFlags: 0
@@ -17657,6 +18063,7 @@ GameObject:
   - component: {fileID: 4191623264529820773}
   - component: {fileID: 1639580431697770939}
   - component: {fileID: 6616737345188377493}
+  - component: {fileID: 2952205663348417477}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -17749,7 +18156,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17781,6 +18188,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2952205663348417477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5479536295553576805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5481005700130203475
 GameObject:
   m_ObjectHideFlags: 0
@@ -18055,6 +18475,7 @@ GameObject:
   - component: {fileID: 7087835458770264992}
   - component: {fileID: 4456866629619341554}
   - component: {fileID: 536410857226548216}
+  - component: {fileID: 6774907421989613269}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -18147,7 +18568,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18179,6 +18600,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6774907421989613269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5578343271384749714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5592946040096883515
 GameObject:
   m_ObjectHideFlags: 0
@@ -18237,6 +18671,7 @@ GameObject:
   - component: {fileID: 5048579704565674135}
   - component: {fileID: 357821289607556993}
   - component: {fileID: 7725328827569930970}
+  - component: {fileID: 4391333917074509048}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -18329,7 +18764,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18361,6 +18796,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4391333917074509048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5593098145356058257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5595446127843610742
 GameObject:
   m_ObjectHideFlags: 0
@@ -18464,6 +18912,7 @@ GameObject:
   - component: {fileID: 7038232749504946439}
   - component: {fileID: 8286060953155487486}
   - component: {fileID: 1378533466415634648}
+  - component: {fileID: 4326675918695105477}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -18556,7 +19005,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18588,6 +19037,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4326675918695105477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618495820679452822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5634826583321243468
 GameObject:
   m_ObjectHideFlags: 0
@@ -19098,6 +19560,7 @@ GameObject:
   - component: {fileID: 2889426336200974024}
   - component: {fileID: 5234362210906293106}
   - component: {fileID: 5501399419112091202}
+  - component: {fileID: 3153490761739607331}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -19190,7 +19653,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19222,6 +19685,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3153490761739607331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5739452804883852965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5742377911020112232
 GameObject:
   m_ObjectHideFlags: 0
@@ -19325,6 +19801,7 @@ GameObject:
   - component: {fileID: 3617007205101243918}
   - component: {fileID: 3409658760395759947}
   - component: {fileID: 8153387617469997058}
+  - component: {fileID: 7006158151791088285}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -19417,7 +19894,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19449,6 +19926,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7006158151791088285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5750407593767436726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5750907804699839881
 GameObject:
   m_ObjectHideFlags: 0
@@ -19733,6 +20223,7 @@ GameObject:
   - component: {fileID: 2651949286023553982}
   - component: {fileID: 4044651724158481335}
   - component: {fileID: 164412404500384465}
+  - component: {fileID: 4832571788316437718}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -19825,7 +20316,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19857,6 +20348,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4832571788316437718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785610011721759483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &5790421786162952390
 GameObject:
   m_ObjectHideFlags: 0
@@ -20458,6 +20962,7 @@ GameObject:
   - component: {fileID: 8414800091011291691}
   - component: {fileID: 8348884263565220676}
   - component: {fileID: 3399981194799548781}
+  - component: {fileID: 3859017030802372650}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -20550,7 +21055,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20582,6 +21087,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3859017030802372650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6057902456055964035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &6066781607793680660
 GameObject:
   m_ObjectHideFlags: 0
@@ -20865,6 +21383,7 @@ GameObject:
   - component: {fileID: 57832558653601356}
   - component: {fileID: 5134686416892575166}
   - component: {fileID: 932950370078579503}
+  - component: {fileID: 6607205990408763061}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -20957,7 +21476,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20989,6 +21508,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6607205990408763061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203312784911924383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &6223449048830306591
 GameObject:
   m_ObjectHideFlags: 0
@@ -23212,6 +23744,7 @@ GameObject:
   - component: {fileID: 826700237363850522}
   - component: {fileID: 3104065877213262246}
   - component: {fileID: 7040410908117648442}
+  - component: {fileID: 4746824232193954716}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -23304,7 +23837,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23336,6 +23869,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4746824232193954716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976745943834164254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7010607580077660348
 GameObject:
   m_ObjectHideFlags: 0
@@ -24837,6 +25383,7 @@ GameObject:
   - component: {fileID: 2909368933565233566}
   - component: {fileID: 6516039475262872366}
   - component: {fileID: 3459655732128374681}
+  - component: {fileID: 7800134505571198040}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -24929,7 +25476,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24961,6 +25508,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7800134505571198040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7503313977870771220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7520290231249915148
 GameObject:
   m_ObjectHideFlags: 0
@@ -25109,6 +25669,7 @@ GameObject:
   - component: {fileID: 614542089942627484}
   - component: {fileID: 1661335548285127708}
   - component: {fileID: 4188390158919503844}
+  - component: {fileID: 7552755225491757461}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -25201,7 +25762,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25233,6 +25794,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7552755225491757461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561667677886280870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7576077813256918843
 GameObject:
   m_ObjectHideFlags: 0
@@ -25697,6 +26271,7 @@ GameObject:
   - component: {fileID: 490485740533632766}
   - component: {fileID: 4724705559872500056}
   - component: {fileID: 7371867128594600209}
+  - component: {fileID: 9001025102807116534}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -25789,7 +26364,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25821,6 +26396,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9001025102807116534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7805975388864764410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7809911057827120621
 GameObject:
   m_ObjectHideFlags: 0
@@ -25969,6 +26557,7 @@ GameObject:
   - component: {fileID: 7219901862764751870}
   - component: {fileID: 9207307139952736396}
   - component: {fileID: 4861910667625702324}
+  - component: {fileID: 5947745408756071988}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -26061,7 +26650,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26093,6 +26682,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5947745408756071988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867872318891750546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7874591841172533136
 GameObject:
   m_ObjectHideFlags: 0
@@ -26242,6 +26844,7 @@ GameObject:
   - component: {fileID: 7703122104457549281}
   - component: {fileID: 8038177383167409117}
   - component: {fileID: 3466559897709933539}
+  - component: {fileID: 1966733980222282963}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -26334,7 +26937,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26366,6 +26969,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1966733980222282963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7943820279786931859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7945644853738475751
 GameObject:
   m_ObjectHideFlags: 0
@@ -26514,6 +27130,7 @@ GameObject:
   - component: {fileID: 4209691392804013713}
   - component: {fileID: 1083226536615440876}
   - component: {fileID: 6526377609746227926}
+  - component: {fileID: 6831695859360349703}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -26606,7 +27223,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26638,6 +27255,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6831695859360349703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7968014185770630045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &7977118683374654948
 GameObject:
   m_ObjectHideFlags: 0
@@ -26921,6 +27551,7 @@ GameObject:
   - component: {fileID: 6320672917924850829}
   - component: {fileID: 6835308040906020886}
   - component: {fileID: 6312743417610478347}
+  - component: {fileID: 3193191973797143491}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -27013,7 +27644,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27045,6 +27676,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3193191973797143491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8024237657851341575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &8121200774575719611
 GameObject:
   m_ObjectHideFlags: 0
@@ -28100,6 +28744,7 @@ GameObject:
   - component: {fileID: 6966794317512892155}
   - component: {fileID: 3320504854047368793}
   - component: {fileID: 8428379486620283167}
+  - component: {fileID: 6767587966987403012}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -28192,7 +28837,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28224,6 +28869,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6767587966987403012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8571771972613856148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &8619050413355386768
 GameObject:
   m_ObjectHideFlags: 0
@@ -28507,6 +29165,7 @@ GameObject:
   - component: {fileID: 6877473003805668920}
   - component: {fileID: 5029951944799667698}
   - component: {fileID: 664426576086183514}
+  - component: {fileID: 834881977089278196}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -28599,7 +29258,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28631,6 +29290,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &834881977089278196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8776925588405809393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &8778291812416961482
 GameObject:
   m_ObjectHideFlags: 0
@@ -28779,6 +29451,7 @@ GameObject:
   - component: {fileID: 5308941816723908526}
   - component: {fileID: 750862689214435905}
   - component: {fileID: 1839313098245308365}
+  - component: {fileID: 1989414868493931871}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -28871,7 +29544,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28903,6 +29576,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1989414868493931871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796459063268085232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &8812709180009670239
 GameObject:
   m_ObjectHideFlags: 0
@@ -28916,6 +29602,7 @@ GameObject:
   - component: {fileID: 7948828149679425492}
   - component: {fileID: 1701909909866887410}
   - component: {fileID: 5819634330883795324}
+  - component: {fileID: 3104091474040126715}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -29008,7 +29695,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29040,6 +29727,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3104091474040126715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812709180009670239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &8813813612284337647
 GameObject:
   m_ObjectHideFlags: 0
@@ -29188,6 +29888,7 @@ GameObject:
   - component: {fileID: 2017910612680240075}
   - component: {fileID: 8997190307810950397}
   - component: {fileID: 7297472784459263493}
+  - component: {fileID: 6408550046536920367}
   m_Layer: 0
   m_Name: Card
   m_TagString: Card
@@ -29280,7 +29981,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0554ec246c38ff34fa06e89f08324ec7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29312,6 +30013,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6408550046536920367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853616650861640681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb159e2906afde448988229250a8890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeAmount: 6.3
 --- !u!1 &8893307877940549334
 GameObject:
   m_ObjectHideFlags: 0
