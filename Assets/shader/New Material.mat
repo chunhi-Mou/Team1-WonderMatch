@@ -91,11 +91,12 @@ Material:
     - _ZWrite: 1
     - _ZWriteControl: 0
     - _alpha_clip: 0.11
+    - _brightness: 1
     - _do_tan_bien: 6.38
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _mau_chay_canh: {r: 0, g: 0, b: 0, a: 0}
-    - _mau_vien: {r: 0.14931375, g: 3.1834247, b: 7.129738, a: 0}
+    - _mau_vien: {r: 2.3212526, g: 0.32488838, b: 5.2981777, a: 0}
   m_BuildTextureStacks: []

@@ -17,7 +17,7 @@ public class StackAnimation : MonoBehaviour {
         int totalMatches = matchedCards.Count;
 
         foreach (var card in matchedCards) {
-            card.transform.DOScale(Vector3.zero, 0.5f).OnComplete(() => {
+            card.cardVFXController.FadeOut(0.8f, ()=> {
                 completedAnimations++;
                 if (completedAnimations == totalMatches) {
                     onComplete?.Invoke();

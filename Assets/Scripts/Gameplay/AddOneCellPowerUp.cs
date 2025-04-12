@@ -10,6 +10,7 @@ public class AddOneCellPowerUp : IPowerUp {
     private GameObject addCell;
 
     public AddOneCellPowerUp() {
+        PowerUpsManager.Instance.cellImageObj.SetActive(false);
         addCell = PowerUpsManager.Instance.addCellObj;
         count = PlayerPrefs.GetInt(SavedData.AddOneCellPowerCount, 3);
         stack = GameObject.Find("StackA").GetComponent<StackLogic>();
@@ -24,6 +25,7 @@ public class AddOneCellPowerUp : IPowerUp {
             GameModeManager.instance.isUsingPowers = true;
             CustomAnimation.PlayExitAnimation(addCell.transform, () => {
                 addCell.SetActive(false);
+                PowerUpsManager.Instance.cellImageObj.SetActive(true);
                 GameModeManager.instance.isUsingPowers = false;
             });
         } else {

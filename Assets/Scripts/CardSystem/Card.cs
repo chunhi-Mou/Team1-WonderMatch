@@ -10,6 +10,7 @@ public class Card : MonoBehaviour {
     private Vector3 prevPosition;
     private CardOverlapChecker cardOverlapChecker;
     private SpriteRenderer spriteRenderer;
+    public CardVFXController cardVFXController;
 
     private bool isSelectable = true; //For Vision Only
 
@@ -23,6 +24,7 @@ public class Card : MonoBehaviour {
         GameModeManager.instance.isUsingPowers = false;
         cardOverlapChecker = GetComponent<CardOverlapChecker>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        cardVFXController = GetComponent<CardVFXController>();
     }
     private void OnMouseDown() {
         if (GameModeManager.instance.isPaused || GameModeManager.instance.isProcessingCard || GameModeManager.instance.isUsingPowers) return;
@@ -100,13 +102,13 @@ public class Card : MonoBehaviour {
     public void SetSelectableData(bool _data) {
         this.isSelectable = _data;
         if(!this.isSelectable) {
-            this.DarkenSprite();
+            cardVFXController.DimCard();
         } else {
-            this.SetWhiteSprite();
+            cardVFXController.BrightenCard();
         }
     }
     public void DisableMatchedCard(Card card) {
-        card.gameObject.SetActive(false); 
+        card.gameObject.SetActive(false);
     }
     public void UndoMove() {
         if (!GameModeManager.instance.isProcessingCard && state != CardState.inStack) return;
@@ -123,11 +125,5 @@ public class Card : MonoBehaviour {
         cardOverlapChecker.NotifyTilesBelow();
         GameEvents.OnCardDoneMovingInvoke();
         spriteRenderer.sortingOrder = 0;
-    }
-    void DarkenSprite() {
-        spriteRenderer.DOColor(new Color(123f / 255f, 122f / 255f, 122f / 255f, 1f), 0.2f);
-    }
-    void SetWhiteSprite() {
-        spriteRenderer.DOColor(Color.white, 0.2f);
     }
 }

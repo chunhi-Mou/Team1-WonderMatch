@@ -100,11 +100,11 @@ public class SettingPanel : MonoBehaviour {
         quitMenu.SetActive(true);
     }
     private void StartIdleClock() {
-        hourTween = hourHand.transform.DORotate(new Vector3(0, 0, 360), hourSpeed, RotateMode.FastBeyond360)
+        hourTween = hourHand.transform.DORotate(new Vector3(0, 0, -360), hourSpeed, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)
             .SetLoops(-1, LoopType.Restart);
 
-        minuteTween = minuteHand.transform.DORotate(new Vector3(0, 0, 360), minuteSpeed, RotateMode.FastBeyond360)
+        minuteTween = minuteHand.transform.DORotate(new Vector3(0, 0, -360), minuteSpeed, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)
             .SetLoops(-1, LoopType.Restart);
     }
@@ -113,7 +113,7 @@ public class SettingPanel : MonoBehaviour {
         minuteTween.Kill();
         //minuteTween.Kill();
         AudioManager.instance.Play(buttonSound);
-        minuteHand.transform.DORotate(new Vector3(0, 0, 360), fastHourSpeed, RotateMode.FastBeyond360)
+        minuteHand.transform.DORotate(new Vector3(0, 0, -360), fastHourSpeed, RotateMode.FastBeyond360)
             .SetEase(Ease.OutQuad)
             .SetLoops(1, LoopType.Restart)
             .OnComplete(()=>{

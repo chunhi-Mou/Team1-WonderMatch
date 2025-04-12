@@ -21,6 +21,7 @@ public class PowerUpsManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI magicCntTxt;
     [SerializeField] private TextMeshProUGUI addOneCellCntTxt;
     public GameObject addCellObj;
+    public GameObject cellImageObj;
     private StackLogic stack;
 
     private Dictionary<PowerType, IPowerUp> powerUps = new Dictionary<PowerType, IPowerUp>();

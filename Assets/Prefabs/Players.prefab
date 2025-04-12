@@ -736,7 +736,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5650621747230018458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.473562}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -894,7 +894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &407480983612430486
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1497,6 +1497,10 @@ PrefabInstance:
       propertyPath: addCellObj
       value: 
       objectReference: {fileID: 1557148029583035312}
+    - target: {fileID: 5494044006730703584, guid: fdecee50cf6022d4da3c9800f01bb98e, type: 3}
+      propertyPath: cellImageObj
+      value: 
+      objectReference: {fileID: 6370458217725223306}
     - target: {fileID: 5921349805078966209, guid: fdecee50cf6022d4da3c9800f01bb98e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
