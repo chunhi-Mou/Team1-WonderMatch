@@ -66,10 +66,17 @@ public class WinLosePanel : MonoBehaviour {
         Debug.Log("YOU WATCHED AD!!!");
         LoseUI.SetActive(false);
         GameModeManager.instance.ResumeGame();
-        Card lastCard = CardHistory.Instance.UndoLastMove();
-        if (lastCard != null) {
-            AudioManager.instance.Play(SoundEffect.Undo);
-            lastCard.UndoMove();
+        UndoThreeCard();
+    }
+    private void UndoThreeCard()
+    {
+        for (int i=0; i<3; i++)
+        {
+            Card lastCard = CardHistory.Instance.UndoLastMove();
+            if (lastCard != null) {
+                AudioManager.instance.Play(SoundEffect.Undo);
+                lastCard.UndoMove();
+            }
         }
     }
     void SpawnAndAnimateCoins() {
