@@ -61,16 +61,17 @@ public class Card : MonoBehaviour {
         spriteRenderer.sprite = cardData.sprite;
     }
     public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear) {
-        spriteRenderer.sortingOrder = 1000;
+        SetPriority(-2);
         SetSelectableData(true);
         gameObject.transform.DOMove(target, _duration)
             .SetEase(easeType)
             .OnComplete(() => {
+                SetPriority(0);
                 CardDoneMovingStatusUpdate();
             });
     }
     public void MoveCardToStack(Vector3 target, float _duration = 0.5f, Ease easeType = Ease.OutBack) {
-        spriteRenderer.sortingOrder = 1000;
+        SetPriority(-2);
         SetSelectableData(true);
 
         float randomRotation = Random.Range(-5f, 5f);
@@ -89,7 +90,8 @@ public class Card : MonoBehaviour {
         sequence.Join(spriteRenderer.DOFade(0.8f, _duration * 0.5f));
 
         sequence.OnComplete(() => {
-            spriteRenderer.DOFade(1f, 0.2f); 
+            spriteRenderer.DOFade(1f, 0.2f);
+            SetPriority(0);
             CardDoneMovingStatusUpdate();
         });
     }
@@ -97,7 +99,7 @@ public class Card : MonoBehaviour {
     private void CardDoneMovingStatusUpdate() {
         cardOverlapChecker.NotifyTilesBelow();
         GameEvents.OnCardDoneMovingInvoke();
-        spriteRenderer.sortingOrder = 0;
+        SetPriority(0);
     }
     public void SetSelectableData(bool _data) {
         this.isSelectable = _data;
@@ -115,6 +117,7 @@ public class Card : MonoBehaviour {
         GameEvents.OnUndoPressedInvoke(this);
         GetComponent<Collider>().enabled = true;
         transform.rotation = Quaternion.identity;
+        SetPriority(-2);
         CardAnimation.PlayCardShakeThenMove(this.transform, prevPosition, 0.3f, 0.5f, () => {
             HandleCardMoveComplete();
         });
@@ -124,6 +127,8 @@ public class Card : MonoBehaviour {
     private void HandleCardMoveComplete() {
         cardOverlapChecker.NotifyTilesBelow();
         GameEvents.OnCardDoneMovingInvoke();
-        spriteRenderer.sortingOrder = 0;
+        SetPriority(0);
+    }
+    private void SetPriority(float _val) {
     }
 }

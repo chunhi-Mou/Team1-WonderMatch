@@ -50,10 +50,14 @@ public class StackLogic : MonoBehaviour {
 
     private void CheckFullStack() {
         if (cardsInStack.Count >= currentSizeStack) {
-            transform.DOShakePosition(0.5f, 0.5f, 10, 90)
-            .OnComplete(() => {
-                GameEvents.OnLoseGameInvoke();
-            });
+            Sequence seq = DOTween.Sequence();
+            seq.Append(transform.DOShakePosition(1f, 0.15f, 10, 90));
+            seq.Join(transform.DOShakeScale(0.8f, 0.1f));
+            seq.SetEase(Ease.InOutSine)
+               .SetUpdate(true)
+               .OnComplete(() => {
+                   GameEvents.OnLoseGameInvoke();
+               });
         }
     }
 
