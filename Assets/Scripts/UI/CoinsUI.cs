@@ -5,6 +5,7 @@ public class CoinsUI : MonoBehaviour {
     [SerializeField] RectTransform adButton;
     [SerializeField] RectTransform spendButton;
     [SerializeField] RectTransform[] powerImages;
+    [SerializeField] RectTransform[] powerTxts;
     private void OnEnable() {
         GameEvents.OnSpendCoinsNeeded += TurnOnSpendCoinsUI;
     }
@@ -21,6 +22,11 @@ public class CoinsUI : MonoBehaviour {
             img.gameObject.SetActive(false);
         }
         powerImages[(int)powerType].gameObject.SetActive(true);
+
+        foreach (var img in powerTxts) {
+            img.gameObject.SetActive(false);
+        }
+        powerTxts[(int)powerType].gameObject.SetActive(true);        
 
         if(CoinsManager.Instance.CanBuyPower()) {
             spendButton.gameObject.SetActive(true);
