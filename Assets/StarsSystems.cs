@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class StarsSystems : MonoBehaviour {
@@ -21,7 +23,27 @@ public class StarsSystems : MonoBehaviour {
     #endregion
     public void ShowUpStars() {
         for (int i = 0; i < starImages.Length; i++) {
-            starImages[i].sprite = (i < stars) ? fullStar : emptyStar; 
+            Image star = starImages[i];
+            bool isFull = (i < stars);
+
+            star.sprite = isFull ? fullStar : emptyStar;
+            star.transform.DOKill(true);
+
+            if (isFull) {
+                star.transform.localScale = Vector3.zero;
+                star.color = new Color(1, 1, 1, 0);
+                DG.Tweening.Sequence seq = DOTween.Sequence();
+                seq.SetUpdate(true); 
+                seq.Append(star.transform.DOScale(1.9f, 0.5f).SetEase(Ease.OutBack));
+                seq.Join(star.DOFade(1f, 0.2f)); 
+                seq.Join(star.transform.DORotate(new Vector3(0, 0, 360), 0.5f, RotateMode.FastBeyond360));
+                seq.Append(star.transform.DOScale(1f, 0.2f));
+                seq.SetDelay(i * 0.1f);
+            } else {
+                star.transform.localScale = Vector3.one;
+                star.color = Color.white;
+                star.transform.rotation = Quaternion.identity;
+            }
         }
     }
 
