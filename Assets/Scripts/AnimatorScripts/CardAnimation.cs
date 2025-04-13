@@ -7,7 +7,6 @@ public static class CardAnimation {
         float spreadDistance, float animationDuration, System.Action onComplete = null) {
 
         GameModeManager.instance.isUsingPowers = true;
-        Debug.Log("hi");
         if (cards == null || cards.Count <= 1 || centerPoint == null) return;
         AudioManager.instance.PlayOneShot(SoundEffect.Shuffle);
         Vector3[] originalPositions = new Vector3[cards.Count];
@@ -42,7 +41,7 @@ public static class CardAnimation {
             onComplete?.Invoke();
         });
     }
-    public static void MagicCardsAnimations(List<Transform> cards, Transform centerPoint,
+    public static void StartShuffleCardsAnimations(List<Transform> cards, Transform centerPoint,
     float spreadDistance, float animationDuration, System.Action onComplete = null) {
         GameModeManager.instance.isUsingPowers = true;
         if (cards == null || cards.Count <= 1 || centerPoint == null) return;

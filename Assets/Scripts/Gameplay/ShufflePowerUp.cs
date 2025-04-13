@@ -68,7 +68,7 @@ public class ShufflePowerUp : IPowerUp {
             .Select(card => card.gameObject.transform)
             .ToList();
 
-        CardAnimation.MagicCardsAnimations(cardTransforms, centerShufflePoint, 20, 1f, onComplete);
+        CardAnimation.StartShuffleCardsAnimations(cardTransforms, centerShufflePoint, 20, 1f, onComplete);
         ShuffleList(cardDataList);
         UpdateBoardCards(cardDataList);
 
