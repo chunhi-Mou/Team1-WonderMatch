@@ -641,7 +641,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 519daf2f0da0f3347a33863d70736a48, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -827,10 +827,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 204546032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 422.6, y: -119.1}
-  m_SizeDelta: {x: 527.66, y: 484.65}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -182, y: 1}
+  m_SizeDelta: {x: 527.6599, y: 484.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &240257378
 MonoBehaviour:
@@ -2043,7 +2043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000012397766, y: -255}
+  m_AnchoredPosition: {x: -0.000012397766, y: -383}
   m_SizeDelta: {x: 586.8, y: 270.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1470774287
@@ -3446,6 +3446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1677425321612503289, guid: f6fe1c013abab224c9b0add8070f1961, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -143
+      objectReference: {fileID: 0}
     - target: {fileID: 1754822796292988822, guid: f6fe1c013abab224c9b0add8070f1961, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3675,7 +3679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5648298984224247259, guid: 35ad3c2ebb9314c41991c3bcb56e3665, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -213.7
+      value: -213.70001
       objectReference: {fileID: 0}
     - target: {fileID: 5648298984224247259, guid: 35ad3c2ebb9314c41991c3bcb56e3665, type: 3}
       propertyPath: m_ConstrainProportionsScale
