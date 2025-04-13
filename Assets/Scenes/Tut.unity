@@ -4200,10 +4200,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
+  m_fontSize: 47.95
   m_fontSizeBase: 70
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -4266,7 +4266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143, y: 70}
+  m_AnchoredPosition: {x: -43, y: 37}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1365855595
@@ -7134,6 +7134,7 @@ MonoBehaviour:
     cardType: 1
     sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!114 &950211268457819904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7525,6 +7526,7 @@ MonoBehaviour:
     cardType: 2
     sprite: {fileID: 21300000, guid: 6deefc09f942fe343a4ffd97fc2b7540, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!4 &1846337403453537094
 Transform:
   m_ObjectHideFlags: 0
@@ -7708,6 +7710,7 @@ MonoBehaviour:
     cardType: 3
     sprite: {fileID: 21300000, guid: f34a11e574f16de47a0a3756da5aafe1, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!114 &2134192881449241093 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9051572161313478010, guid: 35ad3c2ebb9314c41991c3bcb56e3665, type: 3}
@@ -8012,6 +8015,7 @@ MonoBehaviour:
     cardType: 2
     sprite: {fileID: 21300000, guid: 6deefc09f942fe343a4ffd97fc2b7540, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!224 &2761763792640585435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8441,6 +8445,7 @@ MonoBehaviour:
     cardType: 3
     sprite: {fileID: 21300000, guid: f34a11e574f16de47a0a3756da5aafe1, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!224 &3608833478998554506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8669,7 +8674,7 @@ PrefabInstance:
     - target: {fileID: 8077726931926966645, guid: 7d58b80e7d3713142a46054ffce49dca, type: 3}
       propertyPath: xButton
       value: 
-      objectReference: {fileID: 7037258907640333116}
+      objectReference: {fileID: 0}
     - target: {fileID: 8077726931926966645, guid: 7d58b80e7d3713142a46054ffce49dca, type: 3}
       propertyPath: adButton
       value: 
@@ -9391,6 +9396,7 @@ MonoBehaviour:
     cardType: 1
     sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!224 &4152381573376427432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9977,6 +9983,7 @@ MonoBehaviour:
     cardType: 1
     sprite: {fileID: 21300000, guid: f7ba07bf095e1844cbd3db4bae9ad3ef, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!222 &5548989650308177837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10216,6 +10223,7 @@ MonoBehaviour:
     cardType: 2
     sprite: {fileID: 21300000, guid: 6deefc09f942fe343a4ffd97fc2b7540, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!114 &5928362227351752781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10286,6 +10294,7 @@ MonoBehaviour:
     cardType: 3
     sprite: {fileID: 21300000, guid: f34a11e574f16de47a0a3756da5aafe1, type: 3}
   state: 0
+  cardVFXController: {fileID: 0}
 --- !u!114 &5985073018014550552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10963,11 +10972,6 @@ MonoBehaviour:
   tutorial: {fileID: 558364976}
   stepToInvoke: 6
   button: {fileID: 4037169666087514849}
---- !u!224 &7037258907640333116 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5410051808846617206, guid: 35ad3c2ebb9314c41991c3bcb56e3665, type: 3}
-  m_PrefabInstance: {fileID: 6821710308378792072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &7097360803605767584
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11486,6 +11490,7 @@ MonoBehaviour:
   magicCntTxt: {fileID: 405600843923905348}
   addOneCellCntTxt: {fileID: 330908220247752430}
   addCellObj: {fileID: 6819674810802777395}
+  cellImageObj: {fileID: 0}
 --- !u!224 &8062005524584731335 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4723603906013875298, guid: 35ad3c2ebb9314c41991c3bcb56e3665, type: 3}

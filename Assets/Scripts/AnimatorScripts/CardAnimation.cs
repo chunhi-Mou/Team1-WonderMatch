@@ -45,7 +45,7 @@ public static class CardAnimation {
     float spreadDistance, float animationDuration, System.Action onComplete = null) {
         GameModeManager.instance.isUsingPowers = true;
         if (cards == null || cards.Count <= 1 || centerPoint == null) return;
-        AudioManager.instance.PlayOneShot(SoundEffect.Shuffle);
+        AudioManager.instance.PlayOneShot(SoundEffect.CardFlip);
         Vector3[] originalPositions = new Vector3[cards.Count];
         for (int i = 0; i < cards.Count; i++) {
             originalPositions[i] = cards[i].position;
@@ -61,6 +61,7 @@ public static class CardAnimation {
             seq.Join(cards[i].DOShakePosition(0.8f, strength: randomOffset, vibrato: 10, randomness: 90, snapping: false));
         }
         seq.AppendInterval(0.2f);
+        seq.AppendCallback(() => AudioManager.instance.PlayOneShot(SoundEffect.Shuffle));
         int middleIndex = (cards.Count - 1) / 2;
         for (int i = 0; i < cards.Count; i++) {
             float offset = (i - (cards.Count - 1) / 2f) * spreadDistance;

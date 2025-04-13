@@ -12,5 +12,8 @@ public enum SoundEffect {
     CoinPower,
     ClockSlow,
     ClockFast,
-    Win
+    Win,
+    StackFull,
+    CardFlip,
+    MatchedSound
 }

@@ -15,7 +15,7 @@ public class StackAnimation : MonoBehaviour {
     public void AnimateRemoveMatch(List<Card> matchedCards, System.Action onComplete) {
         int completedAnimations = 0;
         int totalMatches = matchedCards.Count;
-
+        AudioManager.instance.Play(SoundEffect.MatchedSound);
         foreach (var card in matchedCards) {
             card.cardVFXController.FadeOut(0.8f, ()=> {
                 completedAnimations++;

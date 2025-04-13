@@ -5,9 +5,11 @@ public class TimerPanel : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private float maxTimeCount = 60f;
     public static float timeRemaining;
+    public static float currMaxTimeCnt;
     private bool timerIsRunning = false;
     private void OnEnable() {
         timeRemaining = maxTimeCount;
+        currMaxTimeCnt = maxTimeCount;
         GameEvents.OnStartTimer += StartTimer;
     }
     private void OnDisable() {
@@ -36,5 +38,8 @@ public class TimerPanel : MonoBehaviour {
         int seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    public static void ResetTime() {
+        timeRemaining = currMaxTimeCnt;
     }
 }
