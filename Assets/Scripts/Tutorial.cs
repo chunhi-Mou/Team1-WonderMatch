@@ -28,7 +28,7 @@ public class Tutorial : MonoBehaviour {
         if (isTutorialActive) return;
 
         isTutorialActive = true;
-        tutorialTxt.text = "SKIP TUTORIAL";
+        tutorialTxt.text = "SKIP";
         tutorialTxt2.text = "CLICK A CARD!";
         //RunStep();
     }

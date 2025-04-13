@@ -65,6 +65,7 @@ public class WinLosePanel : MonoBehaviour {
     public void OnRevivePress() {
         Debug.Log("YOU WATCHED AD!!!");
         LoseUI.SetActive(false);
+        TimerPanel.ResetTime();
         GameModeManager.instance.ResumeGame();
         UndoThreeCard();
     }

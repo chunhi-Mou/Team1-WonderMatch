@@ -50,9 +50,10 @@ public class StackLogic : MonoBehaviour {
 
     private void CheckFullStack() {
         if (cardsInStack.Count >= currentSizeStack) {
+            AudioManager.instance.Play(SoundEffect.StackFull);
             Sequence seq = DOTween.Sequence();
-            seq.Append(transform.DOShakePosition(1f, 0.15f, 10, 90));
-            seq.Join(transform.DOShakeScale(0.8f, 0.1f));
+            seq.Append(transform.DOShakePosition(1.2f, 0.15f, 10, 90));
+            seq.Join(transform.DOShakeScale(1f, 0.1f));
             seq.SetEase(Ease.InOutSine)
                .SetUpdate(true)
                .OnComplete(() => {
