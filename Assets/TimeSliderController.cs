@@ -8,7 +8,12 @@ public class TimeSliderController : MonoBehaviour {
     public RectTransform handle;
     private bool[] turnedOff;
     private bool[] isBlinking;
-
+    private void OnEnable() {
+        GameEvents.OnWinGame += SaveStarCount;
+    }
+    private void OnDisable() {
+        GameEvents.OnWinGame -= SaveStarCount;
+    } 
     void Start() {
         timeSlider.maxValue = TimerPanel.timeRemaining;
         timeSlider.value = TimerPanel.timeRemaining;
@@ -16,7 +21,6 @@ public class TimeSliderController : MonoBehaviour {
         handle = timeSlider.handleRect;
         turnedOff = new bool[lightOn.Length];
         isBlinking = new bool[lightOn.Length];
-
     }
 
     void Update() {
@@ -29,7 +33,7 @@ public class TimeSliderController : MonoBehaviour {
                 if (handleX <= lightX) {
                     isBlinking[i] = true;
                     int index = i;
-
+                    turnedOff[index] = true;
                     Sequence seq = DOTween.Sequence();
                     int blinkTimes = 3;
                     float interval = 0.2f;
@@ -43,11 +47,19 @@ public class TimeSliderController : MonoBehaviour {
 
                     seq.AppendCallback(() => {
                         lightOn[index].gameObject.SetActive(false);
-                        turnedOff[index] = true;
                     });
                 }
             }
         }
 
     }
+    void SaveStarCount() {
+        int starCount = 0;
+        for (int i = 0; i < turnedOff.Length; i++) {
+            if (!turnedOff[i]) starCount++;
+        }
+        StarsSystems.stars = starCount;
+        StarsSystems.instance.SaveStarsData();
+    }
+
 }

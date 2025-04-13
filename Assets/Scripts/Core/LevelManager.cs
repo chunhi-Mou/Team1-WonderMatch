@@ -3,7 +3,10 @@ using DG.Tweening;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
-    public Button[] levelButtons;
+    public ButtonLvObj[] levelButtons;
+    [SerializeField] private Sprite fullStar;
+    [SerializeField] private Sprite emptyStar;
+
     public static int CurrLevel = 0;
     #region Singleton - Dont destroy
     public static LevelManager instance { get; private set; }
@@ -26,6 +29,7 @@ public class LevelManager : MonoBehaviour {
     }
 
     private void Start() {
+        UpdateLevelStars();
         int unlockedLevel = UnlockedLevels;
         for (int i = 0; i < levelButtons.Length; i++) {
             Transform unlockTransform = levelButtons[i].transform.Find("Unlock");
@@ -46,34 +50,15 @@ public class LevelManager : MonoBehaviour {
             }
 
             if (i < unlockedLevel){
-                levelButtons[i].interactable = true;
+                levelButtons[i].levelButton.interactable = true;
             } 
             else {
-                levelButtons[i].interactable = false;
+                levelButtons[i].levelButton.interactable = false;
             }
 
             
         }
     }
-
-
-    //public void OnClickLevelMenu(int level) {
-    //    if (level > UnlockedLevels) return;
-
-    //    levelButtons[level - 1].transform.DOScale(0.95f, 0.1f).OnComplete(() => {
-    //        levelButtons[level - 1].transform.DOScale(1f, 0.1f).OnComplete(() => {
-    //            if (HeartsSystem.hearts > 0) {
-    //                EnterGameLv(level);
-    //            } else {
-    //                Debug.Log("Not enough Hearts");
-    //                GameEvents.OnOutOfHeartInvoke();
-    //                levelButtons[level - 1].transform.DOScale(1.2f, 0.2f);
-    //            }
-    //        });
-    //    });
-
-    //}
-
     public void EnterGameLv(int level) {
         if (level > UnlockedLevels) return;
         if (HeartsSystem.hearts > 0) {
@@ -86,7 +71,12 @@ public class LevelManager : MonoBehaviour {
             levelButtons[level - 1].transform.DOScale(1.1f, 0.2f);
         }
     }
-
+    private void UpdateLevelStars() {
+        for (int i = 0; i < levelButtons.Length; i++) {
+            int starsEarned = PlayerPrefs.GetInt("LevelStars_" + (i + 1), 0);
+            levelButtons[i].UpdateStars(starsEarned, fullStar, emptyStar);
+        }
+    }
     public static void UnlockNextLevel() {
         if (UnlockedLevels == CurrLevel) {
             UnlockedLevels++;

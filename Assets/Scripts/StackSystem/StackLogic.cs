@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,8 +50,10 @@ public class StackLogic : MonoBehaviour {
 
     private void CheckFullStack() {
         if (cardsInStack.Count >= currentSizeStack) {
-            Debug.Log("Stack Is Full!");
-            GameEvents.OnLoseGameInvoke();
+            transform.DOShakePosition(0.5f, 0.5f, 10, 90)
+            .OnComplete(() => {
+                GameEvents.OnLoseGameInvoke();
+            });
         }
     }
 
