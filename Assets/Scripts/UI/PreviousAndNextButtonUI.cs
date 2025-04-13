@@ -41,7 +41,6 @@ public class PreviousAndNextButtonUI : MonoBehaviour
             prevPage = currPage;
             currPage++;
             SavePage();
-            LoadPage();
         }
 
         nextAnimation.DOFade(0f, 0f);
@@ -49,7 +48,10 @@ public class PreviousAndNextButtonUI : MonoBehaviour
 
         Sequence seq = DOTween.Sequence();
         seq.Append(nextAnimation.DOFade(1f, 0.3f))
-        .AppendCallback(() => nextAnimator.Play("animate")) 
+        .AppendCallback(() => {
+            nextAnimator.Play("animate");
+            LoadPage();
+        }) 
         .AppendInterval(0.6f) 
         .Append(nextAnimation.DOFade(0f, 0.25f)) 
         .AppendCallback(() => {

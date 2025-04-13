@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cards:
   - cardType: 0
-    sprite: {fileID: 21300000, guid: 2c90112aca9537f43acc927cf028f99c, type: 3}
+    sprite: {fileID: 21300000, guid: 17a7feab00f559843bcdd47d55cea7b9, type: 3}
   - cardType: 1
     sprite: {fileID: 21300000, guid: e7f2317be017d364eae4ba83a3cccf1f, type: 3}
   - cardType: 2
@@ -35,3 +35,9 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
   - cardType: 10
     sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+  - cardType: 11
+    sprite: {fileID: 21300000, guid: a912f2cc92154204f80d722a5f37d5a5, type: 3}
+  - cardType: 12
+    sprite: {fileID: 21300000, guid: 92b9725ac30b6b3488337d4b88f43420, type: 3}
+  - cardType: 13
+    sprite: {fileID: 21300000, guid: dd18fa9017a204645a63dc3da904a413, type: 3}

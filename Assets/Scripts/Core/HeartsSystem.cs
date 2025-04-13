@@ -5,6 +5,7 @@ public class HeartsSystem : MonoBehaviour {
     [Header("Text")]
     [SerializeField] TextMeshProUGUI heartsCountTxt;
     [SerializeField] TextMeshProUGUI healTimeTxt;
+    [SerializeField] TextMeshProUGUI healTimeTxtPopUp;
 
     [Header("UI")]
     [SerializeField] RectTransform HeartIcon;
@@ -40,6 +41,7 @@ public class HeartsSystem : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.S)) {
             ClearPlayerPrefs();
         }
+        healTimeTxtPopUp.text = healTimeTxt.text;
     }
 
     private void ShowUpHearts() {

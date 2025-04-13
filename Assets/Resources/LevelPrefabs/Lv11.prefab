@@ -439,8 +439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 10
-    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+    cardType: 12
+    sprite: {fileID: 21300000, guid: 92b9725ac30b6b3488337d4b88f43420, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &3066091984010334171
@@ -517,7 +517,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92b9725ac30b6b3488337d4b88f43420, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1613,8 +1613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 10
-    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+    cardType: 12
+    sprite: {fileID: 21300000, guid: 92b9725ac30b6b3488337d4b88f43420, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &3111914699822984215
@@ -1691,7 +1691,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92b9725ac30b6b3488337d4b88f43420, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1992,8 +1992,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 10
-    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+    cardType: 11
+    sprite: {fileID: 21300000, guid: a912f2cc92154204f80d722a5f37d5a5, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &6808330747015408137
@@ -2070,7 +2070,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a912f2cc92154204f80d722a5f37d5a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6322,8 +6322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 9
-    sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
+    cardType: 10
+    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &3416242069174162454
@@ -6400,7 +6400,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7793,8 +7793,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 10
-    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+    cardType: 11
+    sprite: {fileID: 21300000, guid: a912f2cc92154204f80d722a5f37d5a5, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &73261273286493165
@@ -7871,7 +7871,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a912f2cc92154204f80d722a5f37d5a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11466,8 +11466,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 9
-    sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
+    cardType: 10
+    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &1528984812724678539
@@ -11544,7 +11544,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20368,8 +20368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 9
-    sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
+    cardType: 10
+    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &2175454823461561547
@@ -20446,7 +20446,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20882,8 +20882,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 10
-    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+    cardType: 12
+    sprite: {fileID: 21300000, guid: 92b9725ac30b6b3488337d4b88f43420, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &962255439135051950
@@ -20960,7 +20960,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92b9725ac30b6b3488337d4b88f43420, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27660,8 +27660,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 773b5bb31c70f2742b7edafee0b00abd, type: 2}
   cardData:
-    cardType: 10
-    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+    cardType: 11
+    sprite: {fileID: 21300000, guid: a912f2cc92154204f80d722a5f37d5a5, type: 3}
   state: 0
   cardVFXController: {fileID: 0}
 --- !u!114 &6195643136165155509
@@ -27738,7 +27738,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a912f2cc92154204f80d722a5f37d5a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
