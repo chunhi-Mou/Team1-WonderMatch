@@ -2551,7 +2551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 14364130}
-  maxTimeCount: 60
+  maxTimeCount: 150
 --- !u!1 &2110970574
 GameObject:
   m_ObjectHideFlags: 0
