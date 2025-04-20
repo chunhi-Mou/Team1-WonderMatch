@@ -4,6 +4,7 @@ using UnityEngine;
 public class TimerPanel : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private float maxTimeCount = 60f;
+  
     public static float timeRemaining;
     public static float currMaxTimeCnt;
     private bool timerIsRunning = false;

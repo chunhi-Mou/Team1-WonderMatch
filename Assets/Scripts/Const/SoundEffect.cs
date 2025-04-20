@@ -15,5 +15,7 @@ public enum SoundEffect {
     Win,
     StackFull,
     CardFlip,
-    MatchedSound
+    MatchedSound,
+    SlotLevel,
+    SlotMachine,
 }

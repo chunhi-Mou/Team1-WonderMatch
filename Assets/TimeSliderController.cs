@@ -34,7 +34,8 @@ public class TimeSliderController : MonoBehaviour {
                     isBlinking[i] = true;
                     int index = i;
                     turnedOff[index] = true;
-                    Sequence seq = DOTween.Sequence();
+
+                    Sequence seq = DOTween.Sequence().SetUpdate(true);
                     int blinkTimes = 3;
                     float interval = 0.2f;
 
@@ -49,6 +50,7 @@ public class TimeSliderController : MonoBehaviour {
                         lightOn[index].gameObject.SetActive(false);
                     });
                 }
+
             }
         }
 

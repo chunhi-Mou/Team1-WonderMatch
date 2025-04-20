@@ -1139,6 +1139,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f78fc5aec3beada4ab2f84d9d5e628d6, type: 3}
     loop: 0
     source: {fileID: 0}
+  - type: 17
+    outputMixer: {fileID: -6315820454765346748, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
+    clip: {fileID: 8300000, guid: 4cbd3c0a256dda84db19419ba28f7db0, type: 3}
+    loop: 0
+    source: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 3729bd9a35b80284b873fb84fd3c7526, type: 2}
 --- !u!4 &1335280672
 Transform:
