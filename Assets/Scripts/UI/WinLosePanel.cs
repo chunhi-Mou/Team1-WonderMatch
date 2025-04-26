@@ -13,6 +13,10 @@ public class WinLosePanel : MonoBehaviour {
     [SerializeField] Image timerIcon;
     [SerializeField] Image coinIcon;
 
+    [Header("Lose")]
+    [SerializeField] GameObject LoseBG;
+    [SerializeField] GameObject DefeatPanel;
+
     [SerializeField] GameObject WinUI;
     [SerializeField] GameObject LoseUI;
     [SerializeField] Button replayButton;
@@ -59,6 +63,9 @@ public class WinLosePanel : MonoBehaviour {
         if (HeartsSystem.hearts > 0) replayButton.interactable = true;
         else replayButton.interactable = false;
         LoseUI.SetActive(true);
+        LoseBG.SetActive(true);
+        DefeatPanel.transform.localScale = Vector3.zero;
+        DefeatPanel.transform.DOScale(2f, 0.5f).SetEase(Ease.OutBack).SetDelay(0.2f).SetUpdate(true);
         HeartsSystem.LoseHeart();
     }
 
