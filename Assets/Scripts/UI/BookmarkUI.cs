@@ -16,6 +16,7 @@ public class BookmarkUI : MonoBehaviour
         bookmarkAnimation.gameObject.SetActive(false);
         bookmarkAnimator = bookmarkAnimation.gameObject.GetComponent<Animator>();
         collection.SetActive(false);
+        mapButton.interactable = false;
 
         mapButton.onClick.RemoveAllListeners();
         collectionButton.onClick.RemoveAllListeners();
@@ -46,6 +47,8 @@ public class BookmarkUI : MonoBehaviour
     }
     private void ShowCollection()
     {
+        GameEvents.OnShowCollectionInvoke();
+
         collectionButton.interactable = false;
         mapButton.interactable = true;
 

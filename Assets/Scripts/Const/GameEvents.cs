@@ -16,6 +16,7 @@ public static class GameEvents {
     public static event Action OnOutOfHeart;
     public static event Action OnStartTimer;
     public static event Action OnDoneChooseCardType;
+    public static event Action OnShowCollection;
 
 
     // Invoke Methods
@@ -33,4 +34,5 @@ public static class GameEvents {
     public static void OnOutOfHeartInvoke() => OnOutOfHeart?.Invoke();
     public static void StartTimer() => OnStartTimer?.Invoke();
     public static void OnDoneChooseCardTypeInvoke() => OnDoneChooseCardType?.Invoke();
+    public static void OnShowCollectionInvoke() => OnShowCollection?.Invoke();
 }

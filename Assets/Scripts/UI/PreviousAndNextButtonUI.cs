@@ -14,6 +14,14 @@ public class PreviousAndNextButtonUI : MonoBehaviour
     private int maxPage;
     private Animator nextAnimator;
     private Animator prevAnimator;
+    private void OnEnable()
+    {
+        GameEvents.OnShowCollection += ReturnToAvailablePage;
+    }
+    private void OnDisable()
+    {
+        GameEvents.OnShowCollection -= ReturnToAvailablePage;
+    }
     private void Start()
     {
         nextButton.onClick.RemoveAllListeners();
@@ -97,6 +105,12 @@ public class PreviousAndNextButtonUI : MonoBehaviour
         }
         if (prevPage > 0) Pages[prevPage - 1].SetActive(false);
         Pages[currPage - 1].SetActive(true);
+    }
+    private void ReturnToAvailablePage()
+    {
+        if (currPage == maxPage){
+            PrevPage();
+        }
     }
     private void SavePage()
     {

@@ -29,7 +29,7 @@ public class OutOfHeartPanel : MonoBehaviour
     }
     private void ShowPopUp()
     {
-        content.transform.localScale = new Vector3(1.25f, 1.25f, 1.25f);
+        content.transform.DOScale(Vector3.one * 1.25f, 0.3f).SetEase(Ease.OutBack);
         content.gameObject.SetActive(true);
         refillButton.gameObject.SetActive(true);
         panel.gameObject.SetActive(true);

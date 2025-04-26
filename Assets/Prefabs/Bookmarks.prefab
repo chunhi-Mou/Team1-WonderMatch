@@ -57,6 +57,7 @@ MonoBehaviour:
   mapButton: {fileID: 2041366155668529520}
   collectionButton: {fileID: 6255572897415873497}
   nextAndPrev: {fileID: 0}
+  bookBG: {fileID: 0}
 --- !u!1 &1225604457522511353
 GameObject:
   m_ObjectHideFlags: 0
