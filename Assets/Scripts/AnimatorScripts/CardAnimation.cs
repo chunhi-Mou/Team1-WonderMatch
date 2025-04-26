@@ -45,13 +45,15 @@ public static class CardAnimation {
     float spreadDistance, float animationDuration, System.Action onComplete = null) {
         GameModeManager.instance.isUsingPowers = true;
         if (cards == null || cards.Count <= 1 || centerPoint == null) return;
-        AudioManager.instance.PlayOneShot(SoundEffect.CardFlip);
+        
         Vector3[] originalPositions = new Vector3[cards.Count];
         for (int i = 0; i < cards.Count; i++) {
             originalPositions[i] = cards[i].position;
             cards[i].rotation = Quaternion.Euler(0, 180, 0);
         }
+        
         Sequence seq = DOTween.Sequence();
+        seq.AppendCallback(() => AudioManager.instance.PlayOneShot(SoundEffect.CardFlip));
         for (int i = 0; i < cards.Count; i++) {
             seq.Join(cards[i].DOMove(centerPoint.position, animationDuration * 0.5f).SetEase(Ease.InOutQuad));
         }

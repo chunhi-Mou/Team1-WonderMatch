@@ -1,13 +1,14 @@
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
+using DG.Tweening;
 
 
 public class ShufflePowerUp : IPowerUp {
     public void OnEnable() {
         GetCenterPoint();
         GameEvents.OnShufflePowerClicked += HandleShufflePowerClicked;
-        ShuffleBoardWhenStart(CardType.nothing, 0, ()=> GameEvents.StartTimer());
+        DOVirtual.DelayedCall(0.2f, () => ShuffleBoardWhenStart(CardType.nothing, 0, () => GameEvents.StartTimer()));
     }
     public void OnDisable() {
         GameEvents.OnShufflePowerClicked -= HandleShufflePowerClicked;

@@ -9,7 +9,7 @@ public class SlotController : MonoBehaviour {
     public RectTransform[] visibleSlots;     
 
     private bool isSpinning = false;
-
+    public static int IdxCardType;
     void Start() {
         slotMachineMove.SetToCenter();
         foreach (var col in columns) {
@@ -18,6 +18,7 @@ public class SlotController : MonoBehaviour {
         
     }
     public void StartSlotMachineAnimation() {
+        AudioManager.instance.Play(SoundEffect.SlotMachine);
         StartSpinning();
         DOVirtual.DelayedCall(0.1f, () => StopWithMatch()).SetUpdate(true);
     }
@@ -34,6 +35,8 @@ public class SlotController : MonoBehaviour {
         isSpinning = false;
 
         int idx = Random.Range(0, symbols.Length);
+        IdxCardType = idx;
+        Debug.Log(IdxCardType);
         Sprite match = symbols[idx];
         StartCoroutine(StopColumnsOneByOne(match));
     }
@@ -45,10 +48,12 @@ public class SlotController : MonoBehaviour {
             columns[i].StopSpin(matchSymbol, () => done = true);
             yield return new WaitUntil(() => done);
             yield return new WaitForSecondsRealtime(0.3f);
+            AudioManager.instance.PlayOneShot(SoundEffect.SlotChosen);
             count++;
         }
         if(count==columns.Count) {
             slotMachineMove.SetToOriginalPos();
+            GameEvents.OnDoneChooseCardTypeInvoke();
         }
     }
 }

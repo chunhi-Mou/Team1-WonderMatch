@@ -1,10 +1,15 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
 public class TimerPanel : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI timer;
     [SerializeField] private float maxTimeCount = 60f;
-  
+
+    public GameObject timerFill;
+    public GameObject timerShow;
+    public GameObject slot;
+
     public static float timeRemaining;
     public static float currMaxTimeCnt;
     private bool timerIsRunning = false;
@@ -15,6 +20,11 @@ public class TimerPanel : MonoBehaviour {
     }
     private void OnDisable() {
         GameEvents.OnStartTimer -= StartTimer;
+    }
+    private void Start() {
+        timerFill.SetActive(false);
+        timerShow.SetActive(false);
+        slot.SetActive(true);
     }
     void Update() {
         if (timerIsRunning) {
@@ -31,6 +41,9 @@ public class TimerPanel : MonoBehaviour {
     }
     private void StartTimer() {
         timerIsRunning = true;
+        timerFill.SetActive(true);
+        timerShow.SetActive(true);
+        slot.SetActive(false);
     }
     void UpdateTimerDisplay(float timeToDisplay) {
         timeToDisplay = Mathf.Max(0, timeToDisplay);

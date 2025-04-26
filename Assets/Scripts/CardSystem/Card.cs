@@ -14,10 +14,30 @@ public class Card : MonoBehaviour {
 
     private bool isSelectable = true; //For Vision Only
 
-    private void Start() {
-        //BẠN ART MUỐN LÀM BALATRO
+    private void OnEnable() {
+        GameEvents.OnDoneChooseCardType += SetCardData;
     }
-
+    private void OnDisable() {
+        GameEvents.OnDoneChooseCardType -= SetCardData;
+    }
+    void SetCardData() {
+        switch (SlotController.IdxCardType) {
+            case 0:
+                cardDatabase = Resources.Load<CardDatabase>("CardData/BICH_CardData");
+                break;
+            case 1:
+                cardDatabase = Resources.Load<CardDatabase>("CardData/CO_CardData");
+                break;
+            case 2:
+                cardDatabase = Resources.Load<CardDatabase>("CardData/RO_CardData");
+                break;
+            case 3:
+                cardDatabase = Resources.Load<CardDatabase>("CardData/TEP_CardData");
+                break;
+        }
+        GetCardData();
+        Debug.Log("hi");
+    }
     private void Awake() {
         GameModeManager.instance.isPaused = false;
         GameModeManager.instance.isProcessingCard = false;

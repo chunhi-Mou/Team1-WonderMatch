@@ -18,4 +18,5 @@ public enum SoundEffect {
     MatchedSound,
     SlotLevel,
     SlotMachine,
+    SlotChosen,
 }
