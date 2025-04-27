@@ -41,3 +41,11 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 83285d041bc351f44a0b3fc54ec6cabe, type: 3}
   - cardType: 13
     sprite: {fileID: 21300000, guid: 4bfd086cd37c6464683419fef8929f96, type: 3}
+  - cardType: 14
+    sprite: {fileID: 21300000, guid: 17a7feab00f559843bcdd47d55cea7b9, type: 3}
+  - cardType: 15
+    sprite: {fileID: 21300000, guid: 17a7feab00f559843bcdd47d55cea7b9, type: 3}
+  - cardType: 16
+    sprite: {fileID: 21300000, guid: 17a7feab00f559843bcdd47d55cea7b9, type: 3}
+  - cardType: 17
+    sprite: {fileID: 21300000, guid: 17a7feab00f559843bcdd47d55cea7b9, type: 3}

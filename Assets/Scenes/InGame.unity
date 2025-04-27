@@ -2992,6 +2992,12 @@ MonoBehaviour:
   - {fileID: 843063215}
   - {fileID: 1370595732}
   - {fileID: 55719620}
+  lights:
+  - {fileID: 1509130723}
+  - {fileID: 153471881}
+  - {fileID: 171123324}
+  lightOn: {fileID: 21300000, guid: 0e196e5241ec56049b03c146ec63a382, type: 3}
+  lightOff: {fileID: 21300000, guid: dfb82787cfc25fb4f87d8f4f0124ea01, type: 3}
 --- !u!1 &999737814
 GameObject:
   m_ObjectHideFlags: 0

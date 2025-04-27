@@ -36,7 +36,6 @@ public class Card : MonoBehaviour {
                 break;
         }
         GetCardData();
-        Debug.Log("hi");
     }
     private void Awake() {
         GameModeManager.instance.isPaused = false;
@@ -49,7 +48,26 @@ public class Card : MonoBehaviour {
     private void OnMouseDown() {
         if (GameModeManager.instance.isPaused || GameModeManager.instance.isProcessingCard || GameModeManager.instance.isUsingPowers) return;
         AudioManager.instance.Play(SoundEffect.Pop);
-        PushCardToStack();
+        if (cardData.cardType != CardType.SCard_A && cardData.cardType != CardType.SCard_B && cardData.cardType != CardType.SCard_C && cardData.cardType != CardType.SCard_D)
+        {
+            PushCardToStack();
+        } else {
+            GOTCollectableCard();
+        }
+    }
+    public void GOTCollectableCard () {
+        if (!isSelectable) return;
+        PlayerPrefs.SetInt("SCard" + (int)cardData.cardType, 1);
+        transform.DOMove(Vector3.zero, 0.45f);
+        transform.DOScale(transform.localScale * 4.67f, 0.45f)
+            .OnComplete(() => {
+                DOVirtual.DelayedCall(0.6f, () => {
+                    cardVFXController.FadeOut(0.8f);
+                    DOVirtual.DelayedCall(0.81f, () => {
+                        gameObject.SetActive(false);
+                    });
+                });
+            });
     }
     public void PushCardToStack() {
         if (!isSelectable) return;

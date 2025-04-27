@@ -12,5 +12,9 @@ public enum CardType {
     card10, 
     cardJ, 
     cardQ, 
-    cardK
+    cardK,
+    SCard_A,
+    SCard_B, 
+    SCard_C, 
+    SCard_D,
 }
