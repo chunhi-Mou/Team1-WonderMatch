@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
 using System.Collections.Generic;
-using DG.Tweening;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class SlotController : MonoBehaviour {
@@ -13,7 +13,7 @@ public class SlotController : MonoBehaviour {
     public Image[] lights;
     public Sprite lightOn;
     public Sprite lightOff;
-    private Tween blinkTween;
+    private List<Tween> blinkTweens = new List<Tween>();
 
     private bool isSpinning = false;
     public static int IdxCardType;
@@ -68,21 +68,21 @@ public class SlotController : MonoBehaviour {
     }
 
     public void StartBlinking(float blinkDuration, float blinkInterval) {
-        if (blinkTween != null && blinkTween.IsActive()) {
-            blinkTween.Kill();
-        }
+        StopBlinking();
 
         foreach (var light in lights) {
             float randomDelay = UnityEngine.Random.Range(0f, blinkDuration);
             float randomInterval = UnityEngine.Random.Range(blinkInterval * 0.5f, blinkInterval * 1.5f);
 
-            DOTween.To(() => 0f, x => {
+            Tween lightTween = DOTween.To(() => 0f, x => {
                 light.sprite = (x > 0.5f) ? lightOn : lightOff;
                 light.SetNativeSize();
             }, 1f, randomInterval)
             .SetLoops(-1, LoopType.Yoyo)
             .SetDelay(randomDelay)
             .SetUpdate(true);
+
+            blinkTweens.Add(lightTween);
         }
     }
 
@@ -93,9 +93,9 @@ public class SlotController : MonoBehaviour {
     }
 
     public void StopBlinking() {
-        if (blinkTween != null && blinkTween.IsActive()) {
-            blinkTween.Kill();
+        foreach (var tween in blinkTweens) {
+            tween.Kill();
         }
+        blinkTweens.Clear();
     }
 }
-
