@@ -94,7 +94,6 @@ public class HeartsSystem : MonoBehaviour {
         HealHeart(maxHearts);
     }
     public static void LoseHeart() {
-        Debug.Log("tru tim");
         hearts = Mathf.Max(0, hearts - 1);
         lastHealTime = System.DateTime.UtcNow;
         PlayerPrefs.SetInt("Hearts", hearts);

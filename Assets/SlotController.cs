@@ -36,7 +36,6 @@ public class SlotController : MonoBehaviour {
 
         int idx = Random.Range(0, symbols.Length);
         IdxCardType = idx;
-        Debug.Log(IdxCardType);
         Sprite match = symbols[idx];
         StartCoroutine(StopColumnsOneByOne(match));
     }
