@@ -28,8 +28,8 @@ public class SlotController : MonoBehaviour {
     public void StartSlotMachineAnimation() {
         AudioManager.instance.Play(SoundEffect.SlotMachine);
         StartSpinning();
-        StartBlinking(0.75f, 0.1f);
-        DOVirtual.DelayedCall(0.1f, () => StopWithMatch()).SetUpdate(true);
+        StartBlinking(0.75f, 0.25f);
+        DOVirtual.DelayedCall(0.1f, () => StopWithMatch()).SetUpdate(true).SetAutoKill(true);
     }
 
     public void StartSpinning() {
@@ -80,7 +80,7 @@ public class SlotController : MonoBehaviour {
             }, 1f, randomInterval)
             .SetLoops(-1, LoopType.Yoyo)
             .SetDelay(randomDelay)
-            .SetUpdate(true);
+            .SetUpdate(true).SetAutoKill(true);
 
             blinkTweens.Add(lightTween);
         }
@@ -89,6 +89,7 @@ public class SlotController : MonoBehaviour {
     public void SetLightOn() {
         foreach (var light in lights) {
             light.sprite = lightOn;
+            light.SetNativeSize();
         }
     }
 

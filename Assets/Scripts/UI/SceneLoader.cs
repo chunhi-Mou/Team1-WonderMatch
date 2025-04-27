@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using DG.Tweening;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class SceneLoader : MonoBehaviour
     #endregion
     public void LoadScene(string sceneToLoad)
     {
+        DOTween.KillAll();
         StartCoroutine(LoadSceneAsync(sceneToLoad));
     }
 

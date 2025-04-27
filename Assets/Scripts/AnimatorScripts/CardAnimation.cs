@@ -22,14 +22,25 @@ public static class CardAnimation {
             if (cards.Count % 2 == 1 && i == middleIndex) {
                 offset -= spreadDistance * 0.5f;
             }
-            Vector3 targetPos = originalPositions[i] + new Vector3(offset, 0, 0);
+            Vector3 targetPos = new Vector3(
+                originalPositions[i].x + offset,
+                originalPositions[i].y,
+                originalPositions[i].z
+            );
+
             seq.Join(cards[i].DOMove(targetPos, animationDuration).SetEase(Ease.OutQuad));
         }
 
         seq.AppendInterval(0.5f);
         seq.AppendCallback(() => AudioManager.instance.PlayOneShot(SoundEffect.ShuffleOut));
+        
         for (int i = 0; i < cards.Count; i++) {
-            seq.Join(cards[i].DOMove(centerPoint.position, animationDuration).SetEase(Ease.InOutQuad));
+            Vector3 centerPos = new Vector3(
+            centerPoint.position.x,
+            centerPoint.position.y,
+            originalPositions[i].z
+            );
+            seq.Join(cards[i].DOMove(centerPos, animationDuration).SetEase(Ease.InOutQuad));
         }
         seq.AppendInterval(0.5f);
         
@@ -55,7 +66,12 @@ public static class CardAnimation {
         Sequence seq = DOTween.Sequence();
         seq.AppendCallback(() => AudioManager.instance.PlayOneShot(SoundEffect.CardFlip));
         for (int i = 0; i < cards.Count; i++) {
-            seq.Join(cards[i].DOMove(centerPoint.position, animationDuration * 0.5f).SetEase(Ease.InOutQuad));
+            Vector3 centerPos = new Vector3(
+            centerPoint.position.x,
+            centerPoint.position.y,
+            originalPositions[i].z
+            );
+            seq.Join(cards[i].DOMove(centerPos, animationDuration * 0.5f).SetEase(Ease.InOutQuad));
         }
         seq.AppendInterval(0.2f);
         for (int i = 0; i < cards.Count; i++) {
@@ -70,7 +86,11 @@ public static class CardAnimation {
             if (cards.Count % 2 == 1 && i == middleIndex) {
                 offset -= spreadDistance * 0.5f;
             }
-            Vector3 spreadPos = centerPoint.position + new Vector3(offset, 0, 0);
+            Vector3 spreadPos = new Vector3(
+                originalPositions[i].x + offset,
+                originalPositions[i].y,
+                originalPositions[i].z
+            );
             seq.Join(cards[i].DOMove(spreadPos, animationDuration).SetEase(Ease.OutQuad));
         }
         seq.AppendInterval(0.5f);

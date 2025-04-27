@@ -58,7 +58,7 @@ public class Card : MonoBehaviour {
     public void GOTCollectableCard () {
         if (!isSelectable) return;
         PlayerPrefs.SetInt("SCard" + (int)cardData.cardType, 1);
-        transform.DOMove(Vector3.zero, 0.45f);
+        transform.DOMove(Vector3.zero, 0.45f).SetAutoKill(true);
         transform.DOScale(transform.localScale * 4.67f, 0.45f)
             .OnComplete(() => {
                 DOVirtual.DelayedCall(0.6f, () => {
@@ -67,7 +67,7 @@ public class Card : MonoBehaviour {
                         gameObject.SetActive(false);
                     });
                 });
-            });
+            }).SetAutoKill(true);
     }
     public void PushCardToStack() {
         if (!isSelectable) return;
@@ -106,7 +106,7 @@ public class Card : MonoBehaviour {
             .OnComplete(() => {
                 SetPriority(0);
                 CardDoneMovingStatusUpdate();
-            });
+            }).SetAutoKill(true);
     }
     public void MoveCardToStack(Vector3 target, float _duration = 0.5f, Ease easeType = Ease.OutBack) {
         SetPriority(-2);
