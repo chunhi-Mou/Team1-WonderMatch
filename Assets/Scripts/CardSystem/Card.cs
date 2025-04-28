@@ -57,7 +57,9 @@ public class Card : MonoBehaviour {
     }
     public void GOTCollectableCard () {
         if (!isSelectable) return;
+        Board.currCardCount -= 1;
         PlayerPrefs.SetInt("SCard" + (int)cardData.cardType, 1);
+        PlayerPrefs.Save();
         transform.DOMove(Vector3.zero, 0.45f).SetAutoKill(true);
         transform.DOScale(transform.localScale * 4.67f, 0.45f)
             .OnComplete(() => {

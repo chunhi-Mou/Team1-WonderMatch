@@ -8,7 +8,7 @@ public class ShufflePowerUp : IPowerUp {
     public void OnEnable() {
         GetCenterPoint();
         GameEvents.OnShufflePowerClicked += HandleShufflePowerClicked;
-        DOVirtual.DelayedCall(0.2f, () => ShuffleBoardWhenStart(CardType.nothing, 0, () => GameEvents.StartTimer())).SetAutoKill(true);
+        DOVirtual.DelayedCall(1f, () => ShuffleBoardWhenStart(CardType.nothing, 0, () => GameEvents.StartTimer())).SetAutoKill(true);
     }
     public void OnDisable() {
         GameEvents.OnShufflePowerClicked -= HandleShufflePowerClicked;

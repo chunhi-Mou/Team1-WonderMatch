@@ -5,7 +5,7 @@ using System.Linq;
 public class Board : MonoBehaviour {
     public static List<Card> cards = new List<Card>();
     
-    private int currCardCount = 0;
+    public static int currCardCount = 0;
     private void OnEnable() {
         GameEvents.OnMatchTilesDone += CheckWinGame;
     }
