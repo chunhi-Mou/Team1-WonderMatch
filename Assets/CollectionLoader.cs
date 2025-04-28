@@ -2,18 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CollectionLoader : MonoBehaviour {
-    [SerializeField] Image collectableCard;
-    [SerializeField] Sprite collected;
-    [SerializeField] Sprite uncollected;
+    [SerializeField] Button collectableCard;
     [SerializeField] CardType cardType;
-
     private void Start() {
         int state = PlayerPrefs.GetInt("SCard" + (int)cardType, 0);
-        Debug.Log(cardType.ToString());
+        Debug.Log(cardType.ToString() + " " + state);
         if(state==1) {
-            collectableCard.sprite = collected;
+            collectableCard.interactable = true;
         } else {
-            collectableCard.sprite = uncollected;
+            collectableCard.interactable = false;
         }
     }
 }
