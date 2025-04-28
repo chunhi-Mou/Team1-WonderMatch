@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 6200312400154910403}
   - component: {fileID: 915241830727597125}
   - component: {fileID: 7578574345074334036}
+  - component: {fileID: 7410141677120710460}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -722,7 +723,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -758,7 +759,19 @@ MonoBehaviour:
   button: {fileID: 915241830727597125}
   onClickEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CollectiblePopUpUI, Assembly-CSharp
+        m_MethodName: ShowCollectible
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   useAnimation: 1
   idleAnimationType: 0
   idleScaleFactor: 1.1
@@ -768,6 +781,20 @@ MonoBehaviour:
   idleLoopType: 1
   clickAnimationType: 3
   clickRotationAngle: 100
+--- !u!114 &7410141677120710460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320175162736080455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1af227b80707049a0296da3f2d3633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectableCard: {fileID: 915241830727597125}
+  cardType: 17
 --- !u!1 &3760708364678911702
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +808,7 @@ GameObject:
   - component: {fileID: 114073791498335621}
   - component: {fileID: 3449279071247308115}
   - component: {fileID: 6886163980299992272}
+  - component: {fileID: 4695183928382130161}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -835,7 +863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0805dc8e356fe2049ac87c42b83853ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da26f4373dfd2b241a2d7322b9319935, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -870,7 +898,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -906,7 +934,19 @@ MonoBehaviour:
   button: {fileID: 3449279071247308115}
   onClickEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CollectiblePopUpUI, Assembly-CSharp
+        m_MethodName: ShowCollectible
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   useAnimation: 1
   idleAnimationType: 0
   idleScaleFactor: 1.1
@@ -916,6 +956,20 @@ MonoBehaviour:
   idleLoopType: 1
   clickAnimationType: 3
   clickRotationAngle: 100
+--- !u!114 &4695183928382130161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3760708364678911702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1af227b80707049a0296da3f2d3633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectableCard: {fileID: 3449279071247308115}
+  cardType: 15
 --- !u!1 &3860012132875312294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1603,7 @@ GameObject:
   - component: {fileID: 4335570887935644253}
   - component: {fileID: 335195545639200093}
   - component: {fileID: 4649762193605593955}
+  - component: {fileID: 7649499547472897237}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1638,7 +1693,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1674,7 +1729,19 @@ MonoBehaviour:
   button: {fileID: 335195545639200093}
   onClickEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CollectiblePopUpUI, Assembly-CSharp
+        m_MethodName: ShowCollectible
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   useAnimation: 1
   idleAnimationType: 0
   idleScaleFactor: 1.1
@@ -1684,6 +1751,20 @@ MonoBehaviour:
   idleLoopType: 1
   clickAnimationType: 3
   clickRotationAngle: 100
+--- !u!114 &7649499547472897237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6961122106213270051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1af227b80707049a0296da3f2d3633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectableCard: {fileID: 335195545639200093}
+  cardType: 14
 --- !u!1 &7453580634605567470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,6 +1912,7 @@ GameObject:
   - component: {fileID: 7562694007579996389}
   - component: {fileID: 3380462175627181636}
   - component: {fileID: 153775090096032635}
+  - component: {fileID: 4002844061925768159}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1920,7 +2002,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1956,7 +2038,19 @@ MonoBehaviour:
   button: {fileID: 3380462175627181636}
   onClickEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CollectiblePopUpUI, Assembly-CSharp
+        m_MethodName: ShowCollectible
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   useAnimation: 1
   idleAnimationType: 0
   idleScaleFactor: 1.1
@@ -1966,6 +2060,20 @@ MonoBehaviour:
   idleLoopType: 1
   clickAnimationType: 3
   clickRotationAngle: 100
+--- !u!114 &4002844061925768159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7734382421740861402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1af227b80707049a0296da3f2d3633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectableCard: {fileID: 3380462175627181636}
+  cardType: 16
 --- !u!1 &7865317154911345779
 GameObject:
   m_ObjectHideFlags: 0
