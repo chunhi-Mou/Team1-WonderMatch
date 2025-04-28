@@ -19,6 +19,7 @@ public class MagicPowerUp : IPowerUp {
     }
 
     public void Use() {
+        if(Board.currCardCount == 1) return;
         if (GameModeManager.instance.isUsingPowers || GameModeManager.instance.isProcessingCard || GameModeManager.instance.isMovingCardsInStack) return;
         if (count > 0) {
             if (stack.StackMagicHandler()) { //Đồng thời Invoke cho Board
