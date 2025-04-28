@@ -1600,6 +1600,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1889859059}
     m_Modifications:
+    - target: {fileID: 114073791498335621, guid: 8601ffa4e3b7ba441a2f2d7a2f927c33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: da26f4373dfd2b241a2d7322b9319935, type: 3}
     - target: {fileID: 153775090096032635, guid: 8601ffa4e3b7ba441a2f2d7a2f927c33, type: 3}
       propertyPath: onClickEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2057,6 +2061,10 @@ PrefabInstance:
       propertyPath: onClickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4764534609949434884, guid: eaf4776a33fa9d149ad5fe723c7adc62, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 768156317176ac44981e4cbb1e70e944, type: 3}
     - target: {fileID: 6817586155892668887, guid: eaf4776a33fa9d149ad5fe723c7adc62, type: 3}
       propertyPath: m_IsActive
       value: 0
