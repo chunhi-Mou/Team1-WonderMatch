@@ -71,9 +71,8 @@ public static class CardAnimation {
 
         seq.AppendCallback(() => AudioManager.instance.PlayOneShot(SoundEffect.CardFlip));
 
-        // Step 1: Move to centerPoint with rotation
         for (int i = 0; i < cards.Count; i++) {
-            cards[i].GetComponent<CardOverlapChecker>().NotifyTilesBelow();
+            //cards[i].GetComponent<CardOverlapChecker>().NotifyTilesBelow();
             Vector3 centerPos = new Vector3(centerPoint.localPosition.x, centerPoint.localPosition.y, originalLocalPositions[i].z);
             seq.Join(cards[i].DOLocalMove(centerPos, animationDuration * 0.5f).SetEase(Ease.InOutQuad));
             seq.Join(cards[i].DOLocalRotate(new Vector3(0, 0, Random.Range(-30f, 30f)), animationDuration * 0.5f).SetEase(Ease.InOutQuad));
@@ -81,7 +80,6 @@ public static class CardAnimation {
 
         seq.AppendInterval(0.1f);
 
-        // Step 2: Circle shuffle
         float circleRadius = 0.5f;
         float angleStep = 360f / cards.Count;
         float startAngle = (cards.Count % 2 == 0) ? (angleStep / 2f) : 0f;
@@ -97,12 +95,11 @@ public static class CardAnimation {
         seq.AppendInterval(0.2f);
         seq.AppendCallback(() => AudioManager.instance.PlayOneShot(SoundEffect.Shuffle));
 
-        // Step 3: Spread horizontally
         float startX = -(spreadDistance * (cards.Count - 1) / 2f);
         for (int i = 0; i < cards.Count; i++) {
             float offset = (startX + i * spreadDistance) * 1.5f;
             if (Mathf.Abs(offset) < 0.1f)
-                offset += 20f; // Slight right shift
+                offset += 20f;
 
             Vector3 spreadPos = new Vector3(centerPoint.localPosition.x + offset, centerPoint.localPosition.y, originalLocalPositions[i].z);
             float t = (cards.Count == 1) ? 0.5f : (float)i / (cards.Count - 1);
@@ -115,9 +112,8 @@ public static class CardAnimation {
         seq.AppendInterval(0.5f);
         seq.AppendCallback(() => AudioManager.instance.PlayOneShot(SoundEffect.ShuffleOut));
 
-        // Step 4: Return to original local positions
         for (int i = 0; i < cards.Count; i++) {
-            cards[i].GetComponent<CardOverlapChecker>().NotifyTilesBelow();
+            //cards[i].GetComponent<CardOverlapChecker>().NotifyTilesBelow();
             seq.Join(cards[i].DOLocalMove(originalLocalPositions[i], animationDuration).SetEase(Ease.OutQuad));
             seq.Join(cards[i].DOLocalRotate(originalLocalRotations[i], animationDuration * 0.8f).SetEase(Ease.OutBack));
         }
