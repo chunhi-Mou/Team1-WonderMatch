@@ -42,23 +42,9 @@ public class GameModeManager : MonoBehaviour {
     }
     public void ResetGame() {
         if (isPaused) TogglePause();
-        //SceneManager.sceneLoaded -= OnSceneReloaded;
-        //SceneManager.sceneLoaded += OnSceneReloaded;
         gameMode.ClearOldData();
         SceneLoader.instance.LoadScene("InGame");
     }
-    //private void OnSceneReloaded(Scene scene, LoadSceneMode mode) {
-    //    StartCoroutine(DelayedSetup());
-    //    SceneManager.sceneLoaded -= OnSceneReloaded;
-    //}
-
-    //private IEnumerator DelayedSetup() {
-    //    gameMode.ClearOldData();
-    //    yield return new WaitForEndOfFrame();
-    //    if (isPaused) TogglePause();
-    //    //gameMode.TurnOnObjsOfMode();
-    //}
-
     public void EnterMap() {
         if (isPaused) TogglePause();
         gameMode.ClearOldData();
@@ -89,12 +75,7 @@ public class GameModeManager : MonoBehaviour {
 
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-    //public void OnDuoModeSelected() {
-    //    SceneManager.LoadScene(1);
-    //    SingleMode.SetActive(false);
-    //    DuoMode.SetActive(true);
-    //    gameMode = DuoModeManager.instance;
-    //}
+
     #region Audio
     private void Audio_PlayBGMusic() {
         AudioManager.instance.Play(SoundEffect.BGMusic);
