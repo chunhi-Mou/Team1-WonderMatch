@@ -36,6 +36,7 @@ public class BookmarkUI : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         seq.Append(bookmarkAnimation.DOFade(1f, 0.3f))
         .AppendCallback(() => {
+            AudioManager.instance.Play(SoundEffect.bookBackToMap);
             bookmarkAnimator.Play("Bookmark");
             collection.SetActive(false);
             nextAndPrev.SetActive(true);
@@ -59,6 +60,7 @@ public class BookmarkUI : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         seq.Append(bookmarkAnimation.DOFade(1f, 0.3f))
         .AppendCallback(() => {
+            AudioManager.instance.Play(SoundEffect.bookCollectPage);
             bookmarkAnimator.Play("Bookmark");
             collection.SetActive(true);
             nextAndPrev.SetActive(false);

@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: CardMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 6e0df63c1f2a33e4393e05c9fe76de5b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -30,7 +30,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2500
+  m_CustomRenderQueue: 5000
   stringTagMap:
     RenderType: TransparentCutout
   disabledShaderPasses: []
@@ -83,7 +83,7 @@ Material:
     - _Cull: 2
     - _DstBlend: 0
     - _EnableExternalAlpha: 0
-    - _QueueControl: 0
+    - _QueueControl: 1
     - _QueueOffset: 50
     - _SrcBlend: 1
     - _Surface: 0
@@ -92,7 +92,7 @@ Material:
     - _ZWriteControl: 0
     - _alpha_clip: 0.11
     - _brightness: 1
-    - _do_tan_bien: 6.38
+    - _do_tan_bien: 0.67
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}

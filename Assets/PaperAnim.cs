@@ -4,7 +4,7 @@ using DG.Tweening;
 public class PaperAnim : MonoBehaviour {
     public Transform PaperUp;
     public Transform PaperDown;
-    public float moveDuration = 0.25f;
+    public float moveDuration = 0.15f;
 
     private void OnEnable() {
         gameObject.transform.position = PaperUp.position;

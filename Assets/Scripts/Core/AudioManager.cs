@@ -3,6 +3,7 @@ using UnityEngine.Audio;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour {
     [System.Serializable]
@@ -10,6 +11,8 @@ public class AudioManager : MonoBehaviour {
         public SoundEffect type;
         public AudioMixerGroup outputMixer;
         public AudioClip clip;
+        [Range(0 ,1)]
+        public float volume = 1f;
         public bool loop = false;
         [HideInInspector] public AudioSource source;
     }
@@ -41,6 +44,7 @@ public class AudioManager : MonoBehaviour {
         foreach (var sound in sounds) {
             AudioSource source = gameObject.AddComponent<AudioSource>();
             source.clip = sound.clip;
+            source.volume = sound.volume;
             source.loop = sound.loop;
             source.outputAudioMixerGroup = sound.outputMixer;
 

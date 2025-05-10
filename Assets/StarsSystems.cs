@@ -33,6 +33,7 @@ public class StarsSystems : MonoBehaviour {
                 star.transform.localScale = Vector3.zero;
                 star.color = new Color(1, 1, 1, 0);
                 DG.Tweening.Sequence seq = DOTween.Sequence();
+                seq.AppendInterval(0.4f);
                 seq.SetUpdate(true); 
                 seq.Append(star.transform.DOScale(1.9f, 0.5f).SetEase(Ease.OutBack));
                 seq.Join(star.DOFade(1f, 0.2f)); 

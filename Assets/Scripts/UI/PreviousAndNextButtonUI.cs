@@ -57,6 +57,7 @@ public class PreviousAndNextButtonUI : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         seq.Append(nextAnimation.DOFade(1f, 0.3f))
         .AppendCallback(() => {
+            AudioManager.instance.Play(SoundEffect.bookNextPage);
             nextAnimator.Play("animate");
             LoadPage();
         }) 
@@ -80,6 +81,7 @@ public class PreviousAndNextButtonUI : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         seq.Append(prevAnimation.DOFade(1f, 0.3f))
         .AppendCallback(() => {
+            AudioManager.instance.Play(SoundEffect.bookNextPage);
             prevAnimator.Play("animate");
             LoadPage();
         }) 

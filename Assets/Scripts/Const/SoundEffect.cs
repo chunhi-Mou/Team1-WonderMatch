@@ -19,4 +19,8 @@ public enum SoundEffect {
     SlotLevel,
     SlotMachine,
     SlotChosen,
+    ImpactHeavy,
+    bookNextPage,
+    bookCollectPage,
+    bookBackToMap,
 }
