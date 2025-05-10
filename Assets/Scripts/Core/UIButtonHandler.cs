@@ -42,8 +42,12 @@ public class UIButtonHandler : MonoBehaviour {
     }
 
     private void OnButtonClicked() {
-            if (buttonType == ButtonType.Power && GameModeManager.instance.isUsingPowers) return;
-            if (idleTween != null) {
+        var holdInfo = GetComponent<PowerButtonHoldInfo>();
+        if (holdInfo != null && (holdInfo.IsHolding||holdInfo.ShowedInfo)) return;
+
+        if (buttonType == ButtonType.Power && GameModeManager.instance.isUsingPowers) return;
+
+        if (idleTween != null) {
             idleTween.Kill();
             transform.localScale = Vector3.one;
             transform.rotation = Quaternion.identity;
