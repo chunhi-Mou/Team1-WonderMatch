@@ -1753,10 +1753,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4335570887935644253, guid: 8601ffa4e3b7ba441a2f2d7a2f927c33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8965265102f8ef469b2068c9249b985, type: 3}
     - target: {fileID: 4649762193605593955, guid: 8601ffa4e3b7ba441a2f2d7a2f927c33, type: 3}
       propertyPath: onClickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2127624551}
+    - target: {fileID: 6697370095690715083, guid: 8601ffa4e3b7ba441a2f2d7a2f927c33, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6886163980299992272, guid: 8601ffa4e3b7ba441a2f2d7a2f927c33, type: 3}
       propertyPath: onClickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1974,6 +1982,10 @@ PrefabInstance:
       propertyPath: onClickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4614276594817496226, guid: eaf4776a33fa9d149ad5fe723c7adc62, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 901f86aa83b17bd4fb0e3f5afc9732ef, type: 3}
     - target: {fileID: 4764534609949434884, guid: eaf4776a33fa9d149ad5fe723c7adc62, type: 3}
       propertyPath: m_Sprite
       value: 
