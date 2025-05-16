@@ -21,6 +21,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadScene(string sceneToLoad)
     {
         DOTween.KillAll();
+        Time.timeScale = 1;
         StartCoroutine(LoadSceneAsync(sceneToLoad));
     }
 
