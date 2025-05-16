@@ -6913,7 +6913,7 @@ PrefabInstance:
     - target: {fileID: 1827650464566901809, guid: f6fe1c013abab224c9b0add8070f1961, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9ab954097f4609a419240866eac592e4, type: 3}
+      objectReference: {fileID: 21300000, guid: 5aa0ba9f77fce1948a655abb4a6eb956, type: 3}
     - target: {fileID: 2428012303619452898, guid: f6fe1c013abab224c9b0add8070f1961, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7009,6 +7009,14 @@ PrefabInstance:
     - target: {fileID: 7202136626343806554, guid: f6fe1c013abab224c9b0add8070f1961, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202136626343806554, guid: f6fe1c013abab224c9b0add8070f1961, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202136626343806554, guid: f6fe1c013abab224c9b0add8070f1961, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 143
       objectReference: {fileID: 0}
     - target: {fileID: 7202136626343806554, guid: f6fe1c013abab224c9b0add8070f1961, type: 3}
       propertyPath: m_ConstrainProportionsScale
