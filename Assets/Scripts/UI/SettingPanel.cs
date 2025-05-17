@@ -85,6 +85,7 @@ public class SettingPanel : MonoBehaviour {
     }
 
     public void NextLevel() {
+        AudioManager.instance.ResumeAll();
         LevelManager.UnlockNextLevel();
         LevelManager.CurrLevel++;
         RestartLevel();
