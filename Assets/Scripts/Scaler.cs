@@ -5,7 +5,7 @@ public class Scaler : MonoBehaviour {
     public float referenceHeight = 1920f;
     [Range(0f, 1f)] public float biasFactor = 0.85f;
 
-    void Start() {
+    void Awake() {
         Rect safeArea = Screen.safeArea;
 
         float safeWidth = safeArea.width;
@@ -15,7 +15,7 @@ public class Scaler : MonoBehaviour {
         float referenceAspect = referenceWidth / referenceHeight;
 
         float widthScale = safeWidth/referenceWidth * biasFactor;
-        float heightScale = referenceHeight / safeHeight * biasFactor;
+        float heightScale = referenceHeight / safeHeight * 1f;
 
         float finalScale;
 
@@ -25,6 +25,6 @@ public class Scaler : MonoBehaviour {
             finalScale = heightScale;
         }
         finalScale = Mathf.Min(finalScale, biasFactor);
-        transform.localScale = new Vector3(finalScale, finalScale, finalScale);
+        transform.localScale = new Vector3(finalScale, finalScale, 0.85f);
     }
 }
