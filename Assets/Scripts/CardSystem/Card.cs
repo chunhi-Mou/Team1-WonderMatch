@@ -15,6 +15,7 @@ public class Card : MonoBehaviour {
     private bool isSelectable = true; //For Vision Only
 
     private void OnEnable() {
+        GameEvents.OnDoneChooseCardType += SetCardData;
         if (cardData.cardType != CardType.SCard_A && cardData.cardType != CardType.SCard_B && cardData.cardType != CardType.SCard_C && cardData.cardType != CardType.SCard_D) return;
         int SCardTaken = PlayerPrefs.GetInt("SCard" + (int)cardData.cardType, 0);
         if (SCardTaken == 1) {
@@ -24,7 +25,7 @@ public class Card : MonoBehaviour {
             state = CardState.inBoard;
             gameObject.SetActive(false);
         }
-        GameEvents.OnDoneChooseCardType += SetCardData;
+        
     }
     private void OnDisable() {
         GameEvents.OnDoneChooseCardType -= SetCardData;
@@ -49,6 +50,8 @@ public class Card : MonoBehaviour {
                 break;
         }
         GetCardData();
+        Debug.Log(cardDatabase);
+        Debug.Log(SlotController.IdxCardType);
     }
     private void Awake() {
         GameModeManager.instance.isPaused = false;
@@ -118,6 +121,7 @@ public class Card : MonoBehaviour {
         cardData.sprite = cardFromBase.sprite;
         cardData.cardType = (CardType) curType;
         spriteRenderer.sprite = cardData.sprite;
+        Debug.Log("DONE");
     }
     public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear) {
         SetPriority(-2);
