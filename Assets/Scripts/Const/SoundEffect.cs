@@ -23,4 +23,5 @@ public enum SoundEffect {
     bookNextPage,
     bookCollectPage,
     bookBackToMap,
+    specialCard
 }

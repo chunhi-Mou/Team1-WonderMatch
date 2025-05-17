@@ -64,6 +64,7 @@ public class Card : MonoBehaviour {
         transform.DOScale(transform.localScale * 4.67f, 0.45f)
             .OnComplete(() => {
                 DOVirtual.DelayedCall(0.6f, () => {
+                    AudioManager.instance.Play(SoundEffect.specialCard);
                     cardVFXController.FadeOut(0.8f);
                     DOVirtual.DelayedCall(0.81f, () => {
                         gameObject.SetActive(false);
