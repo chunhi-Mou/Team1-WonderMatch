@@ -13,6 +13,7 @@ public class WinLosePanel : MonoBehaviour {
     [SerializeField] Image timerIcon;
     [SerializeField] Image coinIcon;
     [SerializeField] WinEffectController winEffectController;
+    [SerializeField] TextMeshProUGUI winLvText;
 
     [Header("Lose")]
     [SerializeField] GameObject LoseBG;
@@ -21,6 +22,7 @@ public class WinLosePanel : MonoBehaviour {
     [SerializeField] GameObject WinUI;
     [SerializeField] GameObject LoseUI;
     [SerializeField] Button replayButton;
+    [SerializeField] TextMeshProUGUI loseLvText;
 
     private void OnEnable() {
         winEffectController = GetComponent<WinEffectController>();
@@ -37,6 +39,7 @@ public class WinLosePanel : MonoBehaviour {
         AudioManager.instance.PauseAll();
         WinBG.gameObject.SetActive(true);
         WinContent.gameObject.SetActive(true);
+        winLvText.text = "Level " + LevelManager.CurrLevel.ToString();
 
         WinBG.alpha = 0f;
         WinBG.DOFade(1f, 0.3f).SetEase(Ease.InSine).SetUpdate(true);
@@ -70,6 +73,7 @@ public class WinLosePanel : MonoBehaviour {
 
 
     private void ShowUpLoseUI() {
+        loseLvText.text = "Level " + LevelManager.CurrLevel.ToString();
         if (HeartsSystem.hearts > 0) replayButton.interactable = true;
         else replayButton.interactable = false;
         LoseUI.SetActive(true);
