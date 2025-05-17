@@ -2,13 +2,18 @@ using UnityEngine;
 using DG.Tweening;
 
 public class PaperAnim : MonoBehaviour {
-    public Transform PaperUp;
-    public Transform PaperDown;
-    public float moveDuration = 0.15f;
+    public RectTransform PaperUp;
+    public RectTransform PaperDown;
+    public float moveDuration = 0.03f;
+
+    private RectTransform rectTransform;
 
     private void OnEnable() {
-        gameObject.transform.position = PaperUp.position;
-        transform.DOMove(PaperDown.position, moveDuration)
-                 .SetEase(Ease.OutQuad).SetUpdate(true);
+        rectTransform = GetComponent<RectTransform>();
+        DOTween.Kill(rectTransform);
+        rectTransform.anchoredPosition = PaperUp.anchoredPosition;
+        rectTransform.DOAnchorPos(PaperDown.anchoredPosition, moveDuration)
+                     .SetEase(Ease.Unset)
+                     .SetUpdate(true);
     }
 }

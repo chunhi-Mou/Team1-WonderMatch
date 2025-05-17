@@ -15,10 +15,23 @@ public class Card : MonoBehaviour {
     private bool isSelectable = true; //For Vision Only
 
     private void OnEnable() {
+        if (cardData.cardType != CardType.SCard_A && cardData.cardType != CardType.SCard_B && cardData.cardType != CardType.SCard_C && cardData.cardType != CardType.SCard_D) return;
+        int SCardTaken = PlayerPrefs.GetInt("SCard" + (int)cardData.cardType, 0);
+        if (SCardTaken == 1) {
+            cardOverlapChecker.UpdateAboveTiles();
+            cardOverlapChecker.UpdateBelowTiles();
+            cardOverlapChecker.NotifyTilesBelow();
+            state = CardState.inBoard;
+            gameObject.SetActive(false);
+        }
         GameEvents.OnDoneChooseCardType += SetCardData;
     }
     private void OnDisable() {
         GameEvents.OnDoneChooseCardType -= SetCardData;
+    }
+    private void Start() {
+        cardOverlapChecker.UpdateAboveTiles();
+        cardOverlapChecker.UpdateBelowTiles();
     }
     void SetCardData() {
         switch (SlotController.IdxCardType) {
@@ -57,16 +70,21 @@ public class Card : MonoBehaviour {
     }
     public void GOTCollectableCard () {
         if (!isSelectable) return;
-        Board.currCardCount -= 1;
         PlayerPrefs.SetInt("SCard" + (int)cardData.cardType, 1);
         PlayerPrefs.Save();
-        transform.DOMove(Vector3.zero, 0.45f).SetAutoKill(true);
+        cardOverlapChecker.UpdateAboveTiles();
+        cardOverlapChecker.UpdateBelowTiles();
+        transform.DOMove(Vector3.zero, 0.45f).SetAutoKill(true).OnComplete(()=> cardOverlapChecker.NotifyTilesBelow());
         transform.DOScale(transform.localScale * 4.67f, 0.45f)
             .OnComplete(() => {
                 DOVirtual.DelayedCall(0.6f, () => {
                     AudioManager.instance.Play(SoundEffect.specialCard);
+                    cardOverlapChecker.NotifyTilesBelow();
                     cardVFXController.FadeOut(0.8f);
                     DOVirtual.DelayedCall(0.81f, () => {
+                        state = CardState.inBoard;
+                        Board.instance.UpdateCardsList();
+                        Board.instance.CheckWinGame();
                         gameObject.SetActive(false);
                     });
                 });
@@ -171,5 +189,8 @@ public class Card : MonoBehaviour {
         SetPriority(0);
     }
     private void SetPriority(float _val) {
+    }
+    public void OverLapChecker() {
+        cardOverlapChecker.NotifyTilesBelow();
     }
 }

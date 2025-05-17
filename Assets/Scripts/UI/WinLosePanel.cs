@@ -14,6 +14,7 @@ public class WinLosePanel : MonoBehaviour {
     [SerializeField] Image coinIcon;
     [SerializeField] WinEffectController winEffectController;
     [SerializeField] TextMeshProUGUI winLvText;
+    [SerializeField] Button nextButton;
 
     [Header("Lose")]
     [SerializeField] GameObject LoseBG;
@@ -36,6 +37,9 @@ public class WinLosePanel : MonoBehaviour {
     }
 
     private void ShowUpWinUI() {
+        if(LevelManager.CurrLevel == 12) {
+            nextButton.enabled = false;
+        }
         AudioManager.instance.PauseAll();
         WinBG.gameObject.SetActive(true);
         WinContent.gameObject.SetActive(true);

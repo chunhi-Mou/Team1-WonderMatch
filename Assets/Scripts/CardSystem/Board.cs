@@ -3,6 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 
 public class Board : MonoBehaviour {
+
+    #region Singleton
+    public static Board instance { get; private set; }
+
+    private void Awake() {
+        if (instance == null) {
+            instance = this;
+        } else {
+            Destroy(gameObject);
+            return;
+        }
+    }
+    #endregion
     public static List<Card> cards = new List<Card>();
     
     public static int currCardCount = 0;
@@ -16,7 +29,7 @@ public class Board : MonoBehaviour {
         UpdateCardsList();
         UpdateBoard();
     }
-    private void UpdateCardsList() {
+    public void UpdateCardsList() {
         cards = GameObject.FindGameObjectsWithTag("Card")
             .Select(obj => obj.GetComponent<Card>())
             .ToList();
@@ -28,8 +41,8 @@ public class Board : MonoBehaviour {
             card.GetComponent<CardOverlapChecker>().CheckIfUncovered();
         }
     }
-    private void CheckWinGame() {
-        currCardCount -= 3; // Match Found sẽ trừ đi 3 Card
+    public void CheckWinGame() {
+        UpdateCardsList();
         if (currCardCount <= 0) {
             LevelManager.UnlockNextLevel();
             GameEvents.OnWinGameInvoke();

@@ -70,6 +70,7 @@ public class MagicPowerUp : IPowerUp {
             card.SetSelectableData(true);
             card.state = CardState.inStack;
             card.UpdateCardsState();
+            card.OverLapChecker();
 
         }
 
