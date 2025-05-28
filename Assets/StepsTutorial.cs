@@ -21,7 +21,7 @@ public class StepsTutorial : MonoBehaviour {
     public void NextStep() {
         if (GameModeManager.instance.isUsingPowers) return;
         preventCardsFromClicked.SetActive(true);
-        Debug.Log("Next");
+       
         foreach (var obj in steps[currentStep].gameObjects) {
             obj.SetActive(false);
         }
@@ -38,7 +38,7 @@ public class StepsTutorial : MonoBehaviour {
         if (currentStep < steps.Length) {
             ActivateStep(currentStep);
         } else {
-            Debug.Log("Tutorial completed!");
+            
         }
     }
 

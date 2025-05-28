@@ -22,7 +22,6 @@ public class WinEffectController : MonoBehaviour {
                 float delay = Random.Range(0f, 0.7f);
                 DOVirtual.DelayedCall(delay, () => {
                     effect.Play();
-                    Debug.Log("played");
                 }).SetUpdate(true);
             }
         }

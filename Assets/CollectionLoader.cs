@@ -6,7 +6,6 @@ public class CollectionLoader : MonoBehaviour {
     [SerializeField] CardType cardType;
     private void Start() {
         int state = PlayerPrefs.GetInt("SCard" + (int)cardType, 0);
-        Debug.Log(cardType.ToString() + " " + state);
         if(state==1) {
             collectableCard.interactable = true;
         } else {

@@ -29,7 +29,7 @@ public class SlotController : MonoBehaviour {
         AudioManager.instance.Play(SoundEffect.SlotMachine);
         StartSpinning();
         StartBlinking(0.75f, 0.25f);
-        DOVirtual.DelayedCall(0.1f, () => StopWithMatch()).SetUpdate(true).SetAutoKill(true);
+        DOVirtual.DelayedCall(0.05f, () => StopWithMatch()).SetUpdate(true).SetAutoKill(true);
     }
 
     public void StartSpinning() {
@@ -55,7 +55,7 @@ public class SlotController : MonoBehaviour {
             bool done = false;
             columns[i].StopSpin(matchSymbol, () => done = true);
             yield return new WaitUntil(() => done);
-            yield return new WaitForSecondsRealtime(0.3f);
+            yield return new WaitForSecondsRealtime(0.1f);
             AudioManager.instance.PlayOneShot(SoundEffect.SlotChosen);
             count++;
         }

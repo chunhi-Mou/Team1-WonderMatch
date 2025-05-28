@@ -25,7 +25,7 @@ public class CangatController : MonoBehaviour {
         DOVirtual.DelayedCall(animLength, () => slotController.StartSlotMachineAnimation()).SetUpdate(true);
     }
     public void PlayLeverSound() {
-        Debug.Log("Lever sound played");
+       
     }
 
 }

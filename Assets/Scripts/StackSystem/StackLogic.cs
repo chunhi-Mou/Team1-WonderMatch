@@ -96,6 +96,9 @@ public class StackLogic : MonoBehaviour {
 
         stackAnimation.AnimateRemoveMatch(matchedCards, () => {
             foreach (var card in matchedCards) {
+                GameModeManager.instance.isUsingPowers = false;
+                GameModeManager.instance.isProcessingCard = false;
+                GameModeManager.instance.isMovingCardsInStack = false;
                 cardsInStack.Remove(card);
                 cardTypeDictionary[card.cardData.cardType]?.Remove(card);
                 card.DisableMatchedCard(card);
@@ -160,7 +163,6 @@ public class StackLogic : MonoBehaviour {
     }
 
     public void AddOneCell() {
-        Debug.Log("Added");
         currentSizeStack++;
     } 
 }

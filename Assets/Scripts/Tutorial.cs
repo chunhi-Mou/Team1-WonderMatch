@@ -60,7 +60,6 @@ public class Tutorial : MonoBehaviour {
         {
             tutorialTxt2.gameObject.SetActive(false);
             SetPowerStates(false, true, false, false);
-            Debug.Log("Step2: Undo power enabled");
         });
     }
 
@@ -69,7 +68,6 @@ public class Tutorial : MonoBehaviour {
         DOVirtual.DelayedCall(1.5f, () =>
         {
             SetPowerStates(true, false, false, false);
-            Debug.Log("Step3: Shuffle power enabled");
         });
     }
 
@@ -78,7 +76,6 @@ public class Tutorial : MonoBehaviour {
         DOVirtual.DelayedCall(1.5f, () =>
         {
             SetPowerStates(false, false, true, false);
-            Debug.Log("Step4: Magic power enabled");
         });
     }
 
@@ -87,7 +84,6 @@ public class Tutorial : MonoBehaviour {
         DOVirtual.DelayedCall(1.5f, () =>
         {
             SetPowerStates(false, false, false, true);
-            Debug.Log("Step5: AddOne power enabled");
         });
     }
 

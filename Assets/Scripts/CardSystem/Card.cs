@@ -50,8 +50,6 @@ public class Card : MonoBehaviour {
                 break;
         }
         GetCardData();
-        Debug.Log(cardDatabase);
-        Debug.Log(SlotController.IdxCardType);
     }
     private void Awake() {
         GameModeManager.instance.isPaused = false;
@@ -121,9 +119,8 @@ public class Card : MonoBehaviour {
         cardData.sprite = cardFromBase.sprite;
         cardData.cardType = (CardType) curType;
         spriteRenderer.sprite = cardData.sprite;
-        Debug.Log("DONE");
     }
-    public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear) {
+    public void MoveCardTo(Vector3 target, float _duration=0.5f, Ease easeType = Ease.Linear, System.Action onComplete=null) {
         SetPriority(-2);
         SetSelectableData(true);
         gameObject.transform.DOMove(target, _duration)
@@ -131,6 +128,7 @@ public class Card : MonoBehaviour {
             .OnComplete(() => {
                 SetPriority(0);
                 CardDoneMovingStatusUpdate();
+                onComplete?.Invoke();
             }).SetAutoKill(true);
     }
     public void MoveCardToStack(Vector3 target, float _duration = 0.5f, Ease easeType = Ease.OutBack) {
@@ -140,23 +138,29 @@ public class Card : MonoBehaviour {
         float randomRotation = Random.Range(-5f, 5f);
         Vector3 originalScale = new Vector3(1f, 1f, 1f);
         Vector3 finalScale = originalScale * 0.15f;
+        DOVirtual.DelayedCall(0.1f, () => {
+            //cardOverlapChecker.NotifyTilesBelow();
+        });
 
         Sequence sequence = DOTween.Sequence();
 
-        sequence.Append(transform.DOMove(target, _duration).SetEase(easeType));
+        sequence.Append(transform.DOMove(target, _duration * 0.7f).SetEase(easeType));
         sequence.Join(transform.DOScale(originalScale * 0.18f, _duration * 0.7f));
-        sequence.Append(transform.DOScale(finalScale, _duration * 0.3f));
-
-        sequence.Join(transform.DORotate(new Vector3(0, 0, randomRotation), _duration));
-        sequence.Append(transform.DOShakePosition(0.2f, 0.1f, 10, 90, false, true));
-
+        sequence.Join(transform.DORotate(new Vector3(0, 0, randomRotation), _duration * 0.7f));
         sequence.Join(spriteRenderer.DOFade(0.8f, _duration * 0.5f));
 
+        sequence.Append(transform.DOScale(finalScale, _duration * 0.3f));
+        sequence.Join(spriteRenderer.DOFade(1f, _duration * 0.3f));
+
+        sequence.Append(transform.DOShakePosition(0.1f, 0.05f, 5, 90, false, true));
+
         sequence.OnComplete(() => {
+            GameModeManager.instance.isMovingCardsInStack = false;
             spriteRenderer.DOFade(1f, 0.2f);
             SetPriority(0);
             CardDoneMovingStatusUpdate();
         });
+        sequence.SetAutoKill(true);
     }
 
     private void CardDoneMovingStatusUpdate() {
@@ -177,6 +181,7 @@ public class Card : MonoBehaviour {
     }
     public void UndoMove() {
         if (!GameModeManager.instance.isProcessingCard && state != CardState.inStack) return;
+        transform.DOKill();
         GameEvents.OnUndoPressedInvoke(this);
         GetComponent<Collider>().enabled = true;
         transform.rotation = Quaternion.identity;
@@ -196,5 +201,8 @@ public class Card : MonoBehaviour {
     }
     public void OverLapChecker() {
         cardOverlapChecker.NotifyTilesBelow();
+    }
+    private void OnDestroy() {
+        transform.DOKill();
     }
 }

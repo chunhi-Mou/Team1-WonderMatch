@@ -127,7 +127,7 @@ public static class CardAnimation {
     public static void PlayCardShakeThenMove(Transform card, Vector3 targetPosition,
         float shakeDuration = 0.3f, float moveDuration = 0.5f, System.Action onComplete = null) {
         GameModeManager.instance.isUsingPowers = true;
-        card.GetComponent<SpriteRenderer>().sortingOrder = 1000;
+        //card.GetComponent<SpriteRenderer>().sortingOrder = 1000;
 
         Sequence seq = DOTween.Sequence();
         seq.Append(card.DOShakePosition(shakeDuration, strength: 0.5f, vibrato: 20, randomness: 90));

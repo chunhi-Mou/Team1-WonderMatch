@@ -7,7 +7,7 @@ public class SlotColumn : MonoBehaviour {
     public RectTransform container;             
     public List<Image> slotImages;       
     public float symbolHeight = 83f;
-    public float spinSpeed = 0.2f;
+    public float spinSpeed = 0.1f;
 
     private Sprite[] symbolSprites;
     private RectTransform[] visibleSlots;

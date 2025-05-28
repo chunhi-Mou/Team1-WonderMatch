@@ -29,7 +29,6 @@ public class CoinsManager : MonoBehaviour {
     }
     public void AddCoinsOnWin() {
         this.AddCoins(20);
-        Debug.Log(currCoins);
     }
     private void RestoreCoins() {
         currCoins = PlayerPrefs.GetInt(SavedData.Coins, 0);

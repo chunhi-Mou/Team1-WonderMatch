@@ -88,7 +88,6 @@ public class MapSettingPanel : MonoBehaviour {
     }
     private void Quit()
     {
-        Debug.Log("Quitting game...");
         #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
         #else

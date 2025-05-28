@@ -66,7 +66,6 @@ public class LevelManager : MonoBehaviour {
             GameModeManager.instance.ResumeGame();
             SceneLoader.instance.LoadScene("InGame");
         } else {
-            Debug.Log("Not enough Hearts");
             GameEvents.OnOutOfHeartInvoke();
             levelButtons[level - 1].transform.DOScale(1.1f, 0.2f);
         }

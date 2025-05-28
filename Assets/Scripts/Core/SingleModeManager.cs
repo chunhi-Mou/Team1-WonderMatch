@@ -51,7 +51,6 @@ public class SingleModeManager : MonoBehaviour, IGameMode {
                 player.gameObject.SetActive(true);
             } else {
                 player.gameObject.SetActive(false);
-                Debug.Log(player.gameObject.ToString());
             }
         }
     }

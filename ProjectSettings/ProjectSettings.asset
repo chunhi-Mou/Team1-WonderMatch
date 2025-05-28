@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Mad Hatter
+  companyName: Phantom Circus
   productName: Wonder Match
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -140,7 +140,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.0b
+  bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -162,7 +162,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.MadHatter.WonderMatch
+    Android: com.PhantomCircus.WonderMatch
     Standalone: com.Mad-Hatter.Wonder-Match
   buildNumber:
     Standalone: 0
@@ -291,7 +291,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: e2871b6283fd22f41b1510008f973ffe, type: 3}
+      m_Icon: {fileID: 2800000, guid: 757b585adba6cb8438054820d17c3dca, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

@@ -5,8 +5,8 @@ using DG.Tweening;
 
 public class PowerButtonHoldInfo : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler {
     [SerializeField] private GameObject infoPanel;
-    [SerializeField] private float holdDuration = 0.15f;
-    [SerializeField] private float fadeDuration = 0.3f;
+    [SerializeField] private float holdDuration = 0.0001f;
+    [SerializeField] private float fadeDuration = 0.0001f;
     [SerializeField] private Vector3 showScale = Vector3.one;
     [SerializeField] private Vector3 hideScale = Vector3.zero;
 
