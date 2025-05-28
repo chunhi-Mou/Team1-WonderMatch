@@ -2,11 +2,15 @@
 
 [<img src="https://github.com/user-attachments/assets/dabe4f53-fcfb-4e3f-bdd8-a8ebdddf2423" alt="CLB Nhà Sáng Tạo Game PTIT Logo" width="30"/> **CLB Nhà Sáng Tạo Game PTIT**](https://www.facebook.com/gamecreatorsclub)
 
-**Thời gian phát triển:** 01/2025 - 02/2025
+**Thời gian phát triển:** 03/2025 - 05/2025
 
 **Vai trò:** Unity Developer (Dự án team - trong CLB Nhà Sáng Tạo Game PTIT)
 
 **Xem gameplay tại đây:**
+
+
+
+https://github.com/user-attachments/assets/4d1f7a23-c7f7-4128-8da2-6c9da3a665f7
 
 
 
@@ -20,7 +24,7 @@
 
 ## Các tính năng và công nghệ nổi bật:
 
--   **Lối chơi Match-3:** Kết hợp cơ chế chọn bài từ bàn cờ đa tầng (tương tự Mahjong Solitaire) với việc thu thập vào khay (stack) để tạo bộ ba.
+-   **Lối chơi Match-3:** Kết hợp cơ chế chọn bài từ bàn cờ đa tầng với việc thu thập vào khay để tạo bộ ba.
 -   **Hệ thống màn chơi đa dạng:** Nhiều cấp độ được thiết kế tỉ mỉ với độ khó tăng dần, có khả năng lưu và tải màn chơi.
 -   **Thử thách và Phần thưởng:** Hoàn thành màn chơi trong thời gian giới hạn, thu thập sao dựa trên thành tích, và mở khóa các bộ sưu tập.
 -   **Tăng cường trải nghiệm:** Tích hợp hệ thống mạng sống (Hearts), tiền tệ trong game (Coins), và các vật phẩm hỗ trợ (Power-ups) như Hoàn tác (Undo), Phép thuật (Magic), Xáo trộn (Shuffle), và Thêm ô vào khay.
@@ -44,4 +48,4 @@
 -   **Art:** Phạm Văn Trường [[Facebook cá nhân](https://www.facebook.com/FT2036)]
 ---
 
-> 🎓 Đây là sản phẩm đầu tiên Chu thực hiện tại [CLB Nhà Sáng Tạo Game PTIT](https://www.facebook.com/gamecreatorsclub), nơi Chu có cơ hội học hỏi và phát triển đam mê làm game.
+> 🎓 Đây là sản phẩm thực hiện tại [CLB Nhà Sáng Tạo Game PTIT](https://www.facebook.com/gamecreatorsclub), nơi mình có cơ hội học hỏi và phát triển đam mê làm game.
