@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59161b6150b8ce74ba5f0d0043ebb2c9, type: 3}
+  m_Name: CO_CardData
+  m_EditorClassIdentifier: 
+  cards:
+  - cardType: 0
+    sprite: {fileID: 21300000, guid: 17a7feab00f559843bcdd47d55cea7b9, type: 3}
+  - cardType: 1
+    sprite: {fileID: 21300000, guid: e7f2317be017d364eae4ba83a3cccf1f, type: 3}
+  - cardType: 2
+    sprite: {fileID: 21300000, guid: 348d9622b653e5a4ca36db46a328eb89, type: 3}
+  - cardType: 3
+    sprite: {fileID: 21300000, guid: 3a451dfefaa1fbf4f94132e7ac90364f, type: 3}
+  - cardType: 4
+    sprite: {fileID: 21300000, guid: 4f611b7e16e53ee478be18918120a7fe, type: 3}
+  - cardType: 5
+    sprite: {fileID: 21300000, guid: 3fbcbf902d89a6d4887c5139a8a6d4de, type: 3}
+  - cardType: 6
+    sprite: {fileID: 21300000, guid: fdd25b4f2f20b11438fee1d5fdc16c5a, type: 3}
+  - cardType: 7
+    sprite: {fileID: 21300000, guid: 7e015d0e021bb244f96477e0c6fc15ff, type: 3}
+  - cardType: 8
+    sprite: {fileID: 21300000, guid: 4906d8737cb208842b172714de158088, type: 3}
+  - cardType: 9
+    sprite: {fileID: 21300000, guid: 7104b3f91d1dd87448823a80f9695863, type: 3}
+  - cardType: 10
+    sprite: {fileID: 21300000, guid: e05fcff61d35c404a9995b364168ea10, type: 3}
+  - cardType: 11
+    sprite: {fileID: 21300000, guid: a912f2cc92154204f80d722a5f37d5a5, type: 3}
+  - cardType: 12
+    sprite: {fileID: 21300000, guid: 92b9725ac30b6b3488337d4b88f43420, type: 3}
+  - cardType: 13
+    sprite: {fileID: 21300000, guid: dd18fa9017a204645a63dc3da904a413, type: 3}
+  - cardType: 14
+    sprite: {fileID: 21300000, guid: cebef41420a478e45a8a18bdec14fa1a, type: 3}
+  - cardType: 15
+    sprite: {fileID: 21300000, guid: 117a6ef16398e9445b9b875e7dc32633, type: 3}
+  - cardType: 16
+    sprite: {fileID: 21300000, guid: 17a7feab00f559843bcdd47d55cea7b9, type: 3}
+  - cardType: 17
+    sprite: {fileID: 21300000, guid: 17a7feab00f559843bcdd47d55cea7b9, type: 3}
