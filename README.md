@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/4d1f7a23-c7f7-4128-8da2-6c9da3a665f7
 
 ---
 
-## Các tính năng và công nghệ nổi bật:
+## Các tính năng và nổi bật:
 
 -   **Lối chơi Match-3:** Kết hợp cơ chế chọn bài từ bàn cờ đa tầng với việc thu thập vào khay để tạo bộ ba.
 -   **Hệ thống màn chơi đa dạng:** Nhiều cấp độ được thiết kế tỉ mỉ với độ khó tăng dần, có khả năng lưu và tải màn chơi.
